@@ -1,0 +1,11 @@
+.open>.dropdown-menu {   
+    height: 260px;
+    overflow-y: auto;
+}
+
+.cal-text-label {
+    padding-top: 5px;
+    margin-bottom: 3px;
+    color: #7c7c7c !important;
+    font-size: 13px;
+}

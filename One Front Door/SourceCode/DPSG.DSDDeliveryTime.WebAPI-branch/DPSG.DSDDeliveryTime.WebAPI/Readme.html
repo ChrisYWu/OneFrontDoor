@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<meta content="text/html; charset:utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="0" />
+
+<html>
+<head>
+    <title>Readme Merchandiser Web Service - branch</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .TFtable {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+            .TFtable td {
+                padding: 7px;
+                border: #4e95f4 1px solid;
+            }
+            /* provide some minimal visual accomodation for IE8 and below */
+            .TFtable tr {
+                background: #b8d1f3;
+            }
+                /*  Define the background color for all the ODD background rows  */
+                .TFtable tr:nth-child(odd) {
+                    background: #b8d1f3;
+                }
+                /*  Define the background color for all the EVEN background rows  */
+                .TFtable tr:nth-child(even) {
+                    background: #dae5f4;
+                }
+    </style>
+    <script type="text/javascript">
+        function getBaseURL() {
+            return window.location.href.substring(0, window.location.href.length - 12);
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <h2>This is the live documents for DSDDelvieryTime Web Services for MyDay</h2>
+    <a href="http://vh-portal3.dpsg.net:8024/">Test Upload Page--></a>
+
+    <h4>Method 1 - GetNonBreakRoutesForToday() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetNonBreakRoutesForToday</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/GetNonBreakRoutesForToday</p>
+                <p>/api/Delivery/GetNonBreakRoutesForToday?inverse={true|false}</p>
+                <p>Test URL</p>
+                <p><a id="method1-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method1-2" target="_blank" href="#">Test2</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Boolean-invesrse [Optional]</li>
+                        <b>Description:</b> This is optional parameter, if set to true the routes with breaks are fetched. By default, the routes without breaks are fetched.
+                    </ul>
+                </p>              
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 2 - GetDeliveryPlan() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetDeliveryPlan</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/GetDeliveryPlan/RouteNubmer={RouteNumber}&TimeZone={TimeZone}&DeliveryDate={DeliveryDate}&IncludeBreakRoute={true|false}</p>
+                <p>Test URL</p>
+                <p><a id="method2-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method2-2" target="_blank" href="#">Test2</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Int-RouteNumber [Required]</li>
+                        <b>Description:</b> The Route Number ad defined in RoadNet/RouteManager.
+                        <li>Int-TimeZone [Required]</li>
+                        <b>Description:</b> The TimeZone from the client(mobile device).
+                        <li>Int-DeliveryDate [Optional]</li>
+                        <b>Description:</b> Default is Today in CST/CDT.
+                        <li>Int-IncludeBreakRoute [Optional]</li>
+                        <b>Description:</b> If set to true, the delivery plan fetched may have one or more breaks in it.
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 3 - UploadDeliveryTime() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadDeliveryTime</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadDeliveryTime</p>
+                <p>Test URL</p>
+                <p><a id="method3-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>DateTime-DeliveryDate</li>
+                        <b>Description:</b> Driver delivery date
+                        <li>string-RouteNumber</li>
+                        <b>Description:</b> Route Number as defined in RouteManager and Roadnet
+                        <li>string-DriverID</li>
+                        <b>Description:</b> DriverID as defined in Roadnet
+                        <li>string-GSN</li>
+                        <b>Description:</b> Driver GSN
+                        <li>
+                            Array-DeliveryStops
+                            <b>Description:</b> The list of stops that either actual delivery time is captured, and/or new estimated arrival time is available
+                            <ul>
+                                <li>Integer-StopSequence</li>
+                                <b>Description:</b> StopSequence as defined in delivery plan
+                                <li>Integer-StopID</li>
+                                <b>Description:</b> StopID as defined in delivery plan
+                                <li>DateTime-ActualArrivalTime</li>
+                                <li>string-ActualArrivalTimeZone</li>
+                                <li>DateTime-ActualDepartureTime</li>
+                                <li>string-ActualDepartureTimeZone</li>
+                                <li>DateTime-EstimatedArrivalTime</li>
+                                <li>string-EstimatedArrivalTimeZone</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Sample Data Params (POST) </td>
+            <td>
+                {
+                DeliveryDate: "2017-03-02",
+                RouteNumber: "110802221",
+                DriverID: "646700",
+                GSN: "WUXYX001",
+                DeliveryStops: [
+                {
+                StopSequence: 2,
+                StopID: 11308425,
+                ActualArrivalTime: "2017-03-02T05:55:22",
+                ActualArrivalTimeZone: "CST",
+                ActualDepartureTime: "2017-03-02T06:25:33",
+                ActualDepartureTimeZone: "CST",
+                EstimatedArrivalTime: null,
+                EstimatedArrivalTimeZone: null
+                },
+                {
+                StopSequence: 3,
+                StopID: 11308136,
+                ActualArrivalTime: null,
+                ActualArrivalTimeZone: null,
+                ActualDepartureTime: null,
+                ActualDepartureTimeZone: null,
+                EstimatedArrivalTime: "2017-03-02T06:32:07",
+                EstimatedArrivalTimeZone: "CST"
+                },
+                {
+                StopSequence: 4,
+                StopID: 11308945,
+                ActualArrivalTime: null,
+                ActualArrivalTimeZone: null,
+                ActualDepartureTime: null,
+                ActualDepartureTimeZone: null,
+                EstimatedArrivalTime: "2017-03-02T07:57:52",
+                EstimatedArrivalTimeZone: "CST"
+                },
+                {
+                StopSequence: 5,
+                StopID: 11361446,
+                ActualArrivalTime: null,
+                ActualArrivalTimeZone: null,
+                ActualDepartureTime: null,
+                ActualDepartureTimeZone: null,
+                EstimatedArrivalTime: "2017-03-02T08:54:33",
+                EstimatedArrivalTimeZone: "CST"
+                }
+                ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Time Zone Constraint:  AKDT,AKST,CDT,CST,EDT,EST,GMT,HADT,HAST ,HST,MDT,MST,PDT,PST,UTC </td>
+        </tr>
+
+    </table>
+    <h4>Method 4 - GetDeliveryByRoute() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetDeliveryByRoute</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/GetDeliveryByRoute/RouteNubmer={RouteNumber}&DeliveryDate={DeliveryDate}</p>
+                <p>Test URL</p>
+                <p><a id="method4-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method4-2" target="_blank" href="#">Test2</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Int-RouteNumber [Required]</li>
+                        <b>Description:</b> The Route Number ad defined in RoadNet/RouteManager.
+                        <li>Int-DeliveryDate [Optional]</li>
+                        <b>Description:</b> Default is Today in CST/CDT.
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 5 - GetCustomerDeliveries() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetCustomerDeliveries</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/GetCustomerDeliveries/CustomerNumbers={CustomerNumbers}&DeliveryDate={DeliveryDate}</p>
+                <p>Test URL</p>
+                <p><a id="method5-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Int-CustomerNumbers [Required]</li>
+                        <b>Description:</b> The Customer Number list, comma saperated values.
+                        <li>Int-DeliveryDate [Optional]</li>
+                        <b>Description:</b> Default is Today in CST/CDT.
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
+<script>
+    document.getElementById('method1-1').href = getBaseURL().concat('/api/Delivery/GetNonBreakRoutesForToday');
+    document.getElementById('method1-1').text = getBaseURL().concat('/api/Delivery/GetNonBreakRoutesForToday');
+
+    document.getElementById('method1-2').href = getBaseURL().concat('/api/Delivery/GetNonBreakRoutesForToday?inverse=true');
+    document.getElementById('method1-2').text = getBaseURL().concat('/api/Delivery/GetNonBreakRoutesForToday?inverse=true');
+
+    document.getElementById('method2-1').href = getBaseURL().concat('/api/Delivery/GetDeliveryPlan?RouteNumber=110802221&TimeZone=CST');
+    document.getElementById('method2-1').text = getBaseURL().concat('/api/Delivery/GetDeliveryPlan?RouteNumber=110802221&TimeZone=CST');
+
+    document.getElementById('method2-2').href = getBaseURL().concat('/api/Delivery/GetDeliveryPlan?RouteNumber=100961516&TimeZone=EST&DeliveryDate=2017-03-24');
+    document.getElementById('method2-2').text = getBaseURL().concat('/api/Delivery/GetDeliveryPlan?RouteNumber=100961516&TimeZone=EST&DeliveryDate=2017-03-24');
+
+    document.getElementById('method3-1').href = getBaseURL().concat('/api/Delivery/UploadDeliveryTime');
+    document.getElementById('method3-1').text = getBaseURL().concat('/api/Delivery/UploadDeliveryTime');
+
+    document.getElementById('method4-1').href = getBaseURL().concat('/api/Delivery/GetDeliveryByRoute?RouteNumber=110802221');
+    document.getElementById('method4-1').text = getBaseURL().concat('/api/Delivery/GetDeliveryByRoute?RouteNumber=110802221');
+
+    document.getElementById('method4-2').href = getBaseURL().concat('/api/Delivery/GetDeliveryByRoute?json=%7B%27RouteNumber%27%3A110802221%2C%27DeliveryDate%27%3A%272017-03-24%27%7D');
+    document.getElementById('method4-2').text = getBaseURL().concat('/api/Delivery/GetDeliveryByRoute?json=%7B%27RouteNumber%27%3A110802221%2C%27DeliveryDate%27%3A%272017-03-24%27%7D');
+
+    document.getElementById('method5-1').href = getBaseURL().concat('/api/Delivery/GetCustomerDeliveries?CustomerNumbers=11522165,11520286,11521060,11521611&DeliveryDate=2017-04-04');
+    document.getElementById('method5-1').text = getBaseURL().concat('/api/Delivery/GetCustomerDeliveries?CustomerNumbers=11522165,11520286,11521060,11521611&DeliveryDate=2017-04-04');
+
+</script>

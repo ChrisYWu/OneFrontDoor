@@ -1,0 +1,10 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\obj\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\obj\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.dll.config
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\bin\Debug\EntityFramework.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\bin\Debug\EntityFramework.SqlServer.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\bin\Debug\EntityFramework.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\bin\Debug\EntityFramework.SqlServer.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.Model\obj\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,wCAAsC,2BAA2B,CAAC;AAAzD,gFAAyD","sourcesContent":["export { UserDropdownComponent } from './user-dropdown.component';\n"]}

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="2 Cloud"
+  DTS:DTSID="{5D639E65-EA39-4420-9C88-1F08509ED938}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=myday-dev-us-central.database.windows.net;User ID=sqladmin;Initial Catalog=Merch_Practice;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFWEaYO5ysUanmhfs0XjSJQAAAAACAAAAAAADZgAAwAAAABAAAADsLW1OyCbNAkflGUxRsl1uAAAAAASAAACgAAAAEAAAANSA0vUoigITA3hQnY5bsaV4AAAAjCY28edoazwLssYYu06cBPzZkUkOr7tdDObjFefvjf2WBgp+bGnWvhYG2ScvnWHVQ3yrm6OA5fLkhGB4HvJTYpyO9a1CZelwm2mSrS3XmYgH8LgrlQXaavUe4uSyl6O7asJ8opWaBR2mzIaRM5/O8CKDLedEe00IFAAAABWu0rP5bjFwwS2OmSKtyUJhJYE4</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

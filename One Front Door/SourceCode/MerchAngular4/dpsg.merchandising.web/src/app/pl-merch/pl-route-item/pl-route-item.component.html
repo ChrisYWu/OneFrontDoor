@@ -1,0 +1,32 @@
+<!--{{DayMerch | json}}
+
+   {{AvailableMerchandisers.length}}        
+         {{DayMerch.isOffDay}}
+-->
+<div [class]="!DayMerch.isOffDay? 'plm-item-inner-route-persion-off' : 'plm-item-inner-route-persion'" *ngIf="DayMerch.isMerchAssigned">
+    <div class="plm-item-remove" (click)="removeMerch()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <span class="plm-item-text" [hidden]="DayMerch.isOffDay">OFF</span>
+    <div class="plm-info-image text-center">
+        <!--<img class='img-persion circle-white' src="contents/img/noimage.PNG" alt="Persion Image">-->
+         <img class="img-persion circle-white" [src]="DayMerch.AbsoluteURL ? DayMerch.AbsoluteURL : '/assets/img/noimage.PNG'">
+    </div>
+    <div class="plm-item-route">
+        {{DayMerch.FirstName}} {{DayMerch.LastName}}
+
+    </div>
+</div>
+
+<div class="plm-item-inner-route-persion  plm-item-add-persion" *ngIf="!DayMerch.isMerchAssigned" style="cursor: pointer" (click)="plRouteModal.show();">
+
+    <div class="plm-item">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </div>
+
+</div>
+
+<div bsModal #plRouteModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
+    <pl-route-popup (addMerchandiser)="onAddMerchandiser($event)" [plRouteModal]="plRouteModal" [AvailableMerchandisers]="AvailableMerchandisers">
+    </pl-route-popup>
+</div>

@@ -1,0 +1,8 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\bin\Debug\DPSG.Portal.BC.Model.dll.config
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\bin\Debug\DPSG.Portal.BC.Model.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\bin\Debug\DPSG.Portal.BC.Model.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\bin\Debug\Telerik.OpenAccess.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\obj\Debug\DPSG.Portal.BC.Model.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\obj\Debug\DPSG.Portal.BC.Model.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Model\obj\Debug\DPSG.Portal.BC.Model.pdb

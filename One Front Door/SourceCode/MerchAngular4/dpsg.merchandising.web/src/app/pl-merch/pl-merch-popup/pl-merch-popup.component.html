@@ -1,0 +1,28 @@
+<div class="modal-dialog  plm-mrt-select">
+    <div class="modal-content no-border-radius">
+        <div class="modal-header mp-header">
+            <div class="row">
+
+                <!--
+                <a class="mp-close" (click)="plMerchModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+                -->
+
+                <button type="button" class="close mp-close" (click)="plMerchModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                <div class="col-md-12 text-center">
+                   <h4> Select Route </h4>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row plm-mrt-select-row">
+                <div class="col-md-12" *ngFor="let Route of AvailableRoutes; let idx=index" (click)="selectRoute(Route)">
+                    <pl-route-select [Route]="Route" [idx]="idx"></pl-route-select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

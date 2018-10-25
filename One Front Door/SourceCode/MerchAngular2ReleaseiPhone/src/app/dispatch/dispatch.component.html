@@ -1,0 +1,165 @@
+<!--browser version end -->
+<div class="hidden-xs">
+    <div class="container-fluid dispatch-container hidden-xs">
+        <div class="row distpatch-menu-row navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="col-md-5 pull-left remove-col-margin">
+                    <div class="lable-report">Schedule Date:</div>
+                    <div class="float-left">
+                        <button class="btn btn-arrow btn-arrow-left" type="button" (click)="nextDate()">
+                         <i class="fa fa-angle-left refresh-icon"></i>
+                    </button>
+                    </div>
+                    <div class="dropdown" style="float: left">
+                        <button class="btn btn-me-light menu-dd menu-dd-txt" type="button" (click)="isShowDropDown = !isShowDropDown">
+                        {{selectedDate}}
+                        &nbsp;&nbsp;<span class="fa fa-caret-down"></span>
+                    </button>
+                        <ul class="dropdown-menu dispaly-block menu-dd dd-menu-ul" *ngIf="isShowDropDown">
+                            <li (click)="ddDateSelected(i)" [ngClass]="i==selectedIndex? 'active' : ''" *ngFor="let ddDate of ddDates; let i = index">
+                                <a class="dd-menu-a text-center">{{ddDate}} </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="float-left">
+                        <button class="btn btn-arrow btn-arrow-right" type="button" (click)="priorDate()">
+                         <i class="fa fa-angle-right refresh-icon"></i>
+                    </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="dispatch-search">
+                        <div class="input-group">
+                            <span class="input-group-addon dispatch-search-addon">
+                        <i class="fa fa-search"></i>
+                    </span>
+                            <input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input" id="txtSearch" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 pull-right remove-col-margin">
+                    <div class="pull-right" [hidden]="msgText.length > 0 || errText.length > 0">
+                        <a (click)="getMonitorData()" class="refresh-btn-a">
+                            <img src="/assets/img/Refresh-BTN.png">
+                        </a>
+                    </div>
+                    <div class="pull-right lable-report" [hidden]="msgText.length > 0 || errText.length > 0">
+                        Refreshed at: {{refreshTime}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dispatch-row" [hidden]="msgText.length > 0 || errText.length > 0">
+             <div class="row text-right" style="font-style: italic;margin-top: -5px;margin-bottom: 5px;">
+                * For the most accurate time and attendance information use <a href="http://bsccap16.dpsg.net/wfc/navigator/logon" target="_blank" style="font-weight:700">Kronos</a>
+            </div>
+            <div class="row">
+                <dispatch-row *ngFor=" let dispatch of monitorData | filter:{FirstName: filterInput.value, LastName: filterInput.value, RouteName: filterInput.value } " [dispatch]="dispatch "></dispatch-row>
+            </div>
+        </div>
+        <!--  {{msgText.length}} <br> {{ errText.length}} -->
+        <app-spinner [isRunning]="isRequesting"></app-spinner>
+        <div class="row dispatch-row-msg text-center" [hidden]="msgText.length == 0">
+            <h2>{{msgText}} </h2>
+        </div>
+        <div class="row dispatch-row-err text-center" [hidden]="errText.length == 0">
+            <h2>{{errText}} </h2>
+        </div>
+    </div>
+</div>
+<!--browser version end -->
+<!-- ============================================================================================================================== -->
+<!--ip version -->
+<div class="visible-xs">
+    <!-- monitor display -->
+    <div [hidden]="isShowStoreDetails" class="container-fluid dispatch-container-ip">
+        <div class="row distpatch-menu-ip">
+            <div class="container-fluid">
+                <!--ribbon   [hidden] ="isSearchVisible"  -->
+                <div *ngIf="!isSearchVisible">
+                    <div class="pull-left ip-menu-search" (click)="isSearchVisible=true">
+                        <i class="fa fa-search " aria-hidden="true "></i>
+                    </div>
+
+
+                    <!--dd buttons -->
+                    <div class="pull-left ip-menu-dd ">
+                        <div class="float-left ">
+
+                            <button class="btn ip-btn btn-arrow btn-arrow-left " type="button " (click)="nextDate() ">
+                         <i class="fa fa-angle-left refresh-icon "></i>
+                      </button>
+
+                        </div>
+                        <div class="dropdown " style="float: left ">
+                            <button class="btn ip-btn btn-me-light menu-dd menu-dd-txt " type="button " (click)="isShowDropDown=! isShowDropDown ">
+                        {{selectedDate}}
+                        &nbsp;&nbsp;<span class="fa fa-caret-down "></span>
+                    </button>
+                            <ul class="dropdown-menu dispaly-block menu-dd dd-menu-ul " *ngIf="isShowDropDown ">
+                                <li (click)="ddDateSelected(i) " [ngClass]="i==selectedIndex? 'active' : '' " *ngFor="let ddDate of ddDates; let i=index ">
+                                    <a class="dd-menu-a text-center ">{{ddDate}} </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="float-left ">
+                            <button class="btn ip-btn btn-arrow btn-arrow-right " type="button" (click)="priorDate() ">
+                         <i class="fa fa-angle-right refresh-icon "></i>
+                    </button>
+                        </div>
+                    </div>
+                    <!--dd buttons -->
+
+
+                    <div class="pull-right" (click)="getMonitorData()" [hidden]="msgText.length> 0 || errText.length > 0">
+                        <div class="pull-right ip-menu-refresh">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </div>
+                        <div class="pull-right ip-menu-refresh-txt">
+                            {{refreshTimeIp}}
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="isSearchVisible">
+                    <div class="pull-left ip-menu-search" (click)="isSearchVisible=false">
+                        <i class="fa fa-search " aria-hidden="true "></i>
+                        <!--  <i class="fa fa-calendar-o" aria-hidden="true"></i> -->
+                    </div>
+                    <div class="pull-left ip-menu-dd ">
+                        <input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input-ip" id="txtSearch" placeholder="Search">
+                    </div>
+                    <div class="pull-right" (click)="isSearchVisible=false">
+                        <div class="ip-close-txt">Close</div>
+                    </div>
+                </div>
+                <!--ribbon end -->
+            </div>
+          
+        </div>
+        <div class="row text-right" [hidden]="msgText.length > 0 || errText.length > 0" style="font-style: italic; font-style: italic; font-size: 11px; margin-right: -14px; background-color: #efeff4; padding-right: 2px;">
+            * For the most accurate time and attendance information use Kronos
+        </div>
+        <div class="row distpatch-body-ip" [hidden]="msgText.length > 0 || errText.length > 0">
+            <ip-main (ipStoreDetails)="onIpStoreDetails($event)" *ngFor=" let dispatch of monitorData | filter:{FirstName: filterInput.value, LastName: filterInput.value, RouteName: filterInput.value } " [dispatch]="dispatch"></ip-main>
+        </div>
+        <!--support -->
+        <app-spinner [isRunning]="isRequesting"></app-spinner>
+        <div class="row dispatch-row-msg-ip dispatch-msg-ip text-center" [hidden]="msgText.length == 0">
+            <h4>{{msgText}} </h4>
+        </div>
+        <div class="row dispatch-row-err dispatch-msg-ip text-center" [hidden]="errText.length == 0">
+            <h4>{{errText}} </h4>
+        </div>
+        <!--support end -- >
+ </div>
+<!-- monitor display ends-->
+    </div>
+    <div class="visible-xs">
+        <!-- ip-store-details, is not work? -->
+        <div [hidden]="!isShowStoreDetails" class="container-fluid dispatch-container-ip-popup">
+            <ip-store-details2 [storeInfo]="storeInfo" (closeStoreDetails)="onIpCloseStoreDetails($event)"></ip-store-details2>
+        </div>
+        <!-- ip-store-details, end-here -->
+    </div>
+    <!--ip version ends -->
+    <!-- ============================================================================================================================== -->

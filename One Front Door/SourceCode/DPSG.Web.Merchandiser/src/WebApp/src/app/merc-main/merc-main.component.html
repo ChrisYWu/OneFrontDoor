@@ -1,0 +1,179 @@
+
+<div class="container-fluid dispatch-container">
+
+    <div class="row distpatch-menu-row">
+        
+        <div class="container-fluid">
+              
+            <div class="col-md-3 pull-left">
+                
+                <div class="lable-report">Dispatch Date:</div>
+                <div class="float-left">
+                    <datepicker [(ngModel)]="DispathchDate" [init-date]="DispathchDate" (ngModelChange)="onChange($event)" format="MMM d, YYYY" viewFormat="MMM DD, YYYY" class="success"></datepicker>
+                </div>
+            </div>
+            <div class="col-md-6 text-center unassigned-store">
+                  <div>
+                      <span class="unassigned-store" (click)="toggleUnassigned();">Unassigned Stores</span>
+                      <span class="badge unassigned-store-badge" (click)="toggleUnassigned();">{{unassignedAcctsLength}}</span>
+                  </div>
+            </div>
+            
+            <div class="col-md-3 text-right">
+                <a class="disp-history" (click)="dispatchHistory()">Dispatch History</a>
+                <button class="btn btn-primary addstore-bordercolor" (click)="previewDispatch();lgModal.show();">Dispatch</button>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="dispatch-row">
+        <div class="row">
+            <div class="col-md-3 unassigned-group-list" *ngIf="unassignedToggle">
+                <a (click)="false;" class="list-group-item" *ngFor="let acct of unassignedAccts; trackBy:track">
+                    <h4 class="list-group-item-heading">{{acct.AccountName}}</h4>
+                    <p class="list-group-item-text">{{acct.Address}}, {{acct.City}}, {{acct.State}}-{{acct.PostalCode}}</p>
+                </a>  
+            </div>
+            <div [class]="unassignedToggle? 'col-md-9' : 'col-md-12'">
+            <div [class]="unassignedToggle? 'col-md-6 col-xs-12 col-sm-6' : 'col-md-4 col-xs-12 col-sm-6'"  *ngFor="let route of dispatch;trackBy:track" style="padding-top:25px;">
+                <app-route [unassignedInputAccts]="unassignedAccts"
+                           [allInputAccts]="allAccts"
+                           [otherInputAccts]="otherAccts"
+                           [dispatchDateInput]="dispathchDate"
+                           [lastModifiedByInput]="lastModifiedBy"
+                           [routeData]="route"
+                           [unassignedMerchInput] ="unassignedMerch"
+                           [unassignedOtherMerchInput] ="unassignedOtherMerch"
+                           (routeReassigned)="setupdatedroute($event)"
+                            (accountSelected)="setselectedAcct($event)"></app-route>
+            </div>
+           
+        </div>
+        </div>
+    </div>
+
+</div>
+    <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center">Dispatch Status</h4>
+            </div>
+            <div class="modal-body cusFont" style="min-height:500px; color:#333;over">
+                
+                 <table class="table" style="color:#333" *ngIf="dispatchReadyInfoLength>0">
+                    <thead >
+                        <tr>
+                            <th>Dispatch Type</th>
+                            <th>GSN</th>
+                            <th>Name</th>
+                            <th>Route ID</th>
+                            <th>Route Name</th>
+                            <th>Sequence</th>
+                            <th>Account Name</th>
+                            <th>Change Notes</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let dispready of dispatchReadyInfo;trackBy:track">
+                            <td>{{dispready.DispatchType}}</td>
+                            <td>{{dispready.GSN}}</td>
+                            <td>{{dispready.FirstName}} {{dispready.LastName}}</td>
+                            <td>{{dispready.RouteID}}</td>
+                            <td>{{dispready.RouteName}}</td>
+                            <td>{{dispready.Sequence}}</td>
+                            <td>{{dispready.AccountName}}</td>
+                            <td>{{dispready.ChangeNote}}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><td colspan="8" class="text-right"> <a class="btn btn-primary" (click)="lgModal.hide();dispatchFinalModal.show();">Dispatch</a>
+                        <a class="btn btn-default" (click)="lgModal.hide()">Close</a></td></tr>
+                    </tfoot>
+                </table>
+                 <table class="table" style="color:#333" *ngIf="dispatchReadyInfoLength<=0" >
+                    <thead>
+                        <th class="text-center"><span>No changes found from the Last Dispatch! </span></th>
+                    </thead>
+                     <tbody><tr><td>&nbsp;</td></tr></tbody>
+                    <tfoot>
+                        <tr><td class="text-right">
+                        <a class="btn btn-default" (click)="lgModal.hide()">Close</a></td></tr>
+                    </tfoot>
+                 </table>
+            </div>
+        
+        </div>
+    </div>
+
+</div>
+ 
+ <div class="modal fade" bsModal #dispatchFinalModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="dispatchFinalModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title text-center">Dispatch</h4>
+      </div>
+      <div class="modal-body">
+       <div class="form-group">
+        <label for="comment">Dispatch Note:</label>
+        <textarea class="form-control" rows="5" id="comment" (keyup)="onKey($event)" maxlength="199"></textarea>
+      </div>
+      <div class="form-group">
+            <a class="btn btn-primary" *ngIf="dispatchReadyInfoLength>0" (click)="finalDispatch();dispatchFinalModal.hide();">Dispatch</a>
+            <a class="btn btn-default" (click)="dispatchFinalModal.hide();">Close</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div bsModal #lgDispatchHistoryModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="merchDispatchHistoryModal" 
+  aria-hidden="false" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="lgDispatchHistoryModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center">Dispatch History</h4>
+            </div>
+            
+            <div class="modal-body cusFont" style="min-height:500px; color:#333;over">
+
+
+
+ <table class="table" style="color:#333">
+        <tbody>
+            <tr  *ngFor="let history of dispHistory; trackBy:track">
+                <td><p style="font-size:medium;margin:0px;font-weight:700">{{history.ReleaseTime | date:'medium'}} &nbsp;&nbsp;&nbsp;{{history.FirstName}} {{history.LastName}}</p>
+                <p style="font-size:small;margin:0px;color:grey">Dispatch Notes: {{history.BatchNote}}</p></td>
+            </tr>
+            <tr *ngIf="dispHistoryLength==0">
+                <td><p style="font-size:medium;margin:0px;font-weight:700">No Dispatch Found</p></td>
+            </tr>
+        </tbody>
+    </table>
+
+        
+        </div>
+    </div>
+</div>
+</div>
+
+    <div class="row dispatch-row-msg text-center" [hidden]="msgText.length == 0">
+        <h2>{{msgText}} </h2>
+    </div>
+
+<app-spinner [isRunning]="isRequesting"></app-spinner>

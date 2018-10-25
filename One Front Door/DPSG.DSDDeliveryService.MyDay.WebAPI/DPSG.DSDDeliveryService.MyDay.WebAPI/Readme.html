@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<meta content="text/html; charset:utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="0" />
+
+<html>
+<head>
+    <title>Readme DSD Delivery Service</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .TFtable {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+            .TFtable td {
+                padding: 7px;
+                border: #4e95f4 1px solid;
+            }
+            /* provide some minimal visual accomodation for IE8 and below */
+            .TFtable tr {
+                background: #b8d1f3;
+            }
+                /*  Define the background color for all the ODD background rows  */
+                .TFtable tr:nth-child(odd) {
+                    background: #b8d1f3;
+                }
+                /*  Define the background color for all the EVEN background rows  */
+                .TFtable tr:nth-child(even) {
+                    background: #dae5f4;
+                }
+    </style>
+    <script type="text/javascript">
+        function getBaseURL() {
+            return window.location.href.substring(0, window.location.href.length - 12);
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <h3>This is the live documents for DSD Delivery Web Services for MyDay</h3>
+
+    <h4>Method 1 - GetMaster()</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMaster</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/GetMaster</p>
+                <p>Test URL</p>
+                <p><a id="method1-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+    <h4>Method 2 - GetDeliveryManifest()</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetDeliveryManifest</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>api/Merch/GetDeliveryManifest?RouteID={RouteID}</p>
+                <p>api/Merch/GetDeliveryManifest?RouteID={RouteID}&DeliveryDateUTC={DeliveryDateUTC}</p>
+                <p>Test URL</p>
+                <p><a id="method2-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method2-2" target="_blank" href="#">Test2</a></p>
+                <p><a id="method2-3" target="_blank" href="#">Test3</a></p>
+                <p><a id="method2-4" target="_blank" href="#">Test4</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>INT-RouteID [Required]</li>
+                        <b>Description:</b> RouteManager Delivery RouteID
+                    </ul>
+                    <ul>
+                        <li>Date-DeliveryDateUTC [Optional]</li>
+                        <b>Description:</b> Default date is taken from DB server. Date input format is YYYY-MM-DD
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
+<script>
+    document.getElementById('method1-1').href = getBaseURL().concat('/api/Delivery/GetMaster');
+    document.getElementById('method1-1').text = getBaseURL().concat('/api/Delivery/GetMaster');
+
+    document.getElementById('method2-1').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504&DeliveryDateUTC=2018-02-15');
+    document.getElementById('method2-1').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504&DeliveryDateUTC=2018-02-15');
+
+    document.getElementById('method2-2').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504');
+    document.getElementById('method2-2').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504');
+
+    document.getElementById('method2-3').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=102000451');
+    document.getElementById('method2-3').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=102000451');
+
+    document.getElementById('method2-4').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=101600004');
+    document.getElementById('method2-4').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=101600004');
+
+</script>

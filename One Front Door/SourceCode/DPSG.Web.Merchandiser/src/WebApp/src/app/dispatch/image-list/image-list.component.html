@@ -1,0 +1,21 @@
+<div class="mp-image-row-outer">
+    <div [class]="images.length <= 2? 'mp-image-row-inner2' : 'mp-image-row-inner'" *ngIf="images.length > 0">
+
+        <div *ngFor="let img of images; let idx=index" class=" mp-img-div">
+            <div class="mp-div-img">
+                <img height="90px " class="center-block " [src]='img.ImageURL' alt="Display Image ">
+            </div>
+            <div class="mp-img-name text-center">
+                <div class="text-center">{{img.Name1}}</div> 
+                <div class="text-center">{{img.Name2}}</div> 
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="mp-image-row-inner2 text-center" *ngIf="images.length <= 0">
+        <br>
+        <h3>Image not available.</h3>
+    </div>
+</div>

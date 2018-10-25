@@ -1,0 +1,116 @@
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container-fluid" style="font-size:16px">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a routerLink="/monitor" class="navbar-brand"><img src="contents/img/Merch-logo-Blue-long.png" alt="Logo Image" style="margin-top:-16px"></a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+
+                <li>
+                    <a routerLink="/monitor" routerLinkActive="active" (click)="hideGeo(0)">Monitor</a>
+                </li>
+                <li>
+                    <a routerLink="/merchandise" (click)="hideGeo(0)">Dispatch</a>
+                </li>
+                <li class="dropdown" dropdown>
+                    <a href id="report-dropdown" dropdownToggle dropdown-open (click)="hideGeo(0)">Report <b class="caret"></b></a>
+                    <ul class="dropdown-menu" dropdownMenu aria-labelledby="report-dropdown">
+                        <li>
+                            <a routerLink="/rptstoreservice" (click)="hideGeo(1)">
+                                <span class="fa-span fa fa-list-alt fa-stack-2x" style="text-align: left;padding: 7px;"></span>
+                                <span style="padding-left: 25px;">Store Service Report</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/rptmileage" (click)="hideGeo(1)">
+                                <span class="fa-span fa fa-list-alt fa-stack-2x" style="text-align: left;padding: 7px;"></span>
+                                <span style="padding-left: 25px;">Mileage Report</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" dropdown>
+                    <a class="planning-toggle" dropdownToggle dropdown-open (click)="hideGeo(0)">Plan <b class="caret"></b></a>
+                    <ul class="dropdown-menu" dropdownMenu aria-labelledby="planning-dropdown">
+                        <li>
+                            <a routerLink="/plnmerchgroup" (click)="hideGeo(0)">
+                                <img src="contents/img/group-icon.png" alt="Profile Image">
+                                <span style="margin-left: 8px;">Merchandiser Group</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/plnstore" (click)="hideGeo(0)">
+                                <img src="contents/img/store-icon.png" alt="Profile Image">
+                                <span style="padding-left: 8px;">Store</span></a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/plnrsassignment" (click)="hideGeo(0)">
+                                <img src="contents/img/route-icon.png" alt="Profile Image">
+                                <span style="padding-left: 8px;">Route / Store</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/plnmerchsetup" (click)="hideGeo(0)">
+                                <img src="contents/img/group-icon.png" alt="Profile Image">
+                                <span style="margin-left: 8px;">Merchandiser</span>
+                            </a>
+                        </li>
+                        <!--<li><a routerLink="/playphoto" (click)="hideGeo(0)">Play with Photo</a></li>-->
+                        <li>
+                            <a routerLink="/plmerch" (click)="hideGeo(0)">
+                                <img src="contents/img/group-icon.png" alt="Profile Image">
+                                <span style="padding-left: 8px;">Route / Merchandiser</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="filter-style" *ngIf="isGeoVisible==true" style="margin-top:18px">
+                    <div class="btn-group" dropdown>
+                        <button id="branchfilter-button" type="button" class="btn btn-warning" dropdownToggle>
+                    {{selectedBranch.BranchName}} <span class="caret"></span>
+                  </button>
+                        <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="branchfilter-button">
+                            <li role="menuitem"><a class="dropdown-item" (click)="onBranchSelect(branch)" *ngFor="let branch of merchBranches">{{branch.BranchName}}</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="filter-style" *ngIf="isGeoVisible==true" style="margin-top:18px">
+                    <div class="btn-group" dropdown>
+                        <button id="merchGroupfilter-button" type="button" class="btn btn-warning" dropdownToggle>
+                    {{selectedGroup.GroupName}} <span class="caret"></span>
+                  </button>
+                        <ul class="dropdown-menu" dropdownMenu role="menu" aria-labelledby="merchGroupfilter-button">
+                            <li role="menuitem"><a class="dropdown-item" (click)="onGroupSelect(group)" *ngFor="let group of merchTargetGroups">{{group.GroupName}}</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown" dropdown>
+                    <a class="planning-toggle" dropdownToggle dropdown-open style="padding-top:0px;padding-bottom:0px;margin-top:15px">
+                        <img src="contents/img/default_profile.png" alt="Profile Image" style="height:40px;">
+                    </a>
+                    <ul class="dropdown-menu" dropdownMenu aria-labelledby="planning-dropdown">
+                        <li><span class="fa-span fa fa-user fa-2x" style="text-align: left;padding: 7px;"></span>{{userName}} </li>
+                        <li><a href="/logout.html"><span  class="fa-span fa fa-sign-out fa-2x" style="text-align: left;padding: 7px;"></span>Sign Out</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+</header>

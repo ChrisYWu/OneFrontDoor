@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="TScripts">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="bsccap108:DPSG\WUXYX001">
+          <Created>2015-07-16T10:24:53.3654914-05:00</Created>
+          <Type>SQL</Type>
+          <Server>bsccap108</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCAP121:DPSG\WUXYX001">
+          <Created>2015-07-07T10:26:34.7530369-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCAP121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="dpsgsharedclstr:DPSG\WUXYX001">
+          <Created>2015-07-16T09:18:03.6337384-05:00</Created>
+          <Type>SQL</Type>
+          <Server>dpsgsharedclstr</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="vh-portal2:DPSG\WUXYX001">
+          <Created>2015-07-06T13:29:01.1059266-05:00</Created>
+          <Type>SQL</Type>
+          <Server>vh-portal2</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="00. Create Temporary Job.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>00. Create Temporary Job.sql</FullPath>
+        </FileNode>
+        <FileNode Name="01. Plants Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01. Plants Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. ETL.pMergePlantInventory.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. ETL.pMergePlantInventory.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03. ETL.pImportSafetyRecordable.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03. ETL.pImportSafetyRecordable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04. Execution Process.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04. Execution Process.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05. Chico Research.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05. Chico Research.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06. Annual Weight.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>06. Annual Weight.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

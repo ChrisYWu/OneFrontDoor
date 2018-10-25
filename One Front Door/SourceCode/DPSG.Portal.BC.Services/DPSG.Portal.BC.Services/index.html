@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>MyDay WebSerive Release III Testing Page</title>
+	<style type="text/css">
+	    p {
+	    }
+
+	    body {
+	        font-family: Segoe UI, Helvetica, Arial, sans-serif;
+	    }
+	</style>
+  </head>
+  <body bgcolor="white">
+
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>
+          <h1>MyDay WebSerive Release III Testing Page</h1>
+        </td>
+      </tr>
+    </table>
+
+    <p>This is the htm page to test MyDay WebSerive Release III. </p>
+    <p>With IE you can click the following links, then wait for the browser prompt to open the json file. </p>
+    <p>Or, you can use Chrome with <font color="georgian"> JSONView </font> extension to get the json automatically formatted for you in browser. </p>	
+    <ul>
+      <li><a href="OperationContract/BCService.svc/GetProductHierarchy">OperationContract/BCService.svc/<b><font color="blue">GetProductHierarchy</font></b></a></li>
+      <li><a href="OperationContract/BCService.svc/GetSalesMaster">OperationContract/BCService.svc/<b><font color="blue">GetSalesMaster</font></b></a></li>
+      <li><a href="OperationContract/BCService.svc/GetLOSMaster">OperationContract/BCService.svc/<b><font color="blue">GetLOSMaster</font></b></a></li>
+	  <li><a href="OperationContract/BCService.svc/GetLOSMaster?mdate=2015-02-01">OperationContract/BCService.svc/<b><font color="blue">GetLOSMaster?mdate=2015-02-01</font></b></a></li>
+	  <li><a href="OperationContract/BCService.svc/GetPriorityQuestionsByRegionID?regionid=36&mdate=2015-01-01">OperationContract/BCService.svc/<b><font color="blue">GetPriorityQuestionsByRegionID?regionid=36&mdate=2015-01-01</font></b></a></li>
+	  <li><a href="OperationContract/BCService.svc/GetStoreTieInHistoryByRegionID?regionid=239&mdate=2015-02-04">OperationContract/BCService.svc/<b><font color="blue">GetStoreTieInHistoryByRegionID?regionid=239&mdate=2015-02-04</font></b></a></li>
+	  <li><a href="OperationContract/BCService.svc/GetStoreTieInHistoryByRegionID?regionid=49&mdate=2015-02-04">OperationContract/BCService.svc/<b><font color="blue">GetStoreTieInHistoryByRegionID?regionid=49&mdate=2015-02-04</font></b></a></li>
+	  <li><a href="OperationContract/BCService.svc/UploadStoreData">OperationContract/BCService.svc/<b><font color="blue">UploadStoreData</font></b></a> <a href="SampleJsonInput/jsonWtihMoreObj-more.txt">Download a sample input file for this method</a>
+          &nbsp; Also, <a href="SampleJsonInput/uploadOutput.txt">Download output</a></li>
+	  <li><a href="OperationContract/BCService.svc/GetPromotionsByRegionID?regionid=240&mdate=2015-01-01">OperationContract/BCService.svc/<b><font color="blue">GetPromotionsByRegionID?regionid=240&mdate=2015-01-01</font></b></a></li>
+	  <li><a href="OperationContract/BCService.svc/GetPromotionsByRegionID?regionid=9&mdate=2015-01-01">OperationContract/BCService.svc/<b><font color="blue">GetPromotionsByRegionID?regionid=9&mdate=2015-01-01</font></b></a></li>
+	  <li><img src="images/new.jpg" alt="Updated at 2015-03-20" height="16" width="16"><a href="OperationContract/BCService.svc/GetCustomerHierarchyMaster?mdate=">OperationContract/BCService.svc/<b><font color="blue">GetCustomerHierarchyMaster?mdate=</font></b></a></img></li>
+    </ul>
+	<hr>
+	<h2>Release Note:</h2>
+	<ul>
+		<li><p>2015-04-22 : Bug reported and fixed. Store Notes null checking is added before proceeding with upload. Also, more information and exception tracings are added.</p></li>
+
+		<li><p>2015-04-10 : Bug reported and fixed. Historical priority questions and future ones are sent down to MyDay, according to Promotion Configurations.</p></li>
+
+		<li><p>2015-04-10 : Bug reported and fixed. If a local/regional chain is selected, the parents chain id is sent down to MyDay.</p></li>
+
+	    <li><p>2015-04-09 : Bug found and fixed. Both Reporting and Servicing territory is used for map filtering. During deployment to INT the End Date fix is overriden. Redeployed again.</p></li>
+		
+	    <li><p>2015-04-08 : Bug fixed, if Region/Division/Zone is selected in bottler hierarchy, then SystemID is ignored.</p></li>
+		
+		<li><p>2015-04-08 : One day Question bug fix, the Questions are sending down to MyDay from StartDate ~ EndDate, including both start and end date.</p></li>
+
+		<li><p>2015-04-06 : ForAllChains bug fixed.</p></li>
+
+		<li><p>2015-03-30 : DB changes deployed to INT for integration test and web service is pointed to BSCCSQ07/Portal_Data_INT.</p></li>
+
+        <li><p>2015-03-25 : Empty Image bug is found and resolved. If any image is empty, then it won't get saved to SharePoint.</p></li>
+
+        <li><p>2015-03-24 : IsFairShare updated to be integer field and is interpreted with DB Table BCMyDay.TieInFairShareStatus, field TieInFairShareStatusID.</p></li>
+
+        <li><p>2015-03-23 : IsFairShare field added to the StoreDisplay this change is propagated to DB and echoed back to TieInHistory.</p></li>
+
+        <li><p>2015-03-23 : DisplayLocationID in StoreTieInUpload input message is updated to be ClientDisplayID and this change is propagated to DB and echoed back to TieInHistory.</p></li>
+
+        <li><p>2015-03-23 : Method GetStoreTieInHistory is <b>removed</b>.</p></li>
+
+        <li><p>2015-03-23 : Promotion States relationship table is <b>removed</b> from the output for GetPriorityQuestionsByRegionID.</p></li>
+
+        <li><p>2015-03-23 : Method GetManagementPriorityIDsByBottler <b>removed</b>. Table BCMyday.PriorityBottlerForUI <b>dropped</b>.</p></li>
+
+        <li><p>2015-03-20 : Method GetManagementPriorityIDsByBottler added.</p></li>
+
+        <li><p>2015-03-20 : Promotion States relationship table is added to the output for GetPriorityQuestionsByRegionID.</p></li>
+
+        <li><p>2015-03-20 : Promotion States relationship table is added to the output for GetPromotionsByRegionID. Also, for service hosted at v-portals5, the db points to vh-portal2/Portal_Data204. Services hosted at webservices-int/myday-int points to BSCCAP108. </p></li>
+
+        <li><p>2015-03-17 : NoteID, PromotionExecutionID and PriorityExecutionID are put into output for history. DisplayID in PromotionExecution accepts 0 or -1. Both are interpreted as null.</p></li>
+             
+        <li><p>2015-03-16 : InformationCategory field is passing the raw value of 'Promotion' or 'Non-promotion'. </p></li>
+
+        <li><p>2015-03-16 : ClientStoreNoteID, ClientPromotionExecutionID and ClientPriorityExecutionID are updated to be string fields. </p></li>
+
+        <li><p>2015-03-12 : Upload store display details db access code is optimized to save a db commit. </p></li>
+
+        <li><p>2015-03-12 : Bug fixed, the connection string is not consistent, so the following error was reported 
+            "The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_StoreConditionDisplay_StoreCondition\". 
+            The reason is that the StoreCoditon and its displays were being saved to different Databases.</p></li>
+
+        <li><p>2015-03-11 : ClientPromotionExecutionID and ClientPriorityExcecutionID added. PromotionExecutions and PriorityExecutions added as well. </p></li>
+
+        <li><p>2015-03-10 : This service point to <font color="georgian"><b>Portal_Data</b></font> on server <font color="georgian"><b>BSCCAP108</b></font>. </p></li>
+
+        <li><p>2015-03-09 : InformationCategory field in Promotion is populated with "0" or "1". The field is from table Playbook.RetailPromotion.
+            "Promotion" is translated to "1" and "Non-Promotion" to "0", same convention has been applied for Promotions for DSD route. </p></li>
+
+        <li><p>2015-03-07 : Upload method rewritten so any combination of Displays/TieIns/Notes/Promotion Execution/Priority Execution with the StoreCondition will work. 
+			        New implementation uses DBML(Old LINQ to SQL) 
+			        so lots of SPs in use today in Prod are obsolete. For example, insert multiple objects passed in with XML encoded strings. 
+			        Primary Key and identity column added to table 
+			        StoreConditionDisplayDetail. Foreign reference with cascading delete added between StoreConditionDisplay and Detail table. 
+			        Foreign references also added to all Children tables of StoreCondition. When same store condition comes again from MyDay,
+			        orphaned images get deleted as well. Also the ModifiedDate field in Priority is in right format of mm/dd/yyyy. </p></li>
+
+        <li><p>2015-03-06 : Json interfaces locked in, after discussion with MyDay team. Everything works, just that Upload TieIn/Display still go through the old code path. 
+			        This service point to <font color="georgian"><b>Portal_Data204</b></font> on server <font color="georgian"><b>Vh-Portal2</b></font>. 
+			        Chrome extension <font color="georgian">Advanced Rest Client</font> is used for debugging. I don't know if this client
+			        supports User Agent, or any other client for that matter. So it's untested if a http request with User Agent(from MyDay) will actually get the GSN/User Name set. 
+			        Also, this is an existing functionality so it's expected to be working as it is.</p></li>
+	  
+	</ul></hr>
+  </body>
+  
+</html>

@@ -1,0 +1,204 @@
+<!-- overlay for a popup windsow  -->
+
+
+
+
+<div class="visible-xs">
+
+
+
+    <div class="container-fluid dispatch-container-ip-sch">
+
+        <div [hidden]="!isShowOverlay" class="ip-overlay"></div>
+
+        <!-- ip reibben  -->
+        <div class="row distpatch-menu-ip">
+            <div class="container-fluid">
+                <!--ribbon   [hidden] ="isSearchVisible"  -->
+                <div class="pull-left ip-menu-list" (click)="toggleUnassigned();">
+                    <div class="ip-badge">{{unassignedAcctsLength}}</div>
+                    <i class="fa fa-th-list" aria-hidden="true "></i>
+                </div>
+
+                <div class="float-left ip-menu-dd">
+                    <ng2-datepicker [(ngModel)]="DispathchDate" (ngModelChange)="onChange($event)" [options]="customScheduleDate" class="merchandiser"></ng2-datepicker>
+                </div>
+
+
+                <div class="ip-menu-dd pull-right">
+                    <button class="btn btn-dark-gray ip-btn-brd" (click)="openDispatchpopup(true);" *ngIf="(scheduleDateCount==0)">Schedule</button>
+                    <button class="btn btn-dark-gray ip-btn-brd" (click)="openDispatchpopup(true);" *ngIf="(scheduleDateCount>0)">Re-schedule</button>
+                </div>
+                <!--ribbon end -->
+            </div>
+        </div>
+        <!-- ip reibben  end -->
+
+
+
+        <!-- ip  body start  -->
+        <div *ngIf="unassignedToggle">
+            <div class="div-outer-ip">
+                <div class="row ip-row" *ngIf="unassignedToggle">
+                    <a (click)="false;" class="list-group-item" *ngFor="let acct of unassignedAccts; trackBy:track">
+                        <h4 class="list-group-item-heading">{{acct.AccountName}}</h4>
+                        <p class="list-group-item-text">{{acct.Address}}, {{acct.City}}, {{acct.State}}-{{acct.PostalCode}}</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div *ngIf="!unassignedToggle" class="row distpatch-body-ip">
+            <div [class]="statusCSS">
+                 <div class="status-detail">  {{scheduleStatusText}}  <span style="font-weight:500;font-style:italic">{{gmtDate | date :'medium'}} {{gmtTime}} </span> </div>
+            </div>
+            <div class="div-outer-ip" *ngFor="let route of dispatch;trackBy:track">
+                <div class="row ip-row">
+                    <app-mobile-route (merchPopupToggle)="onMerchPopupToggle($event)" (storeAssignToggle)="onStoreAssignToggle($event)" 
+                    (storePopupToggle)="onStorePopupToggle($event)" [dispatchDateInput]="dispathchDate" [lastModifiedByInput]="lastModifiedBy" [routeData]="route"
+                        (routeReassigned)="setupdatedroute($event)" (accountSelected)="setselectedAcct($event)" (resequence)="setResequence($event)"></app-mobile-route>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ip  body end  -->
+    </div>
+</div>
+
+
+<!-- ip  dispatch popup  -->
+<div class="visible-xs" *ngIf="isOpenDispatchPopup">
+    <div class="container-fluid dispatch-container-ip-popup">
+        <div class="ip-popup-sch">
+            <div class="row mp-header-ip">
+                <a (click)="isOpenDispatchPopup=false; isShowOverlay=false;" class="close-ip-sch-popup">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+                <div class="col-xs-12">
+                    <div class="sch-ip-hdr">Schedule</div>
+                </div>
+
+
+            </div>
+
+            <div class="row mp-row-item-ip" >
+                <div class="col-xs-12 sch-col-ip-1">
+                    Schedule Note:
+                </div>
+                <div class="col-xs-12 sch-textarea">
+                    <textarea class="form-control" rows="5" id="comment" (keyup)="onKey($event)" maxlength="199"></textarea>
+                </div>
+                <div class="col-xs-12 sch-col-ip-1">
+                    <a class="btn  schedule-bordercolor" (click)="finalDispatch(true);">Schedule</a>&nbsp;&nbsp;
+                    <!--
+                    <a class="btn  schedule-bordercolor" (click)="isOpenDispatchPopup=false">Close</a>
+                    -->
+                </div>
+            </div>
+            <!--<div class="row mp-row-item-ip" *ngIf="dispatchReadyInfoLength<=0">
+                <div class="col-xs-12 sch-comment">
+                    No changes found from the Last Schedule!
+                </div>
+            </div>-->
+        </div>
+
+    </div>
+</div>
+
+<!-- unassigned stores popup-->
+
+    <div [hidden]="!unassignedToggle">
+        <div class="container-fluid dispatch-container-ip-popup">
+            <div class="ip-popup-sch">
+            <div class="row mp-header-ip">
+                    <a (click)="closeUnassignStore(false)" class="close-ip-sch-popup">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <div class="col-xs-12">
+                        <div class="sch-ip-hdr">Unassigned Stores</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 zeropadding tbl-store-list">
+                    <table class="table" style="color:#333">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="input-group col-xs-12">
+                                        <span class="input-group-addon dispatch-search-addon">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                        <input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input" id="txtSearch" placeholder="Search">
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let acct of unassignedAccts | filter: { AccountName: filterInput.value, Address: filterInput.value }" 
+                                (click)="setUnassignedAcctSelection(acct.SAPAccountNumber, acct.AccountName, acct.Address, acct.City, acct.State, acct.PostalCode)">
+                                <td><p style="font-size:medium;margin:0px">{{acct.AccountName}}</p>
+                                <p style="font-size:small;margin:0px">{{acct.Address}}, {{acct.City}}, {{acct.State}}-{{acct.PostalCode}} (#{{acct.SAPAccountNumber}})</p></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <div [hidden]="!unassignedRoutes">
+
+    <div class="container-fluid dispatch-container-ip-popup scd-cell2">
+
+
+        <div class="ip-popup-sch">
+            <div class="row mp-header-ip">
+                <a (click)="closeUnassignStoreRoute(false)" class="close-ip-sch-popup">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+                <div class="col-xs-12">
+                    <div class="sch-ip-hdr">Assign Route</div>
+                </div>
+            </div>
+            
+            <div class="row mp-row-top-ip">
+                <div class="row mp-row-item-ip">
+                    <div class="col-xs-2 sch-col-ip-1">Store </div>
+                    <div class="col-xs-10 sch-col-ip-2">{{unassignedSelectAcctName}}</div>
+                </div>
+
+                <div class="row mp-row-item-ip">
+                    <div class="col-xs-2 sch-col-ip-1"></div>
+                    <div class="col-xs-10 sch-col-ip-2"> {{unassignedSelectAcctAddess}}</div>
+                </div>
+
+
+                <div class="row mp-row-item-ip ip-route-tbl">
+                    <table class="table" style="color:#333">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="input-group col-xs-12">
+
+                                        <h4 class="modal-title">Select a Route</h4>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let route of dispatchNoEmptyMerch" 
+                                (click)="addUnassignedStore(route.RouteID, route.RouteName, route.GSN)">
+                                <td>{{route.RouteName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            </div>
+
+        </div>
+    </div>

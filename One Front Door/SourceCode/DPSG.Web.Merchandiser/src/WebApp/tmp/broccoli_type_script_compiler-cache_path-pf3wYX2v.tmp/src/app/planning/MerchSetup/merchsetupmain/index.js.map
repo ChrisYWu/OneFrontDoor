@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,yCAAwC,4BAA4B,CAAC;AAA5D,qFAA4D","sourcesContent":["export { MerchsetupmainComponent } from './merchsetupmain.component';\n"]}

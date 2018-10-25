@@ -1,0 +1,99 @@
+<!--ipone version -->
+
+<div class="visible-xs">
+
+
+    <div class="route-info-ip" (click)="onToggleClick()">
+        <div class="info-name-ip ">
+            <div class="div-img-ip">
+
+                <img class="img-persion-ip circle-white" [src]="dispatch.AbsoluteURL? dispatch.AbsoluteURL : '/assets/img/noimage.PNG'">
+
+            </div>
+            <div class="div-txt-ip">
+                <div class="info-name-l1-ip"> {{getFullName(dispatch.FirstName, dispatch.LastName )}}
+                    <!--    {{dispatch.FirstName}} {{dispatch.LastName}} -->
+                </div>
+
+                <div [hidden]="!isLongName" class="name-info" (click)="showFullName($event)">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                </div>
+
+                <div class="info-name-l2-ip ">{{dispatch.RouteName}}</div>
+            </div>
+        </div>
+        <div class="info-timing-ip">
+            <div class="text-center info-timing-l1-ip route-{{dispatch.RouteStatusLabel}} ">
+                <div *ngIf="dispatch.RouteStatusLabel.toLowerCase() != 'completeddns'">  {{dispatch.RouteStatusLabel}}</div>
+                <div *ngIf="dispatch.RouteStatusLabel.toLowerCase() == 'completeddns'"> COMPLETED</div>
+            </div>
+            <div class="text-center info-timing-l2-ip ">
+                {{dispatch.MileageTotalLabel}}   {{dispatch.TotalTimeLabel}}
+            </div>
+        </div>
+    </div>
+    <div class="route-info-ip2" [hidden]="!isShowIpFulleName">
+        {{dispatch.FirstName}} {{dispatch.LastName}}
+    </div>
+
+</div>
+
+<!--ipone version end -->
+
+
+<!--browser version start -->
+<div class="route-info-outer hidden-xs">
+
+    <!--<div class="route-start">
+        {{dispatch.TotalTimeLabel}} &nbsp; &nbsp; &nbsp; &nbsp;
+    </div>-->
+
+
+    <div class="info-image">
+        <img class="img-persion circle-white" [src]="dispatch.AbsoluteURL? dispatch.AbsoluteURL : '/assets/img/noimage.PNG'">
+
+    </div>
+
+    <div class="route-info">
+        <div class="info-name">
+
+            <div class="info-name-l1"> {{getFullName(dispatch.FirstName, dispatch.LastName )}}
+                <!--    {{dispatch.FirstName}} {{dispatch.LastName}} -->
+
+                <div [hidden]="!isLongName" class="tooltipD">
+
+
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+
+
+                    <span class="tooltiptext">
+                        
+                     {{dispatch.FirstName}} {{dispatch.LastName}}
+                         
+                        </span>
+                </div>
+
+            </div>
+
+
+            <div class="info-name-l2">{{dispatch.RouteName}}</div>
+        </div>
+        <div class="info-timing">
+            <div  class="text-center info-timing-l1 route-{{dispatch.RouteStatusLabel}}">
+                <div *ngIf="dispatch.RouteStatusLabel.toLowerCase() != 'completeddns'">  {{dispatch.RouteStatusLabel}}</div>
+                <div *ngIf="dispatch.RouteStatusLabel.toLowerCase() == 'completeddns'"> COMPLETED</div>
+                
+            </div>
+            <div class="text-center info-timing-l2">
+                {{dispatch.MileageTotalLabel}}  {{dispatch.TotalTimeLabel}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--browser version end -->
+
+<!--
+    {{circle_css}}
+ <img class="img-circle" src="/assets/img/persion3.PNG" alt="Persion Image">
+ -->

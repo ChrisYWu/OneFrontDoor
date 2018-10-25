@@ -1,0 +1,18 @@
+"use strict";
+var MerchConstant = (function () {
+    function MerchConstant() {
+    }
+    Object.defineProperty(MerchConstant, "WebAPI_ENDPOINT", {
+        get: function () { return 'http://merchandiser-int.dpsg.net/'; },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MerchConstant, "MYDAY_WebAPI_ENDPOINT", {
+        get: function () { return 'http://webservices-dev.dpsg.net/'; },
+        enumerable: true,
+        configurable: true
+    });
+    return MerchConstant;
+}());
+exports.MerchConstant = MerchConstant;
+//# sourceMappingURL=MerchAppConstant.js.map

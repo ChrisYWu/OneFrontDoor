@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DPSG.Portal.BC.Services.OperationContract.BCService" CodeBehind="BCService.svc.cs" %>

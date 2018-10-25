@@ -1,0 +1,125 @@
+//Global Variable
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+.ip-btn-brd {
+    border: 1px solid white !important;
+    margin-right: -15px;
+}
+
+.ip-badge {
+    @include border-radius(50%);
+    background: red;
+    border: solid 1px white;
+    z-index: 1;
+    color: white;
+    position: absolute;
+    left: 27px;
+    height: 20px;
+    width: 20px;
+    font-size: 11px;
+    padding: 2px 0 0 0;
+    text-align: center;
+    top: 3px;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.sch-row {
+    padding-bottom: 15px;
+    //  margin-top: -15px;
+}
+
+.sch-name-l1-ip {
+    padding-top: 3px;
+    font-size: 15px !important;
+}
+
+.sch-name-l2-ip {
+    margin-top: -5px !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+}
+
+.tab-sch>.tab-container>.nav-tabs>li {
+    float: left !important;
+    width: 50% !important;
+    border-radius: 0 !important;
+    text-transform: uppercase !important;
+}
+
+.tab-sch3>.tab-container>.nav-tabs>li {
+    float: left !important;
+    width: 33.3333% !important;
+    border-radius: 0 !important;
+    text-transform: uppercase !important;
+}
+
+.tbl-store-list>table>tbody {
+    min-height: 430px !important;
+}
+
+.tab-sch3 {
+    padding-top: 5px;
+}
+
+.sch-ip-hdr {
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.ip-popup-sch {
+    position: absolute;
+    top: 0;
+    z-index: 1040; // must > 1030
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: lighten(black, 15%);
+    min-height: 665px !important;
+    min-width: 375px !important;
+    width: 100%;
+}
+
+.ip-popup-sch-assign {
+    position: fixed;
+    top: 0;
+    z-index: 1040; // must > 1030
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: lighten(black, 15%);
+    min-height: 665px !important;
+    min-width: 375px !important;
+    width: 100%;
+}
+
+.close-ip-sch-popup {
+    position: absolute;
+    right: 5px;
+    top: -6px;
+    color: #efeff4;
+    /* background-color: red; */
+    font-size: 28px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 1050; // must > 1040
+    &:hover {
+        color: wwhite !important;
+    }
+}
+
+.sch-comment {
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+}
+
+.sch-textarea {
+    padding: 7px 30px;
+    font-size: 16px;
+    color: black !important;
+    font-weight: normal !important;
+}

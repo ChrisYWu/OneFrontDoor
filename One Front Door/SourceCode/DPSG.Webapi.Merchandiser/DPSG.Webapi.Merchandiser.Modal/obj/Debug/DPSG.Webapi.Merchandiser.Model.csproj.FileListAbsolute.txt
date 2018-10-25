@@ -1,0 +1,5 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.Modal\bin\Debug\DPSG.Webapi.Merchandiser.Modal.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.Modal\bin\Debug\DPSG.Webapi.Merchandiser.Modal.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.Modal\obj\Debug\DPSG.Webapi.Merchandiser.Modal.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.Modal\obj\Debug\DPSG.Webapi.Merchandiser.Modal.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.Modal\obj\Debug\DPSG.Webapi.Merchandiser.Model.csprojResolveAssemblyReference.cache

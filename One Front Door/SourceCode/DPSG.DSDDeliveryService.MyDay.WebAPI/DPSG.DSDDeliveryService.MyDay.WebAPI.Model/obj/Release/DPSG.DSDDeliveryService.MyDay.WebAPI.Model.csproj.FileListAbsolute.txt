@@ -1,0 +1,10 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Release\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Release\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\obj\Release\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\obj\Release\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Release\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.dll.config
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Release\EntityFramework.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Release\EntityFramework.SqlServer.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Release\EntityFramework.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Release\EntityFramework.SqlServer.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\obj\Release\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.csprojResolveAssemblyReference.cache

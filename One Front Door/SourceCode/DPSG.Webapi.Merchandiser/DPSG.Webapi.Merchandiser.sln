@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Webapi.Merchandiser", "DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.csproj", "{12F59360-170D-4965-84C3-A480E06A5849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Webapi.Merchandiser.Model", "DPSG.Webapi.Merchandiser.Modal\DPSG.Webapi.Merchandiser.Model.csproj", "{2D973C29-2634-45AC-B6A0-266FB0CDD9D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Webapi.Merchandiser.BusinessServices", "DPSG.Webapi.Merchandiser.BusinessServices\DPSG.Webapi.Merchandiser.BusinessServices.csproj", "{C43DB4C8-C753-47A0-9504-DB48B7C04B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Webapi.Merchandiser.DataServices", "DPSG.Webapi.Merchandiser.DataServices\DPSG.Webapi.Merchandiser.DataServices.csproj", "{4FC63F50-D711-4A74-BEA5-0C80601F7C3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Webapi.Merchandiser.CommonUtils", "DPSG.Webapi.Merchandiser.CommonUtils\DPSG.Webapi.Merchandiser.CommonUtils.csproj", "{912B613F-EBC0-4CB5-96DD-CD623164FFBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12F59360-170D-4965-84C3-A480E06A5849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F59360-170D-4965-84C3-A480E06A5849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F59360-170D-4965-84C3-A480E06A5849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F59360-170D-4965-84C3-A480E06A5849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D973C29-2634-45AC-B6A0-266FB0CDD9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D973C29-2634-45AC-B6A0-266FB0CDD9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D973C29-2634-45AC-B6A0-266FB0CDD9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D973C29-2634-45AC-B6A0-266FB0CDD9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C43DB4C8-C753-47A0-9504-DB48B7C04B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43DB4C8-C753-47A0-9504-DB48B7C04B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43DB4C8-C753-47A0-9504-DB48B7C04B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43DB4C8-C753-47A0-9504-DB48B7C04B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC63F50-D711-4A74-BEA5-0C80601F7C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC63F50-D711-4A74-BEA5-0C80601F7C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC63F50-D711-4A74-BEA5-0C80601F7C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC63F50-D711-4A74-BEA5-0C80601F7C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912B613F-EBC0-4CB5-96DD-CD623164FFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912B613F-EBC0-4CB5-96DD-CD623164FFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912B613F-EBC0-4CB5-96DD-CD623164FFBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912B613F-EBC0-4CB5-96DD-CD623164FFBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.dpsg.net:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DPSG.Webapi.Merchandiser.BusinessServices\\DPSG.Webapi.Merchandiser.BusinessServices.csproj
+		SccProjectName1 = DPSG.Webapi.Merchandiser.BusinessServices
+		SccLocalPath1 = DPSG.Webapi.Merchandiser.BusinessServices
+		SccProjectUniqueName2 = DPSG.Webapi.Merchandiser.CommonUtils\\DPSG.Webapi.Merchandiser.CommonUtils.csproj
+		SccProjectName2 = DPSG.Webapi.Merchandiser.CommonUtils
+		SccLocalPath2 = DPSG.Webapi.Merchandiser.CommonUtils
+		SccProjectUniqueName3 = DPSG.Webapi.Merchandiser.DataServices\\DPSG.Webapi.Merchandiser.DataServices.csproj
+		SccProjectName3 = DPSG.Webapi.Merchandiser.DataServices
+		SccLocalPath3 = DPSG.Webapi.Merchandiser.DataServices
+		SccProjectUniqueName4 = DPSG.Webapi.Merchandiser.Modal\\DPSG.Webapi.Merchandiser.Model.csproj
+		SccProjectName4 = DPSG.Webapi.Merchandiser.Modal
+		SccLocalPath4 = DPSG.Webapi.Merchandiser.Modal
+		SccProjectUniqueName5 = DPSG.Webapi.Merchandiser\\DPSG.Webapi.Merchandiser.csproj
+		SccProjectName5 = DPSG.Webapi.Merchandiser
+		SccLocalPath5 = DPSG.Webapi.Merchandiser
+	EndGlobalSection
+EndGlobal

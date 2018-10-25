@@ -1,0 +1,42 @@
+<!--<div>
+
+    {{DayRoute | json}}
+
+        {{AvailableRoutes.length}}
+
+</div> -->
+
+
+
+<div [class]="DayRoute.isOffDay? 'plm-item-inner plm-item-off' : 'plm-item-inner'" *ngIf="DayRoute.isRouteAssigned">
+
+    <div class="plm-item-remove" (click)="removeRoute()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <span class="plm-item-text" [hidden]="!DayRoute.isOffDay">OFF</span>
+    <div class="plm-item plm-route-text">
+        {{DayRoute.RouteName}}
+    </div>
+
+</div>
+
+<div [class]="DayRoute.isOffDay? 'plm-item-inner plm-item-add' : 'plm-item-inner plm-item-add-red'" *ngIf="!DayRoute.isRouteAssigned" style="cursor: pointer" (click)="plMerchModal.show();">
+
+    <span class="plm-item-text" [hidden]="!DayRoute.isOffDay">OFF</span>
+    <div class="plm-item">
+
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+    </div>
+
+
+
+    <div bsModal #plMerchModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
+
+        <pl-merch-popup [plMerchModal]="plMerchModal" (addRoute)="onAddRoute($event)" [AvailableRoutes]="AvailableRoutes"></pl-merch-popup>
+
+    </div>
+
+
+
+</div>

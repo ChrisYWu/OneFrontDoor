@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="wudpsgpoc.database.windows.net.DeliveryTime.Chris"
+  DTS:DTSID="{C1E93DE4-BDD0-4756-BF54-6D5603A3D708}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=wudpsgpoc.database.windows.net;User ID=Chris;Initial Catalog=DeliveryTime;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFWEaYO5ysUanmhfs0XjSJQAAAAACAAAAAAADZgAAwAAAABAAAADvYCM/+Deez5zqESoacVF7AAAAAASAAACgAAAAEAAAAKTF6dpvDfgjQph5gZKHivl4AAAA1aaR0yWIzgRT6CFvt/GysPJGwzM8GYQCnpkpJC6V5MU9SwsWKFPQrB4Ki82MdVBwUDdShZFB2pZTTDQPYl1QaYQVvfZ9ItgubszV2R7PtGykygUGLvZKY0yJ0HALIkDCQXUZUdSFgrr8uQybKO/Ovvy8RdFvEsRUFAAAAJrzrmb/83XGxVAQpFnTr/Mga5L4</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

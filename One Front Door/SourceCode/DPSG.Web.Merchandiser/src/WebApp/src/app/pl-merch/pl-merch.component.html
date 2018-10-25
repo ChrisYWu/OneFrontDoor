@@ -1,0 +1,59 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row">
+        <div class="container-fluid">
+            <div class="col-md-4 ">
+                &nbsp;&nbsp;
+            </div>
+            <div class="col-md-4 remove-col-margin">
+                <div class="plm-tabs">
+                    <div (click)="isMerchTab = !isMerchTab" [class]="isMerchTab? 'plm-tab plm-tab-active':'plm-tab'">Merchandisers</div>
+                    <div (click)="isMerchTab = !isMerchTab" [class]="isMerchTab? 'plm-tab':'plm-tab plm-tab-active'">Routes</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                &nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dispatch-row" *ngIf="isMerchTab">
+
+        <!-- Have need to send full data object  - may sinc it
+        {{MerchToDayRouteList | json}}
+         -->
+
+        <div [hidden]="msgText_MerchToDayRouteList.length > 0 || errText.length > 0" class="row" *ngFor="let MerchToDayRoute of RouteMercData.MerchToDayRouteList; let idx=index">
+            <pl-merch-row (deleteRoute)="onDeleteRoute($event)" (addRoute)="onAddRoute($event)" [MerchToDayRoute]="MerchToDayRoute" [RouteToAssigne]="RouteMercData.RouteToAssigne" [RouteList]="RouteMercData.RouteList" [idx]="idx">pl-merch-row</pl-merch-row>
+        </div>
+
+        <div class="row dispatch-row-msg text-center" [hidden]="msgText_MerchToDayRouteList.length == 0">
+            <h2>{{msgText_MerchToDayRouteList}} </h2>
+        </div>
+
+        <div class="row dispatch-row-err text-center" [hidden]="errText.length == 0">
+            <h2>{{errText}} </h2>
+        </div>
+
+    </div>
+
+    <!-- Have need to send full data object  - may sinc it -->
+    <div class="dispatch-row" *ngIf="!isMerchTab">
+
+
+        <div [hidden]="msgText_RouteToDayMerchList.length > 0 || errText.length > 0" class="row" *ngFor="let RouteToDayMerch of RouteMercData.RouteToDayMerchList; let idx=index">
+            <pl-route-row (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [RouteToDayMerch]="RouteToDayMerch" [MerchToAssigne]="RouteMercData.MerchToAssigne" [MerchandiserList]="RouteMercData.MerchandiserList" [idx]="idx">pl-rout-row</pl-route-row>
+        </div>
+
+
+        <div class="row dispatch-row-msg text-center" [hidden]="msgText_RouteToDayMerchList.length == 0">
+            <h2>{{msgText_RouteToDayMerchList}} </h2>
+        </div>
+
+        <div class="row dispatch-row-err text-center" [hidden]="errText.length == 0">
+            <h2>{{errText}} </h2>
+        </div>
+
+    </div>
+</div>
+<app-spinner [isRunning]="isRequesting"></app-spinner>

@@ -1,0 +1,224 @@
+<!--Modified by Siraj -->
+<div class="visible-xs menu-gradient-gray ip-menu-slide" *ngIf="isIpMenuOpen">
+
+    <div class="row menu-gradient-marun ip-menu-persion">
+
+        <div class="ip-menu-pimage col-xs-4">
+            <img src="/assets/img/ip-profile.png" alt="Profile Image">
+        </div>
+
+        <div class="ip-menu-pname col-xs-8">
+            {{userName}}
+            <div class="ip-menu-iplogout">
+                <a href="/assets/logout.html">Sign out</a>
+            </div>
+        </div>
+
+
+        <!--      <div class="ip-menu-iplogout col-xs-12">
+            <a href="/assets/logout.html">Sign out</a>
+        </div>
+        -->
+
+    </div>
+
+
+
+    <div routerLink="/monitor" [class]="cssMenuActive(isIpMenuMonitor)" (click)="isIpMenuMonitor = true; onIpMenuToggle();" ngClass="{'ip-menu-items-active': isIpMenuMonitor}">
+        Monitor
+    </div>
+
+    <div *ngIf="IsAuthorization" routerLink="/mobileschedule" [class]="cssMenuActive(!isIpMenuMonitor)" (click)="isIpMenuMonitor = false; onIpMenuToggle();"
+     ngClass="{'ip-menu-items-active' :!isIpMenuMonitor}">
+        Schedule
+    </div>
+    <div class="row ip-menu-items">
+        &nbsp;
+    </div>
+    <div class="row ip-menu-dd-hd menu-gradient-gray-dd" (click)="isIpBranchShow=!isIpBranchShow">
+        <!--Branch -->
+        {{selectedBranch.BranchName}}
+        <span class="fa fa-caret-right ip-dd-caret" *ngIf="isIpBranchShow"></span>
+        <span class="fa fa-caret-down ip-dd-caret" *ngIf="!isIpBranchShow"></span>
+    </div>
+
+    <div class="ip-dd-div" *ngIf="isIpBranchShow">
+        <!--
+        <div class="row ip-menu-items menu-gradient-gray-active">
+            Austin    Irving
+        </div>
+        -->
+        <div [class]="cssBranchActive(branch.SAPBranchID)" (click)="onBranchSelect(branch)" *ngFor="let branch of merchBranches">
+            {{branch.BranchName}}
+        </div>
+
+
+    </div>
+    <div class="row ip-menu-dd-hd menu-gradient-gray-dd" (click)="isIpGroupShow = !isIpGroupShow">
+        {{selectedGroup.GroupName}}
+        <span class="fa fa-caret-right ip-dd-caret" *ngIf="isIpGroupShow"></span>
+        <span class="fa fa-caret-down ip-dd-caret" *ngIf="!isIpGroupShow"></span>
+    </div>
+    <div class="ip-dd-div" *ngIf="isIpGroupShow">
+        <div [class]="cssGroupActive(group.MerchGroupID)" (click)="onGroupSelect(group); onIpMenuToggle();" *ngFor="let group of merchTargetGroups">
+            {{group.GroupName}}
+        </div>
+
+    </div>
+</div>
+
+
+<header [ngClass]="{ 'ip-menu-open' : isIpMenuOpen} " class="navbar navbar-inverse navbar-fixed-top bs-docs-nav visible-xs " role="banner ">
+    <div class="container-fluid " style="font-size:16px ">
+
+        <div class="ip-header-logo pull-left ">
+            <img src="/assets/img/merch-logo-ip.png " alt="Logo Image ">
+        </div>
+
+        <div class="ip-header-title text-center pull-left ">{{isIpMenuMonitor? 'Monitor' : 'Schedule'}}</div>
+
+        <div class="ip-header-menu pull-right " (click)="onIpMenuToggle(); ">
+            <i class="fa fa-bars " aria-hidden="true "></i>
+        </div>
+    </div>
+</header>
+
+<!--Modified by Siraj end  -->
+
+
+
+
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav hidden-xs " role="banner ">
+    <div class="container-fluid" style="font-size:16px">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a routerLink="/monitor" class="nav-brand" style="margin-right:10px"><img src="/assets/img/new-Merch-Circle-long-50x156.png" alt="Logo Image"></a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+
+                <li (click)="setActive('monitor')" class="{{getActive('monitor')}}">
+                    <a routerLink="/monitor" routerLinkActive="active" (click)="hideGeo(0)">Monitor</a>
+                </li>
+                <li *ngIf="IsAuthorization" (click)="setActive('merchandise')" class="{{getActive('merchandise')}}">
+                    <a routerLink="/merchandise" (click)="hideGeo(0)">Schedule</a>
+                </li>
+                <li class="dropdown" dropdown (click)="setActive('rptnewstoreservice')" class="{{getActive('rptnewstoreservice')}}">
+                    <a href id="report-dropdown" dropdownToggle dropdown-open (click)="hideGeo(0)">Report <b class="caret"></b></a>
+                    <ul class="dropdown-menu" dropdownMenu aria-labelledby="report-dropdown">
+                        <li>
+                            <a routerLink="/rptnewstoreservice" (click)="hideGeo(1)">
+                                <img src="/assets/img/maroon-report2-icon.png" alt="Profile Image">
+                                <span style="padding-left: 25px;">Store Service Report</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/rptnewmileage" (click)="hideGeo(1)">
+                                <img src="/assets/img/maroon-report2-icon.png" alt="Profile Image">
+                                <span style="padding-left: 25px;">Mileage Report</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li *ngIf="IsAuthorization" class="dropdown" dropdown (click)="setActive('plnmerchgroup')" class="{{getActive('plnmerchgroup')}}">
+                    <a class="planning-toggle" dropdownToggle dropdown-open (click)="hideGeo(0)">Plan <b class="caret"></b></a>
+                    <ul class="dropdown-menu" dropdownMenu aria-labelledby="planning-dropdown">
+                        <li>
+                            <a routerLink="/plnmerchgroup" (click)="hideGeo(0)">
+                                <img src="/assets/img/maroon-group-icon.png" alt="Profile Image">
+                                <span style="margin-left: 8px;">Merchandiser Group</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/plnmerchsetup" (click)="hideGeo(0)">
+                                <img src="/assets/img/maroon-1person-icon.png" alt="Profile Image">
+                                <span style="margin-left: 8px;">Merchandiser</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/plnstore" (click)="hideGeo(0)">
+                                <img src="/assets/img/maroon-store-icon.png" alt="Profile Image">
+                                <span style="padding-left: 8px;">Store</span></a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/plnrsassignment" (click)="hideGeo(0)">
+                                <img src="/assets/img/maroon-routeStore-icon.png" alt="Profile Image">
+                                <span style="padding-left: 8px;">Route / Store</span>
+                            </a>
+                        </li>
+
+
+                        <!--<li><a routerLink="/playphoto" (click)="hideGeo(0)">Play with Photo</a></li>-->
+                        <li>
+                            <a routerLink="/plmerch" (click)="hideGeo(0)">
+                                <img src="/assets/img/maroon-routeMerch-icon.png" alt="Profile Image">
+                                <span style="padding-left: 8px;">Route / Merchandiser</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="filter-style" *ngIf="isGeoVisible==true">
+                    <div class="btn-group" dropdown>
+                        <button id="branchfilter-button" type="button" class="btn btn-headerdropdown" dropdownToggle>
+                    {{selectedBranch.BranchName}} <span class="caret"></span>
+                  </button>
+                        <ul class="dropdown-menu scrollable-menu" dropdownMenu role="menu" aria-labelledby="branchfilter-button">
+                            <li role="menuitem"><a class="dropdown-item" (click)="onBranchSelect(branch)" *ngFor="let branch of merchBranches" style="line-height:20px">{{branch.BranchName}}</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="filter-style" *ngIf="isGeoVisible==true">
+                    <div class="btn-group" dropdown>
+                        <button id="merchGroupfilter-button" type="button" class="btn btn-headerdropdown" dropdownToggle>
+                    {{selectedGroup.GroupName}} <span class="caret"></span>
+                  </button>
+                        <ul class="dropdown-menu scrollable-menu" dropdownMenu role="menu" aria-labelledby="merchGroupfilter-button">
+                            <li role="menuitem"><a class="dropdown-item" (click)="onGroupSelect(group)" *ngFor="let group of merchTargetGroups" style="line-height:20px">{{group.GroupName}}</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="dropdown" dropdown>
+                    <a class="planning-toggle" dropdownToggle dropdown-open style="padding-top:0px;padding-bottom:0px;">
+                        <img src="/assets/img/profile-dropdown.png" alt="Profile Image">
+                    </a>
+                    <ul class="dropdown-menu" dropdownMenu aria-labelledby="profile-dropdown" style="padding:0px">
+
+                        <li>
+                            <div class="container-fluid well span6" style="margin-bottom:0px">
+                                <div class="row-fluid">
+                                    <div class="span2">
+                                        <img src="/assets/img/dkBlu-default_profile.png" style="width:150px" class="img-circle">
+                                    </div>
+
+                                    <div class="span8">
+                                        <h3>{{userName}}</h3>
+                                        <h6>GSN: {{gsn}}</h6>
+                                    </div>
+                                    <div class="btn-group-sm">
+                                        <a type="button" href="/assets/logout.html" class="btn-sm btn-success">Sign out</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+
+            </ul>
+        </nav>
+    </div>
+</header>

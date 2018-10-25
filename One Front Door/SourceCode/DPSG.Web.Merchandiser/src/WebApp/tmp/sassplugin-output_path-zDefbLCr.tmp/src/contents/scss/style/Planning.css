@@ -1,0 +1,38 @@
+.plm-tabs {
+  padding: 0;
+  margin: 0; }
+
+.rsplm-tab {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  width: 14% !important;
+  height: 40px !important;
+  float: left !important;
+  border: 1px solid transparent !important;
+  padding-top: 7px;
+  margin-bottom: -5px !important;
+  margin-top: -5px !important;
+  cursor: pointer; }
+  .rsplm-tab:hover {
+    background-color: #378fe7 !important;
+    border: 1px solid #145ca4 !important;
+    border-bottom: 5px solid #f4a66e !important; }
+
+.plm-tab-active {
+  border-bottom: 5px solid #eb6c11 !important; }
+
+.unassigned-group-list {
+  border: 1px solid #d7d7d7;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 7px #a4a4a4;
+  -moz-box-shadow: 0 3px 7px #a4a4a4;
+  box-shadow: 0 3px 7px #a4a4a4;
+  padding: 0; }

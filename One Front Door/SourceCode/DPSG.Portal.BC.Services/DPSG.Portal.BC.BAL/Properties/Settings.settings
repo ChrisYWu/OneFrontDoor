@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DPSG.Portal.BC.BAL.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DPSG_Portal_BC_BAL_ImagingReference_Imaging" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://bplnshp02/_vti_bin/Imaging.asmx</Value>
+    </Setting>
+    <Setting Name="DPSG_Portal_BC_BAL_ListService_Lists" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://bplnshp02/_vti_bin/Lists.asmx</Value>
+    </Setting>
+    <Setting Name="DPSG_Portal_BC_BAL_SPSearch_QueryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://splashnet.dpsg.net/_vti_bin/search.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

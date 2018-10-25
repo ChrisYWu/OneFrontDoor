@@ -1,0 +1,28 @@
+
+
+<div class="col-xs-12 zeropadding">
+    <table class="table" style="color:#333">
+        <thead>
+            <tr>
+                <th>
+                    <div class="input-group col-xs-12">
+                        <span class="input-group-addon dispatch-search-addon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input" id="txtSearch" placeholder="Search">
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let acct of currentTabAccts | filter:{ AccountName: filterInput.value, Address: filterInput.value }" 
+                (click)="addStore(acct.SAPAccountNumber, acct.AccountName, acct.Address)">
+                <td><p style="font-size:medium;margin:0px">{{acct.AccountName}}</p>
+                <p style="font-size:small;margin:0px">{{acct.Address}}, {{acct.City}}, {{acct.State}}-{{acct.PostalCode}}</p></td>
+                
+            </tr>
+
+      
+        </tbody>
+    </table>
+</div>

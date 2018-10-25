@@ -1,0 +1,109 @@
+<div class="ip-popup-outer">
+    <div class="row mp-header-ip">
+        <a (click)="onCloseStoreDetails()" class="close-ip-popup">
+            <span aria-hidden="true">&times;</span>
+        </a>
+        <div class="col-xs-4 v-middle mp-image-ip-col">
+            <img class="center-block" [src]="storeInfo.storeDetails.StoreImageURL" alt="Store Image">
+        </div>
+        <div class="col-xs-8">
+            <div class="mp-header-ip-l1">{{storeInfo.stop.AccountName}}</div>
+            <div class="mp-header-ip-l2">{{storeInfo.storeDetails.StoreAddress}} </div>
+        </div>
+    </div>
+    <div class="row mp-row-top-ip">
+
+        <!--Items -->
+
+        <div class="div-above-cmt">
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Checkin Time</div>
+                <div class="col-xs-6 mp-col-ip-2"> {{storeInfo.storeDetails.CheckInTime}}</div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Checkin Miles</div>
+                <div class="col-xs-6 mp-col-ip-2" *ngIf="storeInfo.storeDetails.UserMileage != '0'">
+                    {{storeInfo.storeDetails.UserMileage}} &nbsp;miles
+                </div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Checkout Time</div>
+                <div class="col-xs-6 mp-col-ip-2"> {{storeInfo.storeDetails.CheckOutTime}}</div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Time in Store</div>
+                <div class="col-xs-6 mp-col-ip-2"> {{storeInfo.storeDetails.TimeInStore}}</div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Cases Worked</div>
+                <div class="col-xs-6 mp-col-ip-2"> {{storeInfo.storeDetails.CasesHandeled}}</div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Backstock Cases</div>
+                <div class="col-xs-6 mp-col-ip-2"> {{storeInfo.storeDetails.CasesInBackRoom}}</div>
+            </div>
+
+        </div>
+
+
+        <div class="ip-popup-comment">
+            Comments
+        </div>
+
+        <div class="ip-popup-comment-data">
+            {{storeInfo.storeDetails.Comments}}
+        </div>
+
+
+        <div class="row mp-row-item-ip">
+            <div class="col-xs-6 mp-col-ip-1">Manager Name</div>
+            <div class="col-xs-6 mp-col-ip-2">{{storeInfo.storeSignature.ManagerName}}</div>
+        </div>
+
+        <div class="row mp-row-item-ip">
+            <div class="col-xs-6 mp-col-ip-1 mp-sign-arrow">
+                Manager Signature
+            </div>
+            <div class="col-xs-6 mp-col-2" *ngIf="storeInfo.storeSignature.azureImageURL !=''" style="min-height:107px">
+                <img class="mp-img-sgn img-responsive" style="height:100px" [src]="storeInfo.storeSignature.azureImageURL" alt="Signature not available">
+            </div>
+            <div class="col-xs-6 mp-col-ip-2" *ngIf="storeInfo.storeSignature.azureImageURL ==''">
+                No signature.
+            </div>
+        </div>
+
+
+        <div class="row mp-row-item-ip ip-headder-pt">
+            <div class="col-xs-12">
+                <div class="mp-pic-header-ip" (click)="isShowStrPics = !isShowStrPics">Store Picture
+
+                    <span class="fa fa-caret-right ip-caret-pic" *ngIf="isShowStrPics"></span>
+                    <span class="fa fa-caret-down ip-caret-pic" *ngIf="!isShowStrPics"></span>
+
+                </div>
+                <div class="mp-pic-list-ip" [hidden]="!isShowStrPics">
+                    <!--  <image-list [images]='storeInfo.storePictures'></image-list>-->
+                    <image-list [images]='strPics'></image-list>
+                </div>
+            </div>
+        </div>
+        <div class="row mp-row-item-ip">
+            <div class="col-xs-12">
+                <div class="mp-pic-header-ip" (click)="isShowDspPics=!isShowDspPics">Display Execution
+                    <span class="fa fa-caret-right ip-caret-pic" *ngIf="isShowDspPics"></span>
+                    <span class="fa fa-caret-down ip-caret-pic" *ngIf="!isShowDspPics"></span>
+                </div>
+                <div class="mp-pic-list-ip" [hidden]="!isShowDspPics">
+                    <!--   <image-list [images]='storeInfo.displayPictures'></image-list> -->
+                    <image-list [images]='dspPics'></image-list>
+                </div>
+            </div>
+        </div>
+
+        <!-- Items ends -->
+        <br>
+
+
+    </div>
+
+</div>

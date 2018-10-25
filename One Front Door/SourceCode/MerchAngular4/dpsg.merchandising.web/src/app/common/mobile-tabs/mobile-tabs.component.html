@@ -1,0 +1,20 @@
+<!-- ip version start -->
+
+<div class="tab-sch3 ip-tab-padding">
+
+    <tabset [justified]="true">
+        <tab heading="Unassigned" [active]="true" (select)="active = true" (deselect)="active = false">
+            <app-mobile-storelist [currentTabAccts]="unassignedInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput" [unassignedDelete]="'1'" (accountSelected)="setselectedAcct($event)"></app-mobile-storelist>
+        </tab>
+        <tab heading="All" (select)="active = true" (deselect)="active = false">
+            <app-mobile-storelist [currentTabAccts]="otherInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput" [unassignedDelete]="'0'" (accountSelected)="setselectedAcct($event)"></app-mobile-storelist>
+        </tab>
+        <tab heading="Branch" (select)="active = true" (deselect)="active = false">
+            <app-mobile-storelist [currentTabAccts]="allInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput" [unassignedDelete]="'0'" (accountSelected)="setselectedAcct($event)"></app-mobile-storelist>
+        </tab>
+    </tabset>
+
+    <!--ip version ends -->
+
+
+</div>

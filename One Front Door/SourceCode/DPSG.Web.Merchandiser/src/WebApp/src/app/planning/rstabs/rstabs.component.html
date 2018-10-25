@@ -1,0 +1,10 @@
+<tabset [justified]="true">
+    <tab heading="UNASSIGNED" [active]="true" (select)="active = true" (deselect)="active = false">
+        <app-rsstorelist [currentTabAccts]="unassignedInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput"
+                         [selectedWeekDayInput]="selectedWeekDayInput" (accountSelected)="setselectedAcct($event)"></app-rsstorelist>
+    </tab>
+    <tab heading="ALL" (select)="active = true" (deselect)="active = false">
+        <app-rsstorelist [currentTabAccts]="allInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput"
+                         [selectedWeekDayInput]="selectedWeekDayInput" (accountSelected)="setselectedAcct($event)"></app-rsstorelist>
+    </tab>
+</tabset>

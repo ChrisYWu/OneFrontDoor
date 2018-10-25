@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "BCMydayReleaseIII", "BCMydayReleaseIII\BCMydayReleaseIII.ssmssqlproj", "{49BEC3E7-7FB1-401E-A184-961CE0757352}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = $/One\u0020Front\u0020Door/SourceCode/T-SQL\u0020Scripts/BCMydayReleaseIII
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Team\u0020Foundation\u0020Server\u0020MSSCCI\u0020Provider
+		SccProjectUniqueName1 = BCMydayReleaseIII\\BCMydayReleaseIII.ssmssqlproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = BCMydayReleaseIII\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49BEC3E7-7FB1-401E-A184-961CE0757352}.Default|Default.ActiveCfg = Default
+		{3EF93FC5-A51D-489E-A1F4-B7A98FC3A5DE}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

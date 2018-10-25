@@ -1,0 +1,90 @@
+//Global Variable
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+$route-border-color1: #dddddd;
+$route-stop-height1: 86px;
+//
+//
+//this file is for Responsive UI of Monitor Screen
+//
+//
+.item-row {
+    height: auto;
+    border: 1px solid $route-border-color1;
+}
+
+.route-info-outer {
+    position: relative;
+    padding: 0;
+    height: auto;
+}
+
+.col-stop-item {
+    padding: 0px !important;
+    margin: 0px !important;
+    float: left;
+    height: $route-stop-height1 !important;
+}
+
+// screen lg and md
+@media only screen and (min-width: 992px) {
+    .item-row {
+        margin-left: -15px;
+    }
+    .dispatch-row-outer {
+        margin: 0 -15px;
+    }
+    .route-info-outer {
+        margin: 0px;
+        width: 100%;
+    }
+    .col-stop-item {
+        width: 16.66667% !important;
+    }
+}
+
+//screen sm xs 
+@media only screen and (max-width: 992px) {
+    .item-row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .dispatch-row-outer {
+        margin: 0;
+    }
+}
+
+//above one or below 2 (may be 3 ) classes
+//sm
+@media only screen and (max-width: 992px) and (min-width:768px) {
+    .col-stop-item {
+        width: 25% !important;
+    }
+    .route-info-outer {
+        width: 60%;
+        margin-left: -15px;
+    }
+}
+
+//xs
+@media only screen and (max-width: 768px) and (min-width:320px) {
+    .col-stop-item {
+        width: 33.3333% !important;
+    }
+    .route-info-outer {
+        width: 100%;
+        height: $route-stop-height1 !important;
+        margin-left: -15px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .col-stop-item {
+        height: $route-stop-height1 !important;
+        width: 100% !important;
+    }
+    .route-info-outer {
+        width: 100%;
+        margin-left: -15px;
+    }
+}

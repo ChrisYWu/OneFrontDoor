@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.MYDAY.SHARED.API", "DPSG.MYDAY.SHARED.API\DPSG.MYDAY.SHARED.API.csproj", "{8D26721C-14C5-4999-ACED-DD0B246C542D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.MYDAY.SHARED.API.Common", "DPSG.MYDAY.SHARED.API.COMMON\DPSG.MYDAY.SHARED.API.Common.csproj", "{B7B2191D-7D8F-4397-8043-FB2D613A1A0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.MYDAY.SHARED.API.DataAccess", "DPSG.MYDAY.SHARED.API.DataAccess\DPSG.MYDAY.SHARED.API.DataAccess.csproj", "{86C177E1-3A89-4FD3-BECF-BAEBC5646154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.MYDAY.SHARED.API.Models", "DPSG.MYDAY.SHARED.API.Models\DPSG.MYDAY.SHARED.API.Models.csproj", "{010FEBC2-A7EF-4974-9C97-0F91FA0D4EFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.MYDAY.SHARED.API.Business", "DPSG.MYDAY.SHARED.API.Business\DPSG.MYDAY.SHARED.API.Business.csproj", "{FCCD3671-7D5F-45AE-9F3F-C975512B4C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Webservices.Security.Hmac", "D:\_tfs\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac.csproj", "{B868F881-02BA-4DAE-A4CA-EE59A229126A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D26721C-14C5-4999-ACED-DD0B246C542D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D26721C-14C5-4999-ACED-DD0B246C542D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D26721C-14C5-4999-ACED-DD0B246C542D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D26721C-14C5-4999-ACED-DD0B246C542D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B2191D-7D8F-4397-8043-FB2D613A1A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B2191D-7D8F-4397-8043-FB2D613A1A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B2191D-7D8F-4397-8043-FB2D613A1A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B2191D-7D8F-4397-8043-FB2D613A1A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C177E1-3A89-4FD3-BECF-BAEBC5646154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C177E1-3A89-4FD3-BECF-BAEBC5646154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C177E1-3A89-4FD3-BECF-BAEBC5646154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C177E1-3A89-4FD3-BECF-BAEBC5646154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{010FEBC2-A7EF-4974-9C97-0F91FA0D4EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010FEBC2-A7EF-4974-9C97-0F91FA0D4EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010FEBC2-A7EF-4974-9C97-0F91FA0D4EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010FEBC2-A7EF-4974-9C97-0F91FA0D4EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCD3671-7D5F-45AE-9F3F-C975512B4C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCD3671-7D5F-45AE-9F3F-C975512B4C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCD3671-7D5F-45AE-9F3F-C975512B4C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCCD3671-7D5F-45AE-9F3F-C975512B4C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B868F881-02BA-4DAE-A4CA-EE59A229126A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B868F881-02BA-4DAE-A4CA-EE59A229126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B868F881-02BA-4DAE-A4CA-EE59A229126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B868F881-02BA-4DAE-A4CA-EE59A229126A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.dpsg.net:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = D:\\_tfs\\One\u0020Front\u0020Door\\SourceCode\\DPSG.Webservices.Security.Hmac\\DPSG.Webservices.Security.Hmac\\DPSG.Webservices.Security.Hmac.csproj
+		SccProjectName0 = ../DPSG.Webservices.Security.Hmac/DPSG.Webservices.Security.Hmac
+		SccLocalPath0 = D:\\_tfs\\One\u0020Front\u0020Door\\SourceCode\\DPSG.Webservices.Security.Hmac\\DPSG.Webservices.Security.Hmac
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = DPSG.MYDAY.SHARED.API.Business\\DPSG.MYDAY.SHARED.API.Business.csproj
+		SccProjectName2 = DPSG.MYDAY.SHARED.API.Business
+		SccLocalPath2 = DPSG.MYDAY.SHARED.API.Business
+		SccProjectUniqueName3 = DPSG.MYDAY.SHARED.API.COMMON\\DPSG.MYDAY.SHARED.API.Common.csproj
+		SccProjectName3 = DPSG.MYDAY.SHARED.API.COMMON
+		SccLocalPath3 = DPSG.MYDAY.SHARED.API.COMMON
+		SccProjectUniqueName4 = DPSG.MYDAY.SHARED.API.DataAccess\\DPSG.MYDAY.SHARED.API.DataAccess.csproj
+		SccProjectName4 = DPSG.MYDAY.SHARED.API.DataAccess
+		SccLocalPath4 = DPSG.MYDAY.SHARED.API.DataAccess
+		SccProjectUniqueName5 = DPSG.MYDAY.SHARED.API.Models\\DPSG.MYDAY.SHARED.API.Models.csproj
+		SccProjectName5 = DPSG.MYDAY.SHARED.API.Models
+		SccLocalPath5 = DPSG.MYDAY.SHARED.API.Models
+		SccProjectUniqueName6 = DPSG.MYDAY.SHARED.API\\DPSG.MYDAY.SHARED.API.csproj
+		SccProjectName6 = DPSG.MYDAY.SHARED.API
+		SccLocalPath6 = DPSG.MYDAY.SHARED.API
+	EndGlobalSection
+EndGlobal

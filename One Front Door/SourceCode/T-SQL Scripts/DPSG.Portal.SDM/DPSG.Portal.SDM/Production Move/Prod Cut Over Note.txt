@@ -1,0 +1,5 @@
+﻿--Steps for Prod Server Cut Over
+
+1. Full Backup Portal_Data from QA server BSCCSQ07
+2. Restore the backup to Prod Server BSCCAP121
+

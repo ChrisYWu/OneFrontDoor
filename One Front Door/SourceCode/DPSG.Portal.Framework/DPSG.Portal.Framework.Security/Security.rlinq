@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="PortalSecurity" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="PortalSecurity" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="DPSG.Portal.Framework.Security" default="true">
+      <orm:class name="UserPermission" uniqueId="0246942e-ceab-4dfe-b37b-2d94139979b6">
+        <orm:table name="UserPermission" schema="Person" />
+        <orm:identity>
+          <orm:single-field field-name="_gSN" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_gSN" property="GSN" behavior="readwrite" uniqueId="2f2a09ec-11da-4906-9948-8460bfa475d3" type="System.String">
+          <orm:column name="GSN" sql-type="varchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_entityID" property="EntityID" behavior="readwrite" uniqueId="49e15d6e-7e32-4262-b3c8-999ba9eb6913" type="System.Int32">
+          <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_permissonTypeID" property="PermissonTypeID" behavior="readwrite" uniqueId="c1907763-a855-42de-9243-3d625fdcb9b0" type="System.Int32">
+          <orm:column name="PermissonTypeID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_applicationEntity" property="ApplicationEntity" behavior="readwrite" uniqueId="7f2b0a73-c3c3-4ec6-9f5b-dd19b9c27f24" type="DPSG.Portal.Framework.Security.ApplicationEntity">
+          <orm:reference uniqueId="69db6e1d-9420-4091-8e4e-44a3799bbd05">
+            <orm:sharedfield name="_entityID" target-class="DPSG.Portal.Framework.Security.ApplicationEntity" target-field="_entityID" />
+            <orm:constraint name="FK__UserPermi__Entit__462AD202" schema="Person" destination-table="ApplicationEntity" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_permissionType" property="PermissionType" behavior="readwrite" uniqueId="5f1fd21b-ce72-4bc4-92eb-2be8b8d0a8f2" type="DPSG.Portal.Framework.Security.PermissionType">
+          <orm:reference uniqueId="7ea276ab-daef-494c-80f5-6c72328ff0d1">
+            <orm:sharedfield name="_permissonTypeID" target-class="DPSG.Portal.Framework.Security.PermissionType" target-field="_permissionTypeID" />
+            <orm:constraint name="FK__UserPermi__Permi__471EF63B" schema="Person" destination-table="PermissionType" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="UserAccount" uniqueId="bcee3b69-c18c-4b0b-9582-97599416827b">
+        <orm:table name="UserAccount" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_userAccountID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_userAccountID" property="UserAccountID" behavior="readwrite" uniqueId="c64a0948-7274-408a-b260-0f0b0844781f" type="System.Int32">
+          <orm:column name="UserAccountID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_gSN" property="GSN" behavior="readwrite" uniqueId="9ee0064c-a559-48b3-b414-e0870db5fb14" type="System.String">
+          <orm:column name="GSN" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_nationalChainID" property="NationalChainID" behavior="readwrite" uniqueId="04fd82f9-a3b5-4969-ba28-5906f867f2d6" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="NationalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_regionalChainID" property="RegionalChainID" behavior="readwrite" uniqueId="f9ef7a0b-6a92-45de-be28-051149a25e4f" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="RegionalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_localChainID" property="LocalChainID" behavior="readwrite" uniqueId="d3317df8-b487-43a2-96e4-0a562c293bb0" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="LocalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="RoleSystem" uniqueId="291d7212-9896-48ad-a559-9b988eccd67f">
+        <orm:table name="RoleSystem" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_roleSystemID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_systemID" property="SystemID" behavior="readwrite" uniqueId="d1ec5131-130e-4a44-8600-2b26cb8493ba" type="System.Int32">
+          <orm:column name="SystemID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_roleID" property="RoleID" behavior="readwrite" uniqueId="e403529c-9d92-49d4-8643-132c7d9c146a" type="System.Int32">
+          <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_defaultValue" property="DefaultValue" behavior="readwrite" uniqueId="ac96a61a-1c7f-4c58-add6-86cb704a563b" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DefaultValue" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_disabled" property="Disabled" behavior="readwrite" uniqueId="8b9dcab9-aff8-4ac7-ade1-70aa964ef6ed" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="Disabled" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_roleSystemID" property="RoleSystemID" behavior="readwrite" uniqueId="0df12f37-10e3-4966-bf76-683c2425c209" type="System.Int32">
+          <orm:column name="RoleSystemID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="RolePermission" uniqueId="328eae32-035c-42ef-ab77-e4bfab80666d">
+        <orm:table name="RolePermission" schema="Person" />
+        <orm:identity>
+          <orm:multiple-field>
+            <orm:single-field field-name="_roleID" />
+            <orm:single-field field-name="_entityID" />
+            <orm:single-field field-name="_permissonTypeID" />
+          </orm:multiple-field>
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_roleID" property="RoleID" behavior="readwrite" uniqueId="0e06e981-9cf4-4fdd-b7ca-3de8fce7589c" type="System.Int32">
+          <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_entityID" property="EntityID" behavior="readwrite" uniqueId="7ddbd85e-a78b-428e-849c-2fb55bb7b86e" type="System.Int32">
+          <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_permissonTypeID" property="PermissonTypeID" behavior="readwrite" uniqueId="fef76247-1923-4ac6-8aa5-08f1b14e7c1b" type="System.Int32">
+          <orm:column name="PermissonTypeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_applicationEntity" property="ApplicationEntity" behavior="readwrite" uniqueId="5b45f084-44ae-4c02-a096-d4e94a69e7be" type="DPSG.Portal.Framework.Security.ApplicationEntity">
+          <orm:reference uniqueId="3e427771-52f0-432c-8826-0078d40fb65b">
+            <orm:sharedfield name="_entityID" target-class="DPSG.Portal.Framework.Security.ApplicationEntity" target-field="_entityID" />
+            <orm:constraint name="FK__RolePermi__Entit__425A411E" schema="Person" destination-table="ApplicationEntity" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_permissionType" property="PermissionType" behavior="readwrite" uniqueId="5ecb94f6-7aed-4221-ac1e-20e8a922dc3b" type="DPSG.Portal.Framework.Security.PermissionType">
+          <orm:reference uniqueId="dca8ca36-815d-4353-ac31-993e1ba914a1">
+            <orm:sharedfield name="_permissonTypeID" target-class="DPSG.Portal.Framework.Security.PermissionType" target-field="_permissionTypeID" />
+            <orm:constraint name="FK__RolePermi__Permi__434E6557" schema="Person" destination-table="PermissionType" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="RoleAttribute" uniqueId="04fb1cd1-be69-4628-885f-c9d73656504f">
+        <orm:table name="RoleAttribute" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_roleAttributeID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_roleAttributeID" property="RoleAttributeID" behavior="readwrite" uniqueId="5c393170-985b-441a-a5db-2e995e5612e1" type="System.Int32">
+          <orm:column name="RoleAttributeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_entityID" property="EntityID" behavior="readwrite" uniqueId="4ea20104-fbc8-4ad8-a98e-7a901b0b26ee" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="EntityID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_roleID" property="RoleID" behavior="readwrite" uniqueId="d55885de-2808-4b78-93eb-6bb4dca96130" type="System.Int32">
+          <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_key" property="Key" behavior="readwrite" uniqueId="afb94848-f4c0-41a2-8f7d-886152ca719e" type="System.String">
+          <orm:column name="Key" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_keyValue" property="KeyValue" behavior="readwrite" uniqueId="0a3036fb-0227-42db-a729-4876d8d4be00" type="System.String">
+          <orm:column name="KeyValue" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="RoleAccount" uniqueId="8132ed7a-f57f-4273-b90a-22ca1b43e2b3">
+        <orm:table name="RoleAccount" schema="Person" />
+        <orm:identity>
+          <orm:multiple-field>
+            <orm:single-field field-name="_roleID" />
+            <orm:single-field field-name="_nationalChainID" />
+          </orm:multiple-field>
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_roleID" property="RoleID" behavior="readwrite" uniqueId="0a8ec9eb-5b95-4083-a14b-17746fadda5f" type="System.Int32">
+          <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_nationalChainID" property="NationalChainID" behavior="readwrite" uniqueId="212efae5-42fb-4a72-b9ac-8511fbfd0540" type="System.Int32">
+          <orm:column name="NationalChainID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_role" property="Role" behavior="readwrite" uniqueId="811e0b11-22ac-4402-a23a-2eb0129e5432" type="DPSG.Portal.Framework.Security.Role">
+          <orm:reference uniqueId="ab99aa14-5f92-4257-8b93-07652854ddc4">
+            <orm:sharedfield name="_roleID" target-class="DPSG.Portal.Framework.Security.Role" target-field="_roleID" />
+            <orm:constraint name="FK_RoleAccount_Role" schema="Person" destination-table="Role" />
+          </orm:reference>
+        </orm:field>
+      </orm:class>
+      <orm:class name="Role" uniqueId="1e37bb66-2950-4e8f-9225-81d1b7e670dd">
+        <orm:table name="Role" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_roleID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_roleID" property="RoleID" behavior="readwrite" uniqueId="6df4076c-9f20-4f2b-973c-1db9c00bcf87" type="System.Int32">
+          <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_roleName" property="RoleName" behavior="readwrite" uniqueId="4cd935f6-b82e-4994-99e1-fdd6086f93ee" type="System.String">
+          <orm:column name="RoleName" sql-type="varchar" nullable="true" length="250" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_roleShortName" property="RoleShortName" behavior="readwrite" uniqueId="aec07175-0261-435e-a374-667a336d0810" type="System.String">
+          <orm:column name="RoleShortName" sql-type="varchar" nullable="true" length="150" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_roleScope" property="RoleScope" behavior="readwrite" uniqueId="57ca2fbd-4bc4-4d9d-917d-b4483c844b17" type="System.String">
+          <orm:column name="RoleScope" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_aDGroupName" property="ADGroupName" behavior="readwrite" uniqueId="4107ee28-2fef-4f08-8cc4-95b69f6ca2c7" type="System.String">
+          <orm:column name="ADGroupName" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_roleAccounts" property="RoleAccounts" behavior="readwrite" uniqueId="a5604414-f7b7-454d-85d8-7a08d1b04b40" type="DPSG.Portal.Framework.Security.RoleAccount">
+          <orm:collection element-class="DPSG.Portal.Framework.Security.RoleAccount" inverse-field="_role" order-by="" uniqueId="ab99aa14-5f92-4257-8b93-07652854ddc4" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="PermissionType" uniqueId="1ac91f21-4d70-4207-b830-1d266c3f1725">
+        <orm:table name="PermissionType" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_permissionTypeID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_permissionTypeID" property="PermissionTypeID" behavior="readwrite" uniqueId="df01f7bc-4d2d-46e9-be80-346eea1129bf" type="System.Int32">
+          <orm:column name="PermissionTypeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_permissionTypeName" property="PermissionTypeName" behavior="readwrite" uniqueId="39c4ca61-32c1-43e5-a534-41d053997f8c" type="System.String">
+          <orm:column name="PermissionTypeName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_userPermissions" property="UserPermissions" behavior="readwrite" uniqueId="082fcba0-dd2d-47e6-a577-fb764a29607d" type="DPSG.Portal.Framework.Security.UserPermission">
+          <orm:collection element-class="DPSG.Portal.Framework.Security.UserPermission" inverse-field="_permissionType" order-by="" uniqueId="7ea276ab-daef-494c-80f5-6c72328ff0d1" />
+        </orm:field>
+        <orm:field name="_rolePermissions" property="RolePermissions" behavior="readwrite" uniqueId="65796dff-552b-4928-9658-c84d02211ddd" type="DPSG.Portal.Framework.Security.RolePermission">
+          <orm:collection element-class="DPSG.Portal.Framework.Security.RolePermission" inverse-field="_permissionType" order-by="" uniqueId="dca8ca36-815d-4353-ac31-993e1ba914a1" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="ApplicationEntity" uniqueId="c9905b82-c5a6-464d-bad6-b7e0d7154dad">
+        <orm:table name="ApplicationEntity" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_entityID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_entityID" property="EntityID" behavior="readwrite" uniqueId="2fdb6cec-055a-493c-814f-0e05095868fe" type="System.Int32">
+          <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_entityName" property="EntityName" behavior="readwrite" uniqueId="da92998d-f353-4727-8675-230cd3ce26ef" type="System.String">
+          <orm:column name="EntityName" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_appID" property="AppID" behavior="readwrite" uniqueId="93ac1f02-2e01-4856-aa3a-d55aa4c5e9ff" type="System.Int32">
+          <orm:column name="AppID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_application" property="Application" behavior="readwrite" uniqueId="0f60252b-d08c-4ffb-8df7-e63bd3d2905a" type="DPSG.Portal.Framework.Security.Application">
+          <orm:reference uniqueId="d6e924ec-9f1e-4ae6-a2e4-da6f3d1dd1b7">
+            <orm:sharedfield name="_appID" target-class="DPSG.Portal.Framework.Security.Application" target-field="_appID" />
+            <orm:constraint name="FK__Applicati__AppID__37DCB2AB" schema="Person" destination-table="Application" />
+          </orm:reference>
+        </orm:field>
+        <orm:field name="_userPermissions" property="UserPermissions" behavior="readwrite" uniqueId="75ca20d8-5537-4da9-9c9d-61cb0b90e51c" type="DPSG.Portal.Framework.Security.UserPermission">
+          <orm:collection element-class="DPSG.Portal.Framework.Security.UserPermission" inverse-field="_applicationEntity" order-by="" uniqueId="69db6e1d-9420-4091-8e4e-44a3799bbd05" />
+        </orm:field>
+        <orm:field name="_rolePermissions" property="RolePermissions" behavior="readwrite" uniqueId="49178968-8188-40b1-a2b3-8f429b3293b9" type="DPSG.Portal.Framework.Security.RolePermission">
+          <orm:collection element-class="DPSG.Portal.Framework.Security.RolePermission" inverse-field="_applicationEntity" order-by="" uniqueId="3e427771-52f0-432c-8826-0078d40fb65b" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="Application" uniqueId="5e80dcb0-e70e-4a44-a9f7-2f56ae9b5cf5">
+        <orm:table name="Application" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_appID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_appID" property="AppID" behavior="readwrite" uniqueId="c2a79092-b968-495f-b563-003fe156de1c" type="System.Int32">
+          <orm:column name="AppID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_appName" property="AppName" behavior="readwrite" uniqueId="75b14423-8d77-4b25-beda-51bbb252c2a6" type="System.String">
+          <orm:column name="AppName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_applicationEntities" property="ApplicationEntities" behavior="readwrite" uniqueId="a9ef8916-cdd6-45dd-a13a-04377529cacd" type="DPSG.Portal.Framework.Security.ApplicationEntity">
+          <orm:collection element-class="DPSG.Portal.Framework.Security.ApplicationEntity" inverse-field="_application" order-by="" uniqueId="d6e924ec-9f1e-4ae6-a2e4-da6f3d1dd1b7" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="System" uniqueId="c321f506-2deb-4063-9e5a-4679efc409af">
+        <orm:table name="System" schema="NationalAccount" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_systemID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_systemID" property="SystemID" behavior="readwrite" uniqueId="b82f7243-b893-4db4-b64f-2a9b52c86240" type="System.Int32">
+          <orm:column name="SystemID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_systemName" property="SystemName" behavior="readwrite" uniqueId="ea46ce44-184b-46c1-b5a4-cdeb460e1e19" type="System.String">
+          <orm:column name="SystemName" sql-type="varchar" nullable="false" length="25" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_termsetName" property="TermsetName" behavior="readwrite" uniqueId="de7ad3a6-6167-4e46-aba8-a7f284766e3c" type="System.String">
+          <orm:column name="TermsetName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_promotionGeoRelevancy" property="PromotionGeoRelevancy" behavior="readwrite" uniqueId="b861019e-c558-48f5-b8eb-5a047fc3fe5c" type="System.String">
+          <orm:column name="PromotionGeoRelevancy" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_promotionCopyRule" property="PromotionCopyRule" behavior="readwrite" uniqueId="0718e149-0371-4006-8770-ebd77cad196b" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PromotionCopyRule" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_defaultPromotionStatus" property="DefaultPromotionStatus" behavior="readwrite" uniqueId="258672c5-cba0-4e12-bc5d-46975101263d" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DefaultPromotionStatus" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_sequence" property="Sequence" behavior="readwrite" uniqueId="989b1fb4-4882-4dc0-aea1-09a30569ce69" type="System.Int32">
+          <orm:column nullable="false" length="0" name="Sequence" scale="0" sql-type="int" ado-type="Int32" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="NationalChain" uniqueId="f1ef1f55-0c9b-499f-aea9-2897b3a5b9f0">
+        <orm:table name="NationalChain" schema="SAP" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_nationalChainID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_nationalChainID" property="NationalChainID" behavior="readwrite" uniqueId="1d3ac6a9-d5cc-4c69-93eb-f31b3c5bf938" type="System.Int32">
+          <orm:column name="NationalChainID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_sAPNationalChainID" property="SAPNationalChainID" behavior="readwrite" uniqueId="afbb9a3b-a87d-4458-9a1e-1b568b4cfd13" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SAPNationalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_nationalChainName" property="NationalChainName" behavior="readwrite" uniqueId="e24ad053-215c-4610-b959-a6922a65e4e6" type="System.String">
+          <orm:column name="NationalChainName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_changeTrackNumber" property="ChangeTrackNumber" behavior="readwrite" uniqueId="19b925a0-051c-4d40-949f-78452428d05c" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ChangeTrackNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_lastModified" property="LastModified" behavior="readwrite" uniqueId="0dbd9562-eeac-497e-9273-882551dada15" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="LastModified" sql-type="smalldatetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="UserNationalChain" uniqueId="a0b6ad2e-fd07-43e1-be18-a599f4cadcd3">
+        <orm:table name="UserNationalChain" schema="Person" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_userNationalChainId" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_gSN" property="GSN" behavior="readwrite" uniqueId="a3850a06-5eeb-49f0-8ae3-5951ea5daa17" type="System.String">
+          <orm:column name="GSN" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_nationalChainID" property="NationalChainID" behavior="readwrite" uniqueId="3b4ba936-460e-4c88-ac9a-2a83186a1577" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="NationalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_isAdmin" property="IsAdmin" behavior="readwrite" uniqueId="4a6ebbf4-cc6f-4952-aaa3-b414944021c8" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsAdmin" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_userNationalChainId" property="UserNationalChainId" behavior="readwrite" uniqueId="2c865d6f-4111-4811-92f0-4efd32e793bd" type="System.Int32">
+          <orm:column name="UserNationalChainId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="Person">
+      <orm:table name="UserPermission" schema="Person">
+        <orm:column name="GSN" sql-type="varchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="StringVariableLength" />
+        <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="PermissonTypeID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:constraint name="FK__UserPermi__Entit__462AD202" schema="Person" destination-table="ApplicationEntity">
+          <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="FK__UserPermi__Permi__471EF63B" schema="Person" destination-table="PermissionType">
+          <orm:column name="PermissonTypeID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="UserAccount" schema="Person">
+        <orm:column name="UserAccountID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="GSN" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="NationalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="RegionalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="LocalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+      </orm:table>
+      <orm:table name="RoleSystem" schema="Person">
+        <orm:column name="SystemID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DefaultValue" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="Disabled" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="RoleSystemID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+      </orm:table>
+      <orm:table name="RolePermission" schema="Person">
+        <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="PermissonTypeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:constraint name="FK__RolePermi__Entit__425A411E" schema="Person" destination-table="ApplicationEntity">
+          <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="FK__RolePermi__Permi__434E6557" schema="Person" destination-table="PermissionType">
+          <orm:column name="PermissonTypeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="RoleAttribute" schema="Person">
+        <orm:column name="RoleAttributeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="EntityID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Key" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="KeyValue" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+      </orm:table>
+      <orm:table name="RoleAccount" schema="Person">
+        <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="NationalChainID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:constraint name="FK_RoleAccount_Role" schema="Person" destination-table="Role">
+          <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Role" schema="Person">
+        <orm:column name="RoleID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="RoleName" sql-type="varchar" nullable="true" length="250" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="RoleShortName" sql-type="varchar" nullable="true" length="150" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="RoleScope" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="ADGroupName" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+      </orm:table>
+      <orm:table name="PermissionType" schema="Person">
+        <orm:column name="PermissionTypeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="PermissionTypeName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+      </orm:table>
+      <orm:table name="ApplicationEntity" schema="Person">
+        <orm:column name="EntityID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="EntityName" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="AppID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:constraint name="FK__Applicati__AppID__37DCB2AB" schema="Person" destination-table="Application">
+          <orm:column name="AppID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Application" schema="Person">
+        <orm:column name="AppID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="AppName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+      </orm:table>
+      <orm:table name="UserNationalChain" schema="Person">
+        <orm:column name="GSN" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="NationalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="IsAdmin" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="UserNationalChainId" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+      </orm:table>
+    </orm:schema>
+    <orm:schema schema="NationalAccount">
+      <orm:table name="System" schema="NationalAccount">
+        <orm:column name="SystemID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="SystemName" sql-type="varchar" nullable="false" length="25" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="TermsetName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="PromotionGeoRelevancy" sql-type="varchar" nullable="true" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="PromotionCopyRule" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DefaultPromotionStatus" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column nullable="false" length="0" name="Sequence" scale="0" sql-type="int" ado-type="Int32" />
+      </orm:table>
+    </orm:schema>
+    <orm:schema schema="SAP">
+      <orm:table name="NationalChain" schema="SAP">
+        <orm:column name="NationalChainID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="SAPNationalChainID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="NationalChainName" sql-type="varchar" nullable="false" length="50" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="ChangeTrackNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="LastModified" sql-type="smalldatetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>Portal_DataConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=bsccap108;initial catalog=Portal_Data;user id=OnePortal;password=OnePortal</AppConfigConnectionString>
+    <InitialCatalog>Portal_Data</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="0246942e-ceab-4dfe-b37b-2d94139979b6" name="UserPermission" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="2f2a09ec-11da-4906-9948-8460bfa475d3" name="GSN" label="GSN : String" kind="Persistent" identity="true" fieldName="_gSN" />
+      <Property Id="49e15d6e-7e32-4262-b3c8-999ba9eb6913" name="EntityID" type="Int32" label="EntityID : Int32" kind="Persistent" fieldName="_entityID" />
+      <Property Id="c1907763-a855-42de-9243-3d625fdcb9b0" name="PermissonTypeID" type="Int32" label="PermissonTypeID : Int32" kind="Persistent" fieldName="_permissonTypeID" />
+      <AssociationTargets>
+        <Association Id="69db6e1d-9420-4091-8e4e-44a3799bbd05" SourceMultiplicity="One" name="UserPermissionHasApplicationEntity">
+          <DomainClassMoniker name="/PortalSecurity/ApplicationEntity" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="3d1b4879-b7e2-4407-a6f6-783ad97a1cc4">
+              <NavigationalPropertyMoniker name="/PortalSecurity/ApplicationEntity/UserPermissions" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="11626473-623a-4eb1-9a4c-6926dc05b409">
+              <NavigationalPropertyMoniker name="/PortalSecurity/UserPermission/ApplicationEntity" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="7ea276ab-daef-494c-80f5-6c72328ff0d1" SourceMultiplicity="One" name="UserPermissionHasPermissionType">
+          <DomainClassMoniker name="/PortalSecurity/PermissionType" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="b9291614-eded-43e5-9e4c-08ee101890e0">
+              <NavigationalPropertyMoniker name="/PortalSecurity/PermissionType/UserPermissions" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="193200e0-09a1-49c7-949f-dfc5f0d5f389">
+              <NavigationalPropertyMoniker name="/PortalSecurity/UserPermission/PermissionType" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="28dcac0d-dee0-4fa7-858b-72b2f4515f3e">
+          <NavigationalProperty Id="7f2b0a73-c3c3-4ec6-9f5b-dd19b9c27f24" name="ApplicationEntity" type="ApplicationEntity" label="ApplicationEntity : ApplicationEntity" nullable="true" kind="Persistent" fieldName="_applicationEntity" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="c7b9917b-0098-482f-9caf-885098e1352a">
+          <NavigationalProperty Id="5f1fd21b-ce72-4bc4-92eb-2be8b8d0a8f2" name="PermissionType" type="PermissionType" label="PermissionType : PermissionType" nullable="true" kind="Persistent" fieldName="_permissionType" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="bcee3b69-c18c-4b0b-9582-97599416827b" name="UserAccount" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="c64a0948-7274-408a-b260-0f0b0844781f" name="UserAccountID" type="Int32" label="UserAccountID : Int32" kind="Persistent" identity="true" fieldName="_userAccountID" />
+      <Property Id="9ee0064c-a559-48b3-b414-e0870db5fb14" name="GSN" label="GSN : String" kind="Persistent" fieldName="_gSN" />
+      <Property Id="d3317df8-b487-43a2-96e4-0a562c293bb0" name="LocalChainID" type="Int32" label="LocalChainID : Int32" nullable="true" kind="Persistent" fieldName="_localChainID" />
+      <Property Id="04fd82f9-a3b5-4969-ba28-5906f867f2d6" name="NationalChainID" type="Int32" label="NationalChainID : Int32" nullable="true" kind="Persistent" fieldName="_nationalChainID" />
+      <Property Id="f9ef7a0b-6a92-45de-be28-051149a25e4f" name="RegionalChainID" type="Int32" label="RegionalChainID : Int32" nullable="true" kind="Persistent" fieldName="_regionalChainID" />
+    </DomainClass>
+    <DomainClass Id="291d7212-9896-48ad-a559-9b988eccd67f" name="RoleSystem" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="d1ec5131-130e-4a44-8600-2b26cb8493ba" name="SystemID" type="Int32" label="SystemID : Int32" kind="Persistent" identity="true" fieldName="_systemID" />
+      <Property Id="ac96a61a-1c7f-4c58-add6-86cb704a563b" name="DefaultValue" type="Boolean" label="DefaultValue : Boolean" nullable="true" kind="Persistent" fieldName="_defaultValue" />
+      <Property Id="8b9dcab9-aff8-4ac7-ade1-70aa964ef6ed" name="Disabled" type="Boolean" label="Disabled : Boolean" nullable="true" kind="Persistent" fieldName="_disabled" />
+      <Property Id="e403529c-9d92-49d4-8643-132c7d9c146a" name="RoleID" type="Int32" label="RoleID : Int32" kind="Persistent" fieldName="_roleID" />
+      <Property Id="0df12f37-10e3-4966-bf76-683c2425c209" name="RoleSystemID" type="Int32" label="RoleSystemID : Int32" kind="Persistent" identity="true" fieldName="_roleSystemID" />
+    </DomainClass>
+    <DomainClass Id="328eae32-035c-42ef-ab77-e4bfab80666d" name="RolePermission" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="0e06e981-9cf4-4fdd-b7ca-3de8fce7589c" name="RoleID" type="Int32" label="RoleID : Int32" kind="Persistent" identity="true" fieldName="_roleID" />
+      <Property Id="7ddbd85e-a78b-428e-849c-2fb55bb7b86e" name="EntityID" type="Int32" label="EntityID : Int32" kind="Persistent" identity="true" fieldName="_entityID" />
+      <Property Id="fef76247-1923-4ac6-8aa5-08f1b14e7c1b" name="PermissonTypeID" type="Int32" label="PermissonTypeID : Int32" kind="Persistent" identity="true" fieldName="_permissonTypeID" />
+      <AssociationTargets>
+        <Association Id="3e427771-52f0-432c-8826-0078d40fb65b" SourceMultiplicity="One" name="RolePermissionHasApplicationEntity">
+          <DomainClassMoniker name="/PortalSecurity/ApplicationEntity" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="82741eeb-9f4a-47c4-810a-76cf851c68e6">
+              <NavigationalPropertyMoniker name="/PortalSecurity/ApplicationEntity/RolePermissions" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="47ea62c6-709d-4afc-95f6-9fce1f598313">
+              <NavigationalPropertyMoniker name="/PortalSecurity/RolePermission/ApplicationEntity" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+        <Association Id="dca8ca36-815d-4353-ac31-993e1ba914a1" SourceMultiplicity="One" name="RolePermissionHasPermissionType">
+          <DomainClassMoniker name="/PortalSecurity/PermissionType" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="4bfcd7a5-80ad-436b-9904-81391de93906">
+              <NavigationalPropertyMoniker name="/PortalSecurity/PermissionType/RolePermissions" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="efd82fe5-e4ca-479d-bea8-73186e12d59d">
+              <NavigationalPropertyMoniker name="/PortalSecurity/RolePermission/PermissionType" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="d09bf6a5-e3ef-4cbf-bfeb-e19c2d09fcb1">
+          <NavigationalProperty Id="5b45f084-44ae-4c02-a096-d4e94a69e7be" name="ApplicationEntity" type="ApplicationEntity" label="ApplicationEntity : ApplicationEntity" nullable="true" kind="Persistent" fieldName="_applicationEntity" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="90b79e4a-3a04-488b-acaa-aa911c7a9d4a">
+          <NavigationalProperty Id="5ecb94f6-7aed-4221-ac1e-20e8a922dc3b" name="PermissionType" type="PermissionType" label="PermissionType : PermissionType" nullable="true" kind="Persistent" fieldName="_permissionType" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="04fb1cd1-be69-4628-885f-c9d73656504f" name="RoleAttribute" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="5c393170-985b-441a-a5db-2e995e5612e1" name="RoleAttributeID" type="Int32" label="RoleAttributeID : Int32" kind="Persistent" identity="true" fieldName="_roleAttributeID" />
+      <Property Id="4ea20104-fbc8-4ad8-a98e-7a901b0b26ee" name="EntityID" type="Int32" label="EntityID : Int32" nullable="true" kind="Persistent" fieldName="_entityID" />
+      <Property Id="afb94848-f4c0-41a2-8f7d-886152ca719e" name="Key" label="Key : String" kind="Persistent" fieldName="_key" />
+      <Property Id="0a3036fb-0227-42db-a729-4876d8d4be00" name="KeyValue" label="KeyValue : String" kind="Persistent" fieldName="_keyValue" />
+      <Property Id="d55885de-2808-4b78-93eb-6bb4dca96130" name="RoleID" type="Int32" label="RoleID : Int32" kind="Persistent" fieldName="_roleID" />
+    </DomainClass>
+    <DomainClass Id="8132ed7a-f57f-4273-b90a-22ca1b43e2b3" name="RoleAccount" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="212efae5-42fb-4a72-b9ac-8511fbfd0540" name="NationalChainID" type="Int32" label="NationalChainID : Int32" kind="Persistent" identity="true" fieldName="_nationalChainID" />
+      <Property Id="0a8ec9eb-5b95-4083-a14b-17746fadda5f" name="RoleID" type="Int32" label="RoleID : Int32" kind="Persistent" identity="true" fieldName="_roleID" />
+      <AssociationTargets>
+        <Association Id="ab99aa14-5f92-4257-8b93-07652854ddc4" SourceMultiplicity="One" name="RoleAccountHasRole">
+          <DomainClassMoniker name="/PortalSecurity/Role" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="f96f740e-c06e-4310-b6f6-29841afe077b">
+              <NavigationalPropertyMoniker name="/PortalSecurity/Role/RoleAccounts" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="0b44492e-b52c-4ee1-be6b-b621150c7e59">
+              <NavigationalPropertyMoniker name="/PortalSecurity/RoleAccount/Role" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="6a6418df-c5fc-4bc0-b2c9-ef212e62cdd0">
+          <NavigationalProperty Id="811e0b11-22ac-4402-a23a-2eb0129e5432" name="Role" type="Role" label="Role : Role" nullable="true" kind="Persistent" fieldName="_role" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="1e37bb66-2950-4e8f-9225-81d1b7e670dd" name="Role" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="6df4076c-9f20-4f2b-973c-1db9c00bcf87" name="RoleID" type="Int32" label="RoleID : Int32" kind="Persistent" identity="true" fieldName="_roleID" />
+      <Property Id="4107ee28-2fef-4f08-8cc4-95b69f6ca2c7" name="ADGroupName" label="ADGroupName : String" kind="Persistent" fieldName="_aDGroupName" />
+      <Property Id="4cd935f6-b82e-4994-99e1-fdd6086f93ee" name="RoleName" label="RoleName : String" kind="Persistent" fieldName="_roleName" />
+      <Property Id="57ca2fbd-4bc4-4d9d-917d-b4483c844b17" name="RoleScope" label="RoleScope : String" kind="Persistent" fieldName="_roleScope" />
+      <Property Id="aec07175-0261-435e-a374-667a336d0810" name="RoleShortName" label="RoleShortName : String" kind="Persistent" fieldName="_roleShortName" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="fd29cb42-876b-4d32-bc99-90db334127c8">
+          <NavigationalProperty Id="a5604414-f7b7-454d-85d8-7a08d1b04b40" name="RoleAccounts" type="IList&lt;RoleAccount&gt;" label="RoleAccounts : IList&lt;RoleAccount&gt;" nullable="true" kind="Persistent" fieldName="_roleAccounts" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="1ac91f21-4d70-4207-b830-1d266c3f1725" name="PermissionType" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="df01f7bc-4d2d-46e9-be80-346eea1129bf" name="PermissionTypeID" type="Int32" label="PermissionTypeID : Int32" kind="Persistent" identity="true" fieldName="_permissionTypeID" />
+      <Property Id="39c4ca61-32c1-43e5-a534-41d053997f8c" name="PermissionTypeName" label="PermissionTypeName : String" kind="Persistent" fieldName="_permissionTypeName" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="696261ae-4fae-4f89-8efb-c7835b3cc565">
+          <NavigationalProperty Id="082fcba0-dd2d-47e6-a577-fb764a29607d" name="UserPermissions" type="IList&lt;UserPermission&gt;" label="UserPermissions : IList&lt;UserPermission&gt;" nullable="true" kind="Persistent" fieldName="_userPermissions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="3666482f-56ac-4c78-a7bb-0b8b2551e7b3">
+          <NavigationalProperty Id="65796dff-552b-4928-9658-c84d02211ddd" name="RolePermissions" type="IList&lt;RolePermission&gt;" label="RolePermissions : IList&lt;RolePermission&gt;" nullable="true" kind="Persistent" fieldName="_rolePermissions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="c9905b82-c5a6-464d-bad6-b7e0d7154dad" name="ApplicationEntity" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="2fdb6cec-055a-493c-814f-0e05095868fe" name="EntityID" type="Int32" label="EntityID : Int32" kind="Persistent" identity="true" fieldName="_entityID" />
+      <Property Id="93ac1f02-2e01-4856-aa3a-d55aa4c5e9ff" name="AppID" type="Int32" label="AppID : Int32" kind="Persistent" fieldName="_appID" />
+      <Property Id="da92998d-f353-4727-8675-230cd3ce26ef" name="EntityName" label="EntityName : String" kind="Persistent" fieldName="_entityName" />
+      <AssociationTargets>
+        <Association Id="d6e924ec-9f1e-4ae6-a2e4-da6f3d1dd1b7" SourceMultiplicity="One" name="ApplicationEntityHasApplication">
+          <DomainClassMoniker name="/PortalSecurity/Application" />
+          <targetNavigationalProperty>
+            <associationDefinesTargetProperty Id="02c2f20b-2532-4dd2-85db-ce928efe997b">
+              <NavigationalPropertyMoniker name="/PortalSecurity/Application/ApplicationEntities" />
+            </associationDefinesTargetProperty>
+          </targetNavigationalProperty>
+          <sourceNavigationalProperty>
+            <associationDefinesSourceProperty Id="fd6c323a-4ad8-474f-99b7-cfbe7c465ea7">
+              <NavigationalPropertyMoniker name="/PortalSecurity/ApplicationEntity/Application" />
+            </associationDefinesSourceProperty>
+          </sourceNavigationalProperty>
+        </Association>
+      </AssociationTargets>
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="f80a1361-0bcc-4d8a-9a29-a8bec0171d8f">
+          <NavigationalProperty Id="75ca20d8-5537-4da9-9c9d-61cb0b90e51c" name="UserPermissions" type="IList&lt;UserPermission&gt;" label="UserPermissions : IList&lt;UserPermission&gt;" nullable="true" kind="Persistent" fieldName="_userPermissions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="4291bbce-f934-41dc-902d-0dd2e11e4819">
+          <NavigationalProperty Id="49178968-8188-40b1-a2b3-8f429b3293b9" name="RolePermissions" type="IList&lt;RolePermission&gt;" label="RolePermissions : IList&lt;RolePermission&gt;" nullable="true" kind="Persistent" fieldName="_rolePermissions" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+        <classHasNavigationalProperties Id="ca9c0a0a-2b21-44f3-8cef-88e4c86fe883">
+          <NavigationalProperty Id="0f60252b-d08c-4ffb-8df7-e63bd3d2905a" name="Application" type="Application" label="Application : Application" nullable="true" kind="Persistent" fieldName="_application" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="5e80dcb0-e70e-4a44-a9f7-2f56ae9b5cf5" name="Application" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="c2a79092-b968-495f-b563-003fe156de1c" name="AppID" type="Int32" label="AppID : Int32" kind="Persistent" identity="true" fieldName="_appID" />
+      <Property Id="75b14423-8d77-4b25-beda-51bbb252c2a6" name="AppName" label="AppName : String" kind="Persistent" fieldName="_appName" />
+      <navigationalProperties>
+        <classHasNavigationalProperties Id="c4b192db-acb8-44f6-b111-54607ae0c0e7">
+          <NavigationalProperty Id="a9ef8916-cdd6-45dd-a13a-04377529cacd" name="ApplicationEntities" type="IList&lt;ApplicationEntity&gt;" label="ApplicationEntities : IList&lt;ApplicationEntity&gt;" nullable="true" kind="Persistent" fieldName="_applicationEntities" isDependent="false" isManaged="false" />
+        </classHasNavigationalProperties>
+      </navigationalProperties>
+    </DomainClass>
+    <DomainClass Id="c321f506-2deb-4063-9e5a-4679efc409af" name="System" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="b82f7243-b893-4db4-b64f-2a9b52c86240" name="SystemID" type="Int32" label="SystemID : Int32" kind="Persistent" identity="true" fieldName="_systemID" />
+      <Property Id="ea46ce44-184b-46c1-b5a4-cdeb460e1e19" name="SystemName" label="SystemName : String" kind="Persistent" fieldName="_systemName" />
+      <Property Id="de7ad3a6-6167-4e46-aba8-a7f284766e3c" name="TermsetName" label="TermsetName : String" kind="Persistent" fieldName="_termsetName" />
+      <Property Id="b861019e-c558-48f5-b8eb-5a047fc3fe5c" name="PromotionGeoRelevancy" label="PromotionGeoRelevancy : String" kind="Persistent" fieldName="_promotionGeoRelevancy" />
+      <Property Id="0718e149-0371-4006-8770-ebd77cad196b" name="PromotionCopyRule" type="Int32" label="PromotionCopyRule : Int32" nullable="true" kind="Persistent" fieldName="_promotionCopyRule" />
+      <Property Id="258672c5-cba0-4e12-bc5d-46975101263d" name="DefaultPromotionStatus" type="Int32" label="DefaultPromotionStatus : Int32" nullable="true" kind="Persistent" fieldName="_defaultPromotionStatus" />
+      <Property Id="989b1fb4-4882-4dc0-aea1-09a30569ce69" name="Sequence" type="Int32" label="Sequence : Int32" kind="Persistent" fieldName="_sequence" />
+    </DomainClass>
+    <DomainClass Id="f1ef1f55-0c9b-499f-aea9-2897b3a5b9f0" name="NationalChain" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="1d3ac6a9-d5cc-4c69-93eb-f31b3c5bf938" name="NationalChainID" type="Int32" label="NationalChainID : Int32" kind="Persistent" identity="true" fieldName="_nationalChainID" />
+      <Property Id="19b925a0-051c-4d40-949f-78452428d05c" name="ChangeTrackNumber" type="Int32" label="ChangeTrackNumber : Int32" nullable="true" kind="Persistent" fieldName="_changeTrackNumber" />
+      <Property Id="0dbd9562-eeac-497e-9273-882551dada15" name="LastModified" type="DateTime" label="LastModified : DateTime" nullable="true" kind="Persistent" fieldName="_lastModified" />
+      <Property Id="e24ad053-215c-4610-b959-a6922a65e4e6" name="NationalChainName" label="NationalChainName : String" kind="Persistent" fieldName="_nationalChainName" />
+      <Property Id="afbb9a3b-a87d-4458-9a1e-1b568b4cfd13" name="SAPNationalChainID" type="Int32" label="SAPNationalChainID : Int32" nullable="true" kind="Persistent" fieldName="_sAPNationalChainID" />
+    </DomainClass>
+    <DomainClass Id="a0b6ad2e-fd07-43e1-be18-a599f4cadcd3" name="UserNationalChain" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="2c865d6f-4111-4811-92f0-4efd32e793bd" name="UserNationalChainId" type="Int32" label="UserNationalChainId : Int32" kind="Persistent" identity="true" fieldName="_userNationalChainId" />
+      <Property Id="a3850a06-5eeb-49f0-8ae3-5951ea5daa17" name="GSN" label="GSN : String" kind="Persistent" fieldName="_gSN" />
+      <Property Id="4a6ebbf4-cc6f-4952-aaa3-b414944021c8" name="IsAdmin" type="Boolean" label="IsAdmin : Boolean" nullable="true" kind="Persistent" fieldName="_isAdmin" />
+      <Property Id="3b4ba936-460e-4c88-ac9a-2a83186a1577" name="NationalChainID" type="Int32" label="NationalChainID : Int32" nullable="true" kind="Persistent" fieldName="_nationalChainID" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="c4e1a3b5-be12-40d2-9278-756908c34110">
+      <domainContainer name="PortalSecurity" namespace="DPSG.Portal.Framework.Security" showPropertiesCompartment="true">
+        <entitySetProperty name="UserPermissions" namespace="DPSG.Portal.Framework.Security" type="UserPermission" label="UserPermissions : IQueryable&lt;DPSG.Portal.Framework.Security.UserPermission&gt;" />
+        <entitySetProperty name="UserAccounts" namespace="DPSG.Portal.Framework.Security" type="UserAccount" label="UserAccounts : IQueryable&lt;DPSG.Portal.Framework.Security.UserAccount&gt;" />
+        <entitySetProperty name="RoleSystems" namespace="DPSG.Portal.Framework.Security" type="RoleSystem" label="RoleSystems : IQueryable&lt;DPSG.Portal.Framework.Security.RoleSystem&gt;" />
+        <entitySetProperty name="RolePermissions" namespace="DPSG.Portal.Framework.Security" type="RolePermission" label="RolePermissions : IQueryable&lt;DPSG.Portal.Framework.Security.RolePermission&gt;" />
+        <entitySetProperty name="RoleAttributes" namespace="DPSG.Portal.Framework.Security" type="RoleAttribute" label="RoleAttributes : IQueryable&lt;DPSG.Portal.Framework.Security.RoleAttribute&gt;" />
+        <entitySetProperty name="RoleAccounts" namespace="DPSG.Portal.Framework.Security" type="RoleAccount" label="RoleAccounts : IQueryable&lt;DPSG.Portal.Framework.Security.RoleAccount&gt;" />
+        <entitySetProperty name="Roles" namespace="DPSG.Portal.Framework.Security" type="Role" label="Roles : IQueryable&lt;DPSG.Portal.Framework.Security.Role&gt;" />
+        <entitySetProperty name="PermissionTypes" namespace="DPSG.Portal.Framework.Security" type="PermissionType" label="PermissionTypes : IQueryable&lt;DPSG.Portal.Framework.Security.PermissionType&gt;" />
+        <entitySetProperty name="ApplicationEntities" namespace="DPSG.Portal.Framework.Security" type="ApplicationEntity" label="ApplicationEntities : IQueryable&lt;DPSG.Portal.Framework.Security.ApplicationEntity&gt;" />
+        <entitySetProperty name="Applications" namespace="DPSG.Portal.Framework.Security" type="Application" label="Applications : IQueryable&lt;DPSG.Portal.Framework.Security.Application&gt;" />
+        <entitySetProperty name="Systems" namespace="DPSG.Portal.Framework.Security" type="System" label="Systems : IQueryable&lt;DPSG.Portal.Framework.Security.System&gt;" />
+        <entitySetProperty name="NationalChains" namespace="DPSG.Portal.Framework.Security" type="NationalChain" label="NationalChains : IQueryable&lt;DPSG.Portal.Framework.Security.NationalChain&gt;" />
+        <entitySetProperty name="UserNationalChains" namespace="DPSG.Portal.Framework.Security" type="UserNationalChain" label="UserNationalChains : IQueryable&lt;DPSG.Portal.Framework.Security.UserNationalChain&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

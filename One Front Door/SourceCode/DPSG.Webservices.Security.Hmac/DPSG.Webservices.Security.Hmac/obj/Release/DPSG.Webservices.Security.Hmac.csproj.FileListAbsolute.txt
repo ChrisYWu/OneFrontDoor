@@ -1,0 +1,16 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\DPSG.Webservices.Security.Hmac.dll.config
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\DPSG.Webservices.Security.Hmac.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\DPSG.Webservices.Security.Hmac.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\obj\Release\DPSG.Webservices.Security.Hmac.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\obj\Release\DPSG.Webservices.Security.Hmac.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\obj\Release\DPSG.Webservices.Security.Hmac.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\Newtonsoft.Json.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\NLog.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\System.Net.Http.Formatting.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\System.Web.Http.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\System.Web.Http.WebHost.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\Newtonsoft.Json.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\NLog.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\System.Net.Http.Formatting.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\System.Web.Http.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webservices.Security.Hmac\DPSG.Webservices.Security.Hmac\bin\System.Web.Http.WebHost.xml

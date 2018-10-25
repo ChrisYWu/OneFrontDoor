@@ -1,0 +1,61 @@
+<!-- iPhone version start -->
+
+<div class="visible-xs">
+
+
+    <div [hidden]="isShowAddStore">
+        <a class="btn btn-primary addstore-bordercolor" (click)="isOpenPopup(true)" *ngIf="routeDataInput.GSN !=''">Add Store</a>
+    </div>
+
+
+
+
+</div>
+
+
+<div class="visible-xs">
+    <!-- iPhone popup start -->
+
+
+
+
+    <div [hidden]="!isShowAddStore">
+
+        <div class="container-fluid dispatch-container-ip-popup">
+
+
+
+            <div class="ip-popup-sch">
+                <div class="row mp-header-ip">
+                    <a (click)="isOpenPopup(false)" class="close-ip-sch-popup">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                    <div class="col-xs-12">
+                        <div class="sch-ip-hdr">Add Store</div>
+                    </div>
+                </div>
+
+                <div class="row mp-row-top-ip">
+                    <div class="row mp-row-item-ip">
+                        <div class="col-xs-6 sch-col-ip-1">Route </div>
+                        <div class="col-xs-6 sch-col-ip-2"> {{routeDataInput.RouteName}}</div>
+                    </div>
+
+                    <div class="row mp-row-item-ip">
+                        <div class="col-xs-6 sch-col-ip-1">Merch </div>
+                        <div class="col-xs-6 sch-col-ip-2"> {{routeDataInput.FirstName}} {{routeDataInput.LastName}}</div>
+                    </div>
+
+                    <app-mobile-tabs [unassignedInputAccts]="unassignedAccts" [allInputAccts]="allAccts" [otherInputAccts]="otherAccts" [lastModifiedByInput]="lastModifiedByInput" [routeDataInput]="routeDataInput" (accountSelected)="setselectedAcct($event)"></app-mobile-tabs>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- iPhone popup end -->
+
+</div>
+
+<!-- iPhone version end -->

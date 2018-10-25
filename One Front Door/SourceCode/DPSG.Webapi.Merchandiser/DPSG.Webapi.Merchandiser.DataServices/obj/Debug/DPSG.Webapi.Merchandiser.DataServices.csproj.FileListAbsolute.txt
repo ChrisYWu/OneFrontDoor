@@ -1,0 +1,14 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\DPSG.Webapi.Merchandiser.DataServices.dll.config
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\DPSG.Webapi.Merchandiser.DataServices.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\DPSG.Webapi.Merchandiser.DataServices.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\DPSG.Webapi.Merchandiser.CommonUtils.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\DPSG.Webapi.Merchandiser.Modal.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\EntityFramework.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\EntityFramework.SqlServer.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\DPSG.Webapi.Merchandiser.CommonUtils.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\DPSG.Webapi.Merchandiser.Modal.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\EntityFramework.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\bin\Debug\EntityFramework.SqlServer.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\obj\Debug\DPSG.Webapi.Merchandiser.DataServices.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\obj\Debug\DPSG.Webapi.Merchandiser.DataServices.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Webapi.Merchandiser\DPSG.Webapi.Merchandiser.DataServices\obj\Debug\DPSG.Webapi.Merchandiser.DataServices.pdb

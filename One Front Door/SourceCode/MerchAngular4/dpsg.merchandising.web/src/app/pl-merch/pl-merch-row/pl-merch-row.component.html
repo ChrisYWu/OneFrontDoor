@@ -1,0 +1,46 @@
+<div class="dispatch-row-outer plm-row-outer" *ngIf="idx==0">
+
+    <div>
+        <div class="col-md-4 col-lg-3 col-sm-12">
+            &nbsp;.
+        </div>
+
+        <div class="col-md-8 col-lg-9 col-sm-12 plm-item-row plm-row-day">
+            <div class="plm-item-outer">
+                <span class="col-plm-item col-plm-day text-center" *ngFor="let day of days; let idx=index">
+                    {{day}}
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--     {{MerchToDayRoute | json}} -->
+<div class="dispatch-row-outer plm-row-outer">
+
+    <div>
+
+        <div class="col-md-4 col-lg-3 col-sm-12">
+            <pl-merch-info [idx]="idx" [GSN]="MerchToDayRoute.GSN" [LastName]="MerchToDayRoute.LastName" [FirstName]="MerchToDayRoute.FirstName" [Email]="MerchToDayRoute.Email" [Phone]="MerchToDayRoute.Phone" [AbsoluteURL]="MerchToDayRoute.AbsoluteURL"></pl-merch-info>
+        </div>
+
+        <div class=" col-md-8 col-lg-9 col-sm-12 plm-item-row ">
+            <div class="plm-item-outer ">
+                <pl-merch-item class="col-plm-item" (addRoute)="onAddRoute($event)" (deleteRoute)="onDeleteRoute($event)" [AvailableRoutes]="RouteToAssigne.Monday" [DayRoute]="MerchToDayRoute.Monday"></pl-merch-item>
+                <pl-merch-item class="col-plm-item" (addRoute)="onAddRoute($event)" (deleteRoute)="onDeleteRoute($event)" [AvailableRoutes]="RouteToAssigne.Tuesday" [DayRoute]="MerchToDayRoute.Tuesday"></pl-merch-item>
+                <pl-merch-item class="col-plm-item" (addRoute)="onAddRoute($event)" (deleteRoute)="onDeleteRoute($event)" [AvailableRoutes]="RouteToAssigne.Wednesday" [DayRoute]="MerchToDayRoute.Wednesday"></pl-merch-item>
+                <pl-merch-item class="col-plm-item" (addRoute)="onAddRoute($event)" (deleteRoute)="onDeleteRoute($event)" [AvailableRoutes]="RouteToAssigne.Thursday" [DayRoute]="MerchToDayRoute.Thursday"></pl-merch-item>
+                <pl-merch-item class="col-plm-item" (addRoute)="onAddRoute($event)" (deleteRoute)="onDeleteRoute($event)" [AvailableRoutes]="RouteToAssigne.Friday" [DayRoute]="MerchToDayRoute.Friday"></pl-merch-item>
+                <pl-merch-item class="col-plm-item" (addRoute)="onAddRoute($event)" (deleteRoute)="onDeleteRoute($event)" [AvailableRoutes]="RouteToAssigne.Saturday" [DayRoute]="MerchToDayRoute.Saturday"></pl-merch-item>
+                <pl-merch-item class="col-plm-item" (addRoute)="onAddRoute($event)" (deleteRoute)="onDeleteRoute($event)" [AvailableRoutes]="RouteToAssigne.Sunday" [DayRoute]="MerchToDayRoute.Sunday"></pl-merch-item>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 " style="height: 10px; ">
+
+    </div>
+
+</div>

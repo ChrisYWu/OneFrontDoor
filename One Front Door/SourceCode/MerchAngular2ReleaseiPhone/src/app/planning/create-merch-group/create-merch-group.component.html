@@ -1,0 +1,249 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="col-md-6 pull-left remove-col-margin">
+
+                <a class="btn btn-me btn-dark-gray" type="button" (click)="onAddGroupSelect()">
+                    <i class="fa fa-plus-circle" aria-hidden="true">
+                    </i> &nbsp;&nbsp;Add Group</a> &nbsp;&nbsp;
+
+            </div>
+            <div class="col-md-6 remove-col-margin pull-right">
+
+                <a type="button" class="btn btn-me btn-light-gray pull-right btn-p-form" (click)="onMerchGroupCancel()">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</a>
+                <a type="submit" class="btn btn-me btn-dark-gray pull-right btn-p-form" (click)="onMerchGroupSave()">&nbsp;&nbsp;Save&nbsp;&nbsp;</a>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dispatch-row">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="group-list">
+
+                    <div class="group-search">
+                        <div class="input-group group-input-group">
+                            <span class="input-group-addon input-group-addon-span">
+                                &nbsp;
+                                <i class="fa fa-search"></i> &nbsp;&nbsp;
+                            </span>
+                            <input type="text" #filterInput [(ngModel)]="filterText" class="form-control group-input" id="txtSearch" placeholder="Search">
+                        </div>
+                    </div>
+
+                    <table class="table tbl-group">
+                        <tbody>
+                            <tr [class]="idx == selectedIdx? 'tbl-row grp-row-active' : 'tbl-row'" (click)="onGroupSelect(group.MerchGroupID, idx)" *ngFor="let group of merchGroupData | filter:{GroupName: filterInput.value, DefaultOwnerName:filterInput.value} ; let idx=index ">
+
+                                <td class="col-xs-2 tbl-group-td center-block-mgroup">
+                                    <div class="nm-circle">{{group.GroupName.trim().charAt(0)}}</div>
+                                </td>
+                                <td class="col-xs-10 tbl-group-td1">
+
+                                    <div (click)="onGroupSelect(group.MerchGroupID, idx)">
+                                        <div class="txt-ln1">{{group.GroupName}}</div>
+                                        <div class="txt-ln2">{{group.DefaultOwnerName}}</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!--  rigt side   Form   from here    -->
+
+            <div class="col-md-8 no-border-radius" *ngIf="groupAreaDisplay">
+
+
+                <form [formGroup]="form">
+                    <!-- header  start -->
+                    <div class="row fr-row-hdr">
+
+                        <div class="col-md-11  remove-col-margin">
+
+                            <div class="row" [style.display]="spanGroupName?'inherit':'none'">
+
+                                <div class="nm-frm-circle float-left ">
+                                    {{getChrOfGroupname(merchGroupDetail.GroupName)}}
+                                </div>
+                                <div class="hdr-text float-left ">
+                                    {{merchGroupDetail.GroupName}}
+                                </div>
+                            </div>
+
+
+
+                            <div class="row" [style.display]="spanGroupName?'none':'inherit'">
+                                <div class="nm-frm-circle float-left ">
+                                    {{getChrOfGroupname(merchGroupDetail.GroupName)}}
+                                </div>
+                                <div class="col-md-6">
+                                    <input class="hdr-input" [(ngModel)]="merchGroupDetail.GroupName" type="text" placeholder="Group Name" id="groupName" ngControl="groupName"
+                                        formControlName="groupName" maxlength="50" (keypress)="onInputChange($event)" (focus)="validateAsyncGroupName()"
+                                        (input)="validateAsyncGroupInDelay()">
+                                </div>
+                            </div>
+
+                            <div class="row msg-alert" *ngIf="submitted && !form.controls['groupName'].valid">
+                                <!-- <div class="row msg-alert" *ngIf="submitted && !groupName.valid "> -->
+                                <strong>GroupName is required</strong>
+                            </div>
+                            <div class=" row msg-alert" *ngIf="IsGroupNameExists ">
+                                <strong>GroupName exists within the branch</strong>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1  remove-col-margin pull-right ">
+
+                            <div *ngIf="merchGroupDetail.MerchGroupID!=0">
+                                <a class="btn btn-me btn-dark-gray btn-hrd-frm pull-right" type="button" (click)="onspanEditGroupName()" *ngIf="spanGroupName">
+                                    <i class=" fa fa-pencil" aria-hidden="true "></i>&nbsp; Edit
+                                </a>
+                                <a class="btn btn-me btn-dark-gray btn-hrd-frm pull-right" type="button" (click)="onspanEditGroupName()" *ngIf="!spanGroupName">
+                                    <i class="fa fa-ban" aria-hidden="true"></i>&nbsp; Cancel
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- header  end -->
+
+                    <!--Edit-->
+                    <!-- body  start -->
+                    <div class="row fr-row-body">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="row pnl-ar-row">
+                                <div class="col-md-1 fr-user-icon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-6 fr-user-col">
+                                    <input class="col-md-6 fr-user-input" auto-complete [(ngModel)]="model4" placeholder="Default Owner" [source]="GetADUsers"
+                                        display-property-name="DisplayName" path-to-data="Users" min-chars="2" id="owner" ngControl="owner"
+                                        (keypress)="onInputChange($event)" formControlName="owner" />
+                                </div>
+                            </div>
+
+                            <div class="row msg-alert" *ngIf="submitted && !form.controls['owner'].valid">
+                                <!-- <div class="row msg-alert" *ngIf="submitted && !owner.valid"> -->
+                                <strong>Default Owner is required</strong>
+                            </div>
+                            <!-- route list start from here -->
+
+                            <div class="row fr-row-list">
+                                <div class="panel panel-default no-border-radius">
+                                    <div class="panel-heading pnl-header">
+                                        <span> Route List </span>
+                                        <button type="button" class="btn btn-primary adj-addstore-mrg addstore-bordercolor pull-right" (click)="onAddRouteSelect()">Add Route</button>
+                                    </div>
+
+                                    <div class="panel-body pnl-ar-body">
+
+                                        <div class="col-md-6 pnl-ar-col" *ngFor="let row of merchGroupDetail.Routes;let i = index;">
+                                            <div *ngIf="row.IsEditRoute" class="col-xs-8">
+                                                <input type="text" [(ngModel)]="row.RouteName" class="frm-ar-input" (blur)="onBlurRouteName(row,i)" maxlength="50" id="edit_routename[i]"
+                                                    ngControl="route_name1" formControlName="route_name1" (focus)="validateAsyncEditRouteName(row,i)"
+                                                    (input)="validateAsyncEditRouteInDelay(row,i)">
+                                            </div>
+                                            <div *ngIf="!row.IsEditRoute" class="col-xs-8">
+                                                <div class="ar-text"> {{ row.RouteName }} </div>
+                                            </div>
+                                            <div class="col-xs-4 pull-right remove-col-margin">
+                                                <table class="pull-right">
+                                                    <tr>
+                                                        <td>
+                                                            <a class="btn btn-ar-edt pull-right" type="button" *ngIf="!row.IsEditRoute" (click)="onEditRoute(row,i)">
+                                                                <i class="fa fa-pencil" style="color:#333333" aria-hidden="true"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-ar-dlt pull-right" type="button" *ngIf="RouteNameEditMode==false && !row.IsEditRoute" (click)="onTryDeleteRoute(row.RouteID, row.RouteName)">
+                                                                <i class="glyphicon glyphicon-trash" style="color:#333333" aria-hidden="true"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <div class="msg-alert  col-xs-12" *ngIf="row.IsRouteNameExists">
+                                                <strong>Route name exists</strong>
+                                            </div>
+                                            <div class="msg-alert  col-xs-12" *ngIf="row.IsRequired">
+                                                <strong>Route name required</strong>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 pnl-ar-col" *ngIf="routeAreaDisplay">
+                                            <div class="col-xs-8">
+                                                <input class="form-control fr-input-store" type="text" [(ngModel)]="routeName" id="route_name" placeholder="Add Route Name"
+                                                    ngControl="route_name" formControlName="route_name" maxlength="50" (focus)="validateAsyncRouteName()"
+                                                    (input)="validateAsyncRouteInDelay()" (blur)="addRouteToList()">
+                                            </div>
+                                            <div class="col-xs-4 pull-right remove-col-margin" style="display:none;">
+                                                <a class="btn btn-ar-edt pull-right" type="button" (click)="addRouteToList()">
+                                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-12 msg-alert fr-message" *ngIf="IsRouteNameExists">
+                                                <strong>Route name exists</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" bsModal #routeDeleteModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog"
+    aria-labelledby="mySmallModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close" (click)="routeDeleteModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Delete route</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="comment">
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i> &nbsp;To delete
+                        <i>{{RouteName}}</i> from
+                        <i>{{MerchGroupName}}</i>, please review the schedule changes and confirm. If day is already Scheduled(green), Schedule will be automatically refreshed with new information.
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="comment">
+                        The route will be
+                    </label>
+                    <ul>
+                        <li *ngFor="let note of RouteRemovelWarnings; let i = index">
+                            {{note.PDNote}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-group" style="text-align:center">
+                    <a class="btn btn-primary addstore-bordercolor" style="border-color:#51626f" (click)="onDeleteRoute();routeDeleteModal.hide();">Ok</a>
+                    <a class="btn btn-primary addstore-bordercolor" style="border-color:#51626f" (click)="routeDeleteModal.hide();">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-spinner [isRunning]="isRequesting"></app-spinner>

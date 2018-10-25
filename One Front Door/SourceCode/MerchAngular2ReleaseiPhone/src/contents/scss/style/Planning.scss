@@ -1,0 +1,65 @@
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+
+.plm-tabs {
+    padding: 0;
+    margin: 0;
+}
+
+.rsplm-tab {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    width: 14% !important;
+    height: 40px !important;
+    float: left !important;
+    border: 1px solid transparent !important;
+    padding-top: 7px;
+    margin-bottom: -5px !important;
+    margin-top: -5px !important;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten($brand-blue, 10%) !important;
+        border: 1px solid darken($brand-blue, 10%) !important;
+        border-bottom: 5px solid lighten($brand-orange, 20%) !important;
+    }
+}
+
+.plm-tab-active {
+    border-bottom: 5px solid $brand-orange !important;
+}
+
+
+.unassigned-store {
+  padding: 0;
+  margin: -5px -12px; }
+
+.unassigned-store-font {
+  font-size: 36px; }
+
+.unassigned-store-font:hover {
+  color: #d7d7d7;
+  cursor: pointer; }
+
+.unassigned-store-badge {
+  margin-left: 3px;
+  margin-top: -31px;
+  position: absolute;
+  background-color: #db2836;
+  font-size: 16px; }
+
+.unassigned-group-list {
+  border: 1px solid #d7d7d7;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 7px #a4a4a4 ;
+  -moz-box-shadow: 0 3px 7px #a4a4a4 ;
+  box-shadow: 0 3px 7px #a4a4a4 ;
+  padding: 0; }
+

@@ -1,0 +1,37 @@
+<div class="col-md-4 group-list">
+<div class="group-search">
+                        <div class="input-group group-input-group">
+                            <span class="input-group-addon group-search-addon">
+                       &nbsp;  <i class="fa fa-search"></i>  &nbsp;&nbsp;
+                    </span>
+                            <input type="text" #filterInput [(ngModel)]="filterText" class="form-control group-input" id="txtSearch" placeholder="Search">
+                        </div>
+                    </div>
+
+                    <table class="table tbl-group">
+                        <tbody class="frm-group-list">
+                            
+                            <tr [class]="idx == selectedIdx ? 'tbl-row grp-row-active' : 'tbl-row'" (click)="onMerchSelect(merch,idx)"  *ngFor="let merch of MerchListData | filter:{MerchName: filterInput.value} ; let idx=index ">
+
+                                <td class="col-xs-1 tbl-group-td">                                  
+                                     <img  class="nm-circle">
+                                </td>
+
+                                <td class="col-xs-9 tbl-group-td1">
+                                    <div>
+                                        <div class="txt-ln1">{{merch.MerchName}}</div>
+                                        <div class="txt-ln2">{{merch.Phone}}</div>                                        
+                                    </div>
+                                </td>
+                                <td class="col-xs-2 text-center tbl-group-td2">
+                                    <div class="grp-delete-icon pull-right">
+                                        <!--<i class="fa fa-trash"></i>-->
+                                    </div>
+                                </td>
+                            </tr>
+                          
+                        </tbody>
+      </table>
+ </div>
+
+

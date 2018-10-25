@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="1 Portal_Data"
+  DTS:DTSID="{3B915BF8-5797-49EE-8B63-A7A9FAC649E7}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=bsccap121;User ID=OnePortal;Initial Catalog=Portal_Data;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFWEaYO5ysUanmhfs0XjSJQAAAAACAAAAAAADZgAAwAAAABAAAADRm62Th7vO506D6B4zu0aOAAAAAASAAACgAAAAEAAAAB0zb0kh+8JzdL3lOvHI+PZ4AAAA/pwbNfz8TXQNbsW7iZqdg7CgS6QDMlhsd8Rz8/clh8iEDDtbbsNNXmle+F7/RrOhGA4SpJmEcGVnyKnQMcF3l+scKMS8yXaFhsUVI9b1ipwT5YmAWT72zP5MjIkA6OnPkODkAQcNzVZOnJrag4kdhmy5qylj4TxXFAAAAIaEBNXAMv8qHPtvX2ycEcjOz4AF</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

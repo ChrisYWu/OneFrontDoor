@@ -1,0 +1,33 @@
+<div class="modal-dialog  plm-modal-select">
+    <div class="modal-content no-border-radius">
+        <div class="modal-header mp-header">
+            <div class="row">
+                <!--
+                <a class="mp-close" (click)="plRouteModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+               -->
+                <button type="button" class="close mp-close" (click)="plRouteModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                <div class="col-md-12 text-center">
+                    <h4>Select Merchandiser</h4>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row plm-modal-select-row">
+
+
+                <div class="col-md-12" *ngFor="let Merchandiser of AvailableMerchandisers; let idx=index" (click)="selectMerchandiser(Merchandiser)">
+
+
+                    <pl-merch-info-select [idx]="idx" [Merchandiser]="Merchandiser"></pl-merch-info-select>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

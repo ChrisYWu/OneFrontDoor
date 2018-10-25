@@ -1,0 +1,76 @@
+<!-- ipone version -->
+
+<div class="div-stop-ip visible-xs" (click)="showPopup(null, stop.MerchStopID, true)">
+    <div class=" div-stop-circle-ip ">
+        <div *ngIf="!((stop.SequenceLabel.toLowerCase() =='p' ) || (stop.SequenceLabel.toLowerCase() =='+'))" [class]="getStopCSSip(stop) ">
+            {{stop.SequenceLabel}}
+        </div>
+
+
+        <div *ngIf="stop.SequenceLabel.toLowerCase()=='p' " class="stop-circle-ip circle-p-ip ">
+            <i class="fa fa-male " style="font-size: 16px; " aria-hidden="true "></i>
+        </div>
+        <div *ngIf="stop.SequenceLabel.toLowerCase()=='+' " [class]="getStopPlusCSSip(stop) ">
+            <i class="fa fa-plus " style="font-size: 16px; " aria-hidden="true ">
+        </i>
+        </div>
+    </div>
+    <div class="div-stop-txt-ip ">
+        <div class="stop-ln1-ip ">{{stop.accName}}</div>
+        <div class="stop-ln2-ip ">{{stop.accNo}}&nbsp;&nbsp;</div>
+        <div class="stop-ln3-ip ">{{stop.TimeSpan}} {{stop.DNSReason}}&nbsp;&nbsp;</div>        
+        <div class="stop-ln-online ">
+
+            <span class="stop-ln-span ">
+                {{getLineTopText(stop.EndMileage, stop.EndDriveTime )}}
+               
+            </span>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- ipone version end
+ {{stop.EndMileage}}&nbsp;|&nbsp;{{stop.EndDriveTime}}
+ -->
+
+
+
+
+<div class="route-item-outer hidden-xs " (click)="showPopup(storeModal, stop.MerchStopID, false) " [style.cursor]="stop.MerchStopID>0? 'pointer' : 'not-allowed'">
+
+    <div *ngIf="stop.EndMileage !=null" class="stop-ln-top">{{stop.EndMileage}}</div>
+    <div *ngIf="stop.EndDriveTime !=null" class="stop-ln-btm">{{stop.EndDriveTime}}</div>
+
+    <div [class]="stop.EndConnectorType == 'Dash'? 'stop-line stop-line-dash' : 'stop-line stop-line-solid'" [hidden]="(idx+1) == count">
+    </div>
+
+    <div *ngIf="(stop.SequenceLabel.toLowerCase() != 'p')|| (stop.SequenceLabel.toLowerCase() != '+')" [class]="getStopCSS(stop)">
+        {{stop.SequenceLabel}}
+    </div>
+    <div *ngIf="stop.SequenceLabel.toLowerCase() == 'p'" class="stop-circle circle-p">
+        <i class="fa fa-male" style="font-size: 16px;" aria-hidden="true"></i>
+    </div>
+    <div *ngIf="stop.SequenceLabel.toLowerCase() == '+'" [class]="getStopPlusCSS(stop)">
+        <i class="fa fa-plus" style="font-size: 16px;" aria-hidden="true">
+        </i>
+    </div>
+
+    <div class="stop-ln1">{{stop.accName}}</div>
+    <div class="stop-ln2">{{stop.accNo}}</div>
+    <div class="stop-ln3">{{stop.TimeSpan}}</div>
+    <div class="stop-ln3">{{stop.DNSReason}}</div>
+
+</div>
+
+<!--  
+    
+ Popup
+    
+-->
+<div bsModal #storeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
+
+    <monitor-popup2 [storeModal]="storeModal" [storeDetails]="storeDetails" [allPictures]="allPictures" [storeSignature]="storeSignature" [stop]="stop"></monitor-popup2>
+
+</div>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SDM">
+  <DataContextMoniker Name="/SDMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="52a2faff-31b6-4b86-a157-cd4fc6b862d0" absoluteBounds="1.25, 2.25, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SDMDataContext/tBottlerAccountLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27efa75c-e851-40dd-8e72-ec43e03a0bfb" absoluteBounds="1.2650000000000001, 2.71, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="238b1e0b-0d1f-4ba1-96a5-34658e598575" absoluteBounds="4.125, 2.375, 2, 1.75354248046875">
+      <DataClassMoniker Name="/SDMDataContext/tBottlerTerritoryMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="744f7a57-53a4-4ff2-bcd0-91ae98e97f49" absoluteBounds="4.14, 2.835, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3653392-4537-4d75-b2ac-3990ba2befaf" absoluteBounds="1.375, 0.625, 2, 1.26050048828125">
+      <DataClassMoniker Name="/SDMDataContext/vBottlerTerritoryMapHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfc4047b-e43b-482d-841a-a5290de90046" absoluteBounds="1.3900000000000001, 1.085, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

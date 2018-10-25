@@ -1,0 +1,5 @@
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.dll
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\obj\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.dll
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\obj\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.Model\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.dll.config

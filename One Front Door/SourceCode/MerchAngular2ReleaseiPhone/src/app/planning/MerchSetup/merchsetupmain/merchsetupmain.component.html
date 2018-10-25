@@ -1,0 +1,51 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="col-md-6 pull-left remove-col-margin">
+
+                <app-addmerch [MerchGroupItem]=item (merchSelected)="setselectedMerch($event)" [merchLookupList]=inputAcctLookupList></app-addmerch>
+
+            </div>
+            <div class="col-md-6 remove-col-margin pull-right">
+
+                <a type="button" class="btn btn-me btn-light-gray pull-right btn-p-form" (click)="onMerchCancel()">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</a>
+                <a type="submit" class="btn btn-me btn-dark-gray pull-right btn-p-form" (click)="onMerchSave()">&nbsp;&nbsp;Save&nbsp;&nbsp;</a>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dispatch-row">
+
+        <div class="row">
+
+            <!--  left side   Form   from here    -->
+            <div class="col-md-4">
+
+                <app-merchlist [(selectedIdx)]=listIndex (refreshDeleteList)="refreshDeletedMerchList()" (merchListSelected)="setListselectedMerch($event)" [MerchListData]="MerchInfoList"></app-merchlist>
+
+            </div>
+            <!--  rigt side   Form   from here    -->
+            <div class="col-md-8 no-border-radius">
+
+                <app-merchdetail (refreshList)="refreshMerchList($event)" [selectedRoute]="selDefaultRoute" [ShowSaveMsg]="SaveMsg"
+                 [MerchGroupItem]="item" (cancelDetail)="cancelDetailMerch($event)" [merchSelectedInfo]="selMerchInfo" [selectedRouteMon]="selDefaultRouteMon" 
+                 [selectedRouteTue]="selDefaultRouteTue" [selectedRouteWed]="selDefaultRouteWed" [selectedRouteThu]="selDefaultRouteThu"
+                 [selectedRouteFri]="selDefaultRouteFri" [selectedRouteSat]="selDefaultRouteSat" [selectedRouteSun]="selDefaultRouteSun"></app-merchdetail>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--StoreList popup-->
+
+</div>
+
+
+<app-spinner [isRunning]="isRequesting"></app-spinner>

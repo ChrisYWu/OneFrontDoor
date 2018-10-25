@@ -1,0 +1,30 @@
+
+<div class="container-fluid">
+  
+  <div class="row row-planing">
+    <div class="col-md-12">
+       <!--  left side   Form   from here    -->
+       <div class="col-md-4">         
+          
+           <app-addmerch [MerchGroupItem]=item       
+           (merchSelected)="setselectedMerch($event)"
+           [merchLookupList]=inputAcctLookupList 
+           ></app-addmerch>
+
+           <app-merchlist [(selectedIdx)]=listIndex
+            (merchListSelected)="setListselectedMerch($event)"
+            [MerchListData]="MerchInfoList"></app-merchlist>       
+         </div> 
+          <!--  rigt side   Form   from here    -->
+           <div class="col-md-8 no-border-radius">
+             <app-merchdetail  (refreshList)="refreshMerchList($event)" 
+             [routeList]=routesList [daysofWeek]=weekDays [selectedRoute]=selDefaultRoute 
+             [ShowSaveMsg]=SaveMsg [MerchGroupItem]=item (cancelDetail)="cancelDetailMerch($event)"  [merchSelectedInfo]=selMerchInfo></app-merchdetail>
+           </div>
+    </div>
+  </div>
+<app-spinner [isRunning]="isRequesting"></app-spinner>
+
+<!--StoreList popup-->
+
+</div>

@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "KronosTSQL", "..\DpsgVS\KronosTSQL\KronosTSQL.ssmssqlproj", "{0A3CFD1D-8E91-4C42-8F95-C9FE0BD1F61B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA9F0E33-AA6A-4028-AB01-64FA3F67C314}.Default|Default.ActiveCfg = Default
+		{0A3CFD1D-8E91-4C42-8F95-C9FE0BD1F61B}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

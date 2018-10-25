@@ -1,0 +1,281 @@
+<div class="container-fluid">
+
+    <div class="row row-planing">
+        <div class="col-md-12">
+
+            <div class="col-md-4">
+                <div class="add-group">
+                    <a class="btn btn-me btn-dark-gray btn-add-group" type="button" (click)="onAddGroupSelect()">
+                        <i class="fa fa-plus-circle plus-icon" aria-hidden="true">
+                      </i> &nbsp;&nbsp;Add Group</a>
+                </div>
+
+                <div class="col-md-4 group-list">
+
+                    <div class="group-search">
+                        <div class="input-group group-input-group">
+                            <span class="input-group-addon group-search-addon">
+                       &nbsp;  <i class="fa fa-search"></i>  &nbsp;&nbsp;
+                    </span>
+                            <input type="text" #filterInput [(ngModel)]="filterText" class="form-control group-input" id="txtSearch" placeholder="Search">
+                        </div>
+                    </div>
+
+                    <table class="table tbl-group">
+                        <tbody>
+                            <tr [class]="idx == selectedIdx? 'tbl-row grp-row-active' : 'tbl-row'" (click)="onGroupSelect(group.MerchGroupID, idx)" *ngFor="let group of merchGroupData | filter:{GroupName: filterInput.value} ; let idx=index ">
+
+                                <td class="col-xs-2 tbl-group-td">
+                                    <div class="nm-circle">{{idx+ 1}}</div>
+                                </td>
+
+
+                                <td class="col-xs-6 tbl-group-td1">
+
+                                    <div (click)="onGroupSelect(group.MerchGroupID, idx)">
+                                        <div class="txt-ln1">{{group.GroupName}}</div>
+                                        <div class="txt-ln2">{{group.DefaultOwnerName}}</div>
+                                    </div>
+                                </td>
+                                <td class="col-xs-4 text-center tbl-group-td2">
+                                    <div class="grp-delete-icon pull-right">
+                                        <!--<i class="fa fa-trash" (click)="onMerchGroupDelete(group)"></i>-->
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+            <!--  rigt side   Form   from here    -->
+
+            <div class="col-md-8 no-border-radius" *ngIf="groupAreaDisplay">
+
+
+                <form [ngFormModel]="form" ngNoForm>
+
+
+                    <!-- header  start -->
+                    <div class="row fr-row-hdr">
+
+                        <div class="col-md-2  block-center">
+
+                            <div class="nm-frm-circle"> {{selectedIdx + 1}} </div>
+
+
+                        </div>
+
+                        <div class="col-md-10 remove-col-margin">
+
+                            <div class="row hdr-text" [style.display]="spanGroupName?'inherit':'none'">
+                                {{merchGroupDetail.GroupName}}
+                            </div>
+
+
+
+                            <div class="row" [style.display]="spanGroupName?'none':'inherit'">
+                                <div class="col-md-6">
+                                    <input class="hdr-input" [(ngModel)]="merchGroupDetail.GroupName" type="text" placeholder="Group Name" id="groupName" ngControl="groupName" #groupName="ngForm" name="groupName" 
+                                     mask maxlength="50" 
+                                    (focus)="validateAsyncGroupName()"
+                                   (input)="validateAsyncGroupInDelay()">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"></div>
+                                <div class="col-md-2" *ngIf="merchGroupDetail.MerchGroupID!=0">
+
+                                    <a class="btn btn-hdr-edt pull-right" type="button" (click)="onspanEditGroupName()" *ngIf="spanGroupName">
+                                        <i class=" fa fa-pencil " aria-hidden="true "></i>&nbsp; Edit
+                                    </a>
+                                     <a class="btn btn-hdr-edt pull-right" type="button" (click)="onspanEditGroupName()" *ngIf="!spanGroupName">
+                                         <i class="fa fa-ban" aria-hidden="true"></i>&nbsp; Cancel
+                                    </a>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+
+
+                            <div class="row msg-alert" *ngIf="submitted && !groupName.valid ">
+                                <strong>GroupName is required</strong>
+                            </div>
+                            <div class=" row msg-alert" *ngIf="IsGroupNameExists ">
+                                <strong>GroupName exists within the branch</strong>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- header  end -->
+
+                    <!--Edit-->
+
+
+
+                    <!-- body  start -->
+                    <div class="row fr-row-body">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+
+                            <div class="row pnl-ar-row">
+
+                                <div class="col-md-1 fr-user-icon">
+
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+
+                                </div>
+                                <div class="col-md-6 fr-user-col">
+
+                                    <input class="col-md-6 fr-user-input" auto-complete [(ngModel)]="model4" placeholder="Default Owner" 
+                                    [source]="GetADUsers" display-property-name="DisplayName" path-to-data="Users" min-chars="2" id="owner"
+                                     ngControl="owner" #owner="ngForm" name="owner" />
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="row msg-alert" *ngIf="submitted && !owner.valid">
+                                <strong>Default Owner is required</strong>
+                            </div>
+
+
+                            <div class="row fr-row-add">
+                                <a type="button" class="add-route" (click)="onAddRouteSelect()">
+                                    <i class="fa fa-minus-circle" aria-hidden="true" *ngIf="routeAreaDisplay"></i>
+                                    <i class="fa fa-plus-circle" aria-hidden="true" *ngIf="!routeAreaDisplay"></i> &nbsp; Add Route
+                                </a>
+                            </div>
+
+
+
+
+                            <div class="row fr-user-row" *ngIf="routeAreaDisplay">
+
+                                <div class="col-md-1 fr-user-icon">
+
+                                    <i class="fa fa-map-o" aria-hidden="true"></i>
+
+                                </div>
+
+                                <div class="col-md-6 fr-user-col">
+                                  <div class="input-group fr-user-route-add">
+                                    <input class="form-control fr-user-input-route" type="text" [(ngModel)]="routeName" id="route_name" placeholder="Add Route Name" ngControl="route_name" #route_name="ngForm" name="route_name" 
+                                     mask maxlength="50"
+                                    (focus)="validateAsyncRouteName()"
+                                   (input)="validateAsyncRouteInDelay()">
+                                   <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" (click)="addRouteToList()" style="height:34px">Add</button>
+                                  </span>                                  
+                                    
+                                  </div>
+                                </div>
+                                <div class="col-md-5 msg-alert fr-message" *ngIf="IsRouteNameExists">
+                                    <strong>Route name exists within the branch</strong>
+                                </div>
+
+                            </div>
+
+                            <!-- route list start from here -->
+
+                            <div class="row fr-row-list">
+                                <div class="panel panel-default no-border-radius">
+                                    <div class="panel-heading pnl-header">
+                                        Route List
+                                    </div>
+
+                                    <div class="panel-body pnl-ar-body">
+
+                                        <div class="col-md-6 pnl-ar-col" style="padding-left:10px" *ngFor="let row of merchGroupDetail.Routes;let i = index;">
+
+                                            <div *ngIf="row.IsEditRoute" class="col-xs-8">
+                                                <input type="text" [(ngModel)]="row.RouteName" class="form-control"  mask maxlength="50" id="edit_routename[i]"
+                                                (focus)="validateAsyncEditRouteName(row,i)"
+                                                (input)="validateAsyncEditRouteInDelay(row,i)">
+                                            </div>
+
+                                            <div *ngIf="!row.IsEditRoute" class="col-xs-8">
+                                                <div class="ar-text"> {{ row.RouteName }} </div>
+                                            </div>
+
+                                            <div class="col-xs-4 pull-right">
+
+                                                <!--<a class="btn btn-ar-dlt pull-right" type="button" (click)="onRouteDelete(row,i)">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </a>-->
+                                                <a class="btn btn-ar-edt pull-right" type="button" *ngIf="!row.IsEditRoute" (click)="onEditRoute(row,i)">
+                                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                </a>
+                                                <!--<a class="btn btn-ar-edt pull-right" type="button" *ngIf="row.IsEditRoute" (click)="onEditCancelRoute(row,i)">
+                                                    <i class="fa fa-ban" aria-hidden="true"></i>
+                                                </a>-->
+                                            </div>
+
+                                            <div class="msg-alert  col-xs-12" *ngIf="row.IsRouteNameExists">
+                                                <strong>Route name exists</strong>
+                                            </div>
+                                             <div class="msg-alert  col-xs-12" *ngIf="row.IsRequired">
+                                                <strong>Route name required</strong>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <!-- route list end from here -->
+
+                        <!--body fotter  start -->
+                        
+                         <div class="pull-right fr-row-body-msg" *ngIf="ShowSaveMsg">
+                           <span class="msg-alert" >Saved Successfully</span>
+                        </div>
+                        <div class="pull-right fr-row-body-fotter">
+                           
+                            <a type="button" class="btn btn-me btn-light-gray" (click)="onMerchGroupCancel()">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</a> &nbsp;&nbsp;
+                            <a type="submit" class="btn btn-me btn-light-blue" (click)="onMerchGroupSave()">&nbsp;&nbsp;Save&nbsp;&nbsp;</a>
+
+
+                        </div>
+
+                        <!--body fotter  end -->
+
+                    </div>
+                    <!-- body  end -->
+                </form>
+
+            </div>
+
+            <!--  rigt side   end here    -->
+
+        </div>
+    </div>
+
+</div>
+<app-spinner [isRunning]="isRequesting"></app-spinner>

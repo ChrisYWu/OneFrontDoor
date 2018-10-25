@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "RandomPractice204", "RandomPractice204.ssmssqlproj", "{457B0E21-4056-41E2-A1F4-BE780CF19A08}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = RandomPractice204.ssmssqlproj
+		SccProjectName0 = $/One\u0020Front\u0020Door/SourceCode/T-SQL\u0020Scripts/RandomPractices204
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:Team\u0020Foundation\u0020Server\u0020MSSCCI\u0020Provider
+		SccProjectFilePathRelativizedFromConnection0 = RandomPractice204\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{457B0E21-4056-41E2-A1F4-BE780CF19A08}.Default|Default.ActiveCfg = Default
+		{A0D0DC99-2F23-4B6C-8BA8-7173053B56FE}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

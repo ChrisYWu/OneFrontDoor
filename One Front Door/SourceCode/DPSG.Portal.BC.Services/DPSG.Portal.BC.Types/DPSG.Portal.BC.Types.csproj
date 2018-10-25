@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF1AF898-3246-433A-8B15-E2BEA5F2907F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DPSG.Portal.BC.Types</RootNamespace>
+    <AssemblyName>DPSG.Portal.BC.Types</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DEV\Json60r8\Bin\Net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Schema">
+      <HintPath>..\packages\Newtonsoft.Json.Schema.1.0.11\lib\net45\Newtonsoft.Json.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AdHoc\Account.cs" />
+    <Compile Include="Account\Bottler\AccountDetails.cs" />
+    <Compile Include="Account\Bottler\Contract\BottlerAccount.cs" />
+    <Compile Include="BottlerHierarchy\BotttlerHierarchyDataDetails.cs" />
+    <Compile Include="BottlerHierarchy\Contract\BottlerHieararchy.cs" />
+    <Compile Include="BottlerHierarchy\Contract\BottlerHiearchyData.cs" />
+    <Compile Include="CDE\AssetDetails.cs" />
+    <Compile Include="CDE\Contract\Asset.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="BCPromotionExecution.cs" />
+    <Compile Include="BottlerSalesHier.cs" />
+    <Compile Include="BCPromotionExecutionStatus.cs" />
+    <Compile Include="Account\AdHoc\AccountResponse.cs" />
+    <Compile Include="Account\AdHoc\AccountResponseDetails.cs" />
+    <Compile Include="Account\AdHoc\AccountSchemaValidate.cs" />
+    <Compile Include="ChainGroup.cs" />
+    <Compile Include="Config\BCMYDAY\ConfigValuesModel.cs" />
+    <Compile Include="Config\BCMYDAY\ConfigValuesResults.cs" />
+    <Compile Include="IPE\Bottler\Contract\IpeBottlerModel.cs" />
+    <Compile Include="IPE\Bottler\IpeBottlerDataResults.cs" />
+    <Compile Include="IPE\MasterData\Contract\EventPriorityEntity.cs" />
+    <Compile Include="IPE\MasterData\Contract\EventTypeEntity.cs" />
+    <Compile Include="IPE\MasterData\Contract\PhaseEntity.cs" />
+    <Compile Include="IPE\MasterData\Contract\QuestionResponderEntity.cs" />
+    <Compile Include="IPE\MasterData\Contract\QuestionsEntity.cs" />
+    <Compile Include="IPE\MasterData\Contract\ResponderEntity.cs" />
+    <Compile Include="IPE\MasterData\Contract\ResponseTypeEntity.cs" />
+    <Compile Include="IPE\MasterData\Contract\ResponseTypeValuesEntity.cs" />
+    <Compile Include="IPE\MasterData\IpeMasterData.cs" />
+    <Compile Include="IPE\MasterData\IpeMasterDataDetails.cs" />
+    <Compile Include="IPE\Programs\Contract\MarketingProgramAttachments.cs" />
+    <Compile Include="IPE\Programs\Contract\MarketingProgramBrands.cs" />
+    <Compile Include="IPE\Programs\Contract\MarketingProgramPackages.cs" />
+    <Compile Include="IPE\Programs\Contract\MarketingPrograms.cs" />
+    <Compile Include="IPE\Programs\MarketingProgramResults.cs" />
+    <Compile Include="IPE\ResponseData\Contract\EventResponseData.cs" />
+    <Compile Include="IPE\ResponseData\EventResponseDataDetails.cs" />
+    <Compile Include="IPE\ResponseData\EventResponseSchemaValidate.cs" />
+    <Compile Include="IPE\SurveyData\Contract\EventBottlerPhaseModel.cs" />
+    <Compile Include="IPE\SurveyData\Contract\EventQuestionDatesModel.cs" />
+    <Compile Include="IPE\SurveyData\Contract\SurveyHistoryModel.cs" />
+    <Compile Include="IPE\SurveyData\SurveyDataResults.cs" />
+    <Compile Include="IPE\SurveyData\SurveyHistoryResults.cs" />
+    <Compile Include="Priority\Contract\PriorityBrand.cs" />
+    <Compile Include="Priority\Contract\PriorityCustomer.cs" />
+    <Compile Include="Priority\Contract\PriorityQuestion.cs" />
+    <Compile Include="Priority\PriorityQuestionsResults.cs" />
+    <Compile Include="PriotityAnswer.cs" />
+    <Compile Include="Product\Contract\Hierarchy\Brand.cs" />
+    <Compile Include="Product\Contract\Hierarchy\Package.cs" />
+    <Compile Include="Product\Contract\Hierarchy\Trademark.cs" />
+    <Compile Include="Product\ProductHierarchyDetails.cs" />
+    <Compile Include="Programs\Contract\Region\AccountPrograms.cs" />
+    <Compile Include="Programs\Contract\Bottler\ProgramBottlers.cs" />
+    <Compile Include="Programs\Contract\Region\MarketingProgramAccounts.cs" />
+    <Compile Include="Programs\Contract\Region\MarketingProgramAttachments.cs" />
+    <Compile Include="Programs\Contract\Region\MarketingProgramBrands.cs" />
+    <Compile Include="Programs\Contract\Region\MarketingProgramPackages.cs" />
+    <Compile Include="Programs\Contract\Region\MarketingPrograms.cs" />
+    <Compile Include="Programs\Contract\Milestones\ProgramMilestones.cs" />
+    <Compile Include="Programs\Contract\Region\ProgramAccounts.cs" />
+    <Compile Include="Programs\Contract\Region\ProgramAttachments.cs" />
+    <Compile Include="Programs\Contract\Region\ProgramBrands.cs" />
+    <Compile Include="Programs\ProgramBottlerDetails.cs" />
+    <Compile Include="Programs\ProgramMilestoneDetails.cs" />
+    <Compile Include="Programs\ProgramRegionDetails.cs" />
+    <Compile Include="Programs\Contract\Region\ProgramPackages.cs" />
+    <Compile Include="Promotion\PromotionState.cs" />
+    <Compile Include="SalesMaster\Contract\Bottler.cs" />
+    <Compile Include="SalesMaster\Contract\BottlerTrademarks.cs" />
+    <Compile Include="SalesMaster\Contract\SalesAccount.cs" />
+    <Compile Include="SalesMaster\Contract\SalesHierarchyDivision.cs" />
+    <Compile Include="SalesMaster\Contract\SalesHierarchyRegion.cs" />
+    <Compile Include="SalesMaster\Contract\SalesHierarchySystem.cs" />
+    <Compile Include="SalesMaster\Contract\SalesHierarchyZone.cs" />
+    <Compile Include="SalesMaster\SalesHierarchyDetails.cs" />
+    <Compile Include="SalesMaster\SalesMasterDataDetails.cs" />
+    <Compile Include="StoreNote.cs" />
+    <Compile Include="SystemCompetitionBrand.cs" />
+    <Compile Include="LOS.cs" />
+    <Compile Include="Promotion\Document.cs" />
+    <Compile Include="Promotion\DocumentCustomerMapping.cs" />
+    <Compile Include="Promotion\OtherPromoData.cs" />
+    <Compile Include="Promotion\PromotionCategory.cs" />
+    <Compile Include="Promotion\PromotionCustomer.cs" />
+    <Compile Include="Promotion\PromotionExecutionStatus.cs" />
+    <Compile Include="Promotion\PromotionRefusalReason.cs" />
+    <Compile Include="Promotion\PromotionWeekPriority.cs" />
+    <Compile Include="Promotion\PromotionStatus.cs" />
+    <Compile Include="Promotion\Promotion.cs" />
+    <Compile Include="Promotion\PromotionAccount.cs" />
+    <Compile Include="Promotion\PromotionAttachment.cs" />
+    <Compile Include="Promotion\PromotionBrand.cs" />
+    <Compile Include="Promotion\PromotionData.cs" />
+    <Compile Include="Promotion\PromotionPackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetailExecution\StoreExecution.cs" />
+    <Compile Include="RetailExecution\StoreExecutionData.cs" />
+    <Compile Include="RetailExecution\StoreExecutionDisplay.cs" />
+    <Compile Include="ServiceLog.cs" />
+    <Compile Include="StoreConditionDisplayDetail.cs" />
+    <Compile Include="SystemBrand.cs" />
+    <Compile Include="SystemPackageBrand.cs" />
+    <Compile Include="SystemTrademark.cs" />
+    <Compile Include="UploadStoreData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

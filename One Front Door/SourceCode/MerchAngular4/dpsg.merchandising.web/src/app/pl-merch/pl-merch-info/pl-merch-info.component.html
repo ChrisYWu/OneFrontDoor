@@ -1,0 +1,24 @@
+<div class="route-info-outer">
+
+    <div class="route-start plm-phone">
+        &nbsp;&nbsp;
+        <!-- 
+        <i class="fa fa-phone" *ngIf="Phone!=null" aria-hidden="true"></i>&nbsp;&nbsp; {{Phone}}
+        <i class="fa fa-phone" *ngIf="Phone==null" aria-hidden="true"></i>&nbsp;&nbsp; No phone number!
+        -->
+    </div>
+
+
+    <div class="info-image">
+         <img class="img-persion circle-white" [src]="AbsoluteURL ? AbsoluteURL : '/assets/img/noimage.PNG'">
+    </div>    
+    <div class="route-info">
+        <div class="plm-name">
+            <div class="plm-name-l1">{{FirstName}} {{LastName}}</div>
+            <!--<div *ngIf="Email!=null" class="plm-name-l2">{{Email}}</div>
+            <div *ngIf="Email==null" class="plm-name-l2">No email!</div>-->
+            <div *ngIf="Phone!=null" class="plm-name-l3">{{Phone}}</div>
+            <div *ngIf="Phone==null" class="plm-name-l3"> No phone number!</div>        
+        </div>
+    </div>
+</div>

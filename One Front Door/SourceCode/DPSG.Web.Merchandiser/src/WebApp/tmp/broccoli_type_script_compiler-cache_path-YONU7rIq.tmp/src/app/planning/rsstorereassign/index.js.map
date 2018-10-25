@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,0CAAyC,6BAA6B,CAAC;AAA9D,wFAA8D","sourcesContent":["export { RsstorereassignComponent } from './rsstorereassign.component';\n"]}

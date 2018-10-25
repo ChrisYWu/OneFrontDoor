@@ -1,0 +1,5 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.MYDAY.SHARED.API\DPSG.MYDAY.SHARED.API.Models\bin\Debug\DPSG.MYDAY.SHARED.API.Models.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.MYDAY.SHARED.API\DPSG.MYDAY.SHARED.API.Models\bin\Debug\DPSG.MYDAY.SHARED.API.Models.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.MYDAY.SHARED.API\DPSG.MYDAY.SHARED.API.Models\obj\Debug\DPSG.MYDAY.SHARED.API.Models.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\SourceCode\DPSG.MYDAY.SHARED.API\DPSG.MYDAY.SHARED.API.Models\obj\Debug\DPSG.MYDAY.SHARED.API.Models.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.MYDAY.SHARED.API\DPSG.MYDAY.SHARED.API.Models\obj\Debug\DPSG.MYDAY.SHARED.API.Models.pdb

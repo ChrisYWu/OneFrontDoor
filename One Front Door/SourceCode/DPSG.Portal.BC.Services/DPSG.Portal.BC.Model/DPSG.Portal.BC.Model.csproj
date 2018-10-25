@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3F2D700-EDB0-432B-9433-ACD2736714F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DPSG.Portal.BC.Model</RootNamespace>
+    <AssemblyName>DPSG.Portal.BC.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <HintPath>..\DPSG.Portal.BC.Services\ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <HintPath>..\DPSG.Portal.BC.Services\ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base.cs" />
+    <Compile Include="BCDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="BCSalesAccountability.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Bottler.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="BottlerAccountTradeMark.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Brand.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Channel.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Config.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Country.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayLocation.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayTypeMaster.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Division.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\StoreConditionDisplay.cs" />
+    <Compile Include="Extension\SystemPackage.cs" />
+    <Compile Include="LO.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="LocalChain.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="LOSDisplayLocation.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Milestone.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="NationalChain.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Package.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PickList.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalChain.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="StoreCondition.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="StoreConditionDisplay.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="StoreConditionDisplayDetail.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="StoreTieInRate.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="SuperChannel.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="System.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="SystemBrand.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="SystemPackage.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="SystemPickList.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="SystemTradeMark.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TBottlerTrademark.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TieInReason.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TieInReasonMaster.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TotalCompany.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TradeMark.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Zone.generated.cs">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <OpenAccessDeploy Include="BCDBModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>BCDBModel.cs</LastGenOutput>
+    </OpenAccessDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="BCDBModel.rlinq.diagram">
+      <DependentUpon>BCDBModel.rlinq</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\OpenAccess.targets')" Project="$(MSBuildExtensionsPath)\OpenAccess.targets" />
+</Project>

@@ -1,0 +1,98 @@
+<style>
+    
+.s4-simple-card{
+    width:575px;
+margin:100px auto 0px auto;
+/* [ReplaceColor(themeColor:"Light1")] */ background-color:#fafcff;
+/* [ReplaceColor(themeColor:"Dark2-Lightest")] */ border-top:1px solid #e3e8ee;
+/* [ReplaceColor(themeColor:"Dark2-Lightest")] */ border-left:1px solid #d9dde3;
+/* [ReplaceColor(themeColor:"Dark2-Lightest")] */ border-bottom:2px solid #bec2c7;
+/* [ReplaceColor(themeColor:"Dark2-Lightest")] */ border-right:2px solid #d9dde3;
+
+margin-top:120px;
+padding-bottom:25px;
+}
+.s4-simple-gobackcont{
+margin-top:20px
+}
+.s4-simple-gearpage{
+width:100%;
+text-align:center;
+}
+.s4-simple-gearpage{
+display:inline-block;
+margin-right:10px;
+}
+.s4-simple-card-top{
+height:10px;
+text-align:right;
+padding:10px 10px 0px 10px;
+}
+.s4-simple-card-content{
+margin:0px 30px 30px 30px;
+word-wrap:break-word;
+max-width:100%;
+}
+.main-message {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+    </style>
+<script>
+function closeMe()
+{
+open(location, '_self').close();
+return false;
+}
+
+function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+</script>
+
+
+<div class="s4-simple-card">
+		<div class="s4-simple-card-top">
+			
+			
+		</div>
+		<div class="s4-simple-card-content">
+			
+				<div class="s4-simple-iconcont">
+					<span class="glyphicon glyphicon-remove"></span>
+				</div>
+			
+			<div class="s4-simple-content">
+				<div class="s4-simple-error-content">
+					
+	           <div id="userGSN"></div> <br/>
+               <span>Please contact the Helpdesk to get access.</span></span>
+               
+				</div>
+				
+					<div class="s4-simple-gobackcont">						
+						<a href="javascript:closeMe();">Close</a>
+					</div>				
+				
+			</div>
+		</div>
+	</div>
+
+<script>
+ document.getElementById('userGSN').innerHTML = "GSN - " + getParameterByName('GSN') + ' not authorized for the MySplashNet Merchandier application.';
+
+</script>

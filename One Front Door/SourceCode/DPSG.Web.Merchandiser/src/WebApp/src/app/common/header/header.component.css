@@ -1,0 +1,32 @@
+.navbar-inverse { background-color: #1976D2}
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover { background-color: #5398DD}
+.navbar-inverse .navbar-nav>li>a:focus { background-color: #2363A6; color:#ffffff}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #5398DD}
+.dropdown-menu { background-color: #ffffff;font-size: 17px;}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #f6f6f6}
+.navbar-inverse { background-image: url(contents/img/top-BlueBar-Bubbles.png); }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
+.navbar-inverse { border-color: #1976D2}
+.navbar-inverse .navbar-brand { color: #FFFFFF}
+.navbar-inverse .navbar-brand:hover { color: #FFFFFF}
+.navbar-inverse .navbar-nav>li>a { color: #FFFFFF}
+.navbar-inverse .navbar-nav>li>a:hover { color: #333}
+.navbar-inverse .navbar-nav>li>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { color: #FFFFFF}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #FFFFFF}
+.dropdown-menu>li>a { color: #333}
+/*.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}*/
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-top-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-bottom-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
+.navbar{min-height:68px}
+.navbar-header{margin-top: 8px}
+.navbar-nav li a {
+ line-height: 38px;
+}
+
+.merchgroup-dropdown{
+    margin-left: 10px;
+    background: url(contents/img/group-icon.png) no-repeat;
+}

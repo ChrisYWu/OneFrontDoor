@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SDM Scripts">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="BSCCAP108:DPSG\WUXYX001">
+          <Created>2013-02-08T17:36:32.5703248-06:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCAP108</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="(jaipx010)BrnadNorm.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(jaipx010)BrnadNorm.sql</FullPath>
+        </FileNode>
+        <FileNode Name="(jaipx010)BulkLoad.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(jaipx010)BulkLoad.sql</FullPath>
+        </FileNode>
+        <FileNode Name="(wuxyx001)TitleCase.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(wuxyx001)TitleCase.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pNormalizeMaterial.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pNormalizeMaterial.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MView.udfGetAccoutsForRouteNumberOnSingleDay.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MView.udfGetAccoutsForRouteNumberOnSingleDay.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MView.udfGetAllAccoutsForRouteNumber.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MView.udfGetAllAccoutsForRouteNumber.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Mview.udfGetAccoutsForRouteNumberWithDateRange.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Mview.udfGetAccoutsForRouteNumberWithDateRange.sql</FullPath>
+        </FileNode>
+        <FileNode Name="(wuxyx001)MViews.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(wuxyx001)MViews.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pNormalizeChains.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pNormalizeChains.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MView.PersonalRoleLocation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MView.PersonalRoleLocation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MView.LocationChain.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MView.LocationChain.sql</FullPath>
+        </FileNode>
+        <FileNode Name="DView.TodayRouteAccount.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DView.TodayRouteAccount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pAssociateBranchMaterial.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pAssociateBranchMaterial.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pNomalizeLocations.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pNomalizeLocations.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pLoadUserProfile.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pLoadUserProfile.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pLoadFromRM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pLoadFromRM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pAssociateRMPerson.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pAssociateRMPerson.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pDViews.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pDViews.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LinkedServerSetup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LinkedServerSetup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Package Type.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Package Type.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pLoadMaterial.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pLoadMaterial.sql</FullPath>
+        </FileNode>
+        <FileNode Name="001. DB Objects.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>001. DB Objects.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items>
+        <FileNode Name="tnsnames.ora">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>tnsnames.ora</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/SDM Scripts</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,12 @@
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService.dll
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService.pdb
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.dll
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\obj\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\obj\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService.dll
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\obj\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService.pdb
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService.dll.config
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\EntityFramework.dll
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\EntityFramework.SqlServer.dll
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\EntityFramework.xml
+H:\VH3_1\One Front Door\DPSG.DSDDeliveryService.MyDay.WebAPI\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\bin\Debug\EntityFramework.SqlServer.xml

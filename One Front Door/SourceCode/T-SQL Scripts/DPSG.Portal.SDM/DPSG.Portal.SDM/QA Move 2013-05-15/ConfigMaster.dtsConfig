@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+	<DTSConfigurationHeading>
+		<DTSConfigurationFileInfo GeneratedBy="DPSG\BUSMX008" GeneratedFromPackageName="PKGMasterData" GeneratedFromPackageID="{27946804-271B-4C8A-8789-83FEA5182F72}" GeneratedDate="4/15/2013 3:47:49 PM"/>
+	</DTSConfigurationHeading>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgAccountDetails].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZCUST_INFO.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgADExtractData].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\bplnap58\SAP_DROP\EE_GSN_Locations.txt</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgBWAccount].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZCUST_ADDR.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgCC2PC].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZCC_PC.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgChain].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZCCHN_HIER.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgCustomer2PC].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZCUST_PRCTR.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgMaterialBrandPKG].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZMAT_HIER.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgPC2SO].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZPC_SOFF.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgSalesOffice].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>\\b002dle0\interfaces\BW\OpenHUb\ZSOFF_HIER.CSV</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMMaterialBrandPKG].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStagAccountDetails].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStgADExtractData].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStgBWAccount].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStgCC2PC].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStgChain].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStgCustomer2PC].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStgPC2SO].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+	<Configuration ConfiguredType="Property" Path="\Package.Connections[SQLCMStgSalesOffice].Properties[ConnectionString]" ValueType="String">
+		<ConfiguredValue>Data Source=BSCCAP108;Initial Catalog=Portal_Dev;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+	</Configuration>
+</DTSConfiguration>

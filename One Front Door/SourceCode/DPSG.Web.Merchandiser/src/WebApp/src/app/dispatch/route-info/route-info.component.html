@@ -1,0 +1,34 @@
+<div class="route-info-outer">
+
+    <div class="route-start">
+        {{dispatch.TotalTimeLabel}} &nbsp; &nbsp; &nbsp; &nbsp;
+    </div>
+
+
+    <div class="info-image">
+        <img class="img-persion circle-white" src="contents/img/noimage.PNG" alt="Persion Image">
+
+    </div>
+
+    <div class="route-info">
+        <div class="info-name">
+            <div class="info-name-l1 ">{{dispatch.FirstName}} {{dispatch.LastName}}</div>
+            <div class="info-name-l2">{{dispatch.RouteName}}</div>
+        </div>
+        <div class="info-timing">
+            <div class="text-center info-timing-l1 route-{{dispatch.RouteStatusLabel}}">
+                {{dispatch.RouteStatusLabel}}
+
+            </div>
+            <div class="text-center info-timing-l2">
+                {{dispatch.MileageTotalLabel}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+    {{circle_css}}
+ <img class="img-circle" src="contents/img/persion3.PNG" alt="Persion Image">
+ -->

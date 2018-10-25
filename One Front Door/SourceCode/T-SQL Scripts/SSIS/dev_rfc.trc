@@ -1,0 +1,23 @@
+
+**** ERROR file opened at 20130312 020917 Central Daylight Time, SAP-REL 730,0,326 RFC-VER 3 1377184 MT-SL
+T:1548 Error in program 'SAPCPIC': ======> Value for ID 'PASSWD' not found
+T:1548 Error in program 'SAPCPIC': ======> 
+
+>>> RfcOpenEx ...
+ Got following connect_param string: 
+   USER=korrx003 LANG=en CLIENT=100 SYSNR=20 ASHOST=b040dle0 <<< RfcOpenEx failed
+
+
+>TS> Tue Mar 12 02:09:24 2013
+T:1548 Error in program 'SAPCPIC': <* RfcCallReceive [0] : returns 16:RFC_NOT_INITIALIZED
+T:1548 Error in program 'SAPCPIC': <* RfcCall [0] : returns 16:RFC_NOT_INITIALIZED
+T:1548 Error in program 'SAPCPIC': <* RfcCall [0] : returns 16:RFC_NOT_INITIALIZED
+T:1548 Error in program 'SAPCPIC': <* RfcCallReceive [0] : returns 16:RFC_NOT_INITIALIZED
+T:1548 Error in program 'SAPCPIC': ======> Value for ID 'PASSWD' not found
+T:1548 Error in program 'SAPCPIC': ======> 
+
+>>> RfcOpenEx ...
+ Got following connect_param string: 
+   USER=korrx003 LANG=en CLIENT=100 SYSNR=20 ASHOST=b040dle0 <<< RfcOpenEx failed
+
+

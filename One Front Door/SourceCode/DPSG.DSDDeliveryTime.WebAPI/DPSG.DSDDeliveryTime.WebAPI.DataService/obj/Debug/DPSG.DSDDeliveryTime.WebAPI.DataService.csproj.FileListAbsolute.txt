@@ -1,0 +1,14 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService.dll.config
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\EntityFramework.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\EntityFramework.SqlServer.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\EntityFramework.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\EntityFramework.SqlServer.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\obj\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\obj\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\obj\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.Model.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService2.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.DSDDeliveryTime.WebAPI\DPSG.DSDDeliveryTime.WebAPI.DataService\bin\Debug\DPSG.DSDDeliveryTime.WebAPI.DataService2.pdb

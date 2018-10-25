@@ -1,0 +1,46 @@
+﻿Steps for QA/Prod Server setup
+
+0. Run Create DB.sql to create the database as well as schemas.
+1. Install Oracle Data Access 11g 64 bit. Or Oracle Client 11g 64 bit on the DB server.
+2. Cope the tnsnames.ora to $oracleHome\Network\Admin
+3. With SA privilege, execute Linked Servers.sql to install the linked servers. Verify connectivity.
+4. Install "PKGMasterData.dtsx" from TFS location "$/One Front Door/SourceCode/DPSG.Portal.SSIS/DPSG.Portal.SSIS"
+	To this location in SSIS service "MSDB\SDMStagingPackages"
+5. Create a local folder for the ssis configuration files at C:\SdmSSISConfig\
+6. Place file "ConfigMaster.dtsConfig" in the config folder created in C:\SdmSSISConfig\. 
+	Update the file so it point to the right DB Server and database.
+7. Add the AD login DPSG\HPDBDPSGSERVICE for Portal Data owner access
+8. Run Tables.sql to create tables, foreign references and indexes. Make sure to use the right database.
+9. Run Views, UDFs and SPs.sql to install the DB objects. Make sure to use the right database.
+10. Run SDM Setup Data.sql. Make sure to use the right database.
+11. Run MSTR Setup Data.sql. Make sure to use the right database.
+12. Run the SP User sync timer job manually once.
+13. With SA privilege, execute SQL Agent Jobs.sql to install the linked servers. Verify executions.
+	Make sure the SSIS package configuration file is point to the right place, in 6.
+	When testing execution, RM and RN one goes first.
+14. Create SQL Logon for OnePortal/OnePortalQA and document the password and assign DB Owner role.
+15. Execute all the change script collected in QA Query Updates.
+
+---------------------
+1st try on BSCCSQ07
+
+0. Done.  -- added etl schema, mview added as well
+1. Done before.
+2. Done before.
+3. Done before.
+4. Not done ... need SA - done manually on 5/16 after SA is granted to Chris Wu
+5. Done
+6. Done
+7. Done
+8. Identified obsolete objects.
+9. Done
+10. Done. 
+11. Not done ... need SA - done manually on 5/16 after SA is granted to Chris Wu
+12. Not Done ... need SA - done manually on 5/16 after SA is granted to Chris Wu
+13. Need to ask Rajeev 
+
+---------------------
+2nd try on BSCCSQ07 scheduled for Friday - Done
+
+
+

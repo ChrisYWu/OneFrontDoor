@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,wCAAuC,2BAA2B,CAAC;AAA1D,kFAA0D","sourcesContent":["export { AddmerchpopupComponent } from './addmerchpopup.component';\n"]}

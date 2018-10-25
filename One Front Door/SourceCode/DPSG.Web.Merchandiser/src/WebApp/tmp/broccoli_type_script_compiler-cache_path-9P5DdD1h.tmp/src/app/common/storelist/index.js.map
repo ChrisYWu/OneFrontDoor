@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,oCAAmC,uBAAuB,CAAC;AAAlD,sEAAkD","sourcesContent":["export { StorelistComponent } from './storelist.component';\n"]}

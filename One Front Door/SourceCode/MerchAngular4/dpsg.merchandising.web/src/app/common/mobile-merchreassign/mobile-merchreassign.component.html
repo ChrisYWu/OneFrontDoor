@@ -1,0 +1,107 @@
+<div [hidden]="isShowMerchandiser">
+    <h4 class="panel-title pull-left" style="padding-top: 7.5px;font-size:small;cursor:pointer">
+        <a (click)="isOpenPopup(true)" [class]="routeData.GSN==''? 'addmerch' : ''">{{routeData.FirstName}} {{routeData.LastName}}</a></h4>
+</div>
+<div [hidden]="!isShowMerchandiser" class="container-fluid dispatch-container-ip-popup">
+
+    <div class="ip-popup-sch-assign">
+
+        <div class="row mp-header-ip">
+            <a (click)="isOpenPopup(false)" class="close-ip-sch-popup">
+                <span aria-hidden="true">&times;</span>
+            </a>
+            <div class="col-xs-12">
+                <div class="sch-ip-hdr">Change Merchandiser</div>
+            </div>
+
+
+        </div>
+
+        <div class="row mp-row-top-ip">
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 sch-col-ip-1">Route </div>
+                <div class="col-xs-6 sch-col-ip-2"> &nbsp; &nbsp;{{routeData.RouteName}}</div>
+            </div>
+
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 sch-col-ip-1">Merch </div>
+                <div class="col-xs-6 sch-col-ip-2"> &nbsp; &nbsp;<span *ngIf="routeData.GSN!=''">{{routeData.FirstName}} {{routeData.LastName}}</span></div>
+            </div>
+
+        </div>
+
+        <div class="row mp-row-top-ip ip-tab-padding">
+
+            <form>
+
+                <div class="form-group tab-sch">
+
+
+                    <tabset [justified]="true">
+                        <tab heading="Unassigned" [active]="true" (select)="active = true" (deselect)="active = false">
+                            <div class="col-xs-12 zeropadding ip-tbl-div">
+
+                                <table class="table" style="color:#333">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">
+                                                <div class="input-group col-xs-12">
+                                                    <span class="input-group-addon dispatch-search-addon">
+                                                            <i class="fa fa-search"></i>
+                                                        </span>
+
+                                                    <input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input" id="txtSearch" name="txtSearch" placeholder="Search">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="sch-tbl-ip-tbody">
+                                        <tr *ngFor="let mer of unassignedMerch | filter:{FirstName: filterInput.value, LastName: filterInput.value, GSN: filterInput.value }" (click)="reassignMerch(mer.GSN, mer.LastName, mer.FirstName);isOpenPopup(false);">
+                                            <td class="mp-td1">{{mer.FirstName}} {{mer.LastName}}</td>
+                                            <td class="mp-td2">{{mer.GSN}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </tab>
+                        <tab heading="Branch" (select)="active = true" (deselect)="active = false">
+
+                            <div class="col-xs-12 zeropadding ip-tbl-div">
+
+                                <table class="table" style="color:#333">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">
+                                                <div class="input-group col-xs-12">
+                                                    <span class="input-group-addon dispatch-search-addon">
+                                                                <i class="fa fa-search"></i>
+                                                            </span>
+                                                    <input type="text" #filterInput1 [(ngModel)]="filterText1" class="form-control menu-input" id="txtSearch1" name="txtSearch1" placeholder="Search">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="sch-tbl-ip-tbody">
+                                            <tr *ngFor="let mer of unassignedOtherMerch | filter:{FirstName: filterInput1.value, LastName: filterInput1.value, GSN: filterInput1.value }" 
+                                                    (click)="mer.MerchGroupName == null && reassignMerch(mer.GSN, mer.LastName, mer.FirstName, mer.AbsoluteURL, mer.MerchGroupName);" 
+                                                    [class]="mer.MerchGroupName != null? 'assigned-merch' : ''">
+                                                <td>{{mer.FirstName}} {{mer.LastName}}</td>
+                                                <td>{{mer.MerchGroupName != null ? mer.MerchGroupName : 'Unassigned'  }}</td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </tab>
+                    </tabset>
+                </div>
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>

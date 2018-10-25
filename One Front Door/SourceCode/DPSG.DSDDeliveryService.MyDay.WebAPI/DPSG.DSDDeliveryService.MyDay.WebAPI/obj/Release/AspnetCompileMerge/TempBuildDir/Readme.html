@@ -1,0 +1,1048 @@
+﻿<!DOCTYPE html>
+<meta content="text/html; charset:utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="0" />
+
+<html>
+<head>
+    <title>Readme DSD Delivery Service</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .TFtable {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+            .TFtable td {
+                padding: 7px;
+                border: #4e95f4 1px solid;
+            }
+            /* provide some minimal visual accomodation for IE8 and below */
+            .TFtable tr {
+                background: #b8d1f3;
+            }
+                /*  Define the background color for all the ODD background rows  */
+                .TFtable tr:nth-child(odd) {
+                    background: #b8d1f3;
+                }
+                /*  Define the background color for all the EVEN background rows  */
+                .TFtable tr:nth-child(even) {
+                    background: #dae5f4;
+                }
+    </style>
+    <script type="text/javascript">
+        function getBaseURL() {
+            return window.location.href.substring(0, window.location.href.length - 12);
+        }
+
+    </script>
+
+</head>
+<body>
+    <h3>This is the live documents for DSD Delivery Web Services for MyDay</h3>
+
+    <h4>Method 1 - GetMaster()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMaster</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/GetMaster<font color="red">?DeliveryDateUTC={DeliveryDateUTC}&RouteID={RouteID}&GSN={GSN}</font></p>
+                <p>Test URL</p>
+                <p><a id="method1-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                            <li>[Optional] String - GSN </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 2 - GetDeliveryManifest()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetDeliveryManifest</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>api/Merch/GetDeliveryManifest?RouteID={RouteID}</p>
+                <p>api/Merch/GetDeliveryManifest?RouteID={RouteID}&DeliveryDateUTC={DeliveryDateUTC}<font color="red">&GSN={GSN}</font></p>
+                <p>Test URL</p>
+                <p><a id="method2-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method2-2" target="_blank" href="#">Test2</a></p>
+                <p><a id="method2-3" target="_blank" href="#">Test3</a></p>
+                <p><a id="method2-4" target="_blank" href="#">Test4</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required: RouteManager Delivery RouteID] INT-RouteID </li>
+                        <li>[Optional: Default date is taken from DB server. Date input format is YYYY-MM-DD] Date-DeliveryDateUTC </li>
+                        <font color="red">
+                            <li>[Optional] String-GSN </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 3 - UploadRouteCheckout()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadRouteCheckout</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/UploadRouteCheckout</p>
+                <p>Test URL</p>
+                <p><a id="method3-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Int-RouteID</li>
+                        <li>[Optional: If ignored then the server date will be used]DateTime-DeliveryDateUTC</li>
+                        <li>[Required] DateTime-ActualStartTime</li>
+                        <li>[Required] String-ActualStartGSN</li>
+                        <li>[Required] String-FirstName</li>
+                        <li>[Required] String-LastName</li>
+                        <li>[Required] String-PhoneNumber</li>
+                        <li>[Required] Decimal-Latitude</li>
+                        <li>[Required] Decimal-Longitude</li>
+                        <li>[Optional: If ignored then ActualStartTime will be used] DateTime-LastModifiedUTC</li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    DeliveryDateUTC: "2018-02-15",
+                    RouteID: 102000451,
+                    ActualStartTime: "2018-02-21T18:10:30",
+                    ActualStartGSN: "WUXYX003",
+                    FirstName: "Chris",
+                    LastName: "Wu",
+                    PhoneNumber: "972-333-0000",
+                    Latitude: 42.595788,
+                    Longitude: -94.998123,
+                    LastModifiedUTC: "2018-02-21T18:25:07"
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Method 4 - UploadAddedStop()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadAddedStop</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/UploadAddedStop</p>
+                <p>Test URL</p>
+                <p><a id="method4-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Int-RouteID</li>
+                        <li>[Optional: If ignored then the server date will be used]DateTime-DeliveryDateUTC</li>
+                        <li>[Required] Int-ServiceTime</li>
+                        <li>[Required] String-SAPAccountNumber</li>
+                        <li>[Optional: If ignored, 0 will be used] Int-Quantity</li>
+                        <li>[Required] String-LastModifiedBy </li>
+                        <li>[Required] DateTime-LastModifiedUTC</li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    DeliveryDateUTC: "2018-02-22",
+                    RouteID: 101600004,
+                    ServiceTime: 27,
+                    SAPAccountNumber: "11219937",
+                    Quantity: 15,
+                    LastModifiedBy: "WUXYX099",
+                    LastModifiedUTC: "2018-02-22T18:25:07"
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>DeliveryStopID, SAPAccountNumber, Latitude and Longitude will be returned for a successful upload, MyDay is expected to use the DeliveryStopID for further communications of the added stop. Otherwise an error message will be provided</td>
+        </tr>
+    </table>
+
+    <h4>Method 4.1 - UploadAddedStops()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadAddedStops</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/UploadAddedStops</p>
+                <p>Test URL</p>
+                <p><a id="method4.1-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>
+                            [Required: The stops collection that neede to be added] Collection - Stops
+                            <ul>
+                                <li>[Required] Int-RouteID</li>
+                                <li>[Optional: If ignored then the server date will be used]DateTime-DeliveryDateUTC</li>
+                                <li>[Required] Int-ServiceTime</li>
+                                <li>[Required] String-SAPAccountNumber</li>
+                                <li>[Optional: If ignored, 0 will be used] Int-Quantity</li>
+                                <li>[Required] String-LastModifiedBy </li>
+                                <li>[Required] DateTime-LastModifiedUTC</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    Stops:
+                    [
+                        {
+                            DeliveryDateUTC: "2018-03-02",
+                            RouteID: 100411011,
+                            ServiceTime: 1800,
+                            SAPAccountNumber: "11219937",
+                            Quantity: 15,
+                            LastModifiedBy: "WUXYX088",
+                            LastModifiedUTC: "2018-03-02T18:25:07"
+                        },
+                        {
+                            DeliveryDateUTC: "2018-03-02",
+                            RouteID: 100411011,
+                            ServiceTime: 3000,
+                            SAPAccountNumber: "11397862",
+                            Quantity: 15,
+                            LastModifiedBy: "WUXYX088",
+                            LastModifiedUTC: "2018-03-02T18:25:07"
+                        }
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>DeliveryStopID, SAPAccountNumber, Latitude and Longitude will be returned for a successful upload, MyDay is expected to use the DeliveryStopID for further communications of the added stop. Otherwise an error message will be provided</td>
+        </tr>
+        <tr>
+            <td>Successful Response Json</td>
+            <td>{
+                "Stops": [
+                    {
+                        "DeliveryStopID": 649,
+                        "SAPAccountNumber": "11219937",
+                        "Latitude": 43.4235,
+                        "Longitude": -95.1134,
+                        "ErrorMessage": null,
+                        "ResponseStatus": 1,
+                        "StackTrace": null
+                    },
+                    {
+                        "DeliveryStopID": 650,
+                        "SAPAccountNumber": "11498974",
+                        "Latitude": 30.2684,
+                        "Longitude": -81.561,
+                        "ErrorMessage": null,
+                        "ResponseStatus": 1,
+                        "StackTrace": null
+                    }
+                ],
+                "ErrorMessage": "",
+                "ResponseStatus": 1,
+                "StackTrace": ""
+            }
+            </td>
+        </tr>
+        <tr>
+            <td>Error Response Json</td>
+            <td>
+                {
+                "ErrorMessage": "[ClientDataError]{Mesh.pUploadAddedStop}: Customer(11219937) already exisits in route (@RouteID=112001002) and @DeliveryDateUTC=2018-03-26",
+                "ResponseStatus": 0,
+                "StackTrace": "   at DPSG.DSDDeliveryService.MyDay.WebAPI.DataService.DeliveryDataService.UploadAddedStops(AddedStops obj) in H:\\VH3_1\\One Front Door\\SourceCode\\DPSG.DSDDeliveryService.MyDay.WebAPI\\DPSG.DSDDeliveryService.MyDay.WebAPI.DataService\\DeliveryDataService.cs:line 228\r\n   at DPSG.DSDDeliveryService.MyDay.WebAPI.Controllers.DeliveryController.UploadAddedStops(AddedStops obj) in H:\\VH3_1\\One Front Door\\SourceCode\\DPSG.DSDDeliveryService.MyDay.WebAPI\\DPSG.DSDDeliveryService.MyDay.WebAPI\\Controllers\\DeliveryController.cs:line 163"
+                }
+            </td>
+        </tr>
+    </table>
+
+    <h4>Method 5 - DeleteStop()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>DeleteStop</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>api/Merch/DeleteStop?DeliveryStopID={DeliveryStopID}<font color="red">&DeliveryDateUTC={DeliveryDateUTC}&RouteID={RouteID}&GSN={GSN}</font></p>
+                <p>Test URL</p>
+                <p><a id="method5-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>INT-DeliveryStopID [Required]</li>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                            <li>[Optional] String - GSN </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>The delete will happen when the stop is added by driver. After deletion the sequence might have a gap and subsequent UpDateSequence call will bridge the gap</td>
+        </tr>
+
+    </table>
+
+    <h4>Method 6 - UpdateEstimatedArrivals()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UpdateEstimatedArrivals</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/UpdateEstimatedArrivals</p>
+                <p>Test URL</p>
+                <p><a id="method6-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Collection - Stops
+                        <ul>
+                            <li>[Required] Int - DeliveryStopID</li>
+                            <li>[Required] Int - Sequence</li>
+                            <li>[Required] DateTime - EstimatedArrivalTime (in UTC)</li>
+                        </ul>
+                        </li>
+                        <li>[Required] String - LastModifiedBy </li>
+                        <li>[Required] DateTime - LastModifiedUTC</li>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    LastModifiedBy: "WUXYX099",
+                    LastModifiedUTC: "2018-02-22T18:25:07",
+                    Stops:
+                    [
+                        {
+                            DeliveryStopID:516,
+                            Sequence:7,
+                            EstimatedArrivalTime: "2018-02-22T16:56:11"
+                        },
+                        {
+                            DeliveryStopID:520,
+                            Sequence:8,
+                            EstimatedArrivalTime: "2018-02-22 17:17:11"
+                        },
+                        {
+                            DeliveryStopID:521,
+                            Sequence:9,
+                            EstimatedArrivalTime: "2018-02-22 17:53:11"
+                        }
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>For each stop that identified with DeliveryStopID, Sequence and EstimatedArrivalTime will be updated to the input values </td>
+        </tr>
+    </table>
+
+    <h4>Method 7 - CheckInDeliveryStop()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>CheckInDeliveryStop</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/CheckInDeliveryStop</p>
+                <p>Test URL</p>
+                <p><a id="method7-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Int64 - CurrentDeliveryStopID </li>
+                        <li>[Required] DateTime - CheckInTime </li>
+                        <li>[Optional: If ignored, then CheckInTime will be taken] DateTime - ArrivalTime </li>
+                        <li>[Optional] Int - CheckInFarAwayReasonID </li>
+                        <li>[Optional: If ignored, will be set to 0] Decimal - CheckInDistance </li>
+                        <li>[Optional: If ignored, will be set to 0] Decimal - CheckInLatitude </li>
+                        <li>[Optional: If ignored, will be set to 0] Decimal - CheckInLongitude </li>
+
+                        <li>
+                            [Required] Collection - Stops
+                            <ul>
+                                <li>[Required] Int - DeliveryStopID</li>
+                                <li>[Required] Int - Sequence</li>
+                                <li>[Required] DateTime - EstimatedArrivalTime (in UTC)</li>
+                            </ul>
+                        </li>
+                        <li>[Required] String - LastModifiedBy </li>
+                        <li>[Required] DateTime - LastModifiedUTC</li>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    CurrentDeliveryStopID: 587,
+                    CheckInTime: "2018-03-02T15:02:59",
+                    CheckInFarAwayReasonID: 1,
+                    CheckInDistance: 0.2567,
+                    CheckInLatitude: -94.098234,
+                    CheckInLongitude: 45.632581,
+                    LastModifiedBy: "WUXYX099",
+                    LastModifiedUTC: "2018-03-02T18:25:59",
+                Stops:
+                    [
+                        {
+                            DeliveryStopID:577,
+                            Sequence:10,
+                            EstimatedArrivalTime: "2018-03-02T15:51:59"
+                        },
+                        {
+                            DeliveryStopID:583,
+                            Sequence:11,
+                            EstimatedArrivalTime: "2018-03-02T16:19:59"
+                        },
+                        {
+                            DeliveryStopID:580,
+                            Sequence:12,
+                            EstimatedArrivalTime: "2018-03-02T16:58:57"
+                        }
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>For each stop that identified with DeliveryStopID, Sequence and EstimatedArrivalTime will be updated to the input values </td>
+        </tr>
+    </table>
+
+    <h4>Method 8 - CheckOutDeliveryStop()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>CheckOutDeliveryStop</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/CheckOutDeliveryStop</p>
+                <p>Test URL</p>
+                <p><a id="method8-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Int64 - CurrentDeliveryStopID </li>
+                        <li>[Required : Default value is false, meaning something but not all is delivered] Boolean - Voided </li>
+                        <li>[Required] DateTime - CheckOutTime </li>
+                        <li>[Optional: If ignored, then CheckInTime will be taken] DateTime - DepartureTime </li>
+                        <li>[Optional: If ignored, will be set to 0] Decimal - CheckOutLatitude </li>
+                        <li>[Optional: If ignored, will be set to 0] Decimal - CheckOutLongitude </li>
+
+                        <li>
+                            [Required] Collection - Stops
+                            <ul>
+                                <li>[Required] Int - DeliveryStopID</li>
+                                <li>[Required] Int - Sequence</li>
+                                <li>[Required] DateTime - EstimatedArrivalTime (in UTC)</li>
+                            </ul>
+                        </li>
+                        <li>[Required] String - LastModifiedBy </li>
+                        <li>[Required] DateTime - LastModifiedUTC</li>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    CurrentDeliveryStopID: 587,
+                    CheckOutTime: "2018-03-02T15:22:59",
+                    CheckOutLatitude: -94.097234,
+                    CheckOutLongitude: 45.637581,
+                    LastModifiedBy: "WUXYX099",
+                    LastModifiedUTC: "2018-03-02T18:25:59",
+                    Stops:
+                    [
+                        {
+                            DeliveryStopID:577,
+                            Sequence:10,
+                            EstimatedArrivalTime: "2018-03-02T16:11:59"
+                        },
+                        {
+                            DeliveryStopID:583,
+                            Sequence:11,
+                            EstimatedArrivalTime: "2018-03-02T16:39:59"
+                        },
+                        {
+                            DeliveryStopID:580,
+                            Sequence:12,
+                            EstimatedArrivalTime: "2018-03-02T17:18:57"
+                        }
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>For each stop that identified with DeliveryStopID, Sequence and EstimatedArrivalTime will be updated to the input values </td>
+        </tr>
+    </table>
+
+    <h4>Method 9 - UploadStopsDNS()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadStopsDNS</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/UploadStopsDNS</p>
+                <p>Test URL</p>
+                <p><a id="method9-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Int - DeliveryStopID</li>
+                        <li>[Required] String - DNSReasonCode</li>
+                        <li>[Required] String - DNSReason, consistent with DNSReasonCode</li>
+                        <li>[Required] String - LastModifiedBy </li>
+                        <li>[Required] DateTime - LastModifiedUTC</li>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    DeliveryStopID:1491,
+                    DNSReasonCode:"EM",
+                    DNSReason: "DNS Reason Number 1",
+                    LastModifiedBy: "WUXYX077",
+                    LastModifiedUTC: "2018-04-30T19:59:59"
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+        </tr>
+    </table>
+
+    <h4>Method 10 - UploadNewSequence()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadNewSequence</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/UploadNewSequence</p>
+                <p>Test URL</p>
+                <p><a id="method10-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Int-RouteID</li>
+                        <li>[Optional: If ignored then the server date will be used]DateTime-DeliveryDateUTC</li>
+                        <li>[Required] String - CommaSeperatedResequenceReasonIDs </li>
+                        <li>[Optional] String - AddtionalReason </li>
+                        <li>
+                            [Required: The stop collection where the estimated arrival time impacted] Collection - Stops
+                            <ul>
+                                <li>[Required] Int - DeliveryStopID</li>
+                                <li>[Required] Int - Sequence</li>
+                                <li>[Required] DateTime - EstimatedArrivalTime (in UTC)</li>
+                            </ul>
+                        </li>
+                        <li>[Required] String - LastModifiedBy </li>
+                        <li>[Required] DateTime - LastModifiedUTC</li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    DeliveryDateUTC: "2018-03-02",
+                    RouteID: 100411011,
+                    CommaSeperatedResequenceReasonIDs: "1,2",
+                    AddtionalReason: "One and Two",
+                    LastModifiedBy: "WUXYX066",
+                    LastModifiedUTC: "2018-03-02T19:59:59",
+                    Stops:
+                    [
+                        {
+                            DeliveryStopID:577,
+                            Sequence:5,
+                            EstimatedArrivalTime: "2018-03-02 12:38:02"
+                        },
+                        {
+                            DeliveryStopID:580,
+                            Sequence:6,
+                            EstimatedArrivalTime: "2018-03-02 13:08:02"
+                        },
+                        {
+                            DeliveryStopID:582,
+                            Sequence:7,
+                            EstimatedArrivalTime: "2018-03-02 13:36:02"
+                        },
+                        {
+                            DeliveryStopID:583,
+                            Sequence:8,
+                            EstimatedArrivalTime: "2018-03-02 14:30:02"
+                        },
+                        {
+                            DeliveryStopID:584,
+                            Sequence:9,
+                            EstimatedArrivalTime: "2018-03-02 15:15:02"
+                        },
+                        {
+                            DeliveryStopID:585,
+                            Sequence:10,
+                            EstimatedArrivalTime: "2018-03-02 15:54:02"
+                        },
+                        {
+                            DeliveryStopID:586,
+                            Sequence:11,
+                            EstimatedArrivalTime: "2018-03-02 16:34:02"
+                        },
+                        {
+                            DeliveryStopID:587,
+                            Sequence:12,
+                            EstimatedArrivalTime: "2018-03-02 17:02:02"
+                        }
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>For each stop that identified with DeliveryStopID, Sequence and EstimatedArrivalTime will be updated to the input values. CommaSeperatedResequenceReasonIDs will be split by comma and each integer taken as a Requence Reason ID. </td>
+        </tr>
+    </table>
+
+    <h4>Method 11 - UploadInvoice()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadInvoice</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/UploadInvoice</p>
+                <p>Test URL</p>
+                <p><a id="method11-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>
+                            [Required: Invoice Headers] Collection - Headers
+                            <ul>
+
+                                <li>[Required] DateTime - DeliveryDateUTC</li>
+                                <li>[Optional] Int - RMInvoiceID </li>
+                                <li>[Optional] int - RMOrderID </li>
+                                <li>[Optional] int - SAPBranchID </li>
+                                <li>[Required] int - SAPAccountNumber </li>
+                            </ul>
+                        </li>
+                        <li>
+                            [Required: Invoice items] Collection - Items
+                            <ul>
+                                <li>[Optional] Int - RMInvoiceID </li>
+                                <li>[Required] Int - ItemNumber </li>
+                                <li>[Required] Int - Quantity </li>
+                            </ul>
+                        </li>
+                        <li>[Required] String - LastModifiedBy </li>
+                        <li>[Required] DateTime - LastModifiedUTC</li>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    Headers:
+                    [
+                        {
+                            DeliveryDateUTC: "2018-03-02",
+                            RMInvoiceID: 103411011,
+                            RMOrderID: 23482034,
+                            SAPBranchID: 1150,
+                            SAPAccountNumber: 12345678
+                        }
+                    ],
+                    Items:
+                    [
+                        {
+                            RMInvoiceID: 103411011,
+                            ItemNumber: 13313,
+                            Quantity:12
+                        },
+                        {
+                            RMInvoiceID: 103411011,
+                            ItemNumber: 25869,
+                            Quantity:99
+                        }
+                    ],
+                    LastModifiedBy: "WUXYX066",
+                    LastModifiedUTC: "2018-03-02T19:59:59"
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+    </table>
+    <h4>Method 12 - CancelStopsDNS()</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>CancelStopsDNS</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Delivery/CancelStopsDNS</p>
+                <p>Test URL</p>
+                <p><a id="method12-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>[Required] Int - DeliveryStopID</li>
+                        <li>[Required] String - LastModifiedBy </li>
+                        <li>[Required] DateTime - LastModifiedUTC</li>
+                        <font color="red">
+                            <li>[Optional: RouteManager Delivery RouteID] INT - RouteID </li>
+                            <li>[Optional] Date - DeliveryDateUTC </li>
+                        </font>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                DeliveryStopID:1491,
+                LastModifiedBy: "WUXYX077",
+                LastModifiedUTC: "2018-04-30T20:59:59"
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+    document.getElementById('method1-1').href = getBaseURL().concat('/api/Delivery/GetMaster');
+    document.getElementById('method1-1').text = getBaseURL().concat('/api/Delivery/GetMaster');
+
+    document.getElementById('method2-1').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504&DeliveryDateUTC=2018-02-15');
+    document.getElementById('method2-1').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504&DeliveryDateUTC=2018-02-15');
+
+    document.getElementById('method2-2').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504');
+    document.getElementById('method2-2').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=110901504');
+
+    document.getElementById('method2-3').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=102000451');
+    document.getElementById('method2-3').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=102000451');
+
+    document.getElementById('method2-4').href = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=101600004');
+    document.getElementById('method2-4').text = getBaseURL().concat('/api/Delivery/GetDeliveryManifest?RouteID=101600004');
+
+    document.getElementById('method3-1').href = getBaseURL().concat('/api/Delivery/UploadRouteCheckOut');
+    document.getElementById('method3-1').text = getBaseURL().concat('/api/Delivery/UploadRouteCheckOut');
+
+    document.getElementById('method4-1').href = getBaseURL().concat('/api/Delivery/UploadAddedStop');
+    document.getElementById('method4-1').text = getBaseURL().concat('/api/Delivery/UploadAddedStop');
+
+    document.getElementById('method4.1-1').href = getBaseURL().concat('/api/Delivery/UploadAddedStops');
+    document.getElementById('method4.1-1').text = getBaseURL().concat('/api/Delivery/UploadAddedStops');
+
+    document.getElementById('method5-1').href = getBaseURL().concat('/api/Delivery/DeleteStop?DeliveryStopID=558');
+    document.getElementById('method5-1').text = getBaseURL().concat('/api/Delivery/DeleteStop?DeliveryStopID=558');
+
+    document.getElementById('method6-1').href = getBaseURL().concat('/api/Delivery/UpdateEstimatedArrivals');
+    document.getElementById('method6-1').text = getBaseURL().concat('/api/Delivery/UpdateEstimatedArrivals');
+
+    document.getElementById('method7-1').href = getBaseURL().concat('/api/Delivery/CheckInDeliveryStop');
+    document.getElementById('method7-1').text = getBaseURL().concat('/api/Delivery/CheckInDeliveryStop');
+
+    document.getElementById('method8-1').href = getBaseURL().concat('/api/Delivery/CheckOutDeliveryStop');
+    document.getElementById('method8-1').text = getBaseURL().concat('/api/Delivery/CheckOutDeliveryStop');
+
+    document.getElementById('method9-1').href = getBaseURL().concat('/api/Delivery/UploadStopsDNS');
+    document.getElementById('method9-1').text = getBaseURL().concat('/api/Delivery/UploadStopsDNS');
+
+    document.getElementById('method10-1').href = getBaseURL().concat('/api/Delivery/UploadNewSequence');
+    document.getElementById('method10-1').text = getBaseURL().concat('/api/Delivery/UploadNewSequence');
+
+    document.getElementById('method11-1').href = getBaseURL().concat('/api/Delivery/UploadInvoice');
+    document.getElementById('method11-1').text = getBaseURL().concat('/api/Delivery/UploadInvoice');
+
+    document.getElementById('method12-1').href = getBaseURL().concat('/api/Delivery/CancelStopsDNS');
+    document.getElementById('method12-1').text = getBaseURL().concat('/api/Delivery/CancelStopsDNS');
+
+</script>

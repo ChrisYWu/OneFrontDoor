@@ -1,0 +1,17 @@
+
+ <div class="row">
+            <div class="col-md-8">
+             <h4> Click on picture to take a photo </h4> <br/>
+               <photo-booth (gotSnapshot)="gotSnapshot($event)"></photo-booth>
+              </div>
+             <div class="col-md-4"><span class="pull-right">
+               <h4>  Your uploaded Image </h4> <br/>
+                  <img [src]="imageDataByWebCam" width="200px" height="200px" />
+                 </span>
+            </div>           
+        </div>
+
+
+          
+
+          

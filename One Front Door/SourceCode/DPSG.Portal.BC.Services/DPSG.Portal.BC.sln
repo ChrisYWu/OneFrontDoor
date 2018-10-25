@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Portal.BC.Services", "DPSG.Portal.BC.Services\DPSG.Portal.BC.Services.csproj", "{3AEB5EAB-15D0-4B41-A189-DCD2A4C158D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Portal.BC.Common", "DPSG.Portal.BC.Common\DPSG.Portal.BC.Common.csproj", "{19688E5D-6BDB-437C-866E-82D1C869D559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Portal.BC.DAL", "DPSG.Portal.BC.DAL\DPSG.Portal.BC.DAL.csproj", "{B830B8AA-E94D-45C7-B1C4-ADBF6C5F6F99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Portal.BC.BAL", "DPSG.Portal.BC.BAL\DPSG.Portal.BC.BAL.csproj", "{9E5377A3-7DDC-4E72-86EB-0A6352012A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Portal.BC.Model", "DPSG.Portal.BC.Model\DPSG.Portal.BC.Model.csproj", "{D3F2D700-EDB0-432B-9433-ACD2736714F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPSG.Portal.BC.Types", "DPSG.Portal.BC.Types\DPSG.Portal.BC.Types.csproj", "{FF1AF898-3246-433A-8B15-E2BEA5F2907F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.dpsg.net:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DPSG.Portal.BC.Services\\DPSG.Portal.BC.Services.csproj
+		SccProjectName1 = DPSG.Portal.BC.Services
+		SccLocalPath1 = DPSG.Portal.BC.Services
+		SccProjectUniqueName2 = DPSG.Portal.BC.Common\\DPSG.Portal.BC.Common.csproj
+		SccProjectName2 = DPSG.Portal.BC.Common
+		SccLocalPath2 = DPSG.Portal.BC.Common
+		SccProjectUniqueName3 = DPSG.Portal.BC.DAL\\DPSG.Portal.BC.DAL.csproj
+		SccProjectName3 = DPSG.Portal.BC.DAL
+		SccLocalPath3 = DPSG.Portal.BC.DAL
+		SccProjectUniqueName4 = DPSG.Portal.BC.BAL\\DPSG.Portal.BC.BAL.csproj
+		SccProjectName4 = DPSG.Portal.BC.BAL
+		SccLocalPath4 = DPSG.Portal.BC.BAL
+		SccProjectUniqueName5 = DPSG.Portal.BC.Model\\DPSG.Portal.BC.Model.csproj
+		SccProjectName5 = DPSG.Portal.BC.Model
+		SccLocalPath5 = DPSG.Portal.BC.Model
+		SccProjectUniqueName6 = DPSG.Portal.BC.Types\\DPSG.Portal.BC.Types.csproj
+		SccProjectName6 = DPSG.Portal.BC.Types
+		SccLocalPath6 = DPSG.Portal.BC.Types
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AEB5EAB-15D0-4B41-A189-DCD2A4C158D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEB5EAB-15D0-4B41-A189-DCD2A4C158D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEB5EAB-15D0-4B41-A189-DCD2A4C158D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEB5EAB-15D0-4B41-A189-DCD2A4C158D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19688E5D-6BDB-437C-866E-82D1C869D559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19688E5D-6BDB-437C-866E-82D1C869D559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19688E5D-6BDB-437C-866E-82D1C869D559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19688E5D-6BDB-437C-866E-82D1C869D559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B830B8AA-E94D-45C7-B1C4-ADBF6C5F6F99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B830B8AA-E94D-45C7-B1C4-ADBF6C5F6F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B830B8AA-E94D-45C7-B1C4-ADBF6C5F6F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B830B8AA-E94D-45C7-B1C4-ADBF6C5F6F99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5377A3-7DDC-4E72-86EB-0A6352012A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5377A3-7DDC-4E72-86EB-0A6352012A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5377A3-7DDC-4E72-86EB-0A6352012A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5377A3-7DDC-4E72-86EB-0A6352012A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F2D700-EDB0-432B-9433-ACD2736714F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F2D700-EDB0-432B-9433-ACD2736714F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F2D700-EDB0-432B-9433-ACD2736714F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F2D700-EDB0-432B-9433-ACD2736714F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1AF898-3246-433A-8B15-E2BEA5F2907F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1AF898-3246-433A-8B15-E2BEA5F2907F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1AF898-3246-433A-8B15-E2BEA5F2907F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1AF898-3246-433A-8B15-E2BEA5F2907F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

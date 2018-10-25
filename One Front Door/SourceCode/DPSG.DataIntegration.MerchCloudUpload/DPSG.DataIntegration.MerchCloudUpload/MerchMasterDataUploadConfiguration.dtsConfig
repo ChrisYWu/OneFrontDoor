@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+  <DTSConfigurationHeading>
+    <DTSConfigurationFileInfo GeneratedBy="DPSG\wuxyx001" GeneratedFromPackageName="MerchMasterDataCloudUploadPackage" GeneratedFromPackageID="{CC1543AD-80AE-4FE2-964F-AF99D58D832F}" GeneratedDate="4/27/2017 2:39:24 PM"/>
+  </DTSConfigurationHeading>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[1 Portal_Data].Properties[InitialCatalog]" ValueType="String">
+    <ConfiguredValue>Portal_Data</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[1 Portal_Data].Properties[Password]" ValueType="String">
+    <ConfiguredValue>OnePortalQA</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[1 Portal_Data].Properties[ServerName]" ValueType="String">
+    <ConfiguredValue>bsccap121</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[1 Portal_Data].Properties[UserName]" ValueType="String">
+    <ConfiguredValue>OnePortal</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[InitialCatalog]" ValueType="String">
+    <ConfiguredValue>Merch_Practice</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[Password]" ValueType="String">
+    <ConfiguredValue>LyLqBiICucc4sIJ</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[ServerName]" ValueType="String">
+    <ConfiguredValue>myday-dev-us-central.database.windows.net</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[UserName]" ValueType="String">
+    <ConfiguredValue>merch_web</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[3 ADW].Properties[InitialCatalog]" ValueType="String">
+    <ConfiguredValue>ADW</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[3 ADW].Properties[Password]" ValueType="String">
+    <ConfiguredValue>!7S09g@1S7QR44V#</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[3 ADW].Properties[ServerName]" ValueType="String">
+    <ConfiguredValue>dpsgsharedclstr</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[3 ADW].Properties[UserName]" ValueType="String">
+    <ConfiguredValue>SDM_OFD</ConfiguredValue>
+  </Configuration>
+</DTSConfiguration>

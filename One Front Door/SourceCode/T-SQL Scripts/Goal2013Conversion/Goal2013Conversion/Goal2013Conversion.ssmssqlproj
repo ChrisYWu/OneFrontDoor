@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Goal2013Conversion">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="bsccap121:DPSG\WUXYX001">
+          <Created>2014-07-15T13:09:55.2025495-05:00</Created>
+          <Type>SQL</Type>
+          <Server>bsccap121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCSQ07:DPSG\WUXYX001">
+          <Created>2014-07-16T10:36:01.5046606-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCSQ07</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="vh-portal2:DPSG\WUXYX001">
+          <Created>2014-07-14T12:28:15.8269537-05:00</Created>
+          <Type>SQL</Type>
+          <Server>vh-portal2</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="PROD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>PROD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RouteStuff.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>RouteStuff.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Sopwith QA.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Sopwith QA.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Sopwith Vh2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Sopwith Vh2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SpeedyStop.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SpeedyStop.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Working.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Working.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/Goal2013Conversion</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

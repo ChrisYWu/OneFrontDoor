@@ -1,0 +1,52 @@
+body {
+  font-family: Helvetica, Roboto, Arial, sans-serif;
+  font-size: 12px;
+  padding-top: 54px !important; }
+
+/*
+
+ Utility classes 
+
+*/
+.center-middle {
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+
+.no-border-radius {
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0; }
+
+.remove-col-margin {
+  margin: 0 -15px; }
+
+.dispaly-block {
+  display: block !important; }
+
+.dispaly-none {
+  display: none !important; }
+
+.float-left {
+  float: left !important; }
+
+.float-right {
+  float: left !important; }
+
+.m-t-5 {
+  margin-top: 5px !important; }
+
+.b-r-0 {
+  border-radius: 0px; }
+
+.col-center {
+  float: none !important;
+  margin: 0 auto !important; }
+
+.v-middle {
+  display: inline-block !important;
+  vertical-align: middle !important; }

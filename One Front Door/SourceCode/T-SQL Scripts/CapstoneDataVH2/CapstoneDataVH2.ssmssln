@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 11.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "CapstoneDataVH2", "CapstoneDataVH2\CapstoneDataVH2.ssmssqlproj", "{37D131D7-03DE-425F-A8C7-93423C1F9A88}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = $/One\u0020Front\u0020Door/SourceCode/T-SQL\u0020Scripts/CapstoneDataVH2
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Team\u0020Foundation\u0020Server\u0020MSSCCI\u0020Provider
+		SccProjectUniqueName1 = CapstoneDataVH2\\CapstoneDataVH2.ssmssqlproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = CapstoneDataVH2\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37D131D7-03DE-425F-A8C7-93423C1F9A88}.Default|Default.ActiveCfg = Default
+		{D4CF73C0-86C5-49A9-8BCB-0791D6661D8B}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

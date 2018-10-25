@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+  <DTSConfigurationHeading>
+    <DTSConfigurationFileInfo GeneratedBy="DPSG\wuxyx001" GeneratedFromPackageName="Package" GeneratedFromPackageID="{4FFBC7C7-83ED-4C94-9848-9FC4891864DD}" GeneratedDate="4/27/2017 2:09:25 PM"/>
+  </DTSConfigurationHeading>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>Data Source=myday-dev-us-central.database.windows.net;User ID=sqladmin;Initial Catalog=Merch_Practice;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[InitialCatalog]" ValueType="String">
+    <ConfiguredValue>Merch_Practice</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[Password]" ValueType="String">
+    <ConfiguredValue>LyLqBiICucc4sIJ</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[ServerName]" ValueType="String">
+    <ConfiguredValue>myday-dev-us-central.database.windows.net</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[2 Cloud].Properties[UserName]" ValueType="String">
+    <ConfiguredValue>merch_web</ConfiguredValue>
+  </Configuration>
+</DTSConfiguration>

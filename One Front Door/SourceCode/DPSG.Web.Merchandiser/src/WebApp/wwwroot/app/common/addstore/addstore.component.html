@@ -1,0 +1,25 @@
+<a class="btn btn-primary addstore-bordercolor" (click)="lgModal.show();">Add Store</a>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
+    <div class="modal-dialog  modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center">Add Store</h4>
+            </div>
+            <div class="modal-body cusFont" style="min-height:500px; color:#333">
+             <h4 class="modal-title">Route: <span style="color:#333; margin-left:25px">{{routeDataInput.RouteName}}</span></h4>
+             <h4 class="modal-title">Merch: <span style="color:#333; margin-left:25px">{{routeDataInput.FirstName}} {{routeDataInput.LastName}}</span></h4>
+
+                <app-tabs [unassignedInputAccts]="unassignedInputAccts"  [unassignedAcctsLength]="unassignedAcctsLength" [allInputAccts]="allInputAccts" [otherInputAccts]="otherInputAccts"
+                          [lastModifiedByInput]="lastModifiedByInput" [routeDataInput]="routeDataInput" (accountSelected)="setselectedAcct($event)" ></app-tabs>
+            </div>
+        
+        </div>
+    </div>
+
+</div>
+
+

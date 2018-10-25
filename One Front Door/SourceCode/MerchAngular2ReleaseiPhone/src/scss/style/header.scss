@@ -1,0 +1,151 @@
+ // Variable
+ @import "theme/variable.scss";
+ .test-radius-mixin {
+     @include border-radius(5px);
+ }
+ 
+ //Headerer
+ .header {
+     background-color: $background-header;
+ }
+ 
+ .header-btns {
+     padding: 12px 10px 10px 10px;
+     margin: 10px;
+ }
+ 
+ .header-logo {
+     border: 0px;
+ }
+ 
+ .submenu-row {
+     margin-top: -18px;
+ }
+ 
+ .user-col {
+     padding-top: 10px;
+     padding-right: 20px;
+ }
+ 
+ // Button 
+ .div-btn-otl {
+     float: left;
+     width: auto;
+ }
+ /*
+ .div-btn-otl:before {
+     content: "\a0";
+     display: block;
+     line-height: 1px;
+     border-top: 20px dashed #000;
+ }
+ */
+ 
+ .btn-me {
+     // border-radius: 0 !important;
+     // border: 1px !important;
+     font-family: $font-family !important;
+     color: $btn-text;
+     // font-weight: bold;
+     // padding: 10px 35px !important;
+     //  margin: 0 5px !important;
+     &:hover {
+         color: $btn-text !important;
+         //  border: 1px solid lighten( #000000, 30%) !important;
+         //  padding: 9px 34px !important;
+     }
+     &:active {
+         color: #ffffff !important;
+     }
+     &:on {
+         color: #ffffff !important;
+     }
+ }
+ 
+ .btn-me-dropdown {
+     &::after {
+         content: " \25BE";
+     }
+ }
+ 
+ .btn-blue {
+     background-color: $brand-blue;
+     &:hover {
+         background: darken( $brand-blue, 10%)
+     }
+ }
+ 
+ .btn-light-blue {
+     background-color: $brand-light-btn-blue;
+     &:hover {
+         background: darken( $brand-light-btn-blue, 10%)
+     }
+ }
+ 
+ .btn-green {
+     background-color: $brand-green;
+     &:hover {
+         background: darken( $brand-green, 10%)
+     }
+ }
+ 
+ .btn-orange {
+     background-color: $brand-orange;
+     &:hover {
+         background: darken( $brand-orange, 10%)
+     }
+ }
+ 
+ .btn-red {
+     background-color: $brand-red;
+     &:hover {
+         background: darken($brand-red, 10%)
+     }
+ }
+ 
+ .btn-light-gray {
+     background-color: lighten($color: $band-light-gray-btn, $amount: 10%);
+     &:hover {
+         background: darken($band-light-gray-btn, 10%)
+     }
+ }
+ 
+ .btn-dark-gray {
+     background-color: $brand-gray-dark;
+     &:hover {
+         background: darken($brand-gray-dark, 10%)
+     }
+ }
+ 
+ .btn-darker-gray {
+     background-color: $brand-gray-darker;
+     &:hover {
+         background: lighten($brand-gray-darker, 10%)
+     }
+ }
+ 
+ .btn-me-light {
+     border-radius: 0 !important;
+     border: 0 !important;
+     font-family: $font-family !important;
+     color: $btn-text-dark;
+     font-weight: bold;
+     background-color: #F5F5F5;
+     padding: 7px 7px !important;
+     &:hover {
+         color: lighten($btn-text-dark, 10%) !important;
+     }
+     &:active {
+         color: lighten($btn-text-dark, 10%) !important;
+     }
+     &:on {
+         color: lighten($btn-text-dark, 10%) !important;
+     }
+ }
+ 
+ .btn-gray {
+     background-color: $band-gray;
+     &:hover {
+         background: darken($band-gray, 10%)
+     }
+ }

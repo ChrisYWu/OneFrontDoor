@@ -1,0 +1,34 @@
+<div class="panel panel-primary route-box">
+    <!-- Default panel contents -->
+    <div class="route-box-header panel-heading text-left">
+        <div class="row">
+            <div class="col-md-6"><h4 class="panel-title pull-left" style="padding-top: 7.5px;">{{routeData.RouteName}}</h4></div>
+            <div class="col-md-6">
+                <span class="pull-right">
+                    <app-rsaddstore [unassignedInputAccts]="unassignedInputAccts"
+                                    [allInputAccts]="allInputAccts"
+                                    [otherInputAccts]="otherInputAccts"
+                                    [routeDataInput]="routeData"
+                                    [lastModifiedByInput]="lastModifiedByInput" (accountSelected)="setselectedAcct($event)" [selectedWeekDayInput]="selectedWeekDayInput"></app-rsaddstore>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- List group -->
+    <div class="panel-body" dnd-sortable-container [sortableData]="routeData.Stores" style="padding-top:0px;padding-bottom:0px">
+        <div *ngFor="let store of routeData.Stores; let i = index" class="row" dnd-sortable [sortableIndex]="i"  (onDragEnd)="dropStore(store.Sequence)">
+            <div class="col-xs-1 text-center" style="border: solid;border-top-width: 1px;border-right-width: 0px;border-left-width: 1px;border-bottom-width:0px;border-color: #ddd;padding: 9px 9px 9px 9px;">{{i+1}}</div>
+            <div class="col-xs-10 text-left"
+                 style="border: solid;border-top-width: 1px;border-right-width: 0px;border-left-width: 1px;border-bottom-width:0px;border-color: #ddd;padding: 9px 9px 9px 9px;">
+
+                <app-rsstorereassign [lastModifiedByInput]="lastModifiedByInput"
+                                     [storeInput]="store" [routeData]="routeData" [routesInput]="routesInput"
+                                     (routeReassigned)="setupdatedroute($event)" [selectedWeekDayInput]="selectedWeekDayInput"></app-rsstorereassign>
+                <span *ngIf="store.PullNumber!=''" class="merch-label-2ndpull">{{store.PullNumber}}</span>
+            </div>
+            <div class="col-xs-1 text-center" style="border: solid;border-top-width: 1px;border-right-width: 0px;border-left-width: 0px;border-bottom-width:0px;border-color: #ddd;padding: 9px 9px 9px 9px;"><span class="glyphicon glyphicon-trash" (click)="removeStore(store.Sequence)" title="Delete"></span></div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="3 ADW"
+  DTS:DTSID="{C3D60036-8719-4924-828A-28413133B9F1}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=dpsgsharedclstr;User ID=SDM_OFD;Initial Catalog=ADW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFWEaYO5ysUanmhfs0XjSJQAAAAACAAAAAAADZgAAwAAAABAAAABVtXiMDgKrxr2XJdqUUqxTAAAAAASAAACgAAAAEAAAAFE+qdRHfP+sHf3Z9bt5CkeAAAAA6kiGpxrvyCHTbIMCh2wl0zmnF+Rlxss/woULhD1pn2pUpGE47DYGaAXRRI8eS69/IaH7hOiCad2Iig4+NB0B2ejbibaflSTghmiSlzCSUq9RvKMohAkKD/HniErLGv6wG3Y5inkQl0SUUNLXaFss2Q9P41iKO7Cy7DeSPNgMu+0UAAAAMdeIJGVyjqTtVZ4oVNJQidgJkBE=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

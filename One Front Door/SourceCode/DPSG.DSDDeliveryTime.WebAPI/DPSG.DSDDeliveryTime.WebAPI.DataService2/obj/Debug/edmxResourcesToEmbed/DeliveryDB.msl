@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="DeliveryDB" />
+  <Alias Key="Target" Value="DeliveryDB.Store" />
+  <EntityContainerMapping CdmEntityContainer="DeliveryDBContainer" StorageEntityContainer="DeliveryDBStoreContainer">
+    <EntitySetMapping Name="Deliveries">
+      <EntityTypeMapping TypeName="DeliveryDB.Delivery">
+        <MappingFragment StoreEntitySet="Delivery">
+          <ScalarProperty Name="LastUpdatedDriverID" ColumnName="LastUpdatedDriverID" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+          <ScalarProperty Name="LastUpdatedTimeUTC" ColumnName="LastUpdatedTimeUTC" />
+          <ScalarProperty Name="EstimatedArrivalTimeZone" ColumnName="EstimatedArrivalTimeZone" />
+          <ScalarProperty Name="EstimatedArrivalTime" ColumnName="EstimatedArrivalTime" />
+          <ScalarProperty Name="ActualDepartureTimeZone" ColumnName="ActualDepartureTimeZone" />
+          <ScalarProperty Name="ActualDepartureTime" ColumnName="ActualDepartureTime" />
+          <ScalarProperty Name="ActualArrivalTimeZone" ColumnName="ActualArrivalTimeZone" />
+          <ScalarProperty Name="ActualArrivalTime" ColumnName="ActualArrivalTime" />
+          <ScalarProperty Name="PlannedServiceTimeInSec" ColumnName="PlannedServiceTimeInSec" />
+          <ScalarProperty Name="PlannedArrivalTimeUTC" ColumnName="PlannedArrivalTimeUTC" />
+          <ScalarProperty Name="StopSequence" ColumnName="StopSequence" />
+          <ScalarProperty Name="StopID" ColumnName="StopID" />
+          <ScalarProperty Name="StopType" ColumnName="StopType" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="SalesOfficeID" ColumnName="SalesOfficeID" />
+          <ScalarProperty Name="RouteNumber" ColumnName="RouteNumber" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

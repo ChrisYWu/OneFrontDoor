@@ -1,0 +1,70 @@
+.stop-circle-route {
+    left: 28%;
+    width: 20px;
+    height: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.dispatch-store-row-cell-route {
+    border: solid;
+    border-top-width: 1px;
+    border-right-width: 0px;
+    border-left-width: 1px;
+    border-bottom-width: 0px;
+    border-color: #ddd;
+    padding: 8px 5px 5px 5px;
+    color: #868686;
+    line-height: 30px;
+}
+
+.deleteActivated {
+    font-size:15px;
+    color: #333333;
+}
+
+.deleteActivated :hover {
+    color: red;
+    background-color: lighten(red, 40%) !important;
+}
+
+.route-ActualArrival{
+    float:right; 
+    background-color:#fbf2e7;
+    font-size:12px;
+    padding: 1px;
+    text-align: center;
+    width:16%;
+    line-height: 12px;
+    border: solid;
+    border-color: #a57d52;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    padding-top:2px;
+    padding-bottom:1px;
+
+}
+.route-NoArrival{
+    float:right;
+    background-color:#f5f5f5;
+    font-size:12px; 
+    padding: 1px; 
+    text-align: center;
+    width:16%;
+    line-height: 12px;
+    border: solid;
+    border-color: #a5a2a5;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    padding-top:2px;
+    padding-bottom:1px;
+}

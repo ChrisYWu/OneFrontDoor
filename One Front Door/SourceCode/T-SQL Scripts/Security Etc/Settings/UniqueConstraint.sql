@@ -1,0 +1,11 @@
+USE [Portal_Data]
+GO
+
+/****** Object:  Index [UIX_Application_ApplicationName]    Script Date: 11/13/2013 11:00:54 PM ******/
+CREATE UNIQUE NONCLUSTERED INDEX [UIX_UserInRole_PortalRoleID_GSN] ON [Settings].UserInRole
+(
+	PortalRoleID ASC, GSN ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+
+

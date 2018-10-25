@@ -1,0 +1,47 @@
+    // Variable
+    @import "theme/variable.scss";
+    $sb-border: #cccccc;
+    $sb-grp-border: #ebebeb;
+    .btn-sb {
+        border-radius: 0 !important;
+        font-family: $font-family !important;
+        font-weight: bold;
+        float: right;
+        padding: 5px 15px !important;
+        margin-left: 10px;
+    }
+    
+    .btn-sb-gray {
+        background-color: darken($band-gray, 3%);
+        border: 1px solid $sb-border !important;
+        color: $text-black;
+        &:hover {
+            color: lighten($text-black, 10%) !important;
+            background: darken($band-gray, 10%)
+        }
+        &:active {
+            color: lighten($text-black, 10%) !important;
+        }
+        &:on {
+            color: lighten($text-black, 10%) !important;
+        }
+    }
+    
+    .btn-sb-grp-gray {
+        background-color: lighten($band-gray, 3%);
+        color: $btn-text-dark;
+        border: 1px solid darken($sb-grp-border, 5%) !important;
+        //  &::after {
+        //       content: " \25BE";
+        //  }
+        &:hover {
+            color: lighten($btn-text-dark, 10%) !important;
+            background: darken($band-gray, 10%)
+        }
+        &:active {
+            color: lighten($btn-text-dark, 10%) !important;
+        }
+        &:on {
+            color: lighten($btn-text-dark, 10%) !important;
+        }
+    }

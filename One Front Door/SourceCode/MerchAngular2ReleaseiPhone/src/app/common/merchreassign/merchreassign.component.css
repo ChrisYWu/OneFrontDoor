@@ -1,0 +1,56 @@
+.table{margin-bottom: 0px;}
+    tbody {
+    display:block;
+    height:270px;
+    overflow-y:auto;
+}
+    thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+    .zeropadding{
+
+        padding:0px;
+        border:1px solid #ddd
+    }
+
+
+    tr:hover td {
+        background-color: #F6F6F6;
+        /*color:#fff;*/
+       cursor: pointer; cursor: hand; 
+    /*-moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);*/
+}
+tr:hover td:first-child  {
+           background-color: #F6F6F6;
+           /*color:#fff;*/
+            cursor: pointer; cursor: hand; 
+    /*-moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);*/
+}
+tr:hover td:last-child  {
+           background-color: #F6F6F6;
+           /*color:#fff;*/
+            cursor: pointer; cursor: hand; 
+    /*-moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);*/
+}
+
+.addmerch
+{
+    color:#d9534f;
+    font-weight: bold;  
+}
+
+.assigned-merch
+{
+    cursor: pointer;
+    font-style: italic;
+    background-color: #dddddd;
+
+}

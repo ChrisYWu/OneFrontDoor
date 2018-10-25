@@ -1,0 +1,86 @@
+<div class="container-fluid dispatch-container">
+
+
+    <div class="row distpatch-menu-row navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="col-md-5 pull-left remove-col-margin">
+                <div class="lable-report">Week Day:</div>
+                <div class="float-left">
+                    <button class="btn btn-arrow btn-arrow-left" type="button" (click)="priorDay()">
+                         <i class="fa fa-angle-left refresh-icon"></i>
+                    </button>
+                </div>
+                <div class="dropdown" style="float: left">
+                    <button class="btn btn-me-light menu-dd menu-dd-txt" type="button" (click)="isShowDropDown = !isShowDropDown">
+                      {{selectedDay}}
+                        &nbsp;&nbsp;<span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu dispaly-block menu-dd dd-menu-ul" *ngIf="isShowDropDown" style="margin-top: 33px">
+                        <li (click)="setSelectedWeekDay(2)" [class]="selectedWeekDay==2? 'active' : ''">
+                            <a class="dd-menu-a text-center">MONDAY</a>
+                        </li>
+                        <li (click)="setSelectedWeekDay(3)" [class]="selectedWeekDay==3? 'active' : ''">
+                            <a class="dd-menu-a text-center">TUESDAY</a>
+                        </li>
+                        <li (click)="setSelectedWeekDay(4)" [class]="selectedWeekDay==4? 'active' : ''">
+                            <a class="dd-menu-a text-center">WEDNESDAY</a>
+                        </li>
+                        <li (click)="setSelectedWeekDay(5)" [class]="selectedWeekDay==5? 'active' : ''">
+                            <a class="dd-menu-a text-center">THURSDAY</a>
+                        </li>
+                        <li (click)="setSelectedWeekDay(6)" [class]="selectedWeekDay==6? 'active' : ''">
+                            <a class="dd-menu-a text-center">FRIDAY</a>
+                        </li>
+                        <li (click)="setSelectedWeekDay(7)" [class]="selectedWeekDay==7? 'active' : ''">
+                            <a class="dd-menu-a text-center">SATURDAY</a>
+                        </li>
+                        <li (click)="setSelectedWeekDay(1)" [class]="selectedWeekDay==1? 'active' : ''">
+                            <a class="dd-menu-a text-center">SUNDAY</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="float-left">
+                    <button class="btn btn-arrow btn-arrow-right" type="button" (click)="nextDay()">
+                         <i class="fa fa-angle-right refresh-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <button class="btn btn-darker-gray menu-dd menu-dd-txt" type="button" (click)="toggleUnassigned($event);">
+                    <span class="unassigned-store" (click)="toggleUnassigned($event);">Unassigned</span>
+                    <span class="badge unassigned-store-badge" (click)="toggleUnassigned($event);">{{unassignedAcctsLength}}</span>
+              </button>
+
+            </div>
+            <div class="col-md-4 pull-right remove-col-margin">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+    <div class="dispatch-row">
+            <div class="row status-main-static navbar-fixed-top">
+                    <div class="status-detail">  Planning   <span style="font-weight:600;font-style:italic;float: right;padding-right: 10px">Any changes performed to planning will not effect already scheduled routes. </span></div>
+            </div>
+        <div class="row" style="margin-top: 25px">
+            <div class="col-md-3 unassigned-group-list" *ngIf="unassignedToggle">
+                <a (click)="false;" class="list-group-item" *ngFor="let acct of unassignedAccts">
+                    <h4 class="list-group-item-heading">{{acct.AccountName}}</h4>
+                    <p class="list-group-item-text">{{acct.Address}}, {{acct.City}}, {{acct.State}}-{{acct.PostalCode}}</p>
+                </a>
+            </div>
+            <div [class]="unassignedToggle? 'col-md-9' : 'col-md-12'">
+                <div [class]="unassignedToggle? 'col-md-6 col-xs-12 col-sm-6' : 'col-md-4 col-xs-12 col-sm-6'" *ngFor="let route of dispatch" style="padding-top:25px;">
+                    <app-rsroute [unassignedInputAccts]="unassignedAccts" [dispatchDateInput]="dispathchDate" [allInputAccts]="allAccts"
+                    [lastModifiedByInput]="lastModifiedBy" [routeData]="route"  [routesInput]="routesInput" 
+                     (routeReassigned)="setupdatedroute($event)"
+                     (accountSelected)="setselectedAcct($event)" [selectedWeekDayInput]="selectedWeekDay"></app-rsroute>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-spinner [isRunning]="isRequesting"></app-spinner>

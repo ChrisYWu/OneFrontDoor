@@ -1,0 +1,69 @@
+
+//Global Variable
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+//local Variable
+$route-info-height: 50px;
+$route-raw-height: 86px;
+$route-start-line: $route-raw-height - $route-info-height;
+$route-border-coloer: #dddddd;
+
+$btn-add-font-size: 16px;
+$nm-fontsize: 26pt;
+$nm-circle-bg: #cccccc;
+$nm-color: #555555;
+$tbl-group-border: #d7d7d7;
+$grp-ln2-color: #898989;
+$active-row-bg: #f6f6f6;
+
+@mixin bottom-shadow() {
+    @include box-shadow(0, 3px, 7px, darken($tbl-group-border, 20%));
+}
+
+.unassigned-store{
+    padding: 0;
+    margin: -5px -12px;
+}
+
+.unassigned-store-font{
+    font-size: 36px;
+}
+.unassigned-store-font:hover{
+    color:#d7d7d7;  
+    cursor:pointer;
+}
+
+.unassigned-store-badge{
+    margin-left: 3px;
+    margin-top: -31px;
+    position: absolute;
+    background-color: $brand-red;
+    font-size: 16px;
+}
+.unassigned-group-list {
+    border: 1px solid #d7d7d7;
+    @include border-radius(5px);
+    @include bottom-shadow();
+    padding: 0;
+}
+.disp-history{
+        color: white;
+    margin-right: 20px;
+    text-decoration: underline;
+    font-size: larger;
+}
+
+
+.disp-history:hover{
+    color: white;
+    margin-right: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    cursor:pointer;
+}
+
+.filter-style
+{
+    margin-top: 8px;
+    margin-right: 20px;
+}

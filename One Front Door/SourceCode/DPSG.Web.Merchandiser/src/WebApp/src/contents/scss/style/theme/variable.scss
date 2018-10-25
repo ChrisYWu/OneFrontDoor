@@ -1,0 +1,37 @@
+﻿@import "mixin.scss";
+// Variable
+//primary color 
+$brand-blue: #1976d2 !default;
+$brand-green: #2ba04c !default;
+$brand-orange: #eb6c11 !default;
+$brand-red: #db2836 !default;
+$brand-gray-dark: #777777;
+$brand-gray-darker: #959595;
+$brand-light-blue: #5398dd !default;
+$brand-light-btn-blue: #72b5cc !default;
+$band-light-gray-btn: #898989 !default;
+$band-gray: #ebebeb !default;
+$btn-text: #fff !default;
+$text-white: #fff !default;
+$btn-text-dark:#333333 !default;
+$text-color-light: #fff !default;
+$text-black: #000000;
+$route-border-coloer: #dddddd;
+//circle
+$color-green: #2ba042;
+$color-red: #db2835;
+$color-gray: #707070;
+$color-white: #ffffff;
+$color-orange: #eb6c11;
+$color-maroon: #822433;
+//Gray shead 
+$background-header: #ebebeb !default;
+$background-rout-info: #ebebeb !default;
+$route-text-color: #636363;
+//Font related
+$font-family: Helvetica,
+Roboto,
+Arial,
+sans-serif;
+//normal font-size 
+$body-font-size: 12px;

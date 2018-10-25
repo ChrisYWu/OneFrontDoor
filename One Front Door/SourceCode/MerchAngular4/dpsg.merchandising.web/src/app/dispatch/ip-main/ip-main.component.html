@@ -1,0 +1,11 @@
+<div class="div-outer-ip">
+    <div class="row ip-row">
+        <route-info (toggleClick)="onToggleClick()" [dispatch]="dispatch">
+        </route-info>
+    </div>
+    <div class="row ip-row">
+        <div *ngIf="isShowItems " class="div-route-item ">
+            <route-item (ipStoreDetails)="onIpStoreDetails($event)" *ngFor="let stop of dispatch.Stops; let idx=index " [stop]="stop " [idx]="idx " [count]="dispatch.Stops.length "></route-item>
+        </div>
+    </div>
+</div>

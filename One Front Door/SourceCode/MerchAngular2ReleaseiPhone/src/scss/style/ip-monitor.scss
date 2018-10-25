@@ -1,0 +1,673 @@
+//Global Variable
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+$route-info-height: 50px;
+$color-gray-fill: #707070;
+$color-gray-plus-fill: #ebebeb;
+$ip-stop-line: #cccccc;
+$ip-main-bg: #efeff4;
+$ip-width: 365px;
+$ip-menu: #51626f;
+$ip-menu-btn: #6f8698;
+$mp-pic-header-bg-ip: #d7d7d7;
+.ip-menu-refresh {
+    /* padding: 5px; */
+    font-size: 24px;
+    /* margin-right: -15px; */
+    position: absolute;
+    right: 12px;
+    top: 9px;
+}
+
+.ip-menu-refresh-txt {
+    padding: 10px 2px 0 0;
+    font-size: 12px;
+    margin-right: 25px;
+    margin-top: 8px;
+}
+
+.ip-menu-search {
+    padding: 5px 12px;
+    font-size: 26px;
+    font-weight: 100;
+    float: left;
+    margin-left: -15px; // as row 
+    background-color: $ip-menu-btn !important;
+}
+
+.ip-menu-list {
+    position: relative;
+    padding: 8px 12px 3px 12px;
+    font-size: 26px;
+    font-weight: 100;
+    margin-left: -15px; // as row 
+    background-color: $ip-menu-btn !important;
+    cursor: pointer;
+}
+
+.ip-menu-search-right {
+    padding: 5px 12px;
+    font-size: 26px;
+    font-weight: 100;
+    float: right;
+    margin-right: -15px; // as row 
+    background-color: $ip-menu-btn !important;
+}
+
+.ip-menu-dd {
+    padding: 7px;
+}
+
+.distpatch-menu-ip {
+    color: $btn-text;
+    background-color: $ip-menu;
+    height: 100%;
+}
+
+.distpatch-body-ip {
+    background-color: #efeff4;
+    //  border: 1px solid red;
+    padding: 0 15px 15px 15px;
+    min-height: 86vh;
+    height: 100%;
+}
+
+.menu-input-ip {
+    width: 136%;
+}
+
+.ip-close-txt {
+    /* width: 100%; */
+    padding: 15px;
+    margin: 0 -15px;
+}
+
+.ip-close-txt-div {
+    float: right;
+    width: 80px;
+}
+
+img.img-persion-ip {
+    border-width: 2px;
+    border-style: solid;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.info-image-ip {
+    width: 32px;
+    height: 32px;
+}
+
+.div-img-ip,
+.div-txt-ip {
+    float: left;
+}
+
+.div-txt-ip {
+    padding: 2px 4px;
+    position: relative;
+    width: 67%;
+}
+
+.div-img-ip {
+    padding: 5px 15px;
+}
+
+.info-name-l1-ip {
+    padding-top: 4px;
+    font-size: 15px;
+}
+
+.info-name-l2-ip {
+    margin-top: -2px;
+    // font-weight: bold;
+    font-size: 14px;
+}
+
+.info-name-ip {
+    width: 70%;
+    background-color: $brand-light-gray;
+    color: $text-color-light;
+    float: left;
+    height: $route-info-height;
+}
+
+.info-timing-ip {
+    width: 30%;
+    float: left;
+    background-color: $background-rout-info;
+    height: $route-info-height;
+    border-left: 2px solid White;
+    border-right: 2px solid White;
+    height: $route-info-height;
+}
+
+.info-timing-l1-ip {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+//to find
+.info-timing-l2-ip {
+    color: $route-text-color;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 12px;
+}
+
+.route-info-ip {
+    border: 1px;
+    height: $route-info-height;
+    cursor: pointer;
+}
+
+.route-info-ip2 {
+    border: 1px;
+    padding: 5px;
+    height: $route-info-height/2;
+    border-bottom: 1px solid $brand-light-gray;
+}
+
+.name-info {
+    font-size: 32px;
+    top: 4px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.div-stop-circle-ip {
+    margin: 0;
+    width: 18%;
+    float: left;
+}
+
+.div-stop-txt-ip {
+    margin: 7px;
+    width: 82%;
+}
+
+.div-stop-ip {
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    border-bottom: 1px solid $ip-stop-line !important; //to modify 
+    cursor: pointer;
+}
+
+.stop-ln1-ip,
+.stop-ln2-ip,
+.stop-ln3-ip {
+    padding-left: 0;
+}
+
+.stop-ln1-ip {
+    font-size: 15px;
+}
+
+.stop-ln2-ip {
+    font-size: 10px;
+}
+
+.stop-ln3-ip {
+    color: $route-text-color !important;
+    font-size: 10px;
+}
+
+.stop-circle-ip {
+    width: 38px;
+    height: 38px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    line-height: 38px;
+    text-align: center;
+    font-weight: 700;
+    margin: 6px 0 0 10px;
+    font-size: 20px;
+}
+
+.circle-p-ip {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    background-color: lighten($color-gray, 45%) !important;
+    border-color: lighten($color-gray, 25%);
+}
+
+.circle-plus-ip {
+    padding: 1px !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    background-color: $color-gray-plus-fill!important;
+    border-color: $color-gray-fill;
+}
+
+.stop-ln-online {
+    margin-bottom: -10px !important;
+    margin-right: -44px;
+    /* border: 1px solid thistle; */
+    float: right;
+    text-align: center;
+    width: 100px;
+}
+
+.stop-ln-span {
+    background-color: white;
+    width: auto;
+    left: auto;
+    right: auto;
+    // padding: 0 5px;
+}
+
+.div-spacer {
+    width: 100%;
+    padding: 5px;
+}
+
+.div-route-item {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 0 15px 0 !important;
+    background-color: white !important;
+}
+
+.div-outer-ip {
+    padding: 15px 0 0 0!important;
+    //   border: 1px solid turquoise;
+}
+
+.div-inner-ip {
+    padding: 15px !important;
+}
+
+.div-external-ip {
+    padding: 15px !important;
+    background-color: $ip-main-bg !important;
+}
+
+.ip-main {
+    background-color: $ip-main-bg !important;
+}
+
+.ip-row {
+    // border: 1px solid goldenrod;
+    margin: 0 -5px !important;
+    background-color: white !important;
+}
+
+//.dispatch-container-ip {
+//    margin-top: 17px; // this may change 
+//}
+.dispatch-container-ip,
+.dispatch-container-ip-sch {
+    //background-color: $ip-main-bg !important;
+    //   border: 1px solid red;
+    margin-top: 17px; // this may change 
+    //height: 100% !important;
+    //  min-height: 617px;
+    overflow: auto;
+    position: relative;
+}
+
+.dispatch-container-ip-popup {
+    background-color: white !important;
+    //   border: 1px solid red;
+    margin-top: 17px; // this may change 
+    height: 100% !important;
+}
+
+.dispatch-msg-ip {
+    // height: 568px !important;
+    height: 300px !important;
+    margin: 0;
+}
+
+.dispatch-row-msg-ip {
+    padding: 30px 10px;
+}
+
+.mp-col-ip-1 {
+    padding-left: 15px;
+    padding-top: 7px;
+    font-size: 16px;
+    color: black;
+}
+
+.mp-col-ip-2 {
+    padding-top: 7px;
+    font-size: 16px;
+    color: $ip-menu;
+}
+
+.mp-header-ip {
+    background-color: $brand-light-blue !important;
+    color: white!important;
+    height: auto;
+}
+
+.ip-popup-outer-OLD {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.ip-popup-outer {
+    position: absolute;
+    top: 0;
+    z-index: 1040; // must > 1030
+    left: 0;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    padding: 0 15px;
+}
+
+.mp-header-ip-l1,
+.mp-header-ip-l2 {
+    color: white;
+}
+
+.mp-header-ip-l1 {
+    padding-top: 7px;
+    font-size: 22px;
+}
+
+.mp-header-ip-l2 {
+    padding-top: 5px !important;
+    font-size: 12px
+}
+
+.mp-image-ip-col {
+    padding-top: 5px;
+    margin: 0 0 0 -5px;
+}
+
+.mp-row-item-ip {
+    padding: 0 !important;
+    background-color: white;
+}
+
+.mp-row-item-ip1 {
+    padding: 0 !important;
+    background-color: white;
+    color: $color-gray-fill;
+}
+
+.mp-row-item-ip2 {
+    padding: 0 !important;
+    background-color: white;
+    color: llighten($color-gray-fill, 5%);
+}
+
+.mp-td1 {
+    color: darken($color-gray-fill, 10%) !important;
+    font-weight: normal !important;
+    font-size: 14px;
+}
+
+.mp-td2 {
+    color: lighten($color-gray-fill, 5%) !important;
+    font-weight: normal !important;
+    font-size: 14px;
+}
+
+.ip-tab-padding {
+    padding-top: 10px !important;
+}
+
+.mp-row-top-ip {
+    height: auto !important;
+    padding: 5px 0 0 0;
+    margin: 0;
+    background-color: white;
+}
+
+.ip-row-spacer {
+    padding: 5px;
+    border-bottom: 1px solid $ip-stop-line !important;
+}
+
+.div-above-cmt {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid $ip-stop-line !important
+}
+
+hr.ip-popup-hr {
+    margin: 0;
+    clear: both;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: -15px;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    color: $ip-stop-line !important;
+    //  width: 100%; // width: 375px;
+}
+
+.div-btm-border {
+    border-bottom: 1px solid lighten($ip-stop-line, 10%) !important;
+}
+
+.ip-popup-comment {
+    font-size: 16px;
+    // padding-left: 15px;
+    color: black;
+}
+
+.ip-popup-comment-data {
+    // padding-left: 15px;
+    font-size: 16px;
+    color: $ip-menu;
+}
+
+.ip-headder-pt {
+    padding-top: 10px !important;
+}
+
+.close-ip-popup-OLD {
+    position: absolute;
+    right: 5px;
+    top: 45px;
+    color: $ip-main-bg;
+    /* background-color: red; */
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.close-ip-popup {
+    position: absolute !important;
+    right: 1px !important;
+    top: -10px !important;
+    color: #efeff4;
+    /* background-color: red; */
+    font-size: 28px !important;
+    font-weight: 900 !important;
+    cursor: pointer !important;
+    z-index: 1050; // must > 1040
+    &:hover {
+        color: wwhite !important;
+    }
+}
+
+.ip-img-list-row {
+    margin-right: 15px !important;
+}
+
+.ip-outer-col {
+    padding: 15px;
+    border: 1px solid lighten($ip-stop-line, 10%) !important;
+}
+
+.ip-img-col {
+    margin: 0;
+}
+
+.ip-txt-col {
+    height: 35px;
+    margin: 0;
+}
+
+.mp-pic-header-ip {
+    border-bottom: 1px solid darken($mp-pic-header-bg-ip, 8%);
+}
+
+.mp-pic-header-ip .mp-img-name-ip {
+    clear: both;
+    font-size: 11px;
+    min-height: 30px;
+    text-align: center !important;
+}
+
+.ip-img-col>img {
+    height: 80px;
+}
+
+.mp-pic-header-ip {
+    background-color: $mp-pic-header-bg-ip !important;
+    color: Black;
+    font-size: 15px;
+    margin: 0 -15px;
+    padding: 5px 0 5px 15px;
+}
+
+.mp-pic-list-ip {
+    margin: 0 -15px -10px -15px;
+    /* padding: 5px; */
+    /* border: 1px solid red; */
+}
+
+.ip-caret-pic {
+    font-size: 22px !important;
+    padding-right: 30px;
+    float: right;
+    color: $color-gray-fill !important;
+}
+
+//schedule related changes 
+.info-scd-ip {
+    width: 70%;
+    background-color: $brand-light-gray;
+    color: $text-color-light;
+    float: left;
+    height: $route-info-height;
+}
+
+.btn-scd-ip {
+    width: 30%;
+    background-color: $brand-light-gray;
+    color: $text-color-light;
+    float: left;
+    height: $route-info-height;
+    padding: 8px 0px 0px 8px;
+}
+
+//class="scd-cell2-a"
+.scd-cell2-a {
+    font-size: 14px !important;
+    color: darken($color-gray-fill, 10%) !important;
+}
+
+.scd-cell1,
+.scd-cell2,
+.scd-cell3,
+.scd-cell4 {
+    padding: 9px 9px;
+    font-size: 14px;
+    float: left;
+    border-bottom: 1px solid lighten($brand-light-gray, 10%) !important;
+    color: darken($color-gray-fill, 10%) !important;
+}
+
+.scd-cell1,
+.scd-cell3 {
+    width: 10%;
+    text-align: center;
+}
+
+.scd-cell4 {
+    width: 14%;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    border-right: 1px solid lighten($brand-light-gray, 15%);
+}
+
+.scd-cell3 {
+    Font-size: 23px !important;
+    padding: 3px !important;
+    color: lighten($color-gray-fill, 30%) !important;
+}
+
+.scd-cell2 {
+    border-left: 1px solid lighten($brand-light-gray, 15%);
+    border-right: 1px solid lighten($brand-light-gray, 15%);
+    width: 66%;
+    a {
+        color: darken($color-gray-fill, 10%) !important;
+    }
+}
+
+
+.scd-row {
+    margin: 0;
+    padding: 0
+}
+
+.sch-col-ip-1 {
+    padding-left: 30px;
+    padding-top: 7px;
+    font-size: 15px;
+    color: black !important;
+    font-weight: normal !important;
+}
+
+.sch-col-ip-2 {
+    padding-top: 7px;
+    font-size: 15px;
+    color: lighten($ip-menu, 10%) !important;
+    font-weight: normal !important;
+}
+
+.sch-tbl-ip-tbody {
+    min-height: 430px !important;
+}
+
+.ip-tbl-div>table>tbody {
+    min-height: 430px !important;
+}
+
+.ip-route-tbl {
+    margin: 0 !important;
+}
+
+
+.nowrap-storecell{
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.nowrap-storecellwrap{
+    white-space: normal;
+}
+// below line recreating css issues in report page
+// table.tbl-sch thead,
+// tbody {
+//     display: block;
+// }
+
+// table.tbl-sch tr,
+// table.tbl-sch>tr {
+//     width: 100%;
+// }

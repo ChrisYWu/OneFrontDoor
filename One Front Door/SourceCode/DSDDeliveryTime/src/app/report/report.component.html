@@ -1,0 +1,21 @@
+ <input type="text" [(ngModel)]="merchGroupIDs">
+ <input type="button" value="Click Me"  (click)="LoadMyData()" >
+ <kendo-grid [data]="gridView" [pageSize]="pageSize" [skip]="skip" [sortable]="{ mode: 'single' }" [sort]="sort" (sortChange)="sortChange($event)"
+                (pageChange)="pageChange($event)" [scrollable]="'none'" [pageable]="{
+            buttonCount: buttonCount,
+            info: info,
+            type: type,
+            pageSizes: pageSizes,
+            previousNext: previousNext
+          }">
+    <kendo-grid-column field="StopSequence" title="Sequence" width="120">
+    </kendo-grid-column>
+    <kendo-grid-column field="Store" title="Store" width="120">
+    </kendo-grid-column>
+        <kendo-grid-column field="FormattedPlannedDelivery" title="Planned" width="120">
+    </kendo-grid-column>
+    <kendo-grid-column field="FormattedActualArrival" title="Actual"  width="120">
+    </kendo-grid-column>
+    <kendo-grid-column field="FormattedEstimatedArrival" title="Estimated" width="120">
+    </kendo-grid-column>              
+</kendo-grid>

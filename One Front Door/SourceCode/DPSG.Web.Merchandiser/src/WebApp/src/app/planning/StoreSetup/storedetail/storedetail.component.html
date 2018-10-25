@@ -1,0 +1,128 @@
+  <!-- header  start -->
+ <div class="row fr-row-hdr" *ngIf="storeSelectedInfo!=undefined">
+    <div class="col-md-3 v-middle mp-image-col">
+      <img alt="Store Image" class="center-block" [src]="storeSelectedInfo.ImageURL">
+    </div>
+     <div class="col-md-6">        
+        <div class="row str-hdr-text">{{storeSelectedInfo.AccountName}}</div>
+        <div class="row str-subhdr">{{storeSelectedInfo.Address}}, {{storeSelectedInfo.City}}</div>
+        <div class="row str-subhdr">{{storeSelectedInfo.State}}, {{storeSelectedInfo.PostalCode}}</div>
+    </div>   
+ </div>
+   <!-- header  End -->
+
+  <!-- Body  start -->
+  <div class="row fr-row-body" *ngIf="storeSelectedInfo!=undefined">
+     <div class="col-md-1"></div>
+     <div class="col-md-5">
+        <div class="row str-pnl">
+           <div class="col-md-1 str-cal-icon">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+           </div>
+           <div class="col-md-11 str-pnl-wk">
+             <div class="row">
+             <div class="col-md-12"><span class="fr-wkspan-lbl">Week days merchandising needed</span></div>            
+             </div>
+             <div class="row">
+                  <div class="col-md-5"></div>
+                  <div class="col-md-7">
+                  <span class="pull-lbl">2nd Pull?</span>
+                  </div>
+             </div>
+             
+              <div class="row">
+                <div class="col-md-5">
+                          <div *ngFor="let week of daysofWeek" class="chk">
+                          <label>
+                          <input type="checkbox" name="week" 
+                          [value]="week.Weeknumber" [ngModel]="week.FirstPull" (change)="onChkChange(week)">
+                          {{week.WeekName}}
+                          </label>
+                          </div>
+                </div>
+                <div class="col-md-7">
+                          <div *ngFor="let p of daysofWeek" class="chk">
+                          <label>
+                          <input type="checkbox" name="pull" 
+                          [value]="p.value" [ngModel]="p.SecondPull" (change)="onSecondPullChkChange(p)">                          
+                          </label>
+                          </div>
+                </div>
+             </div>
+             
+           </div>
+        </div>     
+    
+    
+ 
+     </div>
+      <div class="col-md-6">
+         <div class="row str-rt-pnl">
+                 <div class="col-xs-1 str-cal-icon">
+                 <i class="fa fa-map-marker" aria-hidden="true"></i>
+               </div>
+                <div class="col-xs-4 fr-user-col">
+                         <span dropdown (onToggle)="toggled($event)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRoute.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeList" role="menuitem"><a class="dropdown-item" (click)="onSelectRoute(r)">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>                     
+               </div>
+                 <div class="col-xs-7"> 
+                <ng2-map center="{{storeSelectedInfo.Address}}, {{storeSelectedInfo.City}},{{storeSelectedInfo.State}}, {{storeSelectedInfo.PostalCode}}">
+                  <marker position="{{storeSelectedInfo.Address}}, {{storeSelectedInfo.City}},{{storeSelectedInfo.State}}, {{storeSelectedInfo.PostalCode}}"
+                    (markerDragstart)="log($event, 'dragstart')"
+                    (markerDragend)="log($event, 'dragend')"
+                    draggable="true"></marker>
+                </ng2-map>
+                <div class="fr-row-ltmap">
+                <a class="add-route" target="_blank" href="https://maps.google.com?q={{storeSelectedInfo.Address}},{{storeSelectedInfo.City}},{{storeSelectedInfo.State}},{{storeSelectedInfo.PostalCode}}">
+                Location Map</a></div>
+                 </div>
+               
+      
+             </div>
+      </div>
+     <!--<div class="col-md-1"></div>-->
+      <div class="pull-right fr-row-body-msg" *ngIf="ShowSaveMsg">
+                           <span class="msg-alert" >Saved Successfully</span>
+                        </div>
+                        <div class="pull-right fr-row-body-fotter">
+                           
+                            <a type="button" class="btn btn-me btn-light-gray" (click)="onCancel()">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</a> &nbsp;&nbsp;
+                            <a type="submit" class="btn btn-me btn-light-blue" (click)="selectedRoute.RouteID==null?detailModal.show():onSave()">&nbsp;&nbsp;Save&nbsp;&nbsp;</a>
+
+
+      </div>
+  </div>
+<!-- Body  End -->
+
+
+
+  <div class="modal fade" bsModal #detailModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="detailModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Store SetUp</h4>
+      </div>
+      <div class="modal-body">
+       <div class="form-group">         
+        <label for="comment">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i> &nbsp;Default route has not be defined for this store.
+        </label>        
+      </div>
+      <div class="form-group" style="text-align:center">
+            <a class="btn btn-primary" (click)="onSave();detailModal.hide();">Ok</a>
+            <a class="btn btn-default" (click)="detailModal.hide();">Cancel</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

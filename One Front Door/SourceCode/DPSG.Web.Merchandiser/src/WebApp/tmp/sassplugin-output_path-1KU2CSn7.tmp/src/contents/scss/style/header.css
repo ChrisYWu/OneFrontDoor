@@ -1,0 +1,110 @@
+.test-radius-mixin {
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+.header {
+  background-color: #ebebeb; }
+
+.header-btns {
+  padding: 12px 10px 10px 10px;
+  margin: 10px; }
+
+.header-logo {
+  border: 0px; }
+
+.submenu-row {
+  margin-top: -18px; }
+
+.user-col {
+  padding-top: 10px;
+  padding-right: 20px; }
+
+.div-btn-otl {
+  float: left;
+  width: auto; }
+
+/*
+ .div-btn-otl:before {
+     content: "\a0";
+     display: block;
+     line-height: 1px;
+     border-top: 20px dashed #000;
+ }
+ */
+.btn-me {
+  border-radius: 0 !important;
+  border: 0 !important;
+  font-family: Helvetica, Roboto, Arial, sans-serif !important;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 35px !important;
+  margin: 0 5px !important; }
+  .btn-me:hover {
+    color: #fff !important;
+    border: 1px solid #4d4d4d !important;
+    padding: 9px 34px !important; }
+  .btn-me:active {
+    color: #ffffff !important; }
+  .btn-me:on {
+    color: #ffffff !important; }
+
+.btn-me-dropdown::after {
+  content: " \25BE"; }
+
+.btn-blue {
+  background-color: #1976d2; }
+  .btn-blue:hover {
+    background: #145ca4; }
+
+.btn-light-blue {
+  background-color: #72b5cc; }
+  .btn-light-blue:hover {
+    background: #4da1be; }
+
+.btn-green {
+  background-color: #2ba04c; }
+  .btn-green:hover {
+    background: #207839; }
+
+.btn-orange {
+  background-color: #eb6c11; }
+  .btn-orange:hover {
+    background: #bb560e; }
+
+.btn-red {
+  background-color: #db2836; }
+  .btn-red:hover {
+    background: #b21e29; }
+
+.btn-light-gray {
+  background-color: #898989; }
+  .btn-light-gray:hover {
+    background: #707070; }
+
+.btn-dark-gray {
+  background-color: #777777; }
+  .btn-dark-gray:hover {
+    background: #5e5e5e; }
+
+.btn-me-light {
+  border-radius: 0 !important;
+  border: 0 !important;
+  font-family: Helvetica, Roboto, Arial, sans-serif !important;
+  color: #822433;
+  font-weight: bold;
+  padding: 7px 20px !important; }
+  .btn-me-light:hover {
+    color: #aa2f43 !important; }
+  .btn-me-light:active {
+    color: #aa2f43 !important; }
+  .btn-me-light:on {
+    color: #aa2f43 !important; }
+
+.btn-gray {
+  background-color: #ebebeb; }
+  .btn-gray:hover {
+    background: #d2d2d2; }

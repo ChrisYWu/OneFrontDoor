@@ -1,0 +1,58 @@
+{
+  "project": {
+    "version": "1.0.0-beta.16",
+    "name": "migration-project"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "wwwroot",
+      "assets": "assets",
+      "index": "index.html",
+      "main": "main.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.json",
+      "prefix": "app",
+      "mobile": false,
+      "styles": [
+        "scss/theme-main.scss",
+        "scss/style/dispatch.scss",
+        "scss/style/header.scss",
+        "scss/style/main.scss",
+        "scss/style/merchandiser.scss",
+        "scss/style/monitor.scss",
+        "scss/style/monitor-popup.scss",
+        "scss/style/pl-merc.scss",
+        "scss/style/planning.scss",
+        "scss/style/planning-store.scss",
+        "scss/style/Reporting.scss",
+        "scss/style/submenu.scss",
+        "scss/style/user-dropdown.scss",
+        "scss/style/theme/mixin.scss",
+        "scss/style/theme/variable.scss"
+      ],
+      "scripts": [],
+      "environments": {
+        "source": "environments/environment.ts",
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "addons": [],
+  "packages": [],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "scss",
+    "prefixInterfaces": false
+  }
+}

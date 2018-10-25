@@ -1,0 +1,31 @@
+<div class="col-xs-12 zeropadding">
+    <table class="table" style="color:#333">
+        <thead>
+            <tr>
+                <th>
+                    <div class="input-group col-xs-12">
+                        <span class="input-group-addon dispatch-search-addon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control menu-input" id="txtMerchSearch" placeholder="Search Merchandiser" 
+                                [(ngModel)]="keyword" 
+                                (focus)="showDropdownList()"
+                                (input)="reloadListInDelay()">
+                        <!--<input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input" id="txtSearch" placeholder="Search">-->
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>Merchandiser</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mer of MerchLookupList" 
+                (click)="addMerch(mer)">
+                <td><p style="font-size:medium;margin:0px">{{mer.DisplayName}}</p><p style="font-size:small;margin:0px">
+                  {{mer.sAMAccountName}},{{mer.userPrincipalName}}</p></td>                
+            </tr>      
+        </tbody>
+    </table>
+</div>

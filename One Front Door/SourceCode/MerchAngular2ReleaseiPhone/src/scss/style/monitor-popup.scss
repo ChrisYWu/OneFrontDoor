@@ -1,0 +1,400 @@
+// Globale Variable
+@import "theme/variable.scss";
+//Local Variable
+$mp-header-txt: $text-color-light;
+$mp-close-hover: ligten($color-gray, 10%);
+$mp-img-close-hover: ligten($color-gray, 10%);
+$mp-border-gray: #d7d7d7;
+$mp-pic-header-bg: #d7d7d7;
+$mp-box-border-gray: #b7b7b7;
+$mp-sub-txt: #888888;
+$mp-txt: #000000;
+// for modal popup 2
+.modal-ribbon {
+    background-color: lighten($mp-border-gray, 10%);
+    //  border-bottom: 1px solid $mp-border-gray;
+    margin: 0 !important;
+    display: table;
+    padding: 5px 0;
+}
+
+.modal-ribbon>div:nth-child(-n+3) {
+    border-right: 2px inset $mp-border-gray;
+}
+
+.modal-ribbon>div {
+    padding: 2px 10px 2px 30px;
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.mp-ln-1,
+.mp-ln-2 {
+    width: 100%;
+    float: left;
+}
+
+.mp-ln-1 {
+    color: darken($mp-sub-txt, 30%);
+    font-size: 13px;
+}
+
+.mp-ln-2 {
+    color: $mp-sub-txt;
+    font-size: 12px;
+}
+
+.mp-mrg-sng {
+    text-align: center;
+}
+
+.mp-mrg-img {
+    padding: 0;
+}
+
+.mp-mrg-img img {
+    height: 80px;
+    padding: 5px;
+}
+
+.mp-col-cmt2 {
+    color: $mp-sub-txt;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    max-height: 52px;
+    height: 48px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mp-modal2-body {
+    height: 340px !important;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+}
+
+.mp-modal2-body-img {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: 480px !important;
+}
+
+.col-pic {
+    padding: 10px;
+    //border: 1px solid cornflowerblue;
+}
+
+.mp-img-div2 {
+    padding-left: 4%;
+}
+
+.mp-img-div2>img.mp-img-sale {
+    position: absolute;
+}
+
+.mp-img-div2>img.mp-img-pic {
+    height: 290px;
+    //  border: 1px solid palevioletred;
+    padding: 12px 10px 10px 11px;
+}
+
+.div-ip-row {
+    padding: 0;
+}
+
+img.ip-img-sale {
+    position: absolute;
+    margin-left: 50% !important;
+    left: -162px;
+    /* margin: 0 auto; */
+    top: 10px;
+}
+
+img.ip-img-pic {
+    /* position: absolute; */
+    width: 300px;
+    /* margin-left: 50% !important; */
+    /* left: -140px; */
+    /* top: 10px; */
+    display: block;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+img.ip-img-pic-old {
+    /* position: absolute; */
+    width: 180px;
+    /* margin-left: 50% !important; */
+    /* left: -140px; */
+    /* top: 10px; */
+    display: block;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.mp-row2-top {
+    height: auto !important;
+    margin: 0px 3% !important;
+}
+
+.mp-full-img {
+    height: 440px;
+}
+
+.mp-img-name2 {
+    clear: both;
+    font-size: 12px;
+    min-height: 80px !important;
+    padding-left: 15px;
+    margin-top: -5px;
+    //text-align: center !important;
+    color: lighten($mp-txt, 20%)
+}
+
+.ip-img-name2 {
+    clear: both;
+    font-size: 12px;
+    min-height: 80px !important;
+    padding-left: 11%;
+    margin-top: -5px;
+    color: lighten($mp-txt, 20%)
+}
+
+.mp-img2-name2 {
+    clear: both;
+    font-size: 16px;
+    margin: -10px 0;
+    color: white;
+}
+
+.mp-img2-ln1 {
+    font-size: 16px !important;
+    color: white;
+}
+
+.mp-name2-ln1 {
+    font-size: 13px !important;
+    color: lighten($mp-txt, 10%)
+}
+
+.ip-name2-ln1 {
+    font-size: 13px !important;
+    color: lighten($mp-txt, 10%)
+}
+
+.no-img-text {
+    padding: 50px 0px;
+    text-align: center;
+}
+
+// --- end -- for modal popup 2
+.mp-modal-body {
+    height: 447px !important;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+}
+
+.mp-modal-img-body {
+    height: 517px !important;
+    overflow-x: hidden;
+    overflow-y: auto !important;
+}
+
+.mp-header {
+    background-color: $brand-light-blue !important;
+    color: $mp-header-txt !important;
+    height: auto;
+}
+
+.mp-img-header {
+    border-bottom: none;
+    height: auto;
+    background-color: white !important;
+}
+
+//Below class use for closing "X" of dilogbox, may be need to change 
+.mp-close {
+    font-size: 28px !important;
+    background: transparent;
+    position: absolute;
+    border: 0;
+    margin-top: -5px;
+    top: 0;
+    right: 5px;
+    color: white !important;
+    cursor: pointer;
+    &:hover {
+        color: $mp-header-txt !important;
+    }
+}
+
+.mp-img-close {
+    font-size: 28px !important;
+    background: transparent;
+    position: absolute;
+    border: 0;
+    margin-top: -5px;
+    top: 0;
+    right: 5px;
+    color: darkgrey !important;
+    cursor: pointer;
+}
+
+.mp-image-col {
+    padding-top: 5px;
+    margin: 0;
+}
+
+.mp-header-l1,
+.mp-header-l2,
+.mp-header-l3 {
+    color: $mp-header-txt;
+    padding: 1px !important;
+    margin: -10px 0 -10px 0;
+}
+
+.mp-header-l1 {
+    padding-top: 5px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.mp-header-l2 {
+    padding-top: 5px !important;
+    font-size: 24px
+}
+
+.mp-header-l3 {
+    font-size: 24px
+}
+
+.mp-row-top {
+    height: auto !important;
+}
+
+.mp-row-btm {
+    height: 180px !important;
+}
+
+.mp-col-left,
+.mp-col-right {
+    height: 100% !important;
+}
+
+.mp-row-cnt {
+    height: 15px;
+    max-height: 15px
+}
+
+.mp-col-right {
+    border-left: 2px solid $mp-border-gray;
+}
+
+.mp-row-item {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.mp-col-1 {
+    padding-left: 5%;
+    padding-top: 7px;
+    font-size: 16px;
+    color: $mp-txt;
+}
+
+.mp-col-2 {
+    padding-top: 7px;
+    font-size: 14px;
+    color: $mp-sub-txt;
+}
+
+.mp-col-cmt {
+    padding-top: 4px;
+    padding-left: 5%;
+    font-size: 14px;
+    color: $mp-sub-txt;
+    max-height: 57px;
+    height: 57px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mp-img-sgn {
+    border: 1px solid $mp-box-border-gray !important;
+    margin-left: 10px;
+}
+
+.mp-pic-header {
+    background-color: $mp-pic-header-bg !important;
+    color: $mp-txt;
+    font-size: 14px;
+    margin: 0 -15px;
+    padding: 5px 0 5px 15px;
+}
+
+//mp-pic-list {
+//   height: 340px !important;
+//}
+.mp-image-row {
+    padding: 10px !important;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.mp-image-row-outer {
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: auto;
+}
+
+.mp-image-row-inner,
+.mp-image-row-inner2 {
+    padding: 8px 0 18px 0;
+    height: auto;
+}
+
+.mp-image-row-inner {
+    width: 1000px;
+}
+
+.mp-image-row-inner2 {
+    width: auto;
+}
+
+.mp-img-div {
+    padding: 5px;
+    float: left;
+    border: 1px solid $mp-border-gray;
+    width: 150px;
+}
+
+.mp-div-img {
+    clear: both;
+}
+
+.mp-img-name {
+    clear: both;
+    font-size: 11px;
+    min-height: 30px !important;
+    text-align: center !important;
+}
+
+.mp-sign-arrow {
+    cursor: pointer;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

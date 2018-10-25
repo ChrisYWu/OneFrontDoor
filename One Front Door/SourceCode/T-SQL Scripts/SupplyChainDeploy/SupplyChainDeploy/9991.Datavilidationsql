@@ -1,0 +1,34 @@
+Use Portal_Data
+Go
+
+Select Top 1 AnchorDateID
+From [SupplyChain].[tDsdCaseCut]
+Order By AnchorDateID desc
+
+Select Top 1 DateID
+From [SupplyChain].[tDsdDailyBranchInventory]
+Order By DateID desc
+
+Select Top 1 DateID
+From [SupplyChain].[tDsdDailyCaseCut]
+Order By DateID desc
+
+Select Top 1 DateID
+From [SupplyChain].[tDsdDailyMinMax]
+Order By DateID desc
+
+Select Distinct DateID
+From [SupplyChain].[tDsdOpenOrder]
+Order By DateID desc
+
+Select Top 1 *
+From [SupplyChain].[tDsdPotentialCaseCut]
+Order By DateID desc
+
+Select *
+Select Top 1 *
+From [SupplyChain].[tDsdCaseCut]
+
+Select Distinct AnchorDateID
+From [SupplyChain].[tLineKPI]
+Order By AnchorDateID desc

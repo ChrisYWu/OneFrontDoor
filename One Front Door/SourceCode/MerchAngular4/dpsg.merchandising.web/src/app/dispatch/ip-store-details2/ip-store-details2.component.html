@@ -1,0 +1,101 @@
+<div class="ip-popup-outer">
+    <div class="row mp-header-ip">
+        <a (click)="onCloseStoreDetails()" class="close-ip-popup">
+            <span aria-hidden="true">&times;</span>
+        </a>
+        <div class="col-xs-4 v-middle mp-image-ip-col">
+            <img class="center-block" [src]="storeInfo.storeDetails.StoreImageURL" alt="Store Image">
+        </div>
+        <div class="col-xs-8">
+            <div class="mp-header-ip-l1">{{storeInfo.stop.AccountName}}</div>
+            <div class="mp-header-ip-l2">{{storeInfo.storeDetails.StoreAddress}} </div>
+        </div>
+    </div>
+    <div class="row mp-row-top-ip">
+        <!--Items -->
+        <div class="div-above-cmt">
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Service Time</div>
+                <div class="col-xs-6 mp-col-ip-2">
+                    {{storeInfo.storeDetails.CheckInTime}} - {{storeInfo.storeDetails.CheckOutTime}}
+                    <div [hidden]="getTimeInstore(storeInfo.storeDetails.TimeInStore) == ''">
+                        {{getTimeInstore(storeInfo.storeDetails.TimeInStore)}}
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Delivery Time</div>
+                <div class="col-xs-6 mp-col-ip-2">
+                    {{getDeliveryTime(storeInfo.storeDetails.DeliveryTime)}}<br> {{getDriverName(storeInfo.storeDetails.DriverName)}}
+
+                </div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Cases Worked</div>
+                <div class="col-xs-6 mp-col-ip-2"> {{storeInfo.storeDetails.CasesHandeled}} cs</div>
+            </div>
+            <div class="row mp-row-item-ip">
+                <div class="col-xs-6 mp-col-ip-1">Backstock Cases</div>
+                <div class="col-xs-6 mp-col-ip-2"> {{storeInfo.storeDetails.CasesInBackRoom}} cs</div>
+            </div>
+        </div>
+        <div class="ip-popup-comment">
+            Comments
+        </div>
+        <div class="ip-popup-comment-data">
+            {{storeInfo.storeDetails.Comments}}
+        </div>
+        <div class="row mp-row-item-ip">
+            <div class="col-xs-6 mp-col-ip-1">Manager Name</div>
+            <div class="col-xs-6 mp-col-ip-2">{{storeInfo.storeSignature.ManagerName}}</div>
+        </div>
+        <div class="row mp-row-item-ip">
+            <div class="col-xs-6 mp-col-ip-1 mp-sign-arrow">
+                Manager Signature
+            </div>
+            <div class="col-xs-6 mp-col-2" *ngIf="storeInfo.storeSignature.azureImageURL !=''" style="min-height:107px">
+                <img class="mp-img-sgn img-responsive" style="height:100px" [src]="storeInfo.storeSignature.azureImageURL" alt="Signature not available">
+            </div>
+            <div class="col-xs-6 mp-col-ip-2" *ngIf="storeInfo.storeSignature.azureImageURL ==''">
+                No signature.
+            </div>
+        </div>
+        <div class="row mp-row-item-ip ip-headder-pt">
+            <div class="col-xs-12">
+                <div class="mp-pic-header-ip">Pictures
+                </div>
+                <!--   
+                <div>
+                    {{storeInfo.allPictures | json}}
+                </div>
+ -->
+                <!---->
+                <div class="mp-pic-list-ip">
+                    <div *ngIf="storeInfo.allPictures.length <= 0" class="no-img-text">
+                        <h4>No picture available.</h4>
+                    </div>
+                    <div *ngIf="storeInfo.allPictures.length > 0">
+                        <div *ngFor="let img of storeInfo.allPictures; let idx=index" class="row div-ip-row">
+                            <div class="col-sm-1">
+                                <img [hidden]="!img.isSlaePicture" class="ip-img-sale" src="/assets/img/sale-icon.PNG">
+                                <img class="ip-img-pic" [src]='img.ImageURL' alt="img.ImageURL">
+                                <div class="ip-img-name2 pull-left">
+                                    {{img.Name1}}
+                                    <br>
+                                    <span class="ip-name2-ln1" *ngIf="img.istoolTip==true" [title]="img.Name3" [innerHTML]="getImageName(img.Name2)"></span>
+                                    <span *ngIf="img.istoolTip==true" [title]="img.Name3">...</span>
+                                    <span *ngIf="img.istoolTip==false">{{img.Name2}}</span>
+                                    <!--<br> <span *ngIf="img.Name2.length>0"> {{img.RefusalReason}}</span>-->
+                                    <br> <span> {{img.RefusalReason}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Items ends -->
+        <br>
+    </div>
+</div>

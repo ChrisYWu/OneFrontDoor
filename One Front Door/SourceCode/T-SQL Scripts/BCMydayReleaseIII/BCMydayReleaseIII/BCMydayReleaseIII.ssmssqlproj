@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BCMydayReleaseIII">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="bsccap108:DPSG\WUXYX001">
+          <Created>2015-02-27T23:18:26.2599822-06:00</Created>
+          <Type>SQL</Type>
+          <Server>bsccap108</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCAP121:DPSG\WUXYX001">
+          <Created>2015-02-25T14:07:05.3774637-06:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCAP121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>Portal_Data</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCSQ07:DPSG\WUXYX001">
+          <Created>2015-02-27T21:56:08.0073666-06:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCSQ07</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+        <ConnectionNode Name="dpsgsharedclstr:DPSG\WUXYX001">
+          <Created>2015-03-10T13:36:43.1947885-05:00</Created>
+          <Type>SQL</Type>
+          <Server>dpsgsharedclstr</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="vh-portal2:DPSG\WUXYX001">
+          <Created>2015-02-25T14:06:40.848011-06:00</Created>
+          <Type>SQL</Type>
+          <Server>vh-portal2</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="(Alter)BCMyday.pGetLOSMaster.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(Alter)BCMyday.pGetLOSMaster.sql</FullPath>
+        </FileNode>
+        <FileNode Name="(Alter)BCMyday.pGetPromotionsByRegionID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(Alter)BCMyday.pGetPromotionsByRegionID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="(Alter)BCMyday.pGetStoreTieInsHistory.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(Alter)BCMyday.pGetStoreTieInsHistory.sql</FullPath>
+        </FileNode>
+        <FileNode Name="(Alter)BCMyday.pGetStoreTieInsHistoryByRegionID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>(Alter)BCMyday.pGetStoreTieInsHistoryByRegionID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="01. InsertSystemTradeMarkBrand.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01. InsertSystemTradeMarkBrand.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. vSystemCompetition.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. vSystemCompetition.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03. Populate Sample Data.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03. Populate Sample Data.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04. Test.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04. Test.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05. Constraints.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05. Constraints.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06. AfterFix(pDSDCasecutFilling).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>06. AfterFix(pDSDCasecutFilling).sql</FullPath>
+        </FileNode>
+        <FileNode Name="07. BeforeFix(pDSDCasecutFilling).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>07. BeforeFix(pDSDCasecutFilling).sql</FullPath>
+        </FileNode>
+        <FileNode Name="08. Add Key to display details..sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>08. Add Key to display details..sql</FullPath>
+        </FileNode>
+        <FileNode Name="10. BCMyDay.pGetBCPrioritiesByRegionID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10. BCMyDay.pGetBCPrioritiesByRegionID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="100. DEV108 Deployment.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>100. DEV108 Deployment.sql</FullPath>
+        </FileNode>
+        <FileNode Name="101. (not Needed)BCMyDay.pGetManagementPriorityIDsForBottler.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>101. (not Needed)BCMyDay.pGetManagementPriorityIDsForBottler.sql</FullPath>
+        </FileNode>
+        <FileNode Name="101. DEV108 Validation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>101. DEV108 Validation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12. Add Client ID to executions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>12. Add Client ID to executions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="29. Insert Trademarks etc.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>29. Insert Trademarks etc.sql</FullPath>
+        </FileNode>
+        <FileNode Name="29. Insert(2) Trademarks etc.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>29. Insert(2) Trademarks etc.sql</FullPath>
+        </FileNode>
+        <FileNode Name="29. Insert(3).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>29. Insert(3).sql</FullPath>
+        </FileNode>
+        <FileNode Name="30. Insert Brand Image.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>30. Insert Brand Image.sql</FullPath>
+        </FileNode>
+        <FileNode Name="30. Insert(2) Brand Image.sql.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>30. Insert(2) Brand Image.sql.sql</FullPath>
+        </FileNode>
+        <FileNode Name="31. Insert CompetitionBrand.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>31. Insert CompetitionBrand.sql</FullPath>
+        </FileNode>
+        <FileNode Name="98. Drop Column Constraints.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>98. Drop Column Constraints.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99. (TS) Fix Catcut.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99. (TS) Fix Catcut.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.1 Drop ClientID columns.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.1 Drop ClientID columns.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.10 BCMyDay.pGetRSMsByManagementPriorityID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.10 BCMyDay.pGetRSMsByManagementPriorityID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.2 Data Setup Check.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.2 Data Setup Check.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.3 Priority Data Setup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.3 Priority Data Setup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.4 Potential Bottler State Logic.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.4 Potential Bottler State Logic.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.5 (Not Needed)Logic for States.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.5 (Not Needed)Logic for States.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.6. Is_FairShare.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.6. Is_FairShare.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.7 STORES_MAPVIEW_RADIUS_INMILES.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.7 STORES_MAPVIEW_RADIUS_INMILES.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.8 ClientDisplayID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.8 ClientDisplayID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99.9 ETL.pMergeViewTables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99.9 ETL.pMergeViewTables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/BCMydayReleaseIII</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,94 @@
+<div [class]="routeData.GSN==''? 'route-box-header-gray panel-heading text-left' : 'route-box-header panel-heading text-left'"  >
+   <div class="info-image" style="position:absolute;top:-45px;left:-30px">
+            <img class="img-persion circle-white" [src]="routeData.AbsoluteURL? routeData.AbsoluteURL : '/assets/img/noimage.PNG'">
+        </div>
+</div>
+    <h4 class="panel-title pull-left" style="padding-top: 7.5px;font-size:small;cursor:pointer">
+        <a (click)="getMerchs()" [class]="routeData.GSN==''? 'addmerch' : ''">{{routeData.FirstName}} {{routeData.LastName}}</a></h4>
+
+
+
+
+    <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
+        <div class="modal-dialog  modal-md">
+            <div class="modal-content">
+                <div class="modal-header" style="color:#333">
+                    <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                    <h4 class="modal-title text-center">Change Merchandiser</h4>
+                </div>
+                <div class="modal-body cusFont text-left" style="min-height:500px; color:#333">
+                    <form>
+                        <div class="form-group">
+                            <h4 class="modal-title">Route: <span style="color:#333; margin-left:25px">{{routeData.RouteName}}</span></h4>
+                            <h4 class="modal-title">Current Merch: <span style="color:#333; margin-left:25px" *ngIf="routeData.GSN!=''">{{routeData.FirstName}} {{routeData.LastName}}</span></h4>
+                        </div>
+
+                        <div class="form-group">
+
+
+                            <tabset [justified]="true">
+                                <tab heading="Merch Group: Unassigned" [active]="true" (select)="active = true" (deselect)="active = false">
+                                    <div class="col-xs-12 zeropadding">
+                                        <table class="table" style="color:#333">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">
+                                                        <div class="input-group col-xs-12">
+                                                            <span class="input-group-addon dispatch-search-addon">
+                                                            <i class="fa fa-search"></i>
+                                                        </span>
+                                                            <input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input" id="txtSearch" name="txtSearch" placeholder="Search">
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr *ngFor="let mer of unassignedMerch | filter:{FirstName: filterInput.value, LastName: filterInput.value, GSN: filterInput.value }" 
+                                                (click)="reassignMerch(mer.GSN, mer.LastName, mer.FirstName, mer.AbsoluteURL, mer.MerchGroupName);">
+                                                    <td>{{mer.FirstName}} {{mer.LastName}}</td>
+                                                    <td>{{mer.GSN}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </tab>
+                                <tab heading="Branch" (select)="active = true" (deselect)="active = false">
+                                    <div class="col-xs-12 zeropadding">
+                                        <table class="table" style="color:#333">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <div class="input-group col-xs-12">
+                                                            <span class="input-group-addon dispatch-search-addon">
+                                                                <i class="fa fa-search"></i>
+                                                            </span>
+                                                            <input type="text" #filterInput1 [(ngModel)]="filterText1" class="form-control menu-input" id="txtSearch1" name="txtSearch1" placeholder="Search">
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let mer of unassignedOtherMerch | filter:{FirstName: filterInput1.value, LastName: filterInput1.value, GSN: filterInput1.value }" 
+                                                     (click)="mer.MerchGroupName == null && reassignMerch(mer.GSN, mer.LastName, mer.FirstName, mer.AbsoluteURL, mer.MerchGroupName);" 
+                                                     [class]="mer.MerchGroupName != null? 'assigned-merch' : ''">
+                                                    <td>{{mer.FirstName}} {{mer.LastName}}</td>
+                                                    <td>{{mer.MerchGroupName != null ? mer.MerchGroupName : 'Unassigned'  }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </tab>
+                            </tabset>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>

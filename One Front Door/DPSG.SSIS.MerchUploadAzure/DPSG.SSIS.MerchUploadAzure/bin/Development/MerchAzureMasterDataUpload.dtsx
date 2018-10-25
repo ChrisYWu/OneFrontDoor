@@ -1,0 +1,84 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/27/2017 1:44:49 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="VH-PORTAL3"
+  DTS:CreatorName="DPSG\wuxyx001"
+  DTS:DTSID="{FC5250F5-3E92-4EE1-B059-5DFE9E8879AC}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.6020.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="MerchAzureMasterDataUpload"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{F0DF11F3-5D75-4B7B-8FCF-CF7C03B8A8E4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[2 Cloud]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1D6F28B2-740B-40E6-881A-0F755609CF3F}"
+      DTS:ObjectName="2 Cloud">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=myday-dev-us-central.database.windows.net;User ID=merch_web;Initial Catalog=Merch_Practice;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="H:\VH3_1\One Front Door\DPSG.SSIS.MerchUploadAzure\DPSG.SSIS.MerchUploadAzure\MerchAzureMasterDataUploadConfiguration.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{BC007664-2B01-4F36-8B67-424690A42841}"
+      DTS:ObjectName="MerchAzureMasterDataUploadConfiguration" />
+  </DTS:Configurations>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\(0) Truncate target synonym tables"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{020BE550-31AA-455D-B38D-66F399E989FA}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="(0) Truncate target synonym tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1D6F28B2-740B-40E6-881A-0F755609CF3F}"
+          SQLTask:SqlStatementSource="Truncate Table BCMyDay.Config;&#xA;Truncate Table MSTR.DimChainHier;&#xA;Truncate Table Person.RMEmployee;&#xA;Truncate Table Person.UserProfile;&#xA;Truncate Table Playbook.DisplayLocation;&#xA;Truncate Table Playbook.RetailPromotion;&#xA;Truncate Table PreCal.PromotionBranch;&#xA;Truncate Table PreCal.PromotionLocalChain;&#xA;Truncate Table SAP.Account;&#xA;Truncate Table SAP.Branch;&#xA;Truncate Table SAP.LocalChain;&#xA;Truncate Table SAP.Route;&#xA;Truncate Table SAP.RouteSalesGroupExclusion;&#xA;Truncate Table SAP.RouteSchedule;&#xA;Truncate Table Shared.Config;&#xA;Truncate Table Shared.DisplayType;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="246,42"
+          Id="Package\(0) Truncate target synonym tables"
+          TopLeft="275,144" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

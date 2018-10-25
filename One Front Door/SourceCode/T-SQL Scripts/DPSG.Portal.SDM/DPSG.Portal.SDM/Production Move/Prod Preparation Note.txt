@@ -1,0 +1,29 @@
+﻿-- Steps for Prod Server preperation ----
+
+0. Run Create DB.sql to create the database as well as schemas.
+1. Install Oracle Data Access 11g 64 bit. Or Oracle Client 11g 64 bit on the DB server.
+2. Copy the tnsnames.ora to $oracleHome\Network\Admin
+3. With SA previledge, execute Linked Servers.sql to install the linked servers. Verify connectivity.
+
+4. Install "PKGMasterData.dtsx" from TFS location "$/One Front Door/SourceCode/DPSG.Portal.SSIS/DPSG.Portal.SSIS"
+	To this location in SSIS service "MSDB\SDMStagingPackages"t
+   And do the same for the following
+   Install “PKGOFDDailyMetrics.dtsx” from TFS Location “$/One Front Door/SourceCode/DPSG.Portal.SSIS/DPSG.Portal.SSIS”
+   Install “PKGOFDCasesCut.dtsx” from TFS Location “$/One Front Door/SourceCode/DPSG.Portal.SSIS/DPSG.Portal.SSIS”
+   Install “PKGFMDCustSum.dtsx” from TFS Location “$/One Front Door/SourceCode/DPSG.Portal.SSIS/DPSG.Portal.SSIS” 
+
+5. Create a local folder for the ssis configuration files at C:\SdmSSISConfig\
+6. Place file "ConfigMaster.dtsConfig" in the config folder created in C:\SdmSSISConfig\. 
+	Place file "ConfigOFDDailyMetricsProd.dtsConfig" in the config folder created in C:\SdmSSISConfig\.
+	Place file "ConfigOFDCasesCutProd.dtsConfig" in the config folder created in C:\SdmSSISConfig\.
+	Place file "ConfigOFDCustomerSummaryProd.dtsConfig" in the config folder created in C:\SdmSSISConfig\.
+	Update the files so they point to the right DB Server and database.
+7. Execute DBMail.SQL with sa previledge.
+
+8. Add the AD login DPSG\HPDBDPSGSERVICE for Portal Data owner access
+
+9. With SA previledge, execute SQL Agent Jobs.sql to install the linked servers. Verify executions.
+	Make sure the SSIS package configuration file is point to the right place, in 6.
+	When testing execution, RM and RN one goes first.
+10. Create SQL Logon for OnePortalProd/4BQ9fste4T3A and document the password and assign DB Owner role.
+

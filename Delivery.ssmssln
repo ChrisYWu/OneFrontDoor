@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Delivery", "..\VS\SQL Script\Delivery\Delivery.ssmssqlproj", "{4A841CEC-2E4C-4871-B29D-54761B0042E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{337AB405-A2C4-42A4-AD84-AE44E98EE268}.Default|Default.ActiveCfg = Default
+		{4A841CEC-2E4C-4871-B29D-54761B0042E8}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

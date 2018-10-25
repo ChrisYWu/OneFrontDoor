@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SC2015">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="ASCCSQ11\TORPDB02:OnePortal">
+          <Created>2015-01-08T13:59:31.3481966-06:00</Created>
+          <Type>SQL</Type>
+          <Server>ASCCSQ11\TORPDB02</Server>
+          <UserName>OnePortal</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCAP121:DPSG\WUXYX001">
+          <Created>2015-01-08T11:05:35.480686-06:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCAP121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCSQ07:DPSG\WUXYX001">
+          <Created>2015-01-12T10:08:04.3254417-06:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCSQ07</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="vh-portal2:DPSG\WUXYX001">
+          <Created>2015-01-08T10:57:15.8687298-06:00</Created>
+          <Type>SQL</Type>
+          <Server>vh-portal2</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="00. Safe Discovery.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>00. Safe Discovery.sql</FullPath>
+        </FileNode>
+        <FileNode Name="000. Sequency.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>000. Sequency.sql</FullPath>
+        </FileNode>
+        <FileNode Name="01. Safety DDL Updates.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01. Safety DDL Updates.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. ETL.pImportSafetyRecordable.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. ETL.pImportSafetyRecordable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="025. ETL.pFillRecordables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>025. ETL.pFillRecordables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03. RSSC.pGetPlantRecordable.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03. RSSC.pGetPlantRecordable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05. RSSC.pGetRecordableDetails.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05. RSSC.pGetRecordableDetails.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06. LinkedServer.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>06. LinkedServer.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07. AgentJob.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>07. AgentJob.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08. Check.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>08. Check.sql</FullPath>
+        </FileNode>
+        <FileNode Name="After Anupam.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>After Anupam.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Casecut_Miami_20151012.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Casecut_Miami_20151012.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pMergeCapstoneBottler(Update For Jag 20150113).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pMergeCapstoneBottler(Update For Jag 20150113).sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pMergeDSDDailyBranchInventory(Prev).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pMergeDSDDailyBranchInventory(Prev).sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pMergeDSDDailyBranchInventory.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pMergeDSDDailyBranchInventory.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pMergeDSDDailyMinMax(Prev).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pMergeDSDDailyMinMax(Prev).sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pMergeDSDDailyMinMax.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pMergeDSDDailyMinMax.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pMergePlantInventory(Prev).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pMergePlantInventory(Prev).sql</FullPath>
+        </FileNode>
+        <FileNode Name="ETL.pMergePlantInventory.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ETL.pMergePlantInventory.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Fix for reload.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Fix for reload.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ForComparison_DOS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ForComparison_DOS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Safety01.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Safety01.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SanAntonioSafety.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SanAntonioSafety.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SanAntonioSDM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SanAntonioSDM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SC AddMoreColumn For Primary Index.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>C:\Users\wuxyx001\Desktop\SC AddMoreColumn For Primary Index.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SC Performance Testing.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SC Performance Testing.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP7 SC Loading Test.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SP7 SC Loading Test.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/SC2015</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DPSG.Portal.SDM</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2c01d2f5-78e4-4070-a740-e4f83ff10403}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DPSG.Portal.SDM</RootNamespace>
+    <AssemblyName>DPSG.Portal.SDM</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="QA Move 2013-05-15" />
+    <Folder Include="Production Move" />
+    <Folder Include="SAP.Area" />
+    <Folder Include="EDGE Categories ETC" />
+    <Folder Include="Amplify Changes Survey 20130829" />
+    <Folder Include="SAP.Area\QA Query Updates" />
+    <Folder Include="Verification Scripts" />
+    <Folder Include="SAP.Route" />
+    <Folder Include="After SDM Restore" />
+    <Folder Include="CDE Emergency Fix20130924" />
+    <Folder Include="Drop SLID from Staging" />
+    <Folder Include="Lock Queries" />
+    <Folder Include="Amplify 2013-10-10" />
+    <Folder Include="Material" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="QA Move 2013-05-15\Tables.sql" />
+    <None Include="QA Move 2013-05-15\Create DB.sql" />
+    <None Include="QA Move 2013-05-15\Views, UDFs and SPs.sql" />
+    <None Include="QA Move 2013-05-15\Linked Server.sql" />
+    <None Include="QA Move 2013-05-15\Notes.txt" />
+    <None Include="QA Move 2013-05-15\SQL Agent Jobs.sql" />
+    <None Include="QA Move 2013-05-15\SDM Setup Data.sql" />
+    <None Include="QA Move 2013-05-15\MSTR Setup Data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QA Move 2013-05-15\tnsnames.ora" />
+    <None Include="QA Move 2013-05-15\ConfigMaster.dtsConfig" />
+    <None Include="Production Move\Prod Cut Over Note.txt" />
+    <None Include="Production Move\ConfigMaster.dtsConfig" />
+    <None Include="Production Move\tnsnames.ora" />
+    <None Include="Production Move\Prod Preparation Note.txt" />
+    <None Include="Amplify Changes Survey 20130829\Survey.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Production Move\Linked Server.sql" />
+    <Build Include="Production Move\SQL Agent Jobs.sql" />
+    <None Include="Production Move\DBMail.sql" />
+    <None Include="SAP.Area\Normalized Version_Dev 9-15-2013_.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130518_Alter Table WebServiceLog.sql" />
+    <Build Include="SAP.Area\QA Query Updates\Change_130520_CreateUserProfiles.SQL" />
+    <None Include="SAP.Area\QA Query Updates\Change_130522_Taxonomy Updates.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130523_District Managers etc for CDE.sql" />
+    <Build Include="SAP.Area\QA Query Updates\Change_130529_Location Term Set Association.sql" />
+    <Build Include="SAP.Area\QA Query Updates\Change_130530_ - SPName column drop .sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130531_UpdateRPLTitleColumnName.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130603_TestUserProfile.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130604-1_MappingUpdate.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130604-2_PlaybookUpdates.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130604-3_LinkedServerToDev.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130604-4_PlaybookUpdates-2.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130605_PlaybookUpdates.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130607_PlaybookToExcel.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130610_2.PromotionRanking.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130610_3.Playbook.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130610_4.EDGETOPromotion.sql" />
+    <None Include="SAP.Area\QA Query Updates\Change_130611_1.sql" />
+    <None Include="SAP.Area\QA Query Updates\Increase Network Packet Size- No Action Required.sql" />
+    <None Include="SAP.Area\QA Query Updates\TermSet Raw Data- No action required.sql" />
+    <Build Include="Verification Scripts\EDGE Debugging.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SAP.Area\Tables.sql" />
+    <None Include="SAP.Area\Views.sql" />
+    <None Include="SAP.Area\Stored Procs.sql" />
+    <None Include="SAP.Area\Executed Part_108_.sql" />
+    <None Include="SAP.Area\Denormalized Version_Prod 8-29-2013_.sql" />
+    <None Include="EDGE Categories ETC\Categories etc.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="SAP.Route\Route Changes.sql" />
+    <None Include="After SDM Restore\Fixing Orphaned Users.sql" />
+    <None Include="CDE Emergency Fix20130924\9-16 Bug fixes.sql" />
+    <None Include="CDE Emergency Fix20130924\InsertAsset-To Fix dup.sql" />
+    <None Include="CDE Emergency Fix20130924\InsertAssetActionStatus - to fit Area.sql" />
+    <None Include="Drop SLID from Staging\Drop SLID.sql" />
+    <None Include="CDE Emergency Fix20130924\Z-521.sql" />
+    <None Include="Lock Queries\S1.sql" />
+    <None Include="Amplify 2013-10-10\Consolidated.sql" />
+    <None Include="Material\PPG.sql" />
+  </ItemGroup>
+</Project>

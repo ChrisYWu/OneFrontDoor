@@ -1,0 +1,43 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row">
+        <div class="container-fluid">
+            <div class="col-md-1 pull-left unassigned-store" style="padding-left:5px">
+
+
+                <div>
+                      <span class="unassigned-store" (click)="toggleUnassigned();">Unassigned</span>
+                      <span class="badge unassigned-store-badge" (click)="toggleUnassigned();">{{unassignedAcctsLength}}</span>
+                  </div>
+            </div>
+            <div class="col-md-11 pull-left">
+                <div class="plm-tabs">
+                    <div (click)="setSelectedWeekDay(2)" [class]="selectedWeekDay==2? 'rsplm-tab plm-tab-active':'rsplm-tab'">MONDAY</div>
+                    <div (click)="setSelectedWeekDay(3)" [class]="selectedWeekDay==3? 'rsplm-tab plm-tab-active':'rsplm-tab'">TUESDAY</div>
+                    <div (click)="setSelectedWeekDay(4)" [class]="selectedWeekDay==4? 'rsplm-tab plm-tab-active':'rsplm-tab'">WEDNESDAY</div>
+                    <div (click)="setSelectedWeekDay(5)" [class]="selectedWeekDay==5? 'rsplm-tab plm-tab-active':'rsplm-tab'">THURSDAY</div>
+                    <div (click)="setSelectedWeekDay(6)" [class]="selectedWeekDay==6? 'rsplm-tab plm-tab-active':'rsplm-tab'">FRIDAY</div>
+                    <div (click)="setSelectedWeekDay(7)" [class]="selectedWeekDay==7? 'rsplm-tab plm-tab-active':'rsplm-tab'">SATURDAY</div>
+                    <div (click)="setSelectedWeekDay(1)" [class]="selectedWeekDay==1? 'rsplm-tab plm-tab-active':'rsplm-tab'">SUNDAY</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dispatch-row">
+        <div class="row">
+            <div class="col-md-3 unassigned-group-list" *ngIf="unassignedToggle">
+                <a (click)="false;" class="list-group-item" *ngFor="let acct of unassignedAccts">
+                    <h4 class="list-group-item-heading">{{acct.AccountName}}</h4>
+                    <p class="list-group-item-text">{{acct.Address}}, {{acct.City}}, {{acct.State}}-{{acct.PostalCode}}</p>
+                </a>
+            </div>
+            <div [class]="unassignedToggle? 'col-md-9' : 'col-md-12'">
+                <div [class]="unassignedToggle? 'col-md-6 col-xs-12 col-sm-6' : 'col-md-4 col-xs-12 col-sm-6'" *ngFor="let route of dispatch" style="padding-top:25px;">
+                    <app-rsroute [unassignedInputAccts]="unassignedAccts" [allInputAccts]="allAccts" [otherInputAccts]="otherAccts" [dispatchDateInput]="dispathchDate" [lastModifiedByInput]="lastModifiedBy" [routeData]="route" [routesInput]="routesInput" [unassignedMerchInput]="unassignedMerch"
+                                 [unassignedOtherMerchInput]="unassignedOtherMerch" (routeReassigned)="setupdatedroute($event)" (accountSelected)="setselectedAcct($event)" [selectedWeekDayInput]="selectedWeekDay"></app-rsroute>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-spinner [isRunning]="isRequesting"></app-spinner>

@@ -1,0 +1,167 @@
+<div class="modal-dialog  modal-lg">
+    <div class="modal-content no-border-radius" [hidden]="isImageView">
+
+        <div class="modal-header mp-header">
+            <div class="row">
+                <button type="button" class="close mp-close" (click)="storeModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+                <div class="col-md-3 v-middle mp-image-col">
+                    <img class="center-block" [src]="storeDetails.StoreImageURL" alt="Store Image">
+                </div>
+                <div class="col-md-9">
+                    <div class="mp-header-l1">{{stop.AccountName}}</div>
+                    <div class="mp-header-l2">{{storeDetails.StoreAddress}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row modal-ribbon">
+            <div class="col-md-3 col-xs-1">
+                <div class="mp-ln-1">
+                    Service Time
+                </div>
+                <div class="mp-ln-2">
+                    {{storeDetails.CheckInTime}} - {{storeDetails.CheckOutTime}}
+                </div>
+
+                <div class="mp-ln-2" [hidden]="getTimeInstore(storeDetails.TimeInStore) == ''">
+                    {{getTimeInstore(storeDetails.TimeInStore)}}
+                </div>
+                <div class="mp-ln-1">
+                    Delivery Time
+                </div>
+                <div class="mp-ln-2">
+                    {{getDeliveryTime(storeDetails.DeliveryTime)}}<br> {{getDriverName(storeDetails.DriverName)}}
+                </div>
+
+            </div>
+            <div class="col-md-3 col-xs-1">
+
+                <div class="mp-ln-1">
+                    Cases Worked
+                </div>
+                <div class="mp-ln-2">
+                    {{storeDetails.CasesHandeled}} cs
+                </div>
+                <div class="mp-ln-1">
+                    Backstock Cases
+                </div>
+                <div class="mp-ln-2">
+                    {{storeDetails.CasesInBackRoom}} cs
+                </div>
+
+
+
+            </div>
+            <div class="col-md-3 col-xs-1">
+
+                <div>
+                    Manager Name
+                </div>
+                <div class="mp-ln-2">
+                    {{storeSignature.ManagerName}}
+                </div>
+                <div class="mp-ln-1">
+                    Comments
+                </div>
+                <div class="mp-ln-2 mp-col-cmt2">
+                    {{storeDetails.Comments}}
+                </div>
+
+            </div>
+            <div class="col-md-3 col-xs-1 mp-mrg-sng">
+
+                Manager Signature
+                <div class="mp-mrg-img center-block" *ngIf="storeSignature.azureImageURL !=''">
+                    <img [src]="storeSignature.azureImageURL" alt="Signature not available">
+                </div>
+                <div class="mp-ln-2" *ngIf="storeSignature.azureImageURL==''">No Manager signature.</div>
+
+            </div>
+        </div>
+
+        <!--
+        <div>
+            {{allPictures | json}}
+        </div>
+        -->
+        <div class="modal-body mp-modal2-body">
+            <div class="row mp-row2-top">
+
+                <div *ngIf="allPictures.length <= 0" class="no-img-text">
+                    <h1>No picture available.</h1>
+
+                </div>
+                <div *ngIf="allPictures.length > 0">
+
+                    <div *ngFor="let img of allPictures; let idx=index" class="col-md-4 col-xs-1 col-pic">
+
+                        <div class="mp-img-div2">
+                            <img [hidden]="!img.isSlaePicture" class="mp-img-sale" src="/assets/img/sale-icon.PNG">
+                            <img class="mp-img-pic" (click)="imgSelected(img)" [src]='img.ImageURL' alt="img.ImageURL">
+
+                            <div class="mp-img-name2">
+                                {{img.Name1}}
+                                <br>
+                                <span class="mp-name2-ln1" *ngIf="img.istoolTip==true" [title]="img.Name3" [innerHTML]="getImageName(img.Name2)"></span>
+                                <span *ngIf="img.istoolTip==true" [title]="img.Name3">...</span>
+                                <span *ngIf="img.istoolTip==false">{{img.Name2}}</span>
+                                <br>                                
+                                  <span> {{img.RefusalReason}}</span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <!-------Image View------>
+    <div class="modal-content no-border-radius" [hidden]="!isImageView">
+        <div class="modal-header mp-header">
+
+            <div class="row">
+
+                <button type="button" class="close mp-close" (click)="isImageView=false;" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                <div class="col-md-12 col-xs-12">
+                    <div class="mp-img2-name2">
+                        {{selectedImg.Name1}}
+                        <br>
+                        <span class="mp-img2-ln1" *ngIf="selectedImg.istoolTip==true" [title]="selectedImg.Name3" [innerHTML]="getImageName(selectedImg.Name2)"></span>
+                        <span *ngIf="selectedImg.istoolTip==true" [title]="selectedImg.Name3">...</span>
+                        <span *ngIf="selectedImg.istoolTip==false">{{selectedImg.Name2}}</span>
+                        <br> <span *ngIf="selectedImg.Name2.length>0"> {{selectedImg.RefusalReason}}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="modal-body mp-modal2-body-img">
+            <div class="row mp-row2-top">
+                <a class="image-a" [href]="selectedImg.ImageURL" target="_blank">
+                    <img [src]="selectedImg.ImageURL" alt="Display Image" class="mp-full-img img-responsive center-block">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

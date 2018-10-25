@@ -1,0 +1,122 @@
+<!-- header  start -->
+<div class="row fr-row-hdr" *ngIf="merchSelectedInfo!=undefined">
+  <div class="col-md-3 v-middle mp-image-col">
+    <img class="nm-frm-circle">
+  </div>
+  <div class="col-md-6">
+   
+    <div class="row str-hdr-text">{{merchSelectedInfo.MerchName}}</div>
+    <div class="row str-subhdr">GSN: {{merchSelectedInfo.GSN}}</div>
+  </div>
+</div>
+<!-- header  End -->
+
+<!-- Body  start -->
+<div class="row fr-row-body" *ngIf="merchSelectedInfo!=undefined">
+  <div class="col-md-1"></div>
+  <div class="col-md-5">   
+    <div class="row">
+     <div class="col-md-12">
+        <br/>
+        <div class="input-group">
+          <span class="glyphicon glyphicon-earphone"></span>
+          &nbsp;&nbsp;<input type="text" placeholder="Phone Number" [(ngModel)]="merchSelectedInfo.Phone" maxlength="10">
+        </div>
+     </div>
+    </div>
+    
+      <div class="row str-pnl">
+        <div class="col-md-1 str-cal-icon">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-11 str-pnl-wk">
+          <div class="row">
+            <div class="col-md-12"><span class="fr-wkspan-lbl">Work days</span></div>
+          </div>
+          <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-7">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5">
+
+              <label> <input type="checkbox" name="dayofWeek2" [(ngModel)]="merchSelectedInfo.Mon"> Monday </label><br/>
+              <label> <input type="checkbox" name="dayofWeek3" [(ngModel)]="merchSelectedInfo.Tues"> Tuesday </label> <br/>
+              <label> <input type="checkbox" name="dayofWeek4" [(ngModel)]="merchSelectedInfo.Wed"> Wednesday</label><br/>
+              <label> <input type="checkbox" name="dayofWeek5" [(ngModel)]="merchSelectedInfo.Thu"> Thursday </label> <br/>
+              <label> <input type="checkbox" name="dayofWeek6" [(ngModel)]="merchSelectedInfo.Fri"> Friday</label><br/>
+              <label> <input type="checkbox" name="dayofWeek7" [(ngModel)]="merchSelectedInfo.Sat"> Saturday</label><br/>
+              <label> <input type="checkbox" name="dayofWeek1" [(ngModel)]="merchSelectedInfo.Sun"> Sunday</label>
+
+            </div>
+            <div class="col-md-7">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+</div>
+    <div class="col-md-6">
+      <div class="row str-rt-pnl">
+        <div class="col-xs-2 str-cal-icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="col-xs-10 fr-user-col">
+          <span dropdown (onToggle)="toggled($event)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRoute.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeList" role="menuitem"><a class="dropdown-item" (click)="onSelectRoute(r)">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+        </div>        
+
+
+      </div>
+    </div>
+  
+    <!--<div class="col-md-1"></div>-->
+    <div class="pull-right fr-row-body-msg" *ngIf="ShowSaveMsg">
+      <span class="msg-alert">Saved Successfully</span>
+    </div>
+    <div class="pull-right fr-row-body-fotter">
+
+      <a type="button" class="btn btn-me btn-light-gray" (click)="onCancel()">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</a> &nbsp;&nbsp;
+      <a type="submit" class="btn btn-me btn-light-blue" (click)="selectedRoute.RouteID==-1?detailModal.show():onSave()">&nbsp;&nbsp;Save&nbsp;&nbsp;</a>
+
+
+    </div>
+  </div>
+  <!-- Body  End -->
+
+
+
+  <div class="modal fade" bsModal #detailModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
+
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-label="Close" (click)="detailModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <h4 class="modal-title">Merchandiser SetUp</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="comment">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i> &nbsp;Default route has not be defined for this merchandiser.
+        </label>
+          </div>
+          <div class="form-group" style="text-align:center">
+            <a class="btn btn-primary" (click)="onSave();detailModal.hide();">Ok</a>
+            <a class="btn btn-default" (click)="detailModal.hide();">Cancel</a>
+          </div>
+        </div>
+
+    </div>
+    <div>
+  </div>

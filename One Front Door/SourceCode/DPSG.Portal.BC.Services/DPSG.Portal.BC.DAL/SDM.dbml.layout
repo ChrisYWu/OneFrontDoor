@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.875" name="SDM">
+  <DataContextMoniker Name="/SDMDataContext" />
+  <nestedChildShapes>
+    <classShape Id="526b5ff8-9968-4911-b9cb-52e3087603df" absoluteBounds="3.625, 4.375, 2, 3.6939111328125005">
+      <DataClassMoniker Name="/SDMDataContext/StoreCondition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c1ab0bf-70d7-45dc-9447-7567e6922df5" absoluteBounds="3.64, 4.835, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1d31781-05be-4cef-b3ea-9deb592753bb" absoluteBounds="1.125, 2, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/SDMDataContext/StoreConditionDisplayDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2cb7562-d78f-474f-a0ad-9d90f1b522e5" absoluteBounds="1.1400000000000001, 2.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dfbadaa1-90b8-4c31-9000-bb616619117d" absoluteBounds="5, 8.375, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SDMDataContext/StoreTieInRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c06543de-8a4a-4519-9583-3cf6f9cf71ff" absoluteBounds="5.015, 8.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.3125 : 7.60766845703125); (5.3125 : 8.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SDMDataContext/StoreCondition/StoreCondition_StoreTieInRate" />
+      <nodes>
+        <classShapeMoniker Id="526b5ff8-9968-4911-b9cb-52e3087603df" />
+        <classShapeMoniker Id="dfbadaa1-90b8-4c31-9000-bb616619117d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b73a7441-1870-4689-8cd6-569f4db38fa4" absoluteBounds="1.25, 10.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SDMDataContext/StoreConditionNote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ed4a092-48d7-4c97-9f46-68126d16ebc2" absoluteBounds="1.2650000000000001, 10.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.21874875 : 8.0689111328125); (4.21874875 : 12.0094425455729); (3.25 : 12.0094425455729)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SDMDataContext/StoreCondition/StoreCondition_StoreConditionNote" />
+      <nodes>
+        <classShapeMoniker Id="526b5ff8-9968-4911-b9cb-52e3087603df" />
+        <classShapeMoniker Id="b73a7441-1870-4689-8cd6-569f4db38fa4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5f91b6e5-211c-4775-a5dd-5dbe6a3cd52d" absoluteBounds="6.375, 5.25, 2.25, 2.3478011067708326">
+      <DataClassMoniker Name="/SDMDataContext/PriorityStoreConditionExecution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0734553-7d20-4e9f-b653-86611d342451" absoluteBounds="6.39, 5.71, 2.2199999999999998, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 6.29111857096354); (6.375 : 6.29111857096354)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SDMDataContext/StoreCondition/StoreCondition_PriorityStoreConditionExecution" />
+      <nodes>
+        <classShapeMoniker Id="526b5ff8-9968-4911-b9cb-52e3087603df" />
+        <classShapeMoniker Id="5f91b6e5-211c-4775-a5dd-5dbe6a3cd52d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21379900-c2ce-4680-a9e2-34f422367a45" absoluteBounds="8.25, 10.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SDMDataContext/PromotionExecution" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3300b17-d217-4d07-93d6-393a7a2a26d3" absoluteBounds="8.265, 11.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.8750025 : 8.0689111328125); (4.8750025 : 13.0412825520833); (8.25 : 13.0412825520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SDMDataContext/StoreCondition/StoreCondition_PromotionExecution" />
+      <nodes>
+        <classShapeMoniker Id="526b5ff8-9968-4911-b9cb-52e3087603df" />
+        <classShapeMoniker Id="21379900-c2ce-4680-a9e2-34f422367a45" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4aac3947-74cd-4be8-842d-e281434f24cb" absoluteBounds="0.5, 5.875, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/SDMDataContext/StoreConditionDisplay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c10b5e4b-25da-4151-9e09-9c95a1c48a65" absoluteBounds="0.51500000000000012, 6.335, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.8125 : 5.875); (1.8125 : 4.5401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SDMDataContext/StoreConditionDisplay/StoreConditionDisplay_StoreConditionDisplayDetail" />
+      <nodes>
+        <classShapeMoniker Id="4aac3947-74cd-4be8-842d-e281434f24cb" />
+        <classShapeMoniker Id="b1d31781-05be-4cef-b3ea-9deb592753bb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.625 : 6.97195556640625); (2.5 : 6.97195556640625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SDMDataContext/StoreCondition/StoreCondition_StoreConditionDisplay" />
+      <nodes>
+        <classShapeMoniker Id="526b5ff8-9968-4911-b9cb-52e3087603df" />
+        <classShapeMoniker Id="4aac3947-74cd-4be8-842d-e281434f24cb" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

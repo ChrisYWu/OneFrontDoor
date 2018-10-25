@@ -1,0 +1,58 @@
+
+
+    <div class="route-info-ip"  (click)="isHideStores = !isHideStores" >
+        <div class="info-scd-ip">
+            <div class="div-img-ip">
+
+
+            <img class="img-persion-ip circle-white" [src]="routeData.AbsoluteURL? routeData.AbsoluteURL : '/assets/img/noimage.PNG'">
+        
+
+            </div>
+            <div class="div-txt-ip" >
+                <div class="sch-name-l1-ip">{{routeData.RouteName}}</div>
+                <div class="sch-name-l2-ip ">
+
+                    <app-mobile-merchreassign (merchPopupToggle)="onMerchPopupToggle($event)" [routeData]="routeData" [lastModifiedByInput]="lastModifiedByInput"></app-mobile-merchreassign>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="btn-scd-ip"  (click)="isHideStores = true" >
+            <app-mobile-addstore (storePopupToggle)="onStorePopupToggle($event)" [routeDataInput]="routeData" [lastModifiedByInput]="lastModifiedByInput" (accountSelected)="setselectedAcct($event)"></app-mobile-addstore>
+        </div>
+    </div>
+
+   
+
+        <div class="scd-row" [hidden]="isHideStores" *ngFor="let store of routeData.Stores; trackBy:track; let i = index">
+             <div class="scd-cell1" *ngIf="store.CheckInGSN == 'GREEN'"><div class="stop-circle-route circle-green-fill"></div></div>
+             <div class="scd-cell1" *ngIf="store.CheckInGSN == 'GRAY'"><div class="stop-circle-route circle-p"><span class="fa fa-male" style="font-size:16px"></span></div></div>
+             <div class="scd-cell1" *ngIf="store.CheckInGSN == ''">{{i+1}}</div>
+            <!--<div class="scd-cell1">{{i+1}}</div>-->
+            <div class="scd-cell2 nowrap-storecell">
+
+                <app-mobile-storereassign (storeAssignToggle)="onStoreAssignToggle($event)" [lastModifiedByInput]="lastModifiedByInput" [storeInput]="store" [routeData]="routeData" (routeReassigned)="setupdatedroute($event)"></app-mobile-storereassign>
+
+                <span *ngIf="store.PullNumber!=''" class="merch-label-2ndpull">{{store.PullNumber}}</span>
+           
+
+            </div>
+
+             <div class="scd-cell4">
+                  <div *ngIf="store.ActualArrival.split(' ')[2] == 'DELIVERED'" class="route-ActualArrival">{{store.ActualArrival.split(" ")[0]}} {{store.ActualArrival.split(" ")[1]}} <br/> <small  style="font-size: 8px;"> {{store.ActualArrival.split(" ")[2]}} </small> </div>
+                <div *ngIf="store.ActualArrival.split(' ')[2] != 'DELIVERED'" class="route-NoArrival">{{store.ActualArrival.split(" ")[0]}} {{store.ActualArrival.split(" ")[1]}} <br/> <small style="font-size: 8px;"> {{store.ActualArrival.split(" ")[2]}} </small> </div>
+             </div>
+                    
+
+            <!--<div class="scd-cell4">
+                    <div  [class]="store.ActualArrival!='NO DELIVERY'? 'route-ActualArrival' : 'route-NoArrival'">{{store.ActualArrival.split(" ")[0]}} 
+                    <br/> 
+                   <small style="font-size: 8px;"> {{store.ActualArrival.split(" ")[1]}} </small> </div>
+            </div>-->
+
+            <div class="scd-cell3">
+                <span class="fa-span glyphicon glyphicon-trash" title="Delete" (click)="removeStore(store.Sequence)"></span>
+            </div>
+        </div>

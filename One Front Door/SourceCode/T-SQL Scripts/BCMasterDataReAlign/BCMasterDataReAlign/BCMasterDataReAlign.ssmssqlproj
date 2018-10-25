@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BCMasterDataReAlign">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="bsccap108:DPSG\WUXYX001">
+          <Created>2015-05-28T16:10:38.2681305-05:00</Created>
+          <Type>SQL</Type>
+          <Server>bsccap108</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCAP121:DPSG\WUXYX001">
+          <Created>2015-06-03T09:14:06.1661428-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCAP121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCSQ07:DPSG\WUXYX001">
+          <Created>2015-06-05T09:49:58.2631174-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCSQ07</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="dpsgsharedclstr:DPSG\WUXYX001">
+          <Created>2015-06-03T09:17:28.3216428-05:00</Created>
+          <Type>SQL</Type>
+          <Server>dpsgsharedclstr</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="vh-portal2:DPSG\WUXYX001">
+          <Created>2015-05-26T12:03:56.6699872-05:00</Created>
+          <Type>SQL</Type>
+          <Server>vh-portal2</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="01. Full Load of Stores.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01. Full Load of Stores.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. Modify the Account Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. Modify the Account Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03. ETL.pMergeChainsAccounts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03. ETL.pMergeChainsAccounts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04. ETL.pLoadFromRM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04. ETL.pLoadFromRM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05. Comments.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05. Comments.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06. Update on Full load.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>06. Update on Full load.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07. Verification.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>07. Verification.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08. BCMyday.pGetStoresByRegionID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>08. BCMyday.pGetStoresByRegionID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09. BCMyday.pGetStoresByBottlerID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>09. BCMyday.pGetStoresByBottlerID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10. Drop Backup Columns.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10. Drop Backup Columns.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11. Assembed Code.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>11. Assembed Code.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12. AssembedCodein121.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>12. AssembedCodein121.sql</FullPath>
+        </FileNode>
+        <FileNode Name="19. SchemaChange.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>19. SchemaChange.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20. One Time Full Load of TMap and Inclusion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>20. One Time Full Load of TMap and Inclusion.sql</FullPath>
+        </FileNode>
+        <FileNode Name="21. ETL.pLoadFromCapstone.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>21. ETL.pLoadFromCapstone.sql</FullPath>
+        </FileNode>
+        <FileNode Name="21.5 ETL.pMergeViewTables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>21.5 ETL.pMergeViewTables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="22. ETL.pMergeTMapAndInclusions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>22. ETL.pMergeTMapAndInclusions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="23. Execution.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>23. Execution.sql</FullPath>
+        </FileNode>
+        <FileNode Name="24. Verification.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>24. Verification.sql</FullPath>
+        </FileNode>
+        <FileNode Name="25. Fix Albertson and AAFES.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>25. Fix Albertson and AAFES.sql</FullPath>
+        </FileNode>
+        <FileNode Name="901. ASP01 Reserach.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>901. ASP01 Reserach.sql</FullPath>
+        </FileNode>
+        <FileNode Name="902. ASP02 SP Source Code.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>902. ASP02 SP Source Code.sql</FullPath>
+        </FileNode>
+        <FileNode Name="903. ASP03 Import Code Source CodeSQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>903. ASP03 Import Code Source CodeSQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="DSD Geo.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DSD Geo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GeoVerify.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>GeoVerify.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery4.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery5.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery5.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/BCMasterDataReAlign</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

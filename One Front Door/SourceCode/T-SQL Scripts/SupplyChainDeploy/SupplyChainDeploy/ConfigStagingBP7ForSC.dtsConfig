@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+  <DTSConfigurationHeading>
+    <DTSConfigurationFileInfo GeneratedBy="DPSG\WUXYX001" GeneratedFromPackageName="StagingBP7forSC" GeneratedFromPackageID="{F40A4FB8-545E-41DC-AC3E-D7E73DCB668B}" GeneratedDate="9/15/2014 10:00:21 AM"/>
+  </DTSConfigurationHeading>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMBP7SalesOfficeMinMax].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>\\smbsp7\OpenHub\ZMINMAXDAILYREPORT</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgDSDInventory].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>\\smbsp7\OpenHub\ZInvDSDLocations</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[FFCMStgPlantInventory].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>\\smbsp7\OpenHub\ZInv17Plants</ConfiguredValue>
+  </Configuration>
+  <Configuration ConfiguredType="Property" Path="\Package.Connections[SQLConnectionForStaging].Properties[ConnectionString]" ValueType="String">
+    <ConfiguredValue>Data Source=BSCCAP121;Initial Catalog=Portal_Data_1118;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</ConfiguredValue>
+  </Configuration>
+</DTSConfiguration>

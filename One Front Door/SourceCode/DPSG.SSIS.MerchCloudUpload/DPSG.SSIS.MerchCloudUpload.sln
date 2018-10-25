@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "DPSG.SSIS.MerchCloudUpload", "DPSG.SSIS.MerchCloudUpload\DPSG.SSIS.MerchCloudUpload.dtproj", "{870825D8-57D3-4B92-AC52-4D64CC9FDEF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{870825D8-57D3-4B92-AC52-4D64CC9FDEF1}.Development|Default.ActiveCfg = Development
+		{870825D8-57D3-4B92-AC52-4D64CC9FDEF1}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.dpsg.net:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DPSG.SSIS.MerchCloudUpload\\DPSG.SSIS.MerchCloudUpload.dtproj
+		SccProjectName1 = DPSG.SSIS.MerchCloudUpload
+		SccLocalPath1 = DPSG.SSIS.MerchCloudUpload
+	EndGlobalSection
+EndGlobal

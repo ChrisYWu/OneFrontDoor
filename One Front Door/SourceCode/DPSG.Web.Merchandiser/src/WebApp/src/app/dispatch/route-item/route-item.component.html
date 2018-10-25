@@ -1,0 +1,34 @@
+<div class="route-item-outer" (click)="showPopup(storeModal, stop.MerchStopID)" [style.cursor]="stop.MerchStopID>0? 'pointer' : 'not-allowed'">
+
+    <div *ngIf="stop.EndMileage !=null" class="stop-ln-top">{{stop.EndMileage}}</div>
+    <div *ngIf="stop.EndDriveTime !=null" class="stop-ln-btm">{{stop.EndDriveTime}}</div>
+
+    <div [class]="stop.EndConnectorType == 'Dash'? 'stop-line stop-line-dash' : 'stop-line stop-line-solid'" [hidden]="(idx+1) == count">
+    </div>
+
+    <div *ngIf="(stop.SequenceLabel.toLowerCase() != 'p')|| (stop.SequenceLabel.toLowerCase() != '+')" [class]="getStopCSS(stop)">
+        {{stop.SequenceLabel}}
+    </div>
+    <div *ngIf="stop.SequenceLabel.toLowerCase() == 'p'" class="stop-circle circle-p">
+        <i class="fa fa-male" style="font-size: 16px;" aria-hidden="true"></i>
+    </div>
+    <div *ngIf="stop.SequenceLabel.toLowerCase() == '+'" class="stop-circle circle-plus">
+        <i class="fa fa-plus" style="font-size: 16px;" aria-hidden="true"></i>
+    </div>
+
+    <div class="stop-ln1">{{stop.accName}}</div>
+    <div class="stop-ln2">{{stop.accNo}}</div>
+    <div class="stop-ln3">{{stop.TimeSpan}}</div>
+
+</div>
+
+<!--  
+    
+ Popup
+    
+-->
+<div bsModal #storeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
+
+    <monitor-popup [storeModal]="storeModal" [storeDetails]="storeDetails" [storePictures]="storePictures" [displayPictures]="displayPictures" [storeSignature]="storeSignature" [stop]="stop"></monitor-popup>
+
+</div>

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,yCAAsC,4BAA4B,CAAC;AAA1D,iFAA0D","sourcesContent":["export { PlRoutePopupComponent } from './pl-route-popup.component';\n"]}

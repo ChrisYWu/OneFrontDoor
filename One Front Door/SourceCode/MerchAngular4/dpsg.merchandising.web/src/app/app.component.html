@@ -1,0 +1,9 @@
+<app-header (ipMenuToggle)="onIpMenuToggle($event)"> Loading Header ...</app-header>
+
+<div [ngClass]="{'ip-menu-open' : isIpMenuOpen}">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="hidden-xs">
+    <app-footer>Loading Footer ...</app-footer>
+</div>

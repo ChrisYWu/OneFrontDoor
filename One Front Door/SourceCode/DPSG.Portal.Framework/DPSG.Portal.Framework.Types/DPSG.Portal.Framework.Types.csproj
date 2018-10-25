@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDD6B6AC-E0D0-436B-B873-A872B2591981}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DPSG.Portal.Framework.Types</RootNamespace>
+    <AssemblyName>DPSG.Portal.Framework.Types</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2014.1.403.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <Private>True</Private>
+      <HintPath>C:\Program Files (x86)\Telerik\Data Access\bin\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountType.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="BC\BCGeoInfo.cs" />
+    <Compile Include="BC\BCRegion.cs" />
+    <Compile Include="BC\BCRegionInfo.cs" />
+    <Compile Include="BC\BCStateRegion.cs" />
+    <Compile Include="BC\Systems.cs" />
+    <Compile Include="Branch.cs" />
+    <Compile Include="BranchInfoBU.cs" />
+    <Compile Include="BranchTradeMarks.cs" />
+    <Compile Include="BranchCAN.cs" />
+    <Compile Include="BusinessUnit.cs" />
+    <Compile Include="ChannelJSON.cs" />
+    <Compile Include="Channels.cs" />
+    <Compile Include="ChannelType.cs" />
+    <Compile Include="Constants\CommonConstants.cs" />
+    <Compile Include="Constants\CommonEnums.cs" />
+    <Compile Include="CustomLocationChain.cs" />
+    <Compile Include="ApplicationEntityTypes.cs" />
+    <Compile Include="GeoRelevancy.cs" />
+    <Compile Include="MySplashnetNotification.cs" />
+    <Compile Include="LocationType.cs" />
+    <Compile Include="MatrixData.cs" />
+    <Compile Include="MileStone\AccountMilestone.cs" />
+    <Compile Include="MileStone\MIlestoneRules.cs" />
+    <Compile Include="MileStone\MileStoneStatus.cs" />
+    <Compile Include="MileStone\ReturnStatus.cs" />
+    <Compile Include="Playbook\AccountHier.cs" />
+    <Compile Include="Playbook\AccountInfo.cs" />
+    <Compile Include="Playbook\BCGeoRelevancy.cs" />
+    <Compile Include="Playbook\Bottlers.cs" />
+    <Compile Include="Playbook\BrandPackageCategory.cs" />
+    <Compile Include="Playbook\EdgeExtract.cs" />
+    <Compile Include="Playbook\GEOListItem.cs" />
+    <Compile Include="Playbook\LocationHier.cs" />
+    <Compile Include="Playbook\MassUploadPromo.cs" />
+    <Compile Include="Playbook\PromoAccount.cs" />
+    <Compile Include="Playbook\PromoChannel.cs" />
+    <Compile Include="Playbook\PromoGEO.cs" />
+    <Compile Include="Playbook\PromoGeoType.cs" />
+    <Compile Include="Playbook\PromoSystem.cs" />
+    <Compile Include="Playbook\PromotionCalListIndex.cs" />
+    <Compile Include="Playbook\PromotionGroup.cs" />
+    <Compile Include="Playbook\PromotionPreferences.cs" />
+    <Compile Include="Playbook\PromotionSortOrder.cs" />
+    <Compile Include="Playbook\PromotionViewFilter.cs" />
+    <Compile Include="Playbook\SelectedTreeItem.cs" />
+    <Compile Include="Playbook\PromoBrand.cs" />
+    <Compile Include="Playbook\PromoPackage.cs" />
+    <Compile Include="Playbook\PromoWeek.cs" />
+    <Compile Include="Playbook\ViewPromotionFilter.cs" />
+    <Compile Include="ProgramAlertData.cs" />
+    <Compile Include="Program\AttachmentApprovalRule.cs" />
+    <Compile Include="Program\CustomMilestone.cs" />
+    <Compile Include="Program\DaysRule.cs" />
+    <Compile Include="Program\MileStoneDayPeriod.cs" />
+    <Compile Include="Program\PrecedenceRule.cs" />
+    <Compile Include="Program\Program.cs" />
+    <Compile Include="Program\ProgramAttachment.cs" />
+    <Compile Include="Program\ProgrameCalander_MSDetails.cs" />
+    <Compile Include="Program\ProgrameCalander_PROMOAccount.cs" />
+    <Compile Include="Program\ProgrameCalander_PROMOPackages.cs" />
+    <Compile Include="Program\ProgrameCalander_PROMOTrademark.cs" />
+    <Compile Include="Program\ProgrameCalander_System.cs" />
+    <Compile Include="Program\ProgramMileStone.cs" />
+    <Compile Include="Program\ProgramSortOrder.cs" />
+    <Compile Include="Program\ProgramStatus.cs" />
+    <Compile Include="Program\ProgramSystem.cs" />
+    <Compile Include="Program\ViewProgram.cs" />
+    <Compile Include="Program\ViewProgramFilter.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="SRE\ApplicationRights.cs" />
+    <Compile Include="SRE\Applications.cs" />
+    <Compile Include="SRE\Behavior.cs" />
+    <Compile Include="SRE\BehaviorMemberList.cs" />
+    <Compile Include="SRE\BehaviorMembers.cs" />
+    <Compile Include="SRE\DataScopes.cs" />
+    <Compile Include="SRE\Persona.cs" />
+    <Compile Include="SupplyChain\Measurs.cs" />
+    <Compile Include="SupplyChain\PlantReportURL.cs" />
+    <Compile Include="SupplyChain\Plants.cs" />
+    <Compile Include="SupplyChain\ProductLine.cs" />
+    <Compile Include="SupplyChain\ProductLineHier.cs" />
+    <Compile Include="SupplyChain\Products.cs" />
+    <Compile Include="SupplyChain\TradeMarks.cs" />
+    <Compile Include="SupplyChain\UserProductLinesItem.cs" />
+    <Compile Include="UserGeoLocations.cs" />
+    <Compile Include="UserGoalAccount.cs" />
+    <Compile Include="UserRoutes.cs" />
+    <Compile Include="SqlQueryOperator.cs" />
+    <Compile Include="TimeLine\AppointmentInfo.cs" />
+    <Compile Include="TimeLine\TimeLineEnum.cs" />
+    <Compile Include="TradeMark.cs" />
+    <Compile Include="CAN.cs" />
+    <Compile Include="ConfigEntry.cs" />
+    <Compile Include="Constants\CacheKeys.cs" />
+    <Compile Include="Constants\Config.cs" />
+    <Compile Include="Constants\ErrorInfo.cs" />
+    <Compile Include="Constants\Lists.cs" />
+    <Compile Include="Constants\CookieKeys.cs" />
+    <Compile Include="Constants\UserProfileProperties.cs" />
+    <Compile Include="DPSGOnePortalException.cs" />
+    <Compile Include="OnePortalContext.cs" />
+    <Compile Include="Playbook\Account.cs" />
+    <Compile Include="BranchInfo.cs" />
+    <Compile Include="Constants\DBConstants.cs" />
+    <Compile Include="Playbook\TreeViewItem.cs" />
+    <Compile Include="Playbook\PromoAttachment.cs" />
+    <Compile Include="Playbook\Promotion.cs" />
+    <Compile Include="Playbook\PromoRank.cs" />
+    <Compile Include="Playbook\PromoType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAccounts.cs" />
+    <Compile Include="UserChannels.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Weather.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NationalAccount\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

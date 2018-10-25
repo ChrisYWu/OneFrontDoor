@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5ea8b07e-b191-4f8f-84d2-68634869d4a6" solutionId="5ea8b07e-b191-4f8f-84d2-68634869d4a6" resetWebServer="false" name="DPSG.Portal.Framework.Core" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="DPSG.Portal.Framework.CommonUtils.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\DPSG.Portal.Framework.CommonUtils\DPSG.Portal.Framework.CommonUtils.csproj">
+      <safeControls>
+        <safeControl assemblyName="DPSG.Portal.Framework.CommonUtils" namespaceName="DPSG.Portal.Framework.CommonUtils" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+    <projectOutputAssembly location="DPSG.Portal.Framework.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\DPSG.Portal.Framework\DPSG.Portal.Framework.csproj">
+      <safeControls>
+        <safeControl assemblyName="DPSG.Portal.Framework" namespaceName="DPSG.Portal.Framework" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+    <projectOutputAssembly location="DPSG.Portal.Framework.SDM.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\DPSG.Portal.Framework.SDM\DPSG.Portal.Framework.SDM.csproj">
+      <safeControls>
+        <safeControl assemblyName="DPSG.Portal.Framework.SDM" namespaceName="DPSG.Portal.Framework.SDM" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+    <projectOutputAssembly location="DPSG.Portal.Framework.Types.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\DPSG.Portal.Framework.Types\DPSG.Portal.Framework.Types.csproj">
+      <safeControls>
+        <safeControl assemblyName="DPSG.Portal.Framework.Types" namespaceName="DPSG.Portal.Framework.Types" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+  </assemblies>
+</package>

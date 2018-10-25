@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DeliveryDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DeliveryDBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Deliveries" EntityType="DeliveryDB.Delivery" />
+  </EntityContainer>
+  <EntityType Name="Delivery">
+    <Key>
+      <PropertyRef Name="DeliveryDate" />
+      <PropertyRef Name="RouteNumber" />
+      <PropertyRef Name="StopSequence" />
+    </Key>
+    <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RouteNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SalesOfficeID" Type="Int32" Nullable="false" />
+    <Property Name="DriverID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StopType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StopID" Type="Int64" Nullable="false" />
+    <Property Name="StopSequence" Type="Int32" Nullable="false" />
+    <Property Name="PlannedArrivalTimeUTC" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PlannedServiceTimeInSec" Type="Int32" />
+    <Property Name="ActualArrivalTime" Type="DateTime" Precision="0" />
+    <Property Name="ActualArrivalTimeZone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ActualDepartureTime" Type="DateTime" Precision="0" />
+    <Property Name="ActualDepartureTimeZone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EstimatedArrivalTime" Type="DateTime" Precision="0" />
+    <Property Name="EstimatedArrivalTimeZone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdatedTimeUTC" Type="DateTime" Precision="7" />
+    <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdatedDriverID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

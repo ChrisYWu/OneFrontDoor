@@ -1,0 +1,51 @@
+
+<a (click)="openModal()" class="store-sequence"> {{storeInput.AccountName}} </a>
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog  modal-md">
+        <div class="modal-content">
+            <div class="modal-header" >
+                <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center">Reassign Store</h4>
+            </div>
+            <div class="modal-body cusFont text-left" style="min-height:500px">
+                
+                
+                    <div class="form-group">
+                        <h4 class="modal-title">Store: <span style="color:#333; margin-left:25px">{{storeInput.AccountName}}</span></h4>
+                        <h4 class="modal-title">Current Route: <span style="color:#333; margin-left:25px">{{routeData.RouteName}}</span></h4>
+                    </div>
+                    
+                 <div class="col-xs-12 zeropadding">
+                    <table class="table" style="color:#333">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="input-group col-xs-12">
+                                        <!--<span class="input-group-addon dispatch-search-addon">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                        <input type="text" #filterInputRoute
+                                        class="form-control menu-input" id="txtSearchRoute" placeholder="Search" >-->
+                                        <h4 class="modal-title">Select a Route</h4>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let route of routesFiltered" 
+                                (click)="setupdatedroute(route.RouteID, route.RouteName, route.GSN)">
+                                <td>{{route.RouteName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+</div>

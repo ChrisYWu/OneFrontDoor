@@ -1,0 +1,46 @@
+#---------------------------------------------------------------------------------------------------
+# TNSNAMES.ORA Network Configuration File: $TNS_ADMIN\network\admin\tnsnames.ora
+# Last updated: 201301-10
+#
+# NOTES: SID is REQUIRED for Oracle 7.3.4 Server
+#---------------------------------------------------------------------------------------------------
+# CAPSTONE database
+
+COD.WORLD =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = bsccdb02.dpsg.net)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+        (SERVICE_NAME = COD)
+    )
+  )
+
+RM_DEV.WORLD =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = bplndb09.dpsg.net)(PORT = 1527))
+    )
+    (CONNECT_DATA =
+        (SERVICE_NAME = ACE60D0)
+    )
+  )
+
+RM.WORLD =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = bplnap46.dpsg.net)(PORT = 1527))
+    )
+    (CONNECT_DATA =
+        (SERVICE_NAME = ACE60P0)
+    )
+  )
+RN.WORLD =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = upsp_dbprd.csbg.com)(PORT = 1527))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = UPS60p0)
+    )
+  )

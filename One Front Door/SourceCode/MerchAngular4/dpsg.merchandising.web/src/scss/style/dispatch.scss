@@ -1,0 +1,780 @@
+//Global Variable
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+//local Variable
+$route-info-height: 50px;
+$route-raw-height: auto;
+$route-stop-height: 86px;
+$route-start-line: $route-raw-height - $route-info-height;
+$route-border-color: #dddddd;
+//$route-border-color: #dddddd;  - moved to variables 
+// below are moved at main varibles file
+$color-status-started: #1976d2;
+$color-status-pending: #7c7c7c;
+$color-status-completed: #2ba04c;
+$color-status-completedDNS: #db2836;
+$color-route-status: ( route-Started: $color-status-started, route-Pending: $color-status-pending, route-Completed: $color-status-completed, route-CompletedDNS : $color-status-completedDNS );
+@each $color,
+$value in $color-route-status {
+    .#{$color} {
+        color: white;
+        background-color: $value !important;
+        text-transform: uppercase;
+    }
+}
+
+//$color-green: #2ba042;
+//$color-red: #db2835;
+//$color-gray: #707070;
+$circle-colors: ( circle-green: $color-green, circle-red: $color-red, circle-gray: $color-gray, circle-white: $color-white, circle-orange: $brand-orange);
+@each $color,
+$value in $circle-colors {
+    .#{$color} {
+        border-color: $value;
+        //    &:hover {
+        //       border-color: darken($color: $value, $amount: 10%);
+        //  }
+    }
+}
+
+$color-green-fill: #2ba04c;
+$color-red-fill: #ed1c24;
+$color-yellow-fill:#cdc523;
+$color-gray-fill: #707070;
+$color-gray-plus-fill: #ebebeb;
+$circle-colors-fill: ( circle-green-fill: $color-green-fill, circle-red-fill: $color-red-fill, circle-yellow-fill:$color-yellow-fill);
+@each $color,
+$value in $circle-colors-fill {
+    .#{$color} {
+        color: white;
+        background-color: $value !important;
+        &:hover {
+            background-color: darken($color: $value, $amount: 10%) !important;
+        }
+    }
+}
+
+.circle-gray-fill {
+    color: $color-gray-fill;    
+    border: 1px solid $color-gray-fill !important;
+    &:hover {
+        border-color: darken($color: $color-gray-fill, $amount: 10%) !important;
+    }
+}
+
+.circle-gray-fill-DNS {
+    color: white;
+    background-color: #ed1c24 !important;    
+}
+
+.circle-plus {
+    padding: 1px !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    background-color: $color-gray-plus-fill!important;
+    border-color: $color-gray-fill;
+}
+
+.circle-plus-gray {
+    background-color: $color-gray-fill !important;
+    border: 1px solid $color-gray-fill !important;
+    color: black !important;
+}
+
+.circle-plus-green {
+    background-color: $color-green-fill !important;
+    border: 1px solid $color-green-fill !important;
+    color: white !important;
+}
+
+.circle-plus-red {
+    background-color: $color-red-fill !important;
+    border: 1px solid $color-red-fill !important;
+    color: white !important;
+}
+
+.circle-plus-yellow {
+    background-color: $color-yellow-fill !important;
+    border: 1px solid $color-yellow-fill !important;
+    color: white !important;
+}
+
+.circle-p {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    background-color: $color-gray-plus-fill !important;
+    border-color: $color-gray-plus-fill !important;
+    ;
+    color: $color-gray-fill;
+}
+
+//class
+.dispatch-container {
+    margin: 10px;
+    border: 2px solid $background-header;
+    height: 100%;
+    @include box-shadow(inset, 0px, 1px, 1px, rgba(0, 0, 0, 0.5));
+}
+
+.distpatch-menu-row {
+    color: $btn-text;
+    background-color: $brand-blue;
+    padding: 5px 0;
+    font-size: 12 px;
+    top: 51px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 1;
+    border-top: 10px solid white;
+}
+
+.dispatch-row {
+    padding: 10px;
+    margin-top: 43px;
+    z-index: 0;
+}
+
+.dispatch-row-msg {
+    padding: 30px;
+}
+
+.dispatch-row-err {
+    padding: 30px;
+    color: $brand-red;
+}
+
+/////////////////////////////////////////
+// item - right companent 
+.route-item-outer {
+    padding-top: 10px;
+    height: $route-stop-height !important;
+    position: relative;
+    //border: 1px solid darkgoldenrod;
+    //background: lighten( $brand-blue, 50%);
+    // border: 1px solid lighten( $brand-blue, 40%)
+}
+
+.stop-ln-top,
+.stop-ln-btm {
+    position: absolute;
+    z-index: 19;
+    font-size: 10px;
+    left: 48%;
+    height: auto;
+    width: 39%;
+}
+
+.stop-ln-top {
+    top: 11px;
+}
+
+.stop-ln-btm {
+    top: 24px;
+}
+
+.stop-ln1,
+.stop-ln2,
+.stop-ln3 {
+    padding-left: 0;
+    font-size: 10px;
+}
+
+.stop-ln1 {
+    padding-top: 30px;
+}
+
+.stop-ln3 {
+    color: $route-text-color;
+}
+
+.stop-line {
+    position: relative;
+    top: 19%;
+    left: 10%;
+    z-index: -10;
+}
+
+.stop-line-dash {
+    border-top: 1px dashed gray;
+}
+
+.stop-line-dash1 {
+    border-top: 1px dashed gray;
+}
+
+.stop-line-dash2 {
+    border-top: 1px dotted gray;
+}
+
+.stop-line-dash3 {
+    background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 10%) !important;
+    background-position: top !important;
+    background-size: 10px 2px !important;
+    background-repeat: repeat-x !important;
+}
+
+.stop-line-solid {
+    border-top: 1px solid gray;
+}
+
+/////////////////////////////////////
+// Info - left component 
+.route-start {
+    text-align: right;
+    width: 100%;
+    color: $route-text-color;
+    margin-bottom: -20px;
+    padding-right: 10px;
+    padding-top: 12px;
+    height: $route-start-line;
+}
+
+.info-image {
+    position: relative;
+    margin-bottom: -4px !important;
+    width: 32px;
+    height: 32px;
+    padding-left: 5%;
+}
+
+img.img-persion {
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 8px;
+    @include border-radius(50%);
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+img-circle-me {
+    border: 1px solid black;
+}
+
+.route-info-outer {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0px;
+    height: $route-raw-height;
+}
+
+.route-info {
+    width: 100%;
+    background-color: $background-rout-info !important;
+    border: 1px;
+    height: $route-info-height;
+}
+
+.info-name-l1 {
+    padding-top: 8px;
+}
+
+.info-name-l2 {
+    margin-top: -2px;
+    font-weight: bold;
+}
+
+.info-name {
+    width: 70%;
+    //background-color: $brand-light-blue;
+    background-color: $brand-light-gray;
+    color: $text-color-light;
+    float: left;
+    height: $route-info-height;
+    padding-left: 30%;
+}
+
+.info-timing {
+    width: 30%;
+    float: left;
+    background-color: $background-rout-info;
+    height: $route-info-height;
+    border-left: 2px solid White;
+    border-right: 2px solid White;
+    height: $route-info-height;
+}
+
+.info-timing-l1 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+//to find
+.info-timing-l2 {
+    color: $route-text-color;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 11px;
+}
+
+.route-box {
+    font-size: 15px;
+    border-color: #ddd;
+    /*box-shadow: 0 0 7px 2px #a4a4a4;*/
+}
+
+.route-box:hover {
+    font-size: 15px;
+    border-color: #ddd;
+    /*box-shadow: 0 0 9px 4px #72b5cc;*/
+    box-shadow: 0 0 7px 2px #a4a4a4;
+}
+
+.route-box-header {
+    border-color: $brand-light-gray !important;
+    background-color: $brand-light-gray !important;
+    color: #fff!important;
+    padding: 0px 15px !important;
+    padding-top: 0px!important;
+    padding-right: 15px!important;
+    padding-bottom: 0px!important;
+    padding-left: 28px!important;
+}
+
+.route-box-header-gray {
+    border-color: $brand-light-gray !important;
+    background-color: $brand-light-gray!important;
+    color: #fff!important;
+    padding: 0px 15px !important;
+    padding-top: 0px!important;
+    padding-right: 15px!important;
+    padding-bottom: 0px!important;
+    padding-left: 28px!important;
+}
+
+
+/*.modal-header{
+    
+    background-color:#5398dd !important;
+    color:#fff!important;
+    
+}*/
+
+.modal-open {
+    overflow: scroll;
+}
+
+.top-bottom-buffer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #ffffff !important;
+    color: #51626f
+}
+
+.btn-default {
+    background-color: #eee !important;
+}
+
+.merch-badge {
+    width: 17px;
+    height: 17px;
+    border-radius: 2.9em;
+    background-color: #fff;
+    color: #2ba04c;
+    padding-right: 0.4em;
+    padding-left: 0.4em;
+    padding-top: 0.1em;
+    padding-bottom: 0.2em;
+    margin-right: .4em;
+    font-size: 12px;
+}
+
+.merch-label {
+    display: inline;
+    padding: 0.4em 0.4em 0.4em 0.5em;
+    font-size: 75%;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.merch-label-green {
+    background-color: #2ba04c;
+}
+
+.merch-label-2ndpull {
+    display: inline;
+    padding: .1em .3em .1em;
+    font-size: 75%;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    background-color: #5398dd;
+    margin-left: 1px;
+}
+
+.merch-label-displayCnt {
+    display: inline;
+    padding: .3em .3em .3em;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.42;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    background-color: Gray;
+    margin-left: 1px;
+}
+
+.merch-label-displayCnt .badge {
+    background: white;
+    color: Gray;
+    padding: 2px 5px;
+    font-weight: 600;
+}
+
+.dnd-drag-start {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.7;
+    border: 1px dashed #000;
+    height: 39px;
+}
+
+.dnd-drag-enter {
+    opacity: 0.7;
+    border: 1px dashed #000;
+    height: 39px;
+}
+
+.dnd-drag-over {
+    border: 1px dashed #000;
+    height: 39px;
+}
+
+.dnd-sortable-drag {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.7;
+    border: 1px dashed #000;
+    height: 39px;
+}
+
+
+/*
+
+Menu bar styles
+
+*/
+
+.lable-date {
+    color: $text-color-light;
+    font-size: 16px;
+    font-weight: 700;
+    float: left;
+    vertical-align: middle;
+    padding: 7px 10px 0 0;
+}
+
+//below include to add cross browser utility
+.menu-input,
+.dropdown-menu {
+    @include border-radius(0)
+}
+
+// border-left-width: 0px !important;
+.menu-input {
+    border-left-width: 0px !important;
+}
+
+.refresh-icon {
+    font-size: 18px;
+    margin: 0 -10px;
+}
+
+refresh-btn-a {
+    cursor: pointer;
+}
+
+// belowdid not work
+.col-refresh {
+    margin-right: -20px !important;
+}
+
+.dd-menu-ul {
+    margin-top: -1px;
+    padding: 0 !important;
+    background-color: lighten($brand-light-blue, 30%) !important;
+}
+
+.dd-menu-items>li {
+    cursor: pointer !important;
+}
+
+.dd-menu-items>li,
+.dd-menu-items>li>a,
+.dd-menu-a {
+    cursor: pointer !important;
+    font-size: 14px !important;
+    font-weight: 700;
+    width: 100%;
+    border-bottom: 1px solid lighten($brand-light-blue, 20%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+//below to extend to brand color and man-icon 
+.stop-circle {
+    left: 10%;
+    width: 24px;
+    height: 24px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    line-height: 22px;
+    text-align: center;
+    background-color: #ffffff;
+    outline: 8px solid #ffffff;
+    position: absolute;
+    z-index: 0;
+    font-weight: 700;
+}
+
+.circle-p {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    background-color: lighten($color-gray, 45%) !important;
+    border-color: lighten($color-gray, 25%);
+}
+
+//class
+.dispatch-container {
+    margin: 28px 10px 10px 10px;
+    border: 2px solid $background-header;
+    height: 100%;
+    @include box-shadow(inset, 0px, 1px, 1px, rgba(0, 0, 0, 0.5));
+}
+
+.distpatch-menu-row {
+    color: $btn-text;
+    background-color: $brand-gray-darker;
+    padding: 5px 0;
+    font-size: 12 px;
+}
+
+.dispatch-row {
+    padding: 10px;
+}
+
+/////////////////////////////////////////
+// item - right companent 
+.route-item-outer {
+    padding-top: 10px;
+    height: $route-raw-height;
+    position: relative;
+    //border: 1px solid darkgoldenrod;
+    //background: lighten( $brand-blue, 50%);
+    // border: 1px solid lighten( $brand-blue, 40%)
+}
+
+img-circle-me {
+    border: 1px solid black;
+}
+
+
+/*
+
+Menu bar styles
+
+*/
+
+.lable-date {
+    color: $text-color-light;
+    font-size: 16px;
+    font-weight: 700;
+    float: left;
+    vertical-align: middle;
+    padding: 7px 10px 0 0;
+}
+
+//below include to add cross browser utility
+.menu-input,
+.dropdown-menu {
+    @include border-radius(0)
+}
+
+.dispatch-search {
+    float: left;
+    align-content: center;
+    width: 100%;
+}
+
+// border-left-width: 0px !important;
+.menu-input {
+    border-left-width: 0px !important;
+}
+
+//  background: $band-gray;
+.dispatch-search-addon {
+    background-color: $band-gray;
+    font-size: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.refresh-icon {
+    font-size: 20px;
+    margin: 0 -10px;
+}
+
+.refresh-txt {
+    font-size: 14px;
+    color: $text-color-light;
+    padding: 6px 10px 0 0;
+}
+
+// belowdid not work
+.col-refresh {
+    margin-right: -20px !important;
+}
+
+.menu-dd-txt {
+    height: 34px !important;
+}
+
+.menu-dd {
+    min-width: 150px !important;
+}
+
+.menu-dd-pl {
+    min-width: 180px !important;
+}
+
+.dd-menu-ul {
+    margin-top: -1px;
+    padding: 0 !important;
+    background-color: lighten($brand-light-blue, 30%) !important;
+}
+
+.dd-menu-items>li {
+    cursor: pointer !important;
+}
+
+.dd-menu-items>li,
+.dd-menu-items>li>a,
+.dd-menu-a {
+    cursor: pointer !important;
+    font-size: 14px !important;
+    font-weight: 700;
+    width: 100%;
+    border-bottom: 1px solid lighten($brand-light-blue, 20%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btn-arrow-right,
+.btn-arrow-left {
+    font-size: 20px;
+    height: 34px !important;
+    background-color: #F5F5F5;
+}
+
+.btn-arrow-left {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.btn-arrow-right {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.btn-arrow {
+    border: 0 !important;
+    font-family: $font-family !important;
+    color: $btn-text-dark;
+    font-weight: bold;
+    // margin: 0 1px;
+    padding: 3px 14px !important;
+    &:hover {
+        color: lighten($btn-text-dark, 10%) !important;
+    }
+    &:active {
+        color: lighten($btn-text-dark, 10%) !important;
+    }
+    &:on {
+        color: lighten($btn-text-dark, 10%) !important;
+    }
+}
+
+.dispatch-store-row:hover {
+    background-color: #F6F6F6;
+    cursor: pointer;
+}
+
+.dispatch-store-row-cell {
+    border: solid;
+    border-top-width: 1px;
+    border-right-width: 0px;
+    border-left-width: 1px;
+    border-bottom-width: 0px;
+    border-color: #ddd;
+    padding: 9px 9px 9px 9px;
+    color: #868686;
+}
+
+
+/******* tooltipD    ******/
+
+.tooltipD {
+    position: relative;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.tooltipD .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: $route-border-color;
+    color: $color-status-pending;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 0 !important;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -110px;
+}
+
+.tooltipD .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $route-border-color transparent transparent transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltipD:hover .tooltiptext {
+    visibility: visible;
+}

@@ -1,0 +1,44 @@
+    <div class="panel panel-primary route-box">
+        <!-- Default panel contents -->
+
+    <div [class]="routeData.GSN==''? 'route-box-header-gray panel-heading text-left' : 'route-box-header panel-heading text-left'"  >
+        <div class="input-group" style="padding-left:70px">
+            <h4 class="panel-title pull-left" style="padding-top: 7.5px;">{{routeData.RouteName}}</h4>
+
+            </div>
+            <div class="input-group" style="padding-left:70px">
+
+                <!-- <app-merchreassign [routeData]="routeData" [lastModifiedByInput]="lastModifiedByInput"></app-merchreassign> -->
+                <app-merchreassign [routeData]="routeData" [lastModifiedByInput]="lastModifiedByInput" (resequence)="setResequence($event)"></app-merchreassign>                <div class="input-group-btn" style="top:-11px">
+                    <!--<button class="btn btn-default btn-sm">Add Store</button>-->
+                <app-addstore 
+                              [routeDataInput]="routeData"
+                              [lastModifiedByInput]="lastModifiedByInput"  (accountSelected)="setselectedAcct($event)"></app-addstore>
+                </div>
+            </div>
+        </div>
+        <!-- List group -->
+
+        <div class="panel-body" dnd-sortable-container [sortableData]="routeData.Stores" style="padding-top:0px;padding-bottom:0px">
+            <div *ngFor="let store of routeData.Stores;trackBy:track; let i = index" class="row dispatch-store-row" dnd-sortable [sortableIndex]="i" (onDragEnd)="dropStore(store.Sequence)">
+                <div class="col-xs-1 text-center dispatch-store-row-cell-route">
+                    <span *ngIf="store.CheckInGSN == 'GREEN'"><div class="stop-circle-route circle-green-fill"></div></span>
+                    <span *ngIf="store.CheckInGSN == 'GRAY'"><div class="stop-circle-route circle-p"><span class="fa fa-male" style="font-size:16px"></span></div></span>
+                    <span *ngIf="store.CheckInGSN == ''">{{i+1}}</span>
+                   
+                </div>
+                <div class="col-xs-10 text-left dispatch-store-row-cell-route">
+                    <app-storereassign [lastModifiedByInput]="lastModifiedByInput" [storeInput]="store" [routeData]="routeData" (routeReassigned)="setupdatedroute($event)"></app-storereassign>
+
+                    <span *ngIf="store.PullNumber!=''" class="merch-label-2ndpull">{{store.PullNumber}}</span>
+                    <span *ngIf="store.DisplayTaskCount>0" class="merch-label-displayCnt"><span class="badge">{{store.DisplayTaskCount}}</span> Display</span>                       
+
+                     <div *ngIf="store.ActualArrival.split(' ')[2] == 'DELIVERED'" class="route-ActualArrival">{{store.ActualArrival.split(" ")[0]}} {{store.ActualArrival.split(" ")[1]}} <br/> <small  style="font-size: 8px;"> {{store.ActualArrival.split(" ")[2]}} </small> </div>
+                    <div *ngIf="store.ActualArrival.split(' ')[2] != 'DELIVERED'" class="route-NoArrival">{{store.ActualArrival.split(" ")[0]}} {{store.ActualArrival.split(" ")[1]}} <br/> <small style="font-size: 8px;"> {{store.ActualArrival.split(" ")[2]}} </small> </div>
+                    
+                </div>
+                <div class="col-xs-1 text-center dispatch-store-row-cell-route"><span class="fa-span glyphicon glyphicon-trash deleteActivated" (click)="removeStore(store.Sequence)" title="Delete"></span></div>
+            </div>
+
+        </div>
+    </div>

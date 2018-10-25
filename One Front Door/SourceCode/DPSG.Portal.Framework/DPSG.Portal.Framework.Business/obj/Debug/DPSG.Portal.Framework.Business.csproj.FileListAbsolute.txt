@@ -1,0 +1,5 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.Framework\DPSG.Portal.Framework.Business\bin\Debug\DPSG.Portal.Framework.Business.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.Framework\DPSG.Portal.Framework.Business\bin\Debug\DPSG.Portal.Framework.Business.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.Framework\DPSG.Portal.Framework.Business\obj\Debug\DPSG.Portal.Framework.Business.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.Framework\DPSG.Portal.Framework.Business\obj\Debug\DPSG.Portal.Framework.Business.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.Framework\DPSG.Portal.Framework.Business\obj\Debug\DPSG.Portal.Framework.Business.pdb

@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AEB5EAB-15D0-4B41-A189-DCD2A4C158D1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DPSG.Portal.BC.Services</RootNamespace>
+    <AssemblyName>DPSG.Portal.BC.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DPSG.Portal.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7a41cc71aadbc525, processorArchitecture=MSIL">
+      <HintPath>..\..\OFD_Assemblies\DPSG.Portal.Framework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DPSG.Portal.Framework.CommonUtils, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eb254209cf4b0d8d, processorArchitecture=MSIL">
+      <HintPath>..\..\OFD_Assemblies\DPSG.Portal.Framework.CommonUtils.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=AMD64">
+      <HintPath>..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.Office.Server.Search.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Schema, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Schema.1.0.11\lib\net45\Newtonsoft.Json.Schema.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.identitymodel.services">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.identitymodel.services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.Runtime, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\new.jpg" />
+    <Content Include="images\new_version.jpg" />
+    <Content Include="index.html" />
+    <Content Include="ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.35.Extensions.dll" />
+    <Content Include="ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.dll" />
+    <Content Include="ReferenceAssemblies\ORM\Current\Telerik.OpenAccess.Runtime.dll" />
+    <Content Include="ReferenceAssemblies\ReadMe1st.txt" />
+    <Content Include="SampleJsonInput\JsonUploadNoImage.txt" />
+    <Content Include="SampleJsonInput\jsonWtihMoreObj-more.txt" />
+    <Content Include="OperationContract\BCService.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContract\Account\AdHoc\AdHocResponseDetails.cs" />
+    <Compile Include="DataContract\Account\Bottler\AccountDetails.cs" />
+    <Compile Include="DataContract\BottlerHierarchy\BotttlerHierarchyDataDetails.cs" />
+    <Compile Include="DataContract\CDE\AssetDetails.cs" />
+    <Compile Include="DataContract\Base.cs" />
+    <Compile Include="DataContract\Bottler.cs" />
+    <Compile Include="DataContract\Brand\Brand.cs" />
+    <Compile Include="DataContract\Brand\BrandData.cs" />
+    <Compile Include="DataContract\Brand\Package.cs" />
+    <Compile Include="DataContract\Brand\TradeMark.cs" />
+    <Compile Include="DataContract\Chains.cs" />
+    <Compile Include="DataContract\Channel.cs" />
+    <Compile Include="DataContract\Config\BCMYDAY\ConfigValuesResults.cs" />
+    <Compile Include="DataContract\DownloadFile.cs" />
+    <Compile Include="DataContract\ExceptionErrorMsg.cs" />
+    <Compile Include="DataContract\IPE\EventResponseDataDetails.cs" />
+    <Compile Include="DataContract\IPE\IpeBottlerDataResults.cs" />
+    <Compile Include="DataContract\IPE\IpeMasterDataDetails.cs" />
+    <Compile Include="DataContract\IPE\MarketingProgramResults.cs" />
+    <Compile Include="DataContract\IPE\SurveyDataResults.cs" />
+    <Compile Include="DataContract\IPE\SurveyHistoryResults.cs" />
+    <Compile Include="DataContract\LocalChain.cs" />
+    <Compile Include="DataContract\LOSDisplayLocation.cs" />
+    <Compile Include="DataContract\LOS\Config.cs" />
+    <Compile Include="DataContract\LOS\BCPromotionExecutionStatus.cs" />
+    <Compile Include="DataContract\LOS\SystemCompetitionBrand.cs" />
+    <Compile Include="DataContract\LOS\DisplayLocation.cs" />
+    <Compile Include="DataContract\LOS\DisplayTypeMaster.cs" />
+    <Compile Include="DataContract\LOS\LOS.cs" />
+    <Compile Include="DataContract\LOS\LOSData.cs" />
+    <Compile Include="DataContract\LOS\LOSDisplayLocation.cs" />
+    <Compile Include="DataContract\LOS\PickList.cs" />
+    <Compile Include="DataContract\LOS\SystemBrand.cs" />
+    <Compile Include="DataContract\LOS\SystemPackage.cs" />
+    <Compile Include="DataContract\LOS\SystemPackageBrand.cs" />
+    <Compile Include="DataContract\LOS\SystemPickList.cs" />
+    <Compile Include="DataContract\LOS\SystemTrademarkMaster.cs" />
+    <Compile Include="DataContract\LOS\TieInReasonMaster.cs" />
+    <Compile Include="DataContract\NationalChain.cs" />
+    <Compile Include="DataContract\OtherPromo\OtherPromoData.cs" />
+    <Compile Include="DataContract\Priority\PriorityQuestionsResults.cs" />
+    <Compile Include="DataContract\Product\ProductHierarchyDetails.cs" />
+    <Compile Include="DataContract\Programs\ProgramBottlerDetails.cs" />
+    <Compile Include="DataContract\Programs\ProgramMilestonesDetails.cs" />
+    <Compile Include="DataContract\Programs\ProgramRegionDetails.cs" />
+    <Compile Include="DataContract\Promotion\BottlerPromotion.cs" />
+    <Compile Include="DataContract\Promotion\Documents.cs" />
+    <Compile Include="DataContract\Promotion\PromotionCategory.cs" />
+    <Compile Include="DataContract\Promotion\PromotionExecutionStatus.cs" />
+    <Compile Include="DataContract\Promotion\PromotionRefusalReason.cs" />
+    <Compile Include="DataContract\Promotion\PromotionWeekPriority.cs" />
+    <Compile Include="DataContract\Promotion\PromotionStatus.cs" />
+    <Compile Include="DataContract\Promotion\Promotion.cs" />
+    <Compile Include="DataContract\Promotion\PromotionAccount.cs" />
+    <Compile Include="DataContract\Promotion\PromotionAttachment.cs" />
+    <Compile Include="DataContract\Promotion\PromotionBottler.cs" />
+    <Compile Include="DataContract\Promotion\PromotionBrand.cs" />
+    <Compile Include="DataContract\Promotion\PromotionData.cs" />
+    <Compile Include="DataContract\Promotion\PromotionPackage.cs" />
+    <Compile Include="DataContract\RegionalChain.cs" />
+    <Compile Include="DataContract\ResponseBase.cs" />
+    <Compile Include="DataContract\RetailExecution\StoreExecution.cs" />
+    <Compile Include="DataContract\RetailExecution\StoreExecutionData.cs" />
+    <Compile Include="DataContract\RetailExecution\StoreExecutionDisplay.cs" />
+    <Compile Include="DataContract\RetailExecution\StoreExecutionReponse.cs" />
+    <Compile Include="DataContract\SalesAccount.cs" />
+    <Compile Include="DataContract\SalesAccountabilityHierarchy.cs" />
+    <Compile Include="DataContract\SalesHierarchy\BottlerSalesHier.cs" />
+    <Compile Include="DataContract\SalesHierarchy\Country.cs" />
+    <Compile Include="DataContract\SalesHierarchy\Division.cs" />
+    <Compile Include="DataContract\SalesHierarchy\Region.cs" />
+    <Compile Include="DataContract\SalesHierarchy\SalesHierarchyData.cs" />
+    <Compile Include="DataContract\SalesHierarchy\System.cs" />
+    <Compile Include="DataContract\SalesHierarchy\TotalCompany.cs" />
+    <Compile Include="DataContract\SalesHierarchy\Zone.cs" />
+    <Compile Include="DataContract\SalesMaster\SalesMasterDataDetails.cs" />
+    <Compile Include="DataContract\StoreCondition.cs" />
+    <Compile Include="DataContract\StoreDisplay.cs" />
+    <Compile Include="DataContract\Store\BCPromotionExecution.cs" />
+    <Compile Include="DataContract\Store\Condition.cs" />
+    <Compile Include="DataContract\Store\ConditionResponse.cs" />
+    <Compile Include="DataContract\Store\Display.cs" />
+    <Compile Include="DataContract\Store\DisplayDetails.cs" />
+    <Compile Include="DataContract\Store\PriotityAnswer.cs" />
+    <Compile Include="DataContract\Store\StoreData.cs" />
+    <Compile Include="DataContract\Store\StoreNote.cs" />
+    <Compile Include="DataContract\Store\TieInRate.cs" />
+    <Compile Include="DataContract\Store\UploadTieIn.cs" />
+    <Compile Include="DataContract\SuperChannel.cs" />
+    <Compile Include="DataContract\SystemBrand.cs" />
+    <Compile Include="Header.cs" />
+    <Compile Include="HTTPModule\BCModule.cs" />
+    <Compile Include="NullableSupportingWebHttpBehaviourExtension.cs" />
+    <Compile Include="OperationContract\Base.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OperationContract\BCService.svc.cs">
+      <DependentUpon>BCService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="OperationContract\IBCService.cs" />
+    <Compile Include="OperationContract\ServiceWrapper\BCMaster.cs" />
+    <Compile Include="OperationContract\ServiceWrapper\Promotion.cs" />
+    <Compile Include="OperationContract\ServiceWrapper\RetailExecution.cs" />
+    <Compile Include="OperationContract\ServiceWrapper\StoreTieIn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\BC.pubxml" />
+    <None Include="Properties\PublishProfiles\Pradip.pubxml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\WILTX006_DEV.pubxml" />
+    <None Include="Properties\PublishProfiles\WUXYX001.pubxml" />
+    <Content Include="SampleJsonInput\uploadOutput.txt" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DPSG.Portal.BC.BAL\DPSG.Portal.BC.BAL.csproj">
+      <Project>{9e5377a3-7ddc-4e72-86eb-0a6352012a16}</Project>
+      <Name>DPSG.Portal.BC.BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPSG.Portal.BC.Common\DPSG.Portal.BC.Common.csproj">
+      <Project>{19688e5d-6bdb-437c-866e-82d1c869d559}</Project>
+      <Name>DPSG.Portal.BC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPSG.Portal.BC.Common\DPSG.Portal.BC.Common.csproj">
+      <Project>{19688e5d-6bdb-437c-866e-82d1c869d559}</Project>
+      <Name>DPSG.Portal.BC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPSG.Portal.BC.DAL\DPSG.Portal.BC.DAL.csproj">
+      <Project>{b830b8aa-e94d-45c7-b1c4-adbf6c5f6f99}</Project>
+      <Name>DPSG.Portal.BC.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPSG.Portal.BC.Model\DPSG.Portal.BC.Model.csproj">
+      <Project>{d3f2d700-edb0-432b-9433-acd2736714f5}</Project>
+      <Name>DPSG.Portal.BC.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DPSG.Portal.BC.Types\DPSG.Portal.BC.Types.csproj">
+      <Project>{ff1af898-3246-433a-8b15-e2bea5f2907f}</Project>
+      <Name>DPSG.Portal.BC.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24657</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:24658/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

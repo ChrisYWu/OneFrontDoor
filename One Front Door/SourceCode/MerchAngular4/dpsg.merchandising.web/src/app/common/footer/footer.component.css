@@ -1,0 +1,11 @@
+/*footer area*/
+
+.footer{
+	background: #000;
+}
+.footer p{
+	color: #7e8287;
+	font-size: 12px;
+	padding-top:17px;
+    padding-bottom: 6px;
+}

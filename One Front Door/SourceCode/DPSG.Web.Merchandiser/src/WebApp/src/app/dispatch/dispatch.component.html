@@ -1,0 +1,74 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row">
+        <div class="container-fluid">
+            <div class="col-md-5 pull-left remove-col-margin">
+                <div class="lable-date">Dispatch Date:</div>
+                <div class="float-left">
+                    <button class="btn btn-arrow btn-arrow-left" type="button" (click)="nextDate()">
+                         <i class="fa fa-angle-left refresh-icon"></i>
+                    </button>
+                </div>
+                <div class="dropdown" style="float: left">
+                    <button class="btn btn-me-light menu-dd menu-dd-txt" type="button" (click)="isShowDropDown = !isShowDropDown">
+                        {{selectedDate}}
+                        &nbsp;&nbsp;<span class="fa fa-caret-down"></span>
+                    </button>
+                    <ul class="dropdown-menu dispaly-block menu-dd dd-menu-ul" *ngIf="isShowDropDown">
+                        <li (click)="ddDateSelected(i)" [ngClass]="i==selectedIndex? 'active' : ''" *ngFor="let ddDate of ddDates; let i = index">
+                            <a class="dd-menu-a text-center">{{ddDate}} </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="float-left">
+                    <button class="btn btn-arrow btn-arrow-right" type="button" (click)="priorDate()">
+                         <i class="fa fa-angle-right refresh-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="dispatch-search">
+                    <div class="input-group">
+                        <span class="input-group-addon dispatch-search-addon">
+                        <i class="fa fa-search"></i>
+                    </span>
+                        <input type="text" #filterInput [(ngModel)]="filterText" class="form-control menu-input" id="txtSearch" placeholder="Search">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 pull-right remove-col-margin">
+                <div class="pull-right" [hidden]="msgText.length > 0 || errText.length > 0">
+                    <a (click)="getMonitorData()" class="refresh-btn-a">
+                        <img src="contents/img/Refresh-BTN.png">
+                    </a>
+                </div>
+                <div class="pull-right refresh-txt" [hidden]="msgText.length > 0 || errText.length > 0">
+                    Refreshed at: {{refreshTime}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dispatch-row" [hidden]="msgText.length > 0 || errText.length > 0">
+        <div class="row">
+            <dispatch-row *ngFor=" let dispatch of monitorData | filter:{FirstName: filterInput.value, LastName: filterInput.value, RouteName: filterInput.value } " [dispatch]="dispatch "></dispatch-row>
+        </div>
+    </div>
+
+    <!--  {{msgText.length}} <br> {{ errText.length}} -->
+    <app-spinner [isRunning]="isRequesting"></app-spinner>
+
+    <div class="row dispatch-row-msg text-center" [hidden]="msgText.length == 0">
+        <h2>{{msgText}} </h2>
+    </div>
+
+    <div class="row dispatch-row-err text-center" [hidden]="errText.length == 0">
+        <h2>{{errText}} </h2>
+    </div>
+
+
+
+
+
+</div>

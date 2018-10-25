@@ -1,0 +1,22 @@
+ // Variable
+ @import "theme/variable.scss";
+ $user-txt: #007aff;
+ .btn-user {
+     border-radius: 0 !important;
+     border: 0 !important;
+     font-family: $font-family !important;
+     float: right;
+     padding: 5px 15px !important;
+     margin-left: 10px;
+     color: $user-txt;
+     //  &::after {
+     //      content: " \25BE";
+     //  }
+     &:hover,
+     &:active
+     {
+         color: darken( $user-txt, 10%) !important;
+         padding: 4px 14px !important;
+         border: 1px solid lighten( $user-txt, 10%)!important;
+     }
+ }

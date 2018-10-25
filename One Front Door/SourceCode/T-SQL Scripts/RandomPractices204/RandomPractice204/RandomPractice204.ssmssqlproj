@@ -1,0 +1,506 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="RandomPractice204">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="bsccap108:DPSG\wuxyx001">
+          <Created>2015-07-30T15:48:09.3096872-05:00</Created>
+          <Type>SQL</Type>
+          <Server>bsccap108</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCAP121:DPSG\wuxyx001">
+          <Created>2015-07-30T16:38:22.2849546-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCAP121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCSQ07:DPSG\wuxyx001">
+          <Created>2015-07-30T16:36:01.1828458-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCSQ07</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="dpsgsharedclstr:DPSG\wuxyx001">
+          <Created>2015-07-23T11:07:26.1207724-05:00</Created>
+          <Type>SQL</Type>
+          <Server>dpsgsharedclstr</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="vh-portal2:DPSG\wuxyx001">
+          <Created>2015-07-20T10:48:09.1014987-05:00</Created>
+          <Type>SQL</Type>
+          <Server>vh-portal2</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+        <ConnectionNode Name="vh-portal3:DPSG\wuxyx001">
+          <Created>2015-07-21T08:53:37.6151981-05:00</Created>
+          <Type>SQL</Type>
+          <Server>vh-portal3</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="001. Knoxville(2015-09-24).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>001. Knoxville(2015-09-24).sql</FullPath>
+        </FileNode>
+        <FileNode Name="100. Playbook.pGetDSDPromotionsForGSN.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>100. Playbook.pGetDSDPromotionsForGSN.sql</FullPath>
+        </FileNode>
+        <FileNode Name="101. Playbook.PromotionRequestLog.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>101. Playbook.PromotionRequestLog.sql</FullPath>
+        </FileNode>
+        <FileNode Name="102. Missing Indexes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>102. Missing Indexes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="201. BC PromotionSave(Table).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>201. BC PromotionSave(Table).sql</FullPath>
+        </FileNode>
+        <FileNode Name="202. Playbook.pSaveBCPromotion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>202. Playbook.pSaveBCPromotion.sql</FullPath>
+        </FileNode>
+        <FileNode Name="202. Temp.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>202. Temp.sql</FullPath>
+        </FileNode>
+        <FileNode Name="203. BC PromotionSave(Testing).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>203. BC PromotionSave(Testing).sql</FullPath>
+        </FileNode>
+        <FileNode Name="204. Playbook.pSaveDSDPromotion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>204. Playbook.pSaveDSDPromotion.sql</FullPath>
+        </FileNode>
+        <FileNode Name="205. Playbook.pReMapDSDPromotions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>205. Playbook.pReMapDSDPromotions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="206. Playbook.pGetDSDPromotionsForBranches.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>206. Playbook.pGetDSDPromotionsForBranches.sql</FullPath>
+        </FileNode>
+        <FileNode Name="207. DSD AssembledPackage(20150924).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>207. DSD AssembledPackage(20150924).sql</FullPath>
+        </FileNode>
+        <FileNode Name="208. PreCal.pReMapBCPromotions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>208. PreCal.pReMapBCPromotions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="209. BC Reassemble(Still going on).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>209. BC Reassemble(Still going on).sql</FullPath>
+        </FileNode>
+        <FileNode Name="210. Playbook.pGetBCPromotionsForRegions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>210. Playbook.pGetBCPromotionsForRegions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="220. Playbook.pGetBCLocationTree.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>220. Playbook.pGetBCLocationTree.sql</FullPath>
+        </FileNode>
+        <FileNode Name="221. Playbook.pGetChainGroupsFromBCPromos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>221. Playbook.pGetChainGroupsFromBCPromos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="222. Playbook.pGetBCPromotionsForLocCgStartDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>222. Playbook.pGetBCPromotionsForLocCgStartDate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="225. Playbook.pGetDSDPromotionsAccountCountsForBranches.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>225. Playbook.pGetDSDPromotionsAccountCountsForBranches.sql</FullPath>
+        </FileNode>
+        <FileNode Name="226. Playbook.pGetDSDPromotionsChainGroupCountsForBranches.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>226. Playbook.pGetDSDPromotionsChainGroupCountsForBranches.sql</FullPath>
+        </FileNode>
+        <FileNode Name="227. Playbook.pGetChainGroupsBranches.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>227. Playbook.pGetChainGroupsBranches.sql</FullPath>
+        </FileNode>
+        <FileNode Name="228. PlayBook.pGetLocationTree.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>228. PlayBook.pGetLocationTree.sql</FullPath>
+        </FileNode>
+        <FileNode Name="229. Playbook.pGetPromotionsForLocCgStartDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>229. Playbook.pGetPromotionsForLocCgStartDate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="248. ChainGroup Research.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>248. ChainGroup Research.sql</FullPath>
+        </FileNode>
+        <FileNode Name="249. RevImage(Research).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>249. RevImage(Research).sql</FullPath>
+        </FileNode>
+        <FileNode Name="250. ChainGroup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>250. ChainGroup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="251. PromotionChainGroup(Table).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>251. PromotionChainGroup(Table).sql</FullPath>
+        </FileNode>
+        <FileNode Name="252. ChainGroupNesting.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>252. ChainGroupNesting.sql</FullPath>
+        </FileNode>
+        <FileNode Name="253. ChainTree.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>253. ChainTree.sql</FullPath>
+        </FileNode>
+        <FileNode Name="300. Deployment Scripts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>300. Deployment Scripts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="301. Assembled Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>301. Assembled Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="302. Assembled SPs.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>302. Assembled SPs.sql</FullPath>
+        </FileNode>
+        <FileNode Name="303. RollBack.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>303. RollBack.sql</FullPath>
+        </FileNode>
+        <FileNode Name="304. Sequence.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>304. Sequence.sql</FullPath>
+        </FileNode>
+        <FileNode Name="305. CutOver.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>305. CutOver.sql</FullPath>
+        </FileNode>
+        <FileNode Name="31. Indexes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>31. Indexes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="310. ChainGroup Data Issue.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>310. ChainGroup Data Issue.sql</FullPath>
+        </FileNode>
+        <FileNode Name="32. BCMyday.pGetBCPromotionsForLeadershipView.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>32. BCMyday.pGetBCPromotionsForLeadershipView.sql</FullPath>
+        </FileNode>
+        <FileNode Name="33. BC.tGSNRegion.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>33. BC.tGSNRegion.sql</FullPath>
+        </FileNode>
+        <FileNode Name="34. BCMyday.pGetBCPromotionsForGSN9.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>34. BCMyday.pGetBCPromotionsForGSN9.sql</FullPath>
+        </FileNode>
+        <FileNode Name="35.pLeaderView33.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>35.pLeaderView33.sql</FullPath>
+        </FileNode>
+        <FileNode Name="36. MassExecution.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>36. MassExecution.sql</FullPath>
+        </FileNode>
+        <FileNode Name="37. ReadingLog.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>37. ReadingLog.sql</FullPath>
+        </FileNode>
+        <FileNode Name="38. BCMyday.pGetBCPromotionsForGSN8.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>38. BCMyday.pGetBCPromotionsForGSN8.sql</FullPath>
+        </FileNode>
+        <FileNode Name="600. State Fix For BC.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>600. State Fix For BC.sql</FullPath>
+        </FileNode>
+        <FileNode Name="601. StateFix Analysis.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>601. StateFix Analysis.sql</FullPath>
+        </FileNode>
+        <FileNode Name="602. StateFix Prod Analy.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>602. StateFix Prod Analy.sql</FullPath>
+        </FileNode>
+        <FileNode Name="603. StatePromotion ACCT Address.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>603. StatePromotion ACCT Address.sql</FullPath>
+        </FileNode>
+        <FileNode Name="721 Verification.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>721 Verification.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99. CVS Brokendown.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCAP121:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCAP121</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99. CVS Brokendown.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Albertsons 4101.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Albertsons 4101.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BCSalesHierTree.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal2:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal2</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>BCSalesHierTree.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Chain Comparison.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Chain Comparison.sql</FullPath>
+        </FileNode>
+        <FileNode Name="COS Connection.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>COS Connection.sql</FullPath>
+        </FileNode>
+        <FileNode Name="DSD StatePromotions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>DSD StatePromotions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="EBH.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>EBH.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ForComparison.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>ForComparison.sql</FullPath>
+        </FileNode>
+        <FileNode Name="LOWES.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>LOWES.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Promotion for MCA.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Promotion for MCA.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Promotion For MCA2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Promotion For MCA2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SchrikSDM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SchrikSDM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery10.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery10.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery3.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery4.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery5.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery5.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery6.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery6.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7.sql</FullPath>
+        </FileNode>
+        <FileNode Name="VH3BCReseeding.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:vh-portal3:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>vh-portal3</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>VH3BCReseeding.sql</FullPath>
+        </FileNode>
+        <FileNode Name="WhereAmI.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dpsgsharedclstr:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>dpsgsharedclstr</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>WhereAmI.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/RandomPractices204</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

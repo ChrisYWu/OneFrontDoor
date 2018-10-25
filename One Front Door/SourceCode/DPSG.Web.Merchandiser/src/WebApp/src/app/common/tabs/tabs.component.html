@@ -1,0 +1,14 @@
+<tabset [justified]="true">
+    <tab heading="UNASSIGNED" [active]="true" (select)="active = true" (deselect)="active = false">
+        <app-storelist [currentTabAccts]="unassignedInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput" 
+        [unassignedDelete]="'1'" (accountSelected)="setselectedAcct($event)"></app-storelist>
+    </tab>
+    <tab heading="ALL" (select)="active = true" (deselect)="active = false">
+        <app-storelist [currentTabAccts]="allInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput"
+         [unassignedDelete]="'0'" (accountSelected)="setselectedAcct($event)"></app-storelist>
+    </tab>
+    <tab heading="OTHERS" (select)="active = true" (deselect)="active = false">
+        <app-storelist [currentTabAccts]="otherInputAccts" [routeDataInput]="routeDataInput" [lastModifiedByInput]="lastModifiedByInput" 
+        [unassignedDelete]="'0'" (accountSelected)="setselectedAcct($event)"></app-storelist>
+    </tab>
+</tabset>

@@ -1,0 +1,109 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row">
+        <div class="container-fluid">
+            <div class="col-md-7 pull-left remove-col-margin">
+                <div class="lable-report">Geo:</div>
+                <div class="float-left">
+                    <ss-multiselect-dropdown [options]="usrAllGeo" (selectedModel)="optionsUpdated($event)" [settings]="mySettings" [texts]="myTexts" [defaultModel]="selectedGeo"></ss-multiselect-dropdown>
+                </div>
+                <div class="lable-report">From Date:</div>
+                <div class="float-left">
+                    <datepicker [(ngModel)]="FromDate" [init-date]="FromDate"></datepicker>
+                </div>
+                <div class="lable-report">To Date:</div>
+                <div class="float-left">
+                    <datepicker [(ngModel)]="ToDate" [init-date]="ToDate"></datepicker>
+                </div>
+                <div>
+                    &nbsp;&nbsp;<button (click)="FilterReportData()" class="btn btn-primary">Go</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="report-search">
+                    <global-search *ngIf="config.globalSearchEnabled" (globalUpdate)="globalSearchTerm = $event">
+                    </global-search>
+
+                </div>
+            </div>
+            <div class="col-md-2 pull-right remove-col-margin">
+                <div class="pull-right">
+                    <csv-export *ngIf="config.exportEnabled"></csv-export>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dispatch-row">
+        <div class="row">
+            <table class="ng2-table__table--striped">
+                <thead>
+                    <tr class="tbl-header">
+                        <th [style.display]="config.orderEnabled?'':'none' " *ngFor="let key of keys" (click)="orderBy(key)">
+                            {{ key | changeName}}
+                            <span *ngIf="resource.order[key]==='asc' " class="ng2-table__sort-indicator ng2-table__sort-indicator--down"></span>
+                            <span *ngIf="resource.order[key]==='desc' " class="ng2-table__sort-indicator ng2-table__sort-indicator--up"></span>
+                        </th>
+                        <th [style.display]="!config.orderEnabled?'':'none' " *ngFor="let key of keys">
+                            {{ key }}
+                        </th>
+                    </tr>
+                    <tr *ngIf="config.searchEnabled">
+                        <th *ngFor="let key of keys">
+                            <table-header (update)="term = $event" [key]="key"></table-header>
+                        </th>
+                        <th *ngIf="config.editEnabled"></th>
+                    </tr>
+                </thead>
+                <tbody class="oddEven">
+                    <tr *ngFor="let row of reportdata | search : term | global : globalSearchTerm | pagination : range">
+                        <td *ngFor="let key of keys">
+                            <div *ngIf="key =='ManagerSignature' && row.ManagerSignature!=null && row.ManagerSignature!=''">
+                                <a href='javascript:' (click)="getImageDetails(row.ManagerSignature, 1);">Link</a>
+                            </div>
+                            <div *ngIf="key =='StorePics' && row.StorePics!=null && row.StorePics!=''">
+                                <a href='javascript:' (click)="getImageDetails(row.StorePics, 0);">Link</a>
+                            </div>
+                            <div *ngIf="key!='ManagerSignature' && key!='StorePics' ">{{ row[key] }}</div>
+                        </td>
+                        <td *ngIf="config.editEnabled">
+                            <button class="ng2-table__button">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot *ngIf="config.footerEnabled">
+                    <tr>
+                        <td *ngFor="let key of keys"></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <span *ngIf="showNoDataMessage"><h4>No data available</h4></span>
+            <pagination *ngIf="config.paginationEnabled" [numberOfItems]="numberOfItems" (updateRange)="range = $event"></pagination>
+
+        </div>
+    </div>
+</div>
+ <app-spinner [isRunning]="isRequesting"></app-spinner>
+<!-- Model dialog for showing Image -->
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="false" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Image</h4>
+            </div>
+            <div class="modal-body cusFont" style="min-height:500px; color:#333;over">
+                <app-spinner [isRunning]="isRequesting"></app-spinner>
+                <h4 *ngIf="imageBlobID == ''">There is no image</h4>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let img of imgURLList">
+                        <img [src]="img" width="200px" height="200px" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>

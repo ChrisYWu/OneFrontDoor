@@ -1,0 +1,70 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="col-md-9 pull-left remove-col-margin">
+                <div class="lable-report">Geo:</div>
+                <div class="float-left">
+                    <ss-multiselect-dropdown [options]="usrAllGeo" (selectedModel)="optionsUpdated($event)" [settings]="mySettings" [texts]="myTexts" [defaultModel]="selectedGeo"></ss-multiselect-dropdown>
+                </div>
+                <div class="lable-report">From Date:</div>
+                <div class="float-left">
+                    <ng2-datepicker [(ngModel)]="FromDate" class="merchandiser" [options] = "customFromDate"></ng2-datepicker>
+                </div>
+                <div class="lable-report">To Date:</div>
+                <div class="float-left">
+                    <ng2-datepicker [(ngModel)]="ToDate" class="merchandiser" [options] = "customToDate"></ng2-datepicker>
+                </div>
+                <div>
+                    &nbsp;&nbsp;<button (click)="FilterReportData()" class="btn schedule-bordercolor">Go</button>
+                </div>
+            </div>
+            <div class="col-md-2">       
+                        
+                <div class="report-search">
+                    <div class="input-group">
+                        <span class="input-group-addon dispatch-search-addon">
+                        <i class="fa fa-search"></i>
+                    </span>                        
+                        <input type="text" [(ngModel)]="filter" (ngModelChange)="SearchFilter()" class="form-control menu-input" id="txtSearch" placeholder="Search">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-1 pull-right remove-col-margin">
+                <div class="pull-right">
+                    <button (click)="exportData()" class="btn schedule-bordercolor">Export to CSV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dispatch-row">
+        <div class="row">
+            <kendo-grid [data]="gridView" [pageSize]="pageSize" [skip]="skip" [sortable]="{ mode: 'single' }" [sort]="sort" (sortChange)="sortChange($event)"
+                (pageChange)="pageChange($event)" [scrollable]="'none'" [pageable]="{
+            buttonCount: buttonCount,
+            info: info,
+            type: type,
+            pageSizes: pageSizes,
+            previousNext: previousNext
+          }">
+                <kendo-grid-column field="Branch" title="Branch" width="120">
+                </kendo-grid-column>
+                <kendo-grid-column field="GroupName" title="Group Name" width="120">
+                </kendo-grid-column>
+                <kendo-grid-column field="Supervisor" title="Supervisor" width="120">
+                </kendo-grid-column>
+                 <kendo-grid-column field="Merchandiser" title="Merchandiser" width="120">
+                </kendo-grid-column>
+                <kendo-grid-column field="Date" title="Date"  width="120">
+                </kendo-grid-column>
+                <kendo-grid-column field="CalculatedMiles" title="Calculated Miles" width="120">
+                </kendo-grid-column>
+                <kendo-grid-column field="AdjustedMiles" title="Adjusted Miles"  width="120">
+                </kendo-grid-column>
+                <kendo-grid-column field="ShortReason" title="Reason" width="120">
+                </kendo-grid-column>
+               
+            </kendo-grid>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="CapstoneData">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="bsccap108:DPSG\WUXYX001">
+          <Created>2014-03-11T10:57:36.072887-05:00</Created>
+          <Type>SQL</Type>
+          <Server>bsccap108</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCap121:DPSG\WUXYX001">
+          <Created>2014-04-03T08:33:13.0315094-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCap121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCSQ07:DPSG\WUXYX001">
+          <Created>2014-04-03T08:29:42.2860931-05:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCSQ07</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="v-portals11:DPSG\WUXYX001">
+          <Created>2014-03-21T14:44:28.3497028-05:00</Created>
+          <Type>SQL</Type>
+          <Server>v-portals11</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="0 DataComparison.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>0 DataComparison.sql</FullPath>
+        </FileNode>
+        <FileNode Name="0000. Query Comparison.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>0000. Query Comparison.sql</FullPath>
+        </FileNode>
+        <FileNode Name="0002. Raw data for Jason.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>0002. Raw data for Jason.sql</FullPath>
+        </FileNode>
+        <FileNode Name="0004. Reporting And Servicing.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>0004. Reporting And Servicing.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02. pLoadFromCapstone.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02. pLoadFromCapstone.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04.pMergeCapstoneBottlerERH.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04.pMergeCapstoneBottlerERH.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05.pMergeCapstoneBottlerHier.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05.pMergeCapstoneBottlerHier.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06.pMergeStateCounty.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>06.pMergeStateCounty.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07.pMergeCapstoneBottler.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>07.pMergeCapstoneBottler.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08.pReloadBCSalesAccountability.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>08.pReloadBCSalesAccountability.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09. Active Accounts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>09. Active Accounts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09.pMergeChainsAccounts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>09.pMergeChainsAccounts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="1 Denom.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1 Denom.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10.1 pMergeCapstoneProduct.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10.1 pMergeCapstoneProduct.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10.pMergeTMapAndInclusions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10.pMergeTMapAndInclusions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="96. pNotifyCapstoneFailedStatus.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>96. pNotifyCapstoneFailedStatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="97. GeoCoding.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>97. GeoCoding.sql</FullPath>
+        </FileNode>
+        <FileNode Name="97. pMergeViewTables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>97. pMergeViewTables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="98.Truncate Log.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>98.Truncate Log.sql</FullPath>
+        </FileNode>
+        <FileNode Name="99. Sequencing and loads analysis.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>99. Sequencing and loads analysis.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Account is not just ship to.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Account is not just ship to.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Bottler etc.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Bottler etc.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Bottler.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Bottler.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BottlerHierachy.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>BottlerHierachy.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BottlerSA.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>BottlerSA.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BottlerSalesHierachy.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>BottlerSalesHierachy.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CAP_DM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CAP_DM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CodeLookup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>CodeLookup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Discussion With Sara.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Discussion With Sara.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Employee.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Employee.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GlobalStatus.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>GlobalStatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Local to 11.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Local to 11.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Packaging.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Packaging.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Product.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Product.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q01. Reverse.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q01. Reverse.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q02. Create Staging Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q02. Create Staging Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q03. Creating Working Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q03. Creating Working Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q04. Modify existing Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q04. Modify existing Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q05. Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q05. Tables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q06. Views.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q06. Views.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q07. Total Stored Procs.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q07. Total Stored Procs.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q08. Linked Server.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q08. Linked Server.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q09. JobCapstone.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q09. JobCapstone.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q98. Update Geo w Tweaking Needed.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q98. Update Geo w Tweaking Needed.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q99. Geocoding Application Registration.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:BSCCSQ07:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>BSCCSQ07</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Q99. Geocoding Application Registration.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Questions.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Questions.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Store.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Store.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Store_Hier.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Store_Hier.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Store_Hier_Loading.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Store_Hier_Loading.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Territory Map Prep.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Territory Map Prep.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Territory Map.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Territory Map.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Territory_HierLoading.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Territory_HierLoading.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Territory_Map(Processing).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Territory_Map(Processing).sql</FullPath>
+        </FileNode>
+        <FileNode Name="Territory_Map(Validation1).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Territory_Map(Validation1).sql</FullPath>
+        </FileNode>
+        <FileNode Name="Territory_Map(Validation2).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Territory_Map(Validation2).sql</FullPath>
+        </FileNode>
+        <FileNode Name="Territory_Map(Validation3).sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Territory_Map(Validation3).sql</FullPath>
+        </FileNode>
+        <FileNode Name="Utilities.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:v-portals11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>v-portals11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Utilities.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/CapstoneData</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

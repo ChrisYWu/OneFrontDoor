@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2432309B-2134-4D55-9F97-15017ECDB100}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DPSG.Portal.Framework.SDM</RootNamespace>
+    <AssemblyName>DPSG.Portal.Framework.SDM</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseXmlMapping>true</UseXmlMapping>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SDM.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DPSG.Portal.Framework.CommonUtils, Version=1.0.0.0, Culture=neutral, PublicKeyToken=eb254209cf4b0d8d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DPSG.Portal.Framework.CommonUtils\bin\Debug\DPSG.Portal.Framework.CommonUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2014.1.403.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2014.1.403.2, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertNotificationLastAccessDatetime.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Area.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Bcsalesaccountability.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Branch.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="BranchMaterial.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Brand.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessUnit.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ChainHier.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumptionLog_OFD.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Department.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="DimBranchPlan.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="FactOFDDailyMetric.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Job.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="KPI.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="LocalChain.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="LocationChain.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Material.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="MeasursType.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="MyPlant.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="NationalChain.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="NationalChainMaster.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBAccountMilestone.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBAttachmentType.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBBottler.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBBrand.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBBusinessUnit.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBCategory.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBCategoryBrandPackage.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBChainHier.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBChannelHier.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBCustomCategory.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBCustomCategory1.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBCustomCategoryPackage.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBDepartment.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBDisplayLocation.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBDisplayType.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBLocalChain.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBLocationChannel.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBLocationHier.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBMassUploadPromoAudit.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBMassUploadPromotion.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBMaterial.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBMilestone.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBNationalChain.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPackage.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPackageType.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBProgram.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBProgramAccount.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBProgramMilestone.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBProgramMilestoneAttachment.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBProgramPackage.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBProgramSystem.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBProgramTrademark.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionAccount.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionAttachment.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionAttachmentSystem.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionBrand.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionCategory.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionChannel.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionDisplayLocation.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionGeographic.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionGeoRelevancy.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionPackage.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionRank.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionSystem.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBPromotionType.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBRegionalChain.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBRetailPromotion.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBRoleSystem.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBRPLItem.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBSPUserProfile.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBStatus.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBStatusNationalAccount.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBStgMassUploadAttachment.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBSystem.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBTLocationChain.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBTradeMark.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBTRegionChain.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBUserAccount.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBUserChannel.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBUserGeographic.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBUserInformation.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBUserPreference.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PBVBottlerSalesHier.generated.cs">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Plant.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PlaybookModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PlaybookRepository.cs" />
+    <Compile Include="Region.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Region1.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RegionalChain.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Role.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RoleSystem.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Route.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="SPUserProfile.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TradeMark.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TransMTDDay.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UPSSyncConfig.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountMapping.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserBranchTradeMark.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserCan.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserChannel.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserGeoRelevancy.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserInBranch.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserInRole.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserLocation.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserNationalChain.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserPersona.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserProductLine.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfileModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfileRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserRoute.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="VBottlerSalesHier.generated.cs">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <OpenAccessDeploy Include="UserProfileModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>UserProfileModel.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </OpenAccessDeploy>
+    <None Include="App.Config" />
+    <None Include="UserProfileModel.rlinq.diagram">
+      <DependentUpon>UserProfileModel.rlinq</DependentUpon>
+    </None>
+    <OpenAccessDeploy Include="PlaybookModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>PlaybookModel.cs</LastGenOutput>
+    </OpenAccessDeploy>
+    <None Include="PlaybookModel.rlinq.diagram">
+      <DependentUpon>PlaybookModel.rlinq</DependentUpon>
+    </None>
+    <None Include="SDM.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DPSG.Portal.Framework.Types\DPSG.Portal.Framework.Types.csproj">
+      <Project>{bdd6b6ac-e0d0-436b-b873-a872b2591981}</Project>
+      <Name>DPSG.Portal.Framework.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\OpenAccess.targets')" Project="$(MSBuildExtensionsPath)\OpenAccess.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

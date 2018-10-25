@@ -1,0 +1,8 @@
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\bin\Debug\DPSG.Portal.BC.Types.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\bin\Debug\DPSG.Portal.BC.Types.pdb
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\bin\Debug\Newtonsoft.Json.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\bin\Debug\Newtonsoft.Json.Schema.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\bin\Debug\Newtonsoft.Json.Schema.xml
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\obj\Debug\DPSG.Portal.BC.Types.csprojResolveAssemblyReference.cache
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\obj\Debug\DPSG.Portal.BC.Types.dll
+H:\VH3_1\One Front Door\SourceCode\DPSG.Portal.BC.Services\DPSG.Portal.BC.Types\obj\Debug\DPSG.Portal.BC.Types.pdb

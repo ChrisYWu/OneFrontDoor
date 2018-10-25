@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Portal_Data_INT" Class="SDMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BSCCSQ07;Initial Catalog=Portal_Data_INT;User ID=PortalData_DBO_INT" SettingsObjectName="DPSG.Portal.BC.DAL.Properties.Settings" SettingsPropertyName="Portal_Data_INTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="BCMyday.StoreCondition" Member="StoreConditions">
+    <Type Name="StoreCondition">
+      <Column Name="StoreConditionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConditionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GSN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BCSystemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="StoreNote" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BottlerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="StoreCondition_StoreTieInRate" Member="StoreTieInRates" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreTieInRate" />
+      <Association Name="StoreCondition_StoreConditionNote" Member="StoreConditionNotes" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreConditionNote" />
+      <Association Name="StoreCondition_PriorityStoreConditionExecution" Member="PriorityStoreConditionExecutions" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="PriorityStoreConditionExecution" />
+      <Association Name="StoreCondition_PromotionExecution" Member="PromotionExecutions" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="PromotionExecution" />
+      <Association Name="StoreCondition_StoreConditionDisplay" Member="StoreConditionDisplays" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreConditionDisplay" />
+    </Type>
+  </Table>
+  <Table Name="BCMyday.StoreConditionDisplayDetail" Member="StoreConditionDisplayDetails">
+    <Type Name="StoreConditionDisplayDetail">
+      <Column Name="StoreConditionDisplayID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SystemPackageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SystemBrandID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StoreConditionDisplayDetailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="StoreConditionDisplay_StoreConditionDisplayDetail" Member="StoreConditionDisplay" ThisKey="StoreConditionDisplayID" OtherKey="StoreConditionDisplayID" Type="StoreConditionDisplay" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="BCMyday.StoreTieInRate" Member="StoreTieInRates">
+    <Type Name="StoreTieInRate">
+      <Column Name="StoreConditionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SystemBrandId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TieInRate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TotalDisplays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="StoreCondition_StoreTieInRate" Member="StoreCondition" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreCondition" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="BCMyday.StoreConditionNote" Member="StoreConditionNotes">
+    <Type Name="StoreConditionNote">
+      <Column Name="NoteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StoreConditionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageSharePointID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="StoreCondition_StoreConditionNote" Member="StoreCondition" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreCondition" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="BCMyday.PriorityStoreConditionExecution" Member="PriorityStoreConditionExecutions">
+    <Type Name="PriorityStoreConditionExecution">
+      <Column Name="PriorityExecutionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StoreConditionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ManagementPriorityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PriorityExecutionStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Association Name="StoreCondition_PriorityStoreConditionExecution" Member="StoreCondition" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreCondition" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="BCMyday.PromotionExecution" Member="PromotionExecutions">
+    <Type Name="PromotionExecution">
+      <Column Name="ExecutionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PromotionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoreConditionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PromotionExecutionStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastModified" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="StoreConditionDisplayID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="StoreCondition_PromotionExecution" Member="StoreCondition" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreCondition" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="BCMyday.StoreConditionDisplay" Member="StoreConditionDisplays">
+    <Type Name="StoreConditionDisplay">
+      <Column Name="StoreConditionDisplayID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StoreConditionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayLocationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PromotionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DisplayLocationNote" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DisplayTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OtherNote" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DisplayImageURL" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="GridX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GridY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClientDisplayID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReasonID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageSharePointID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TieInFairShareStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DPTieInFlag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="StoreConditionDisplay_StoreConditionDisplayDetail" Member="StoreConditionDisplayDetails" ThisKey="StoreConditionDisplayID" OtherKey="StoreConditionDisplayID" Type="StoreConditionDisplayDetail" />
+      <Association Name="StoreCondition_StoreConditionDisplay" Member="StoreCondition" ThisKey="StoreConditionID" OtherKey="StoreConditionID" Type="StoreCondition" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Function Name="BCMyday.pGetManagementPriorityIDsForBottler" Method="pGetManagementPriorityIDsForBottler">
+    <Parameter Name="BottlerID" Parameter="bottlerID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="pGetManagementPriorityIDsForBottlerResult">
+      <Column Name="PriorityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

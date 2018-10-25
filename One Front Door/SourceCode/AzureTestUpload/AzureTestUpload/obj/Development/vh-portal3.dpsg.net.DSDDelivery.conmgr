@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="vh-portal3.dpsg.net.DSDDelivery"
+  DTS:DTSID="{B83588E8-7E8D-404F-98BC-0E3F4ED47145}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=vh-portal3.dpsg.net;User ID=OnePortal;Initial Catalog=DSDDelivery;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFWEaYO5ysUanmhfs0XjSJQAAAAACAAAAAAADZgAAwAAAABAAAAClamw7SxKYYO/IxxCn2E/iAAAAAASAAACgAAAAEAAAAOsddfeeEIZ7yS/iypg7/Gl4AAAAFJCFNwiyLXg9V526VzDlTQfeSAdcLoX1C4YpT5Otk6caT0EXEtct2BVPDFCXhMps9oEWPmQepIZ94Rn3hUNqKohfGgdMSiUX87T+QKb6W9SUIJ9A4T0FKdJJ068uBjXu+2qF70TYnPgmZ67kcPPannArssHziMN8FAAAAI/dcUojyXAL4RPUUKRRy3JUXD1f</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

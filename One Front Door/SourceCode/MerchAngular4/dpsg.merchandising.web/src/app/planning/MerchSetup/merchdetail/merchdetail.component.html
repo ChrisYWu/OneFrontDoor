@@ -1,0 +1,235 @@
+<!-- header  start -->
+<div class="row fr-row-hdr" *ngIf="merchSelectedInfo!=undefined">
+
+    <div class="col-md-12  remove-col-margin">
+
+        <div class="row">
+
+            <div class="nm-frm-circle float-left ">
+                {{getChrOfMerchName(merchSelectedInfo.MerchName)}}
+            </div>
+            <div class="hdr-text float-left ">
+                {{merchSelectedInfo.MerchName}} <span class="hdr-text-sub">({{merchSelectedInfo.GSN}}) </span>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- header  end -->
+
+
+
+
+
+<!-- Body  start -->
+<div class="row fr-row-body" *ngIf="merchSelectedInfo!=undefined">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <div class="row pnl-ar-row">
+
+            <div class="col-md-1 fr-store-icon text-center">
+
+                <i class="fa fa-phone" aria-hidden="true"></i>
+
+            </div>
+            <div class="col-md-3 fr-store-col">
+                <input type="text" class="col-md-6 fr-user-input-phone" placeholder="Phone Number" [(ngModel)]="merchSelectedInfo.Phone" (keypress)= "onInputChange($event)" maxlength="10">
+            </div>
+
+            <div class="col-md-8 fr-store-col">
+                &nbsp;
+            </div>
+
+        </div>
+
+
+        <div class="row pnl-ar-row">
+
+            <div class="col-md-1 fr-store-icon text-center">
+
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+            </div>
+            <div class="col-md-6 fr-store-col">
+                <span dropdown (onToggle)="toggledDefaultRoute($event)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRoute.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeList" role="menuitem"><a class="dropdown-item" (click)="onSelectRoute(r)">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+
+            </div>
+            <div class="col-md-5 fr-store-col">
+                &nbsp;
+            </div>
+
+        </div>
+
+
+
+        <div class="row pnl-ar-row">
+
+            <div class="col-md-1 fr-store-icon text-center">
+
+                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+
+            </div>
+            <div class="col-md-6 fr-store-col">
+
+                <div class="cal-text"> Work days</div>
+            </div>
+
+            <div class="col-md-5 fr-store-col">
+                &nbsp;
+            </div>
+
+        </div>
+
+        <div class="row pnl-ar-row">
+
+            <div class="col-md-1 fr-store-icon">
+
+                &nbsp;
+
+            </div>
+            <div class="col-md-10 fr-store-col day-checkbox">
+
+                <label> <input type="checkbox" name="dayofWeek2" [(ngModel)]="merchSelectedInfo.Mon" (click)="onChecked('Mon')"> Monday </label>
+                         <span dropdown (onToggle)="toggled($event,2)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                          {{selectedRouteMon.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeListByDay" role="menuitem"><a class="dropdown-item" (click)="onSelectRouteWeek(r,'Mon')">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+                <br/>
+                <label> <input type="checkbox" name="dayofWeek3" [(ngModel)]="merchSelectedInfo.Tues" (click)="onChecked('Tue')"> Tuesday </label> 
+                 <span dropdown (onToggle)="toggled($event,3)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRouteTue.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeListByDay" role="menuitem"><a class="dropdown-item" (click)="onSelectRouteWeek(r,'Tue')">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+                <br/>
+                <label> <input type="checkbox" name="dayofWeek4" [(ngModel)]="merchSelectedInfo.Wed" (click)="onChecked('Wed')"> Wednesday</label>
+                  <span dropdown (onToggle)="toggled($event,4)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRouteWed.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeListByDay" role="menuitem"><a class="dropdown-item" (click)="onSelectRouteWeek(r,'Wed')">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+                <br/>
+                <label> <input type="checkbox" name="dayofWeek5" [(ngModel)]="merchSelectedInfo.Thu" (click)="onChecked('Thu')"> Thursday </label> 
+                <span dropdown (onToggle)="toggled($event, 5)" class="fr-user-input" >
+                          <a href id="simple-dropdown" dropdownToggle >
+                           {{selectedRouteThu.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeListByDay" role="menuitem"><a class="dropdown-item" (click)="onSelectRouteWeek(r,'Thu')">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+                <br/>
+                <label> <input type="checkbox" name="dayofWeek6" [(ngModel)]="merchSelectedInfo.Fri" (click)="onChecked('Fri')"> Friday</label>
+                  <span dropdown (onToggle)="toggled($event,6)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRouteFri.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeListByDay" role="menuitem"><a class="dropdown-item" (click)="onSelectRouteWeek(r,'Fri')">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+                <br/>
+                <label> <input type="checkbox" name="dayofWeek7" [(ngModel)]="merchSelectedInfo.Sat" (click)="onChecked('Sat')"> Saturday</label>
+                 <span dropdown (onToggle)="toggled($event,7)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRouteSat.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeListByDay" role="menuitem"><a class="dropdown-item" (click)="onSelectRouteWeek(r,'Sat')">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+                <br/>
+                <label> <input type="checkbox" name="dayofWeek1" [(ngModel)]="merchSelectedInfo.Sun" (click)="onChecked('Sun')"> Sunday</label>
+                <span dropdown (onToggle)="toggled($event,1)" class="fr-user-input">
+                          <a href id="simple-dropdown" dropdownToggle>
+                           {{selectedRouteSun.RouteName}}
+                          </a>
+                          <ul class="dropdown-menu" dropdownMenu aria-labelledby="simple-dropdown">
+                            <li *ngFor="let r of routeListByDay" role="menuitem"><a class="dropdown-item" (click)="onSelectRouteWeek(r,'Sun')">{{r.RouteName}}</a></li>                          
+                          </ul>
+                        </span>
+                <br/>
+            </div>  
+
+            <div class="col-md-1 fr-store-col">
+                &nbsp;
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <br><br>
+</div>
+<!-- Body  End -->
+
+
+<!-- Body  start to remove -->
+<br><br>
+
+<!--<div class="row fr-row-body" *ngIf="merchSelectedInfo!=undefined">-->
+
+<!--<div class="col-md-1"></div>-->
+<!--<div class="pull-right fr-row-body-msg" *ngIf="ShowSaveMsg">
+        <span class="msg-alert">Saved Successfully</span>
+    </div>-->
+<!--<div class="pull-right fr-row-body-fotter">
+
+        <a type="button" class="btn btn-me btn-light-gray" (click)="onCancel()">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</a> &nbsp;&nbsp;
+        <a type="submit" class="btn btn-me btn-light-blue" (click)="selectedRoute.RouteID==-1?detailModal.show():onSave()">&nbsp;&nbsp;Save&nbsp;&nbsp;</a>
+
+    </div>-->
+
+<!--</div>-->
+
+<!-- Body  End to remove -->
+
+
+<div class="modal fade" bsModal #detailModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
+
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close" (click)="detailModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                <h4 class="modal-title">Merchandiser SetUp</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="comment">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i> &nbsp;Default route has not be defined for this merchandiser.
+        </label>
+                </div>
+                <div class="form-group" style="text-align:center">
+                    <a class="btn btn-primary addstore-bordercolor" style="border-color:#51626f" (click)="onSave();detailModal.hide();">Ok</a>
+                    <a class="btn btn-primary addstore-bordercolor" style="border-color:#51626f" (click)="detailModal.hide();">Cancel</a>
+                </div>
+            </div>
+
+        </div>
+        <div>
+        </div>

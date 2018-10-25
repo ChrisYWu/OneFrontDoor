@@ -1,0 +1,1757 @@
+﻿<!DOCTYPE html>
+<meta content="text/html; charset:utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="0" />
+
+<html>
+<head>
+    <title>Readme Merchandiser Web Service</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .TFtable {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+            .TFtable td {
+                padding: 7px;
+                border: #4e95f4 1px solid;
+            }
+            /* provide some minimal visual accomodation for IE8 and below */
+            .TFtable tr {
+                background: #b8d1f3;
+            }
+                /*  Define the background color for all the ODD background rows  */
+                .TFtable tr:nth-child(odd) {
+                    background: #b8d1f3;
+                }
+                /*  Define the background color for all the EVEN background rows  */
+                .TFtable tr:nth-child(even) {
+                    background: #dae5f4;
+                }
+    </style>
+    <script type="text/javascript">
+        function getBaseURL() {
+            return window.location.href.substring(0, window.location.href.length - 12);
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <h3>This is the live documents for Merchandiser Web Services for MyDay</h3>
+
+    <h4>Method 1 - GetMerchandisableStoresByBranch() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchandisableStoresByBranch</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchandisableStoresByBranch?SAPBranchID={SAPBranchID}</p>
+                <p>/api/Merch/GetMerchandisableStoresByBranch?SAPBranchID={SAPBranchID}&mdate={mdate}</p>
+                <p>Test URL</p>
+                <p><a id="method1-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method1-2" target="_blank" href="#">Test2</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String-SAPBranchID [Required]</li>                        
+                        <li>DateTime-mdate [Optional]</li>
+                        <b>Description:</b> This is optional parameter to get the data based on LastModifiedDate, In case of null, it will fetch all the records otherwise greater than LastModifiedDate
+                    </ul>
+                </p>              
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+    <h4>Method 2 - GetMerchProfileByGSN() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchProfileByGSN</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>api/Merch/GetMerchProfileByGSN?GSN={GSN}</p>
+                <p>Test URL</p>
+                <p><a id="method2-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String-GSN [Required]</li>  
+                        <b>Description:</b> Merchandiser user GSN                   
+                    </ul>
+                </p>           
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 3 - GetMerchSchedule() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchSchedule</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchSchedule?MerchGroupID={MerchGroupID}&GSN={GSN}<p>
+                <p>/api/Merch/GetMerchSchedule?MerchGroupID={MerchGroupID}&GSN={GSN}&StartDispatchDate={StartDispatchDate}<p>
+                <p>/api/Merch/GetMerchSchedule?MerchGroupID={MerchGroupID}&GSN={GSN} &StartDispatchDate={StartDispatchDate}&LastScheduleDate={LastScheduleDate}<p>
+                <p>/api/Merch/GetMerchSchedule?MerchGroupID={MerchGroupID}&GSN={GSN}&StartDispatchDate={StartDispatchDate}&LastScheduleDate={LastScheduleDate}&BatchID={BatchID}<p>
+
+                <p>Test URL</p>
+                <p><a id="method3-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method3-2" target="_blank" href="#">Test1</a></p>
+                <p><a id="method3-3" target="_blank" href="#">Test1</a></p>
+                <p><a id="method3-4" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Integer-MerchGroupID [Required]</li>
+                        <b>Description:</b> Merchandiser GroupID for Group Name like Lewisville, MidCities, Minneapolis etc. (SDM Table Name - [Setup].[MerchGroup])
+                        <li>String-GSN [Required]</li>
+                        <b>Description:</b> Merchandiser GSN
+                        <li>Date-StartDispatchDate [Optional]</li>
+                        <b>Description:</b>- Start schedule date, if not provided the current date will be used. The service will provide schedule for the next 4 weeks(configurable from the server side) starting from this date. 
+                        <li>Date-LastScheduleDate [Optional]</li>
+                        <b>Description:</b> Merchendiser Last scheduled date. This is the last day when MyDay has schedule for the GSN in the context. From StartDispatchDate to LastScheduleDate, MyDay has the schedule as current as the BatchID indicated with the next parameter. So the service will only need to provde differential updates for this range. For any day passed LastScheduleDate, the service will provide full load.
+                        <li>Integer-BatchID [Optional]</li>
+                        <b>Description:</b> Used to identify the downloaded scheduled data in Merchendiser device, as explained above.
+                    </ul>
+                </p>        
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 3.1 - GetMerchPlan() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchPlan</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchPlan?MerchGroupID={MerchGroupID}&GSN={GSN}<p>
+                <p>/api/Merch/GetMerchPlan?MerchGroupID={MerchGroupID}&GSN={GSN}&StartDispatchDate={StartDispatchDate}<p>
+                <p>/api/Merch/GetMerchPlan?MerchGroupID={MerchGroupID}&GSN={GSN} &StartDispatchDate={StartDispatchDate}&LastScheduleDate={LastScheduleDate}<p>
+                <p>/api/Merch/GetMerchPlan?MerchGroupID={MerchGroupID}&GSN={GSN}&StartDispatchDate={StartDispatchDate}&LastScheduleDate={LastScheduleDate}&BatchID={BatchID}<p>
+
+                <p>Test URL</p>
+                <p><a id="method31-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Integer-MerchGroupID [Required]</li>
+                        <b>Description:</b> Merchandiser GroupID for Group Name like Lewisville, MidCities, Minneapolis etc. (SDM Table Name - [Setup].[MerchGroup])
+                        <li>String-GSN [Required]</li>
+                        <b>Description:</b> Merchandiser GSN
+                        <li>Date-StartDispatchDate [Optional]</li>
+                        <b>Description:</b>- Start schedule date, if not provided the current date will be used. The service will provide schedule for the next 4 weeks(configurable from the server side) starting from this date.
+                        <li>Date-LastScheduleDate [Optional]</li>
+                        <b>Description:</b> Merchendiser Last scheduled date. This is the last day when MyDay has schedule for the GSN in the context. From StartDispatchDate to LastScheduleDate, MyDay has the schedule as current as the BatchID indicated with the next parameter. So the service will only need to provde differential updates for this range. For any day passed LastScheduleDate, the service will provide full load.
+                        <li>Integer-BatchID [Optional]</li>
+                        <b>Description:</b> Used to identify the downloaded scheduled data in Merchendiser device, as explained above.
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+    <h4>Method 4 - RegisterDPSAppleToken() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>RegisterDPSAppleToken</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/RegisterDPSAppleToken?BundleID={BundleID}&GSN={GSN}&AppleToken={AppleToken}</p>
+                <p>Test URL</p>
+                <p><a id="method4-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String-BundleID [Required]</li>
+                        <li>String-GSN [Required]</li>
+                        <b>Description:</b> Merchandiser GSN
+                        <li>String-AppleToken [Required]</li>
+                        <b>Description:</b> Merchandiser device unique ID
+                    </ul>
+                </p>     
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 5 - GetMerchStoreVisitDetailsByGSN() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchStoreVisitDetailsByGSN</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchStoreVisitDetailsByGSN?GSN={GSN}</p>
+                <p>/api/Merch/GetMerchStoreVisitDetailsByGSN?GSN={GSN}&ScheduleDate={ScheduleDate}</p>
+                <p>Test URL</p>
+                <p><a id="method5-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method5-2" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String-GSN [Required]</li>
+                        <b>Description:</b> Merchandiser GSN
+                        <li>Date-ScheduleDate [Optional]</li>
+                        <b>Description:</b> Merchandiser schedule date , in case of null, it will fetch data based on current date
+                    </ul>
+                </p>          
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 6 - UploadMerchStopCheckIn() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadMerchStopCheckIn</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadMerchStopCheckIn</p>
+                <p>Test URL</p>
+                <p><a id="method6-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                        <ul>
+                            <li>DateTime-ScheduleDate</li>
+                            <b>Description:</b> Merchandiser schedule date
+                            <li>string-GSN</li>
+                            <b>Description:</b> Merchandiser GSN
+                            <li>Integer-MerchGroupID</li>
+                            <b>Description:</b> Merchandiser GroupID for Group Name like Lewisville, MidCities, Minneapolis etc. (SDM Table Name - [Setup].[MerchGroup])
+                            <li>Integer-ClientSequence</li>
+                            <b>Description:</b> Merchandiser visit sequence number
+                            <li>Integer-RouteID</li>
+                            <b>Description:</b> Merchandiser Route ID (SDm Table Name - [Planning].[Route])
+                            <li>Integer64-SAPAccountNumber</li>
+                            <li>Boolean-IsOffRouteStop</li>
+                            <li>DateTime-ClientCheckInTime</li>
+                            <li>string-ClientCheckInTimeZone</li>    
+                            <b>Description:</b> Merchandiser checkin time zone, Please see the notes for available time zone                       
+                            <li>decimal-CheckInLatitude</li>
+                            <li>decimal-CheckInLongitude</li>
+                            <li>Integer-DriveTimeInMinutes</li>
+                            <b>Description:</b> Merchandiser drive time to reach store in minuates
+                            <li>decimal-StandardMileage</li>
+                            <b>Description:</b> Mileage to reach store                           
+                            <li>decimal-UserMileage</li>
+                            <b>Description:</b>Merchandiser given mileage
+                        </ul>
+                   
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Sample Data Params (POST) </td>
+            <td>
+                {
+                ScheduleDate: "2016-07-06",
+                GSN: "ADEAX015",
+                MerchGroupID: 101,
+                ClientSequence: 1,
+                SameStoreSequence: 1,
+                RouteID: 10136,
+                SAPAccountNumber: 11228986,
+                IsOffRouteStop: true,
+                ClientCheckInTime: "2016-07-05T00:00:00",
+                ClientCheckInTimeZone: "CDT",                
+                CheckInLatitude: 31.617078,
+                CheckInLongitude: 97.052886,
+                DriveTimeInMinutes: 13,
+                StandardMileage: 8,
+                UserMileage: 0.0
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Time Zone Constraint:  AKDT,AKST,CDT,CST,EDT,EST,GMT,HADT,HAST ,HST,MDT,MST,PDT,PST,UTC </td>
+        </tr>
+
+    </table>
+
+    <h4>Method 7 - UploadMerchStopCheckOut() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadMerchStopCheckOut</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadMerchStopCheckOut</p>
+                <p>Test URL</p>
+                <p><a id="method7-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>DateTime-ScheduleDate</li>
+                        <b>Description:</b> Merchandiser schedule date
+                        <li>string-GSN</li>
+                        <b>Description:</b> Merchandiser GSN    
+                        <li>Integer-MerchGroupID</li>   
+                        <b>Description:</b> Merchandiser GroupID for Group Name like Lewisville, MidCities, Minneapolis etc. (SDM Table Name - [Setup].[MerchGroup])                
+                        <li>Integer-ClientSequence</li>  
+                        <b>Description:</b> Merchandiser visit sequence number                    
+                        <li>Integer64-SAPAccountNumber</li>                     
+                        <li>DateTime-ClientCheckOutTime</li>
+                        <li>string-ClientCheckOutTimeZone</li> 
+                        <b>Description:</b> Merchandiser checkin time zone, Please see the notes for available time zone                                              
+                        <li>decimal-CheckOutLatitude</li>
+                        <li>decimal-CheckOutLongitude</li>
+                        <li>Integer-CasesHandeled</li>
+                        <li>Integer-CasesInBackroom</li>
+                        <li>string-Comments</li>    
+                        <li>Integer-AtAccountTimeInMinute</li>
+                        <b>Description:</b>Merchandiser time spent in store (in Minute)
+                    </ul>
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                ScheduleDate: "2016-07-06",
+                GSN: "ADEAX015",              
+                ClientSequence: 1,
+                SameStoreSequence: 1,
+                MerchGroupID: 101,
+                SAPAccountNumber: 11228986,
+                ClientCheckOutTime:"2016-07-06T00:00:00",
+                ClientCheckOutTimeZone:"CDT",                
+                CheckOutLatitude:31.617078,
+                CheckOutLongitude:-97.052886,
+                CasesHandeled:12,
+                CasesInBackroom:30,
+                Comments:"Test Data",
+                AtAccountTimeInMinute:102
+                }
+
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Time Zone Constraint:  AKDT,AKST,CDT,CST,EDT,EST,GMT,HADT,HAST,HST,MDT,MST,PDT,PST,UTC </td>
+        </tr>
+
+    </table>
+
+    <h4>Method 8 - UploadMerchStoreSignature() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadMerchStoreSignature</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadMerchStoreSignature</p>
+                <p>Test URL</p>
+                <p><a id="method8-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>DateTime-ScheduleDate</li>
+                        <b>Description:</b> Merchandiser schedule date
+                        <li>string-GSN</li>
+                        <b>Description:</b> Merchandiser GSN                     
+                        <li>Integer64-SAPAccountNumber</li>                        
+                        <li>string-ManagerName</li>                                              
+                        <li>string-SignatureName</li>
+                        <b>Description:</b>Signature image URL
+                        <li>DateTime-ClientTime</li>
+                        <b>Description:</b> Merchandiser datetime at the time of upload
+                        <li>string-ClientTimeZone</li>        
+                        <b>Description:</b> Merchandiser time zone at the time of upload, see time zone constraint in Notes
+                        <li>string-RelativeURL[Optional]</li>
+                        <li>string-AbsoluteURL[Optional]</li>
+                        <b>Description:</b> This has to be globally unique, otherwise error is thrown
+                        <li>string-Container[Optional]</li>
+                        <li>string-StorageAccount[Optional]</li>       
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    ScheduleDate: "2016-07-13",
+                    GSN: "ADEAX015",
+                    SAPAccountNumber: 11228986,
+                    ManagerName: "Test Manager Name",
+                    SignatureName: "Test Signature Name",
+                    ClientTime:"2016-07-13T00:00:00",
+                    ClientTimeZone:"CDT",
+                    RelativeURL:"2016/09/14/default-636094429154152083.jpg",
+                    AbsoluteURL:"https://mydpspoc.blob.core.windows.net/displaybuild/2016/09/14/default-636094429154152083.jpg",
+                    Container:"storesignature",
+                    StorageAccount:"mydpspoc"
+                }
+
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Time Zone Constraint:  AKDT,AKST,CDT,CST,EDT,EST,GMT,HADT,HAST ,HST,MDT,MST,PDT,PST,UTC </td>
+        </tr>
+
+    </table>
+
+    <h4>Method 9 - UploadMerchStorePicture() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadMerchStorePicture</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadMerchStorePicture</p>
+                <p>Test URL</p>
+                <p><a id="method9-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>DateTime-ScheduleDate</li>
+                        <b>Description:</b> Merchandiser schedule date
+                        <li>string-GSN</li>
+                        <b>Description:</b> Merchandiser GSN
+                        <li>Integer64-SAPAccountNumber</li>
+                        <b>Description:</b> SAPAccountNumber (SDM Table: SAP.Account)
+                        <li>Integer-ClientPhotoID</li>
+                        <li>string-Caption</li>
+                        <li>string-PictureName</li>
+                        <li>Integer-SizeInByte</li>
+                        <li>string-Extension</li>
+                        <b>Description:</b> Image extension like png, jpg, bmp etc
+                        <li>DateTime-ClientTime</li>
+                        <b>Description:</b> Merchandiser datetime at the time of upload
+                        <li>string-ClientTimeZone</li>
+                        <b>Description:</b> Merchandiser time zone at the time of upload, see time zone constraint in Notes   
+                        <li>string-RelativeURL[Optional]</li>
+                        <li>string-AbsoluteURL[Optional]</li>
+                        <b>Description:</b> This has to be globally unique, otherwise error is thrown
+                        <li>string-Container[Optional]</li>
+                        <li>string-StorageAccount[Optional]</li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                ScheduleDate: "2016-07-13",
+                GSN: "ADEAX015",
+                SAPAccountNumber: 11228986,
+                ClientPhotoID:10,
+                Caption:"Test Caption",
+                PictureName:"Test Picture Name",
+                SizeInByte:200,
+                Extension:"png",
+                ClientTime:"2016-07-13T00:00:00",
+                ClientTimeZone:"CDT",
+                RelativeURL:"2016/09/14/default-636094429154152083.jpg",
+                AbsoluteURL:"https://mydpspoc.blob.core.windows.net/displaybuild/2016/09/14/default-636094429154152083.jpg",
+                Container:"storepicture",
+                StorageAccount:"mydpspoc"
+                }
+
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Time Zone Constraint:  AKDT,AKST,CDT,CST,EDT,EST,GMT,HADT,HAST ,HST,MDT,MST,PDT,PST,UTC </td>
+        </tr>
+
+    </table>
+
+    <h4>Method 10 - UploadAdhocMileage() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadAdhocMileage</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadAdhocMileage</p>
+                <p>Test URL</p>
+                <p><a id="method10-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>DateTime-ScheduleDate</li>
+                        <b>Description:</b> Merchandiser schedule date
+                        <li>string-GSN</li>                     
+                        <b>Description:</b> Merchandiser GSN
+                        <li>Integer-ClientMileageID</li>
+                        <li>decimal-UserMileage</li>
+                        <li>string-Description</li> 
+                        <li>Integer-MerchGroupID</li>
+                        <li>DateTime-ClientTime</li>
+                        <b>Description:</b> Merchandiser datetime at the time of upload
+                        <li>string-ClientTimeZone</li>
+                        <b>Description:</b> Merchandiser time zone at the time of upload, see time zone constraint in Notes      
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    ScheduleDate: "2016-07-13",
+                    GSN: "ADEAX015",
+                    ClientMileageID:1,
+                    UserMileage:12.5,
+                    Description:"Test Description",
+                    MerchGroupID:101,
+                    ClientTime:"2016-07-13T00:00:00",
+                    ClientTimeZone:"CDT"
+                }
+
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Time Zone Constraint:  AKDT,AKST,CDT,CST,EDT,EST,GMT,HADT,HAST ,HST,MDT,MST,PDT,PST,UTC </td>
+        </tr>
+
+    </table>
+
+    <h4>Method 11 - GetMerchStoreDelivery() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchStoreDelivery</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchStoreDelivery?DeliveryDate={DeliveryDate}&SAPAccountNumber={SAPAccountNumber}</p>      
+                <p>/api/Merch/GetMerchStoreDelivery?DeliveryDate={DeliveryDate}&SAPAccountNumber={SAPAccountNumber}&IsDetailNeeded={true}</p>           
+                <p>Test URL</p>
+                <p><a id="method11-1" target="_blank" href="#">Test1</a></p>    
+                <p><a id="method11-2" target="_blank" href="#">Test2</a></p>               
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Date-DeliveryDate [Optional]</li>
+                        <li>String-SAPAccountNumber [Required]</li>
+                        <b>Description:</b> list of SAPAccountNumber with comma seperated (SDM Table: SAP.Account)
+                        <li>bool - IsDetailNeeded [Optional]</li>
+                        <b>Description:</b> By default, value is true and return store delivery with items details, In case of "false", it will return only the store delivery detail.
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 12 - GetItemMaster() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetItemMaster</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetItemMaster?mdate={mdate}</p>
+                <p>Test URL</p>
+                <p><a id="method12-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method12-2" target="_blank" href="#">Test2</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Date-mdate[Optional]</li>
+                    </ul>
+                    <b>Description:</b> Route Manager Item Master, location agnostic
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 13 - UploadDisplayBuild() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadDisplayBuild</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Display/UploadDisplayBuild</p>
+                <p>Test URL</p>
+                <p><a id="method13-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Integer64-SAPAccountNumber[Required]</li>
+                        <b>Description:</b> SAPAccountNumber in SDM, or Customer Number in Route Manager
+                        <li>string-GSN[Required]</li>
+                        <b>Description:</b> Account Manager GSN
+                        <li>Integer-PromotionID[Required]</li>
+                        <b>Description:</b> Promotion ID, as defined in SDM
+                        <li>Boolean-RequiresDisplay[Required]</li>
+                        <b>Description:</b> Whether the display build is required or not
+                        <li>Integer-PromotionExecutionStatusID[Required]</li>
+                        <b>Description:</b> Sales execution status of the promotion, referenced to ExecutionStatus Table in SDM. Some refer to this as REV status
+                        <li>Integer-DisplayLocationID[Required]</li>
+                        <b>Description:</b> For Display Location, referenced to DisplayLocation table in SDM
+                        <li>Integer-DisplayTypeID[Optional]</li>
+                        <b>Description:</b> For Display Type, referenced to DisplayType table in SDM
+                        <li>DateTime-ProposedStartDate[Required]</li>
+                        <li>DateTime-ProposedEndDate[Optional]</li>
+                        <li>string-BuildInstruction[Optional]</li>
+                        <li>string-InstructionImageName[Optional]</li>
+                        <li>string-RelativeURL[Optional]</li>
+                        <li>string-AbsoluteURL[Optional]</li>
+                        <b>Description:</b> This has to be globally unique, otherwise error is thrown
+                        <li>string-Container[Optional]</li>
+                        <li>string-StorageAccount[Optional]</li>
+                    </ul>
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Sample Data Params (POST) </td>
+            <td>
+                {
+                    SAPAccountNumber : 11276019,
+                    GSN : "WUXYX001",
+                    PromotionID : 58420,
+                    RequiresDisplay : "True",
+                    PromotionExecutionStatusID : 2,
+                    DisplayLocationID : 211,
+                    DisplayTypeID : 5,
+                    ProposedStartDate : "2016-08-01",
+                    ProposedEndDate : "2016-11-01",
+                    BuildInstruction : "Build it well!",
+                    InstructionImageName : "",
+                    RelativeURL:"2016/09/14/default-636094429154152083.jpg",
+                    AbsoluteURL:"https://mydpspoc.blob.core.windows.net/displaybuild/2016/09/14/default-636094429154152083.jpg",
+                    Container:"displaybuild",
+                    StorageAccount:"mydpspoc"
+                }
+            </td>
+        </tr>
+    </table>
+
+    <h4>Method 14 - UploadDisplayBuildExecution() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadDisplayBuildExecution</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Display/UploadDisplayBuildExecution</p>
+                <p>Test URL</p>
+                <p><a id="method14-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Integer64-SAPAccountNumber[Optional]</li>
+                        <b>Description:</b> SAPAccountNumber in SDM, or Customer Number in Route Manager
+                        <li>string-GSN[Required]</li>
+                        <b>Description:</b> Account Manager GSN
+                        <li>Integer-PromotionID[Optional]</li>
+                        <b>Description:</b> Promotion ID, as defined in SDM
+                        <li>Interger-DisplayBuildID[Optional]</li>
+                        <b>Description:</b> DisplayBuildID, if uploaded by Merchandiser, they will have the displaybuildID. If uploaded by AM, they may or may not have displayBuildID, if not, they will have PromotionID as well as SAPAccountNumber
+                        <li>Integer-BuildStatusID[Required]</li>
+                        <li>DateTime-ClientTime[Required]</li>
+                        <li>String-ClientTimeZone[Required]</li>
+                        <li>String-ClientAppSource[Required]</li>
+                        <b>Description:</b> Indicating the build status
+                        <li>Integer-DisplayLocationID[Optional]</li>
+                        <b>Description:</b> For Display Location, referenced to DisplayLocation table in SDM
+                        <li>Integer-DisplayTypeID[Optional]</li>
+                        <b>Description:</b> For Display Type, referenced to DisplayType table in SDM
+                        <li>Integer-BuildRefulsalReasonID[Optional]</li>
+                        <li>String-BuildNote[Optional]</li>
+                        <li>string-ImageName[Optional]</li>
+                        <li>decimal-Latitude[Optional]</li>
+                        <li>decimal-Longitude[Optional]</li>
+                        <li>string-RelativeURL[Optional]</li>
+                        <li>string-AbsoluteURL[Optional]</li>
+                        <b>Description:</b> This has to be globally unique, otherwise error is thrown
+                        <li>string-Container[Optional]</li>
+                        <li>string-StorageAccount[Optional]</li>    
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Sample Data Params (POST) </td>
+            <td>
+                {
+                    SAPAccountNumber : 11276019,
+                    GSN : "WUXYX001",
+                    PromotionID : 58420,
+                    DisplayBuildID : 148,
+                    BuildStatusID : 1,
+                    ClientTime : "2016-08-30T11:08:25",
+                    ClientTimeZone : "CDT",
+                    ClientAppSource : "Account Manager MyDay",
+                    DisplayLocationID : 211,
+                    DisplayTypeID : 5,
+                    BuildRefusalReasonID : 2,
+                    BuildNote : "There is no space in the store",
+                    Latitude : 37.580521,
+                    Longitude : -122.332832,
+                    RelativeURL:"2016/09/14/default-636094429154152083.jpg",
+                    AbsoluteURL:"https://mydpspoc.blob.core.windows.net/displaybuild/2016/09/14/default-636094429154152083.jpg",
+                    Container:"displaybuild",
+                    StorageAccount:"mydpspoc",
+                    ImageName : "Test"
+                }
+            </td>
+        </tr>
+    </table>
+
+    <h4>Method 15 - GetDisplayBuildWithLatestStatus() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetDisplayBuildWithLatestStatus</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Display/GetDisplayBuildWithLatestStatus?SAPAccountNumber={SAPAccountNumber}&DispatchDate={DispathDate}&IncludeBuiltOnes={true|false}</p>
+                <p>Test URL</p>
+                <p><a id="method15-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method15-2" target="_blank" href="#">Test2</a></p>
+                <p><a id="method15-3" target="_blank" href="#">Test3</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String-SAPAccountNumber[Required]</li>
+                        <b>Description:</b> SAPAccountNumber, or Customer Number in Route Manager
+                        <li>DateTime-DispatchDate[Optional]</li>
+                        <b>Description:</b> The dispatch date or schedule date from the merch perspective, default is today
+                        <li>Boolean-IncludeBuiltOnes[Optional]</li>
+                        <b>Description:</b> Specify whether or not the built ones should be included or not, default is false
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 16 - GetDisplayBuildWithLatestStatusByRouteNumber() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetDisplayBuildWithLatestStatusByRouteNumber</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Display/GetDisplayBuildWithLatestStatusByRouteNumber?RouteNumber={RouteNumber}</p>
+                <p>Test URL</p>
+                <p><a id="method16-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String-RouteNumber[Required]</li>
+                        <b>Description:</b> Route Number as in Route Manager
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 17 - GetMerchBuildMaster() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchBuildMaster</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Display/GetMerchBuildMaster?LastModified={LastModified}</p>
+                <p>Test URL</p>
+                <p><a id="method17-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method17-2" target="_blank" href="#">Test2</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>DateTime-LastModifiedDate[Optional]</li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 18 - GetImagePostingURL() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetImagePostingURL</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Imaging/GetImagePostingURL?imageType={DisplayBuild|StorePicture|StoreSignature|MerchandiserProfileImage}&fileExtension={.jpg|.bmp|.jpeg|...}&clientIdentifier={clientIdentifier}</p>
+                <p>Test URL</p>
+                <p><a id="method18-1" target="_blank" href="#">Test1</a></p>
+                <p><a id="method18-2" target="_blank" href="#">Test2</a></p>
+                <p><a id="method18-3" target="_blank" href="#">Test3</a></p>
+                <p><a id="method18-4" target="_blank" href="#">Test4</a></p>
+                <p><a id="method18-5" target="_blank" href="#">Test5</a></p>             
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String-imageType[Required]</li>
+                        <b>Description:</b>Specifiy the image type for the service to locate the blob storage container, where the access policy can be specified. Note the supported values.
+                        <li>String-fileExtension[Required]</li>
+                        <b>Description:</b>File extension starts with [.].
+                        <li>String-clientIdentifier[optional]</li>
+                        <b>Description:</b>A string that can identify the client, could be device ID or current User ID. If nothing is provided the string "default" will be used.
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+    <h4>Method 19 - ExtendContainerReadSAS() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>ExtendContainerReadSAS</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Imaging/ExtendContainerReadSAS</p>
+                <p>Test URL</p>
+                <p><a id="method19-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP Get</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Int-ContainerID [Required]</li>
+                        <b>Description:</b> The containerID for the Azure Blob Storage Container
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Method 20 - UploadMerchProfilePicture() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadMerchProfilePicture</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadMerchProfilePicture</p>
+                <p>Test URL</p>
+                <p><a id="method20-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>                        
+                        <li>string-GSN</li>
+                        <b>Description:</b> Merchandiser GSN                       
+                        <li>string-RelativeURL[Optional]</li>
+                        <li>string-AbsoluteURL[Optional]</li>
+                        <b>Description:</b> This has to be globally unique, otherwise error is thrown
+                        <li>string-Container[Optional]</li>
+                        <li>string-StorageAccount[Optional]</li>
+                        <li>DateTime-ClientTime</li>
+                        <b>Description:</b> Merchandiser datetime at the time of upload
+                        <li>string-ClientTimeZone</li>
+                        <b>Description:</b> Merchandiser time zone at the time of upload, see time zone constraint in Notes
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                GSN: "ADEAX015",               
+                RelativeURL:"2016/09/14/default-636094429154152083.jpg",
+                AbsoluteURL:"https://mydpspoc.blob.core.windows.net/displaybuild/2016/09/14/default-636094429154152083.jpg",
+                Container:"merchandiserprofile",
+                StorageAccount:"mydpspoc",
+                ClientTime:"2016-07-13T00:00:00",
+                ClientTimeZone:"CDT",
+                }
+
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>Time Zone Constraint:  AKDT,AKST,CDT,CST,EDT,EST,GMT,HADT,HAST ,HST,MDT,MST,PDT,PST,UTC </td>
+        </tr>
+
+    </table>
+
+    <h4>Method 21 - UploadMerchPhoneNumber() detail</h4>
+
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadMerchPhoneNumber</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadMerchPhoneNumber</p>
+                <p>Test URL</p>
+                <p><a id="method21-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>string-GSN</li>
+                        <b>Description:</b> Merchandiser GSN
+                        <li>string-PhoneNumber</li>
+                        <b>Description:</b>Merchandiser Phone Number to Update                       
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                   GSN: "ADEAX015",
+                   PhoneNumber:"1234567890"              
+                }
+
+            </td>
+        </tr>
+      
+    </table>
+
+    <h4>Method 22 - UploadMerchStopDNS() detail</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadMerchStopDNS</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadMerchStopDNS</p>
+                <p>Test URL</p>
+                <p><a id="method22-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Int-DNSReasonID</li>                       
+                        <li>DateTime-DispatchDate</li>
+                        <li>String-GSN</li>
+                        <li>Int-MerchGroupID</li>
+                        <li>Int-RouteID</li>
+                        <li>Int-ClientSequence</li>
+                        <li>Int64-SAPAccountNumber</li>
+                        <li>Bool-IsOffRouteStop</li>
+                        <li>Int-SameStoreSequence</li>
+                        <li>DateTime-DNSCheckInTime</li>
+                        <li>String-DNSCheckInTimeZone</li>
+                        <li>decimal-DNSCheckInLatitude</li>
+                        <li>decimal-DNSCheckInLongitude</li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                DNSReasonID: 1,
+                DispatchDate: '2017-02-08',
+                GSN: "TIWNX001",
+                MerchGroupID:101,
+                RouteID:10135,
+                ClientSequence:1,
+                SAPAccountNumber: 11289585,
+                IsOffRouteStop: true,
+                SameStoreSequence:1,
+                DNSCheckInTime: '2017-02-08',
+                DNSCheckInTimeZone: 'CST',
+                DNSCheckInLatitude: 0.0,
+                DNSCheckInLongitude: 0.0
+                }
+
+            </td>
+        </tr>
+
+    </table>
+
+    <h4>Method 23 - GetMerchandisingDetails() detail</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchandisingDetails</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchandisingDetails?DeliveryDate={OperationDate}&SAPAccountNumber={SAPAccountNumber}</p>
+                <p>Test URL</p>
+                <p><a id="method23-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP GET</td>
+        </tr>
+        <tr>
+            <td>URL Params</td>
+            <td>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Date-OperationDate [Optional]</li>
+                        <li>String-SAPAccountNumber [Required]</li>
+                        <b>Description:</b> list of SAPAccountNumber with comma seperated (SDM Table: SAP.Account)
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>Not Applicable (Get Method)</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>The checkin and checkout time returned is in UTC</td>
+        </tr>
+
+    </table>
+
+    <h4>Method 24 - GetMerchandisingDetailsPost() detail</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchandisingDetailsPost</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchandisingDetailsPost</p>
+                <p>Test URL</p>
+                <p><a id="method24-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Date-OperationDate [Optional: Default is today from DB server]</li>
+                        <li>Int[]-SAPAccountNumbers [Required]</li>
+                        <b>Description:</b> Array of integers for SAPAccountNumbers
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    OperationDate: "2017-12-11",
+                    SAPAccountNumbers:
+                    [
+                        11297784,
+                        12284717,
+                        11297027,
+                        11186660
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h4>Method 25 - GetMerchStoreDeliveryPost() detail</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>GetMerchStoreDeliveryPost</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/GetMerchStoreDeliveryPost</p>
+                <p>Test URL</p>
+                <p><a id="method25-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>Date - DeliveryDate [Optional]</li>
+                        <b>Description:</b> By default, DeliveryDate is set to be today from Database.
+                        <li>Int[] - SAPAccountNumbers [Required]</li>
+                        <b>Description:</b> Array of integer (SDM Table: SAP.Account)
+                        <li>bool - IsDetailNeeded [Optional]</li>
+                        <b>Description:</b> By default, value is true and return store delivery with items details, In case of "false", it will return only the store delivery detail.
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    DeliveryDate:"2018-05-24",
+                    IsDetailNeeded:false,
+                    SAPAccountNumbers:
+                    [
+                        11186512,
+                        11186518,
+                        11186519,
+                        11186520,
+                        11186659,
+                        11186660
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Method 26 - UploadAPNRegistration() detail</h4>
+    <table class="TFtable">
+        <tr>
+            <td width="20%">Method Name</td>
+            <td>UploadAPNRegistration</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <p>/api/Merch/UploadAPNRegistration</p>
+                <p>Test URL</p>
+                <p><a id="method26-1" target="_blank" href="#">Test1</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Request Type</td>
+            <td>HTTP POST</td>
+        </tr>
+        <tr>
+            <td>JSON Params</td>
+            <td>
+                <p>Below fields needed in JSON format</p>
+                <p>
+                    <b>
+                        Field Type-FieldName
+                    </b>
+                    <ul>
+                        <li>String - DeviceID [Requiredl]</li>
+                        <b>Description:</b>iOS Device ID
+                        <li>String - AppBundle [Required]</li>
+                        <b>Description:</b> App Store Bundle ID
+                        <li>String - GSN [Required]</li>
+                        <b>Description:</b> GSN associated with DeivceID and AppBundleID
+                    </ul>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>Data Params (POST) </td>
+            <td>
+                {
+                    DeviceID:"abcdefg123",
+                    AppBundle:"abcdefg123",
+                    GSN:"ABC12345"
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+<script>
+    document.getElementById('method1-1').href = getBaseURL().concat('/api/Merch/GetMerchandisableStoresByBranch?SAPBranchID=1115');
+    document.getElementById('method1-1').text = getBaseURL().concat('/api/Merch/GetMerchandisableStoresByBranch?SAPBranchID=1115');
+
+    document.getElementById('method1-2').href = getBaseURL().concat('/api/Merch/GetMerchandisableStoresByBranch?SAPBranchID=1115&mdate=2016-01-01T11:08:00');
+    document.getElementById('method1-2').text = getBaseURL().concat('/api/Merch/GetMerchandisableStoresByBranch?SAPBranchID=1115&mdate=2016-01-01T11:08:00');
+
+    document.getElementById('method2-1').href = getBaseURL().concat('/api/Merch/GetMerchProfileByGSN?GSN=EADHE001');
+    document.getElementById('method2-1').text = getBaseURL().concat('/api/Merch/GetMerchProfileByGSN?GSN=EADHE001');
+
+    document.getElementById('method3-1').href = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001');
+    document.getElementById('method3-1').text = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001');
+
+    document.getElementById('method3-2').href = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001&StartDispatchDate=2016-06-11');
+    document.getElementById('method3-2').text = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001&StartDispatchDate=2016-06-11');
+
+    document.getElementById('method3-3').href = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001&StartDispatchDate=2016-06-11&LastScheduleDate=2016-06-12');
+    document.getElementById('method3-3').text = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001&StartDispatchDate=2016-06-11&LastScheduleDate=2016-06-12');
+
+    document.getElementById('method3-4').href = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001&StartDispatchDate=2016-06-11&LastScheduleDate=2016-06-12&BatchID=16');
+    document.getElementById('method3-4').text = getBaseURL().concat('/api/Merch/GetMerchSchedule?MerchGroupID=101&GSN=ARMDZ001&StartDispatchDate=2016-06-11&LastScheduleDate=2016-06-12&BatchID=16');
+
+    document.getElementById('method31-1').href = getBaseURL().concat('/api/Merch/GetMerchPlan?MerchGroupID=101&GSN=WILRX077&StartDispatchDate=2017-04-15');
+    document.getElementById('method31-1').text = getBaseURL().concat('/api/Merch/GetMerchPlan?MerchGroupID=101&GSN=WILRX077&StartDispatchDate=2017-04-15');
+
+    document.getElementById('method4-1').href = getBaseURL().concat('/api/Merch/RegisterDPSAppleToken?BundleID=12&GSN=NATEST&AppleToken=2334');
+    document.getElementById('method4-1').text = getBaseURL().concat('/api/Merch/RegisterDPSAppleToken?BundleID=12&GSN=NATEST&AppleToken=2334');
+
+    document.getElementById('method5-1').href = getBaseURL().concat('/api/Merch/GetMerchStoreVisitDetailsByGSN?GSN=ARMDZ001');
+    document.getElementById('method5-1').text = getBaseURL().concat('/api/Merch/GetMerchStoreVisitDetailsByGSN?GSN=ARMDZ001');
+
+    document.getElementById('method5-2').href = getBaseURL().concat('/api/Merch/GetMerchStoreVisitDetailsByGSN?GSN=ARMDZ001&ScheduleDate=2016-06-11');
+    document.getElementById('method5-2').text = getBaseURL().concat('/api/Merch/GetMerchStoreVisitDetailsByGSN?GSN=ARMDZ001&ScheduleDate=2016-06-11');
+
+    document.getElementById('method6-1').href = getBaseURL().concat('/api/Merch/UploadMerchStopCheckIn');
+    document.getElementById('method6-1').text = getBaseURL().concat('/api/Merch/UploadMerchStopCheckIn');
+
+    document.getElementById('method7-1').href = getBaseURL().concat('/api/Merch/UploadMerchStopCheckOut');
+    document.getElementById('method7-1').text = getBaseURL().concat('/api/Merch/UploadMerchStopCheckOut');
+
+    document.getElementById('method8-1').href = getBaseURL().concat('/api/Merch/UploadMerchStoreSignature');
+    document.getElementById('method8-1').text = getBaseURL().concat('/api/Merch/UploadMerchStoreSignature');
+
+    document.getElementById('method9-1').href = getBaseURL().concat('/api/Merch/UploadMerchStorePicture');
+    document.getElementById('method9-1').text = getBaseURL().concat('/api/Merch/UploadMerchStorePicture');
+
+    document.getElementById('method10-1').href = getBaseURL().concat('/api/Merch/UploadAdhocMileage');
+    document.getElementById('method10-1').text = getBaseURL().concat('/api/Merch/UploadAdhocMileage');
+
+    document.getElementById('method11-1').href = getBaseURL().concat('/api/Merch/GetMerchStoreDelivery?DeliveryDate=2016-07-23&SAPAccountNumber=11227583,11227704,11227799');
+    document.getElementById('method11-1').text = getBaseURL().concat('/api/Merch/GetMerchStoreDelivery?DeliveryDate=2016-07-23&SAPAccountNumber=11227583,11227704,11227799');
+
+    document.getElementById('method11-2').href = getBaseURL().concat('/api/Merch/GetMerchStoreDelivery?DeliveryDate=2016-07-23&SAPAccountNumber=11227583,11227704,11227799&IsDetailNeeded=true');
+    document.getElementById('method11-2').text = getBaseURL().concat('/api/Merch/GetMerchStoreDelivery?DeliveryDate=2016-07-23&SAPAccountNumber=11227583,11227704,11227799&IsDetailNeeded=true');
+
+    document.getElementById('method12-1').href = getBaseURL().concat('/api/Merch/GetItemMaster');
+    document.getElementById('method12-1').text = getBaseURL().concat('/api/Merch/GetItemMaster');
+    document.getElementById('method12-2').href = getBaseURL().concat('/api/Merch/GetItemMaster?mdate=2016-08-12');
+    document.getElementById('method12-2').text = getBaseURL().concat('/api/Merch/GetItemMaster?mdate=2016-08-12');
+
+    document.getElementById('method13-1').href = getBaseURL().concat('/api/Display/UploadDisplayBuild');
+    document.getElementById('method13-1').text = getBaseURL().concat('/api/Display/UploadDisplayBuild');
+
+    document.getElementById('method14-1').href = getBaseURL().concat('/api/Display/UploadDisplayBuildExecution');
+    document.getElementById('method14-1').text = getBaseURL().concat('/api/Display/UploadDisplayBuildExecution');
+
+    document.getElementById('method15-1').href = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatus?SAPAccountNumber=11970182,12267879,12267885,12267953,12267956,11276019');
+    document.getElementById('method15-1').text = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatus?SAPAccountNumber=11970182,12267879,12267885,12267953,12267956,11276019');
+
+    document.getElementById('method15-2').href = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatus?SAPAccountNumber=11970182,12267879,12267885,12267953,12267956,11276019&IncludeBuiltOnes=true');
+    document.getElementById('method15-2').text = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatus?SAPAccountNumber=11970182,12267879,12267885,12267953,12267956,11276019&IncludeBuiltOnes=true');
+
+    document.getElementById('method15-3').href = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatus?SAPAccountNumber=11970182,12267879,12267885,12267953,12267956,11276019&DispatchDate=2016-08-15&IncludeBuiltOnes=true');
+    document.getElementById('method15-3').text = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatus?SAPAccountNumber=11970182,12267879,12267885,12267953,12267956,11276019&DispatchDate=2016-08-15&IncludeBuiltOnes=true');
+
+    document.getElementById('method16-1').href = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatusByRouteNumber?RouteNumber=113301150');
+    document.getElementById('method16-1').text = getBaseURL().concat('/api/Display/GetDisplayBuildWithLatestStatusByRouteNumber?RouteNumber=113301150');
+
+    document.getElementById('method17-1').href = getBaseURL().concat('/api/Display/GetMerchBuildMaster');
+    document.getElementById('method17-1').text = getBaseURL().concat('/api/Display/GetMerchBuildMaster');
+
+    document.getElementById('method17-2').href = getBaseURL().concat('/api/Display/GetMerchBuildMaster?LastModified=2016-08-31');
+    document.getElementById('method17-2').text = getBaseURL().concat('/api/Display/GetMerchBuildMaster?LastModified=2016-08-31');
+
+    document.getElementById('method18-1').href = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=StorePicture&fileExtension=.jpg&clientIdentifier=GSNXX001');
+    document.getElementById('method18-1').text = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=StorePicture&fileExtension=.jpg&clientIdentifier=GSNXX001');
+
+    document.getElementById('method18-2').href = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=StoreSignature&fileExtension=.jpg&clientIdentifier=iPhone123');
+    document.getElementById('method18-2').text = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=StoreSignature&fileExtension=.jpg&clientIdentifier=iPhone123');
+
+    document.getElementById('method18-3').href = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=DisplayBuild&fileExtension=.jpg&clientIdentifier=Wersd39kD');
+    document.getElementById('method18-3').text = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=DisplayBuild&fileExtension=.jpg&clientIdentifier=Wersd39kD');
+
+    document.getElementById('method18-4').href = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=WideOpen&fileExtension=.jpg&clientIdentifier=WideOpen');
+    document.getElementById('method18-4').text = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=WideOpen&fileExtension=.jpg&clientIdentifier=WideOpen');
+
+    document.getElementById('method18-5').href = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=MerchandiserProfileImage&fileExtension=.jpg&clientIdentifier=WideOpen');
+    document.getElementById('method18-5').text = getBaseURL().concat('/api/Imaging/GetImagePostingURL?imageType=MerchandiserProfileImage&fileExtension=.jpg&clientIdentifier=WideOpen');
+
+    document.getElementById('method19-1').href = getBaseURL().concat('/api/Imaging/ExtendContainerReadSAS?ContainerID=4');
+    document.getElementById('method19-1').text = getBaseURL().concat('/api/Imaging/ExtendContainerReadSAS?ContainerID=4');
+
+    document.getElementById('method20-1').href = getBaseURL().concat('/api/Merch/UploadMerchProfilePicture');
+    document.getElementById('method20-1').text = getBaseURL().concat('/api/Merch/UploadMerchProfilePicture');
+
+    document.getElementById('method21-1').href = getBaseURL().concat('/api/Merch/UploadMerchPhoneNumber');
+    document.getElementById('method21-1').text = getBaseURL().concat('/api/Merch/UploadMerchPhoneNumber');
+
+    document.getElementById('method22-1').href = getBaseURL().concat('/api/Merch/UploadMerchStopDNS');
+    document.getElementById('method22-1').text = getBaseURL().concat('/api/Merch/UploadMerchStopDNS');
+
+    document.getElementById('method23-1').href = getBaseURL().concat('/api/Merch/GetMerchandisingDetails?OperationDate=2017-12-11&SAPAccountNumber=11297784,12284717,11297027');
+    document.getElementById('method23-1').text = getBaseURL().concat('/api/Merch/GetMerchandisingDetails?OperationDate=2017-12-11&SAPAccountNumber=11297784,12284717,11297027');
+
+    document.getElementById('method24-1').href = getBaseURL().concat('/api/Merch/GetMerchandisingDetailsPost');
+    document.getElementById('method24-1').text = getBaseURL().concat('/api/Merch/GetMerchandisingDetailsPost');
+
+    document.getElementById('method25-1').href = getBaseURL().concat('/api/Merch/GetMerchStoreDeliveryPost');
+    document.getElementById('method25-1').text = getBaseURL().concat('/api/Merch/GetMerchStoreDeliveryPost');
+
+    document.getElementById('method26-1').href = getBaseURL().concat('/api/Merch/UploadAPNRegistration');
+    document.getElementById('method26-1').text = getBaseURL().concat('/api/Merch/UploadAPNRegistration');
+
+</script>

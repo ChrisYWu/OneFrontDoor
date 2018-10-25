@@ -1,0 +1,59 @@
+<!-- iPhone version start -->
+<a (click)="openModal(true)"> {{storeInput.AccountName}} </a>
+
+
+<!-- iPhone popup start -->
+
+<div [hidden]="!isShowStorePopup">
+
+    <div class="container-fluid dispatch-container-ip-popup">
+
+
+        <div class="ip-popup-sch">
+            <div class="row mp-header-ip">
+                <a (click)="toClosePopup()" class="close-ip-sch-popup">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+                <div class="col-xs-12">
+                    <div class="sch-ip-hdr">Reassign Store</div>
+                </div>
+            </div>
+
+            <div class="row mp-row-top-ip">
+                <div class="row mp-row-item-ip">
+                    <div class="col-xs-6 sch-col-ip-1">Store </div>
+                    <div class="col-xs-6 sch-col-ip-2 nowrap-storecellwrap"> {{storeInput.AccountName}}</div>
+                </div>
+
+                <div class="row mp-row-item-ip">
+                    <div class="col-xs-6 sch-col-ip-1">Current Route </div>
+                    <div class="col-xs-6 sch-col-ip-2 nowrap-storecellwrap"> {{routeData.RouteName}}</div>
+                </div>
+
+
+                <div class="row mp-row-item-ip ip-route-tbl">
+                    <table class="table" style="color:#333">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="input-group col-xs-12">
+
+                                        <h4 class="modal-title">Select a Route</h4>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let route of routesFiltered" (click)="setupdatedroute(route.RouteID, route.RouteName, route.GSN, true)">
+                                <td>{{route.RouteName}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- iPhone popup end -->
+
+</div>

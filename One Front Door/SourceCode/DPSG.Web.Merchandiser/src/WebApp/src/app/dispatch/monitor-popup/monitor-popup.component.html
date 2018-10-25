@@ -1,0 +1,114 @@
+<div class="modal-dialog  modal-lg">
+    <div class="modal-content no-border-radius">
+        <div class="modal-header mp-header">
+            <div class="row">
+                <!--
+                <a class="close" (click)="storeModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </a>
+               -->
+                <button type="button" class="close mp-close" (click)="storeModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+                <div class="col-md-3 v-middle mp-image-col">
+                    <img class="center-block" [src]="storeDetails.StoreImageURL" alt="Store Image">
+                </div>
+                <div class="col-md-9">
+                    <div class="mp-header-l1">{{stop.AccountName}}</div>
+                    <div class="mp-header-l2">{{storeDetails.StoreAddress}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body mp-modal-body">
+
+            <!--    {{storePictures | json}}  -->
+
+            <div class="row mp-row-top">
+                <div class="col-md-6 mp-col-left">
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1">Checkin Time</div>
+                        <div class="col-md-6 mp-col-2">&nbsp; &nbsp; {{storeDetails.CheckInTime}}</div>
+                    </div>
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1">Checkin Miles</div>
+                        <div class="col-md-6 mp-col-2" *ngIf="storeDetails.UserMileage != '0'">&nbsp; &nbsp; {{storeDetails.UserMileage}} &nbsp;miles
+                        </div>
+                    </div>
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1">Checkout Time</div>
+                        <div class="col-md-6 mp-col-2">&nbsp; &nbsp; {{storeDetails.CheckOutTime}}</div>
+                    </div>
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1">Time in Store</div>
+                        <div class="col-md-6 mp-col-2">&nbsp; &nbsp; {{storeDetails.TimeInStore}}</div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6 mp-col-right">
+
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1">Cases Worked</div>
+                        <div class="col-md-6 mp-col-2">&nbsp; &nbsp; {{storeDetails.CasesHandeled}}</div>
+                    </div>
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1">Backstock Cases</div>
+                        <div class="col-md-6 mp-col-2">&nbsp; &nbsp; {{storeDetails.CasesInBackRoom}}</div>
+                    </div>
+                    <div class="row mp-row-item">
+                        <div class="col-md-12 mp-col-1">Comments</div>
+                        <div class="col-md-12 mp-col-cmt">
+
+                            {{storeDetails.Comments}}
+
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1">Manager Name</div>
+                        <div class="col-md-6 mp-col-2">&nbsp; &nbsp; {{storeSignature.ManagerName}}</div>
+                    </div>
+                    <div class="row mp-row-item">
+                        <div class="col-md-6 mp-col-1 mp-sign-arrow">
+                            Manager Signature
+                            <!-- 
+                                - {{isShowSign}} -
+                                (click)="SignClick();
+                            <i [ngClass]="isShowSign? 'fa fa-arrow-circle-up' : 'fa fa-arrow-circle-down'" aria-hidden="true"></i>
+                         [hidden]="!isShowSign" 
+                       -->
+                        </div>
+                        <div class="col-md-6 mp-col-2">
+                            &nbsp; &nbsp;
+                            <img class="mp-img-sgn img-responsive" style="height:100px" [src]="storeSignature.azureImageURL" alt="Signature not available">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row mp-row-cnt"></div>
+            <div class="row mp-row-btm">
+                <div class="col-md-6 mp-col-left">
+                    <div class="mp-pic-header">Store Picture </div>
+                    <div class="mp-pic-list">
+                        <image-list [images]='storePictures'></image-list>
+                    </div>
+                </div>
+                <div class="col-md-6 mp-col-right">
+                    <div class="mp-pic-header">Display Execution</div>
+                    <div class="mp-pic-list">
+                        <image-list [images]='displayPictures'></image-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

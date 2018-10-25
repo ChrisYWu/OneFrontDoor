@@ -1,0 +1,163 @@
+
+//Global Variable
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+//local Variable
+$route-info-height: 50px;
+$route-raw-height: 86px;
+$route-start-line: $route-raw-height - $route-info-height;
+$route-border-coloer: #dddddd;
+
+$btn-add-font-size: 16px;
+$nm-fontsize: 26pt;
+$nm-circle-bg: #cccccc;
+$nm-color: #555555;
+$tbl-group-border: #d7d7d7;
+$grp-ln2-color: #898989;
+$active-row-bg: #f6f6f6;
+
+@mixin bottom-shadow() {
+    @include box-shadow(0, 3px, 7px, darken($tbl-group-border, 20%));
+}
+
+.div-unassigned-store {
+    cursor: pointer;
+    padding: 8px;
+    &:hover {
+        background-color: lighten($nm-color, 10%) !important;
+    }
+}
+
+.unassigned-store {
+    margin-top: 8px;
+    color:  #fff;
+    font-size: 14px;
+    cursor:pointer;
+}
+
+.unassigned-store-font{
+    font-size: 36px;
+}
+.unassigned-store-font:hover{
+    color:#d7d7d7;  
+    cursor:pointer;
+}
+
+.unassigned-store-badge{
+    background-color: $brand-red;
+    cursor:pointer;
+}
+.unassigned-group-list {
+    border: 1px solid #d7d7d7;
+    @include border-radius(5px);
+    @include bottom-shadow();
+    padding: 0;
+}
+
+
+
+.disp-history{
+        color: white;
+    margin-right: 20px;
+    text-decoration: underline;
+    font-size: larger;
+}
+
+
+.disp-history:hover{
+    color: white;
+    margin-right: 20px;
+    font-size: larger;
+    font-weight: bolder;
+    cursor:pointer;
+}
+
+.filter-style {
+    margin-top: 8px;
+    margin-right: 20px;
+}
+
+.addstore-bordercolor {
+    border-color: #FFFFFF;
+}
+
+.addstore-bordercolor:hover,.addstore-bordercolor:focus,.addstore-bordercolor:active  {
+    border-color: #51626f;
+    background-color: #f6f6f6!important;
+    color: #a1a1a1;
+}
+
+.schedule-bordercolor {
+    background-color: #a1a1a1!important;
+    border-color: #51626f;
+    color: #FFFFFF;
+}
+
+.schdeule-bordercolor:hover {
+    border-color: #ffffff;
+    background-color: #f6f6f6!important;
+    color: #333;
+}
+
+.lable-report {
+    color:  #fff;
+    font-size: 14px;
+    float: left;
+    vertical-align: middle;
+    padding: 7px 10px 0 0;
+    margin-left: 3px;
+}
+
+.nav-tabs.nav-justified>li>a {
+    background-color: #f6f6f6;
+    color: #822433;
+}
+
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs.nav-justified>.active>a:hover,
+.nav-tabs.nav-justified>.active>a:focus {
+    background-color: #822433;
+    border-bottom-color: #822433;
+    color: #ffffff;
+}
+.modal-title{
+    color:#959595
+}
+
+.input-group .form-control {
+    
+    margin-bottom: 0px; 
+    border: 1px solid #ccc !important;
+}
+
+.modal-header {
+    background-color: #eaeaea;
+}
+
+.btn-headerdropdown {
+    background-color: #580a1a !important;
+    color: #FFFFFF;
+    border-color: #ffffff;
+}
+
+.btn-headerdropdown:hover {
+    background-color: #822433 !important;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-headerdropdown:focus {
+    background-color: #822433 !important;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.store-sequence {
+    color: #000000;
+}
+
+.modal-dialog { margin: 60px auto; }
+
+.input-group .form-control {
+    z-index: 0;
+}

@@ -1,0 +1,12 @@
+.btn-user {
+  border-radius: 0 !important;
+  border: 0 !important;
+  font-family: Helvetica, Roboto, Arial, sans-serif !important;
+  float: right;
+  padding: 5px 15px !important;
+  margin-left: 10px;
+  color: #007aff; }
+  .btn-user:hover, .btn-user:active {
+    color: #0062cc !important;
+    padding: 4px 14px !important;
+    border: 1px solid #3395ff !important; }

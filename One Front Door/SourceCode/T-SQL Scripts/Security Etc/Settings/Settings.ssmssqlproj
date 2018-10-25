@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Settings">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="bsccap108:DPSG\KAVSX001">
+          <Created>2013-12-05T09:29:35.5047376-06:00</Created>
+          <Type>SQL</Type>
+          <Server>bsccap108</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="BSCCap121:DPSG\KAVSX001">
+          <Created>2013-12-05T09:59:55.6624253-06:00</Created>
+          <Type>SQL</Type>
+          <Server>BSCCap121</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="V-PORTALS11:DPSG\KAVSX001">
+          <Created>2013-10-28T11:57:22.0878902-05:00</Created>
+          <Type>SQL</Type>
+          <Server>V-PORTALS11</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>Portal_Data</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="--.CutOver Roles.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>--.CutOver Roles.sql</FullPath>
+        </FileNode>
+        <FileNode Name="01.Settings Schema.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01.Settings Schema.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02.Settings.pCreateApplication.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>02.Settings.pCreateApplication.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03.Settings.pMaintainJobcodeToRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>03.Settings.pMaintainJobcodeToRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04.Settings.pGetUserRights.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>04.Settings.pGetUserRights.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05.Settings.vUserRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>05.Settings.vUserRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="08.Settings.pAddUserToRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>08.Settings.pAddUserToRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="09.Settings.pRemoveUserFromRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>09.Settings.pRemoveUserFromRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="10.Settings.pRemoveUserRoleFromBlackList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>10.Settings.pRemoveUserRoleFromBlackList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="11.Settings.pGetOrgUnitsByRoleID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>11.Settings.pGetOrgUnitsByRoleID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="12.Settings.pGetUsersByRoleID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>12.Settings.pGetUsersByRoleID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="13.Settings.pGetPortalRolesWithCounts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>13.Settings.pGetPortalRolesWithCounts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="14.pGetPortalRolesWithCounts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>14.pGetPortalRolesWithCounts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="15.Settings.vExtendedApplicationRight.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>15.Settings.vExtendedApplicationRight.sql</FullPath>
+        </FileNode>
+        <FileNode Name="16.Settings.pGetExtendedRightByApplicationAndRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>16.Settings.pGetExtendedRightByApplicationAndRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="17.Settings.pRemoveUserFromNotInRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>17.Settings.pRemoveUserFromNotInRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="18.Settings.pAddUserToNotInRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>18.Settings.pAddUserToNotInRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="19.Settings.pGetUserRolesByGSN.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>19.Settings.pGetUserRolesByGSN.sql</FullPath>
+        </FileNode>
+        <FileNode Name="20.Settings.pGetUserRightsByGSN.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>20.Settings.pGetUserRightsByGSN.sql</FullPath>
+        </FileNode>
+        <FileNode Name="21.Settings.udfGetRightsBYParentID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>21.Settings.udfGetRightsBYParentID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="22.Settings.pGetBehaviorsWithCounts.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>22.Settings.pGetBehaviorsWithCounts.sql</FullPath>
+        </FileNode>
+        <FileNode Name="23.Settings.pGetSearchUserByRefinerRole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>23.Settings.pGetSearchUserByRefinerRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="POI.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>POI.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Retrofit.Title.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Retrofit.Title.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SkimSDM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:bsccap108:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>bsccap108</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SkimSDM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Turn It On.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Turn It On.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UniqueConstraint.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V-PORTALS11:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V-PORTALS11</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>UniqueConstraint.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>$/One Front Door/SourceCode/T-SQL Scripts/Security Etc</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Team Foundation Server MSSCCI Provider</SccProvider>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,359 @@
+//Global Variable
+@import "theme/variable.scss";
+@import "theme/mixin.scss";
+//local Variables
+$plm-item-height: 86px;
+$plm-info-height: 58px;
+$plm-route-height: 96px;
+$plm-route-item-height: 66px;
+$plm-route-select-height: 36px;
+// ******************************
+// Popup for route  Select
+// ******************************
+.plm-mrt-select {
+    width: 350px !important;
+}
+
+.plm-mrt-select-row {
+    Height: 300px;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+}
+
+.plm-mrt-select-name {
+    padding-top: 5px !important;
+    padding-left: 10%;
+    font-size: 15px !important;
+    color: $brand-light-blue;
+    font-weight: 600;
+}
+
+.plm-route-row-select {
+    height: $plm-route-select-height !important;
+}
+
+// ******************************
+// Popup for Persion  Select
+// ******************************
+.plm-modal-select {
+    width: 450px !important;
+}
+
+.plm-modal-select-row {
+    Height: 400px;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+}
+
+.plm-info-row-select {
+    height: $plm-route-item-height !important;
+}
+
+.plm-info-image-select {
+    width: 100%;
+    height: 32px;
+}
+
+.plm-merch-select {
+    padding: 5px;
+    &:hover {
+        background-color: lighten($color: $brand-light-blue, $amount: 30%);
+    }
+}
+
+.plm-select-name {
+    padding-top: 20px !important;
+    padding-left: 10%;
+    font-size: 15px !important;
+    color: $brand-light-blue;
+    font-weight: 600;
+}
+
+.plm-remove-btm-margin {
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+
+// ******************************
+// Route Rendering 
+// ******************************
+//margin-top: -32px;
+//   height: 96px;
+//  height: 98px !important;
+//   position: relative;
+.plm-item-inner-route {
+    height: $plm-route-height !important;
+    position: relative;
+    &:hover {
+        background-color: lighten($color: $brand-light-blue, $amount: 30%)
+    }
+}
+
+.plm-item-inner-route-add {
+    border: 1px solid $route-border-coloer;
+    border-width: 1px 0 0 1px !important;
+    margin-top: -31px;
+    height: $plm-route-height !important;
+    position: relative;
+    &:hover {
+        background-color: lighten($color: $brand-light-blue, $amount: 30%) !important;
+    }
+}
+
+.plm-item-inner-route-persion {
+    border: 1px solid $route-border-coloer;
+    border-width: 1px 0 0 1px !important;
+    margin-top: -31px;
+    height: $plm-route-height !important;
+    position: relative;
+    &:hover {
+        background-color: lighten($color: $brand-light-blue, $amount: 30%)
+    }
+}
+
+.plm-item-inner-route-persion-off {
+    border: 1px solid $route-border-coloer;
+    border-width: 1px 0 0 1px !important;
+    margin-top: -31px;
+    height: $plm-route-height !important;
+    position: relative;
+    background-color: lighten($color: $route-border-coloer, $amount: 10%) !important;
+    &:hover {
+        background-color: lighten($color: $route-border-coloer, $amount: 5%) !important;
+    }
+}
+
+.plm-item-route {
+    font-weight: 600;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -85%);
+    color: $brand-gray-dark !important;
+}
+
+.plm-item-row-route {
+    margin: 0 -15px !important;
+    border-bottom: 1px solid $route-border-coloer;
+    height: $plm-route-item-height !important;
+}
+
+.plm-row-day-route {
+    padding-bottom: 32px;
+    border: 0 solid transparent !important;
+}
+
+.plm-row-outer-route {
+    margin-right: -15px !important;
+    padding-top: 32px !important;
+}
+
+.plm-info-image {
+    position: relative;
+    width: 100%;
+    height: 32px;
+}
+
+.plm-route-info-outer {
+    padding-top: 25px !important;
+    width: 100%;
+    margin: 0px;
+    background-color: $brand-light-blue !important;
+    height: $plm-route-item-height;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+// ******************************
+// Tabs
+// ******************************
+.plm-tabs {
+    padding: 0;
+    margin: 0;
+}
+
+.plm-tab {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    width: 50% !important;
+    height: 40px !important;
+    float: left !important;
+    border: 1px solid transparent !important;
+    padding-top: 7px;
+    margin-bottom: -5px !important;
+    margin-top: -5px !important;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten($brand-blue, 10%) !important;
+        border: 1px solid darken($brand-blue, 10%) !important;
+        border-bottom: 5px solid lighten($brand-orange, 20%) !important;
+    }
+}
+
+.plm-tab-active {
+    border-bottom: 5px solid $brand-orange !important;
+}
+
+// drivan - orignal at dispatch scss - col-stop-item 
+.col-plm-item {
+    width: 14.285% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    float: left;
+    border-right: 1px solid $route-border-coloer;
+}
+
+.col-plm-item-route {
+    width: 14.285% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    float: left;
+}
+
+.col-plm-day {
+    color: darken($brand-light-blue, 15%) !important;
+    padding: 10px 0 10px 0!important;
+    margin: auto !important;
+    font-weight: 600;
+    font-size: 13px !important;
+    border: 0 solid transparent !important;
+    text-transform: uppercase;
+}
+
+.plm-row-day {
+    border: 0 solid transparent !important;
+}
+
+.plm-item-outer {
+    margin: 0 -15px;
+}
+
+// drivan orignal at dispatch scss - col-stop-item 
+//.item-row {
+//  height: $route-raw-height;
+//    border: 1px solid $route-border-coloer;
+//   margin-left: -15px;
+// background-color: red;
+//}
+.plm-item-row {
+    margin: 0 -15px !important;
+    border: 1px solid $route-border-coloer;
+}
+
+.plm-row-outer {
+    margin-right: -15px !important;
+}
+
+.plm-item-inner {
+    height: $plm-item-height !important;
+    position: relative;
+    &:hover {
+        background-color: lighten($color: $brand-light-blue, $amount: 30%)
+    }
+}
+
+.plm-item-off {
+    background-color: lighten($color: $route-border-coloer, $amount: 10%) !important;
+    &:hover {
+        background-color: lighten($color: $route-border-coloer, $amount: 5%) !important;
+    }
+}
+
+.plm-item-text {
+    right: 0;
+    left: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    color: black;
+    text-align: left;
+    position: absolute;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+}
+
+.plm-route-text {
+    color: $brand-light-blue;
+}
+
+.plm-item {
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.plm-item-remove {
+    z-index: 100;
+    padding: 2px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 12px;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    &:hover {
+        color: $brand-red;
+        ;
+    }
+}
+
+.plm-item-add-persion {
+    font-size: 30px !important;
+    color: darken($color: $route-border-coloer, $amount: 30%) !important;
+}
+
+.plm-item-add {
+    font-size: 30px !important;
+    color: darken($color: $route-border-coloer, $amount: 30%) !important;
+    background-color: lighten($color: $route-border-coloer, $amount: 10%) !important;
+    &:hover {
+        background-color: lighten($color: $route-border-coloer, $amount: 5%) !important;
+    }
+}
+
+.plm-item-add-red {
+    font-size: 30px !important;
+    color: darken($color: $route-border-coloer, $amount: 30%) !important;
+    background-color: white;
+    &:hover {
+        background-color: lighten($color: $brand-light-blue, $amount: 35%) !important;
+    }
+}
+
+// driven - orinal at dispatch scss - with info insted plm 
+.plm-name-l1 {
+    padding-top: 2px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.plm-name-l2 {
+    font-weight: 400;
+}
+
+.plm-name-l3 {
+    margin-top: -2px;
+    font-weight: 400;
+}
+
+.plm-name {
+    width: 100%;
+    background-color: $brand-light-blue;
+    color: $text-color-light;
+    float: left;
+    height: $plm-info-height;
+    padding-left: 35%;
+}
+
+.plm-phone {
+    color: darken($brand-light-blue, 20%) !important;
+}

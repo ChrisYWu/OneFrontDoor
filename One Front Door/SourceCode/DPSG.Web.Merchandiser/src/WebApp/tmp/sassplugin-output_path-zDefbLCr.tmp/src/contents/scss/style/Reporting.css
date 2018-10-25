@@ -1,0 +1,147 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css);
+.ng2-table__input {
+  border: 0;
+  font-size: .9em;
+  margin: 0;
+  padding: 2px;
+  width: 100%;
+  color: black; }
+
+.ng2-table__button {
+  background: #f0f0f0;
+  border: 1px solid #d7d7d7;
+  font-size: .8em;
+  padding: 6px; }
+
+.ng2-table__table, .ng2-table__table--striped {
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed; }
+  .ng2-table__table td,
+  .ng2-table__table th, .ng2-table__table--striped td,
+  .ng2-table__table--striped th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    margin: 0;
+    padding: 8px;
+    overflow: initial; }
+  .ng2-table__table thead > th, .ng2-table__table--striped thead > th {
+    cursor: pointer;
+    font-weight: 700;
+    text-align: left; }
+  .ng2-table__table tr:last-child th, .ng2-table__table--striped tr:last-child th {
+    border-bottom-color: #cacaca; }
+  .ng2-table__table tr:last-child td, .ng2-table__table--striped tr:last-child td {
+    border-bottom: 1px solid #f0f0f0; }
+  .ng2-table__table tr td:first-child,
+  .ng2-table__table tr th:first-child, .ng2-table__table--striped tr td:first-child,
+  .ng2-table__table--striped tr th:first-child {
+    border-left: 1px solid #f0f0f0; }
+
+.ng2-table__table--striped tbody tr:nth-child(odd) {
+  background: #f0f0f0; }
+
+.ng2-table__csv-export-button {
+  background: #1976d2;
+  border: 1px solid;
+  color: white;
+  display: inline-block;
+  padding: 6px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #5398dd !important;
+  border-color: #2e6da4; }
+
+.ng2-table__global-search-label {
+  display: inline-block;
+  margin: 6px 0;
+  padding: 2px;
+  width: 300px; }
+  .ng2-table__global-search-label::before {
+    color: #cacaca;
+    content: '\f002';
+    font-family: 'FontAwesome', sans-serif;
+    left: 290px;
+    position: absolute;
+    top: 10px;
+    z-index: 1; }
+
+.ng2-table__sort-indicator {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  float: right;
+  font-size: 0.5em;
+  height: 0;
+  padding-top: 4px;
+  width: 0; }
+
+.ng2-table__sort-indicator--up {
+  border-bottom: 10px solid #000; }
+
+.ng2-table__sort-indicator--down {
+  border-top: 10px solid #000; }
+
+.ng2-table__pagination, .ng2-table__items-per-page {
+  display: inline-block;
+  float: left;
+  list-style-type: none;
+  margin: 8px 0;
+  padding: 0; }
+  .ng2-table__pagination li, .ng2-table__items-per-page li {
+    border: 1px solid #f0f0f0;
+    float: left;
+    margin: 0;
+    padding: 6px; }
+  .ng2-table__pagination a, .ng2-table__items-per-page a {
+    color: inherit;
+    text-decoration: none; }
+  .ng2-table__pagination .active, .ng2-table__items-per-page .active {
+    background: #2196f3;
+    border-color: #0c7cd5;
+    color: #fff; }
+
+.ng2-table__items-per-page {
+  float: right; }
+
+.ng2-table__pagination-wrapper::after {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+.ng-datepicker-input {
+  color: black !important;
+  text-align: center !important;
+  margin-top: 6px; }
+
+.btn-default {
+  padding: 3px; }
+
+.report-search {
+  float: left;
+  align-content: center;
+  width: 100%; }
+
+.report-search-addon {
+  background-color: white; }
+
+.ng2-Global-Search-Input {
+  border: 0;
+  margin: 0;
+  padding: 2px;
+  width: 100%;
+  color: black; }
+
+.menu-input {
+  border: 0px !important; }
+
+.lable-report {
+  color: #fff;
+  font-size: 14px;
+  float: left;
+  vertical-align: middle;
+  padding: 7px 10px 0 0;
+  margin-left: 3px; }

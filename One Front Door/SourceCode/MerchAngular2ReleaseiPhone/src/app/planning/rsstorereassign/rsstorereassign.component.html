@@ -1,0 +1,46 @@
+
+<a (click)="lgModal.show()" class="store-sequence">{{storeInput.AccountName}}</a>
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false">
+    <div class="modal-dialog  modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title text-center">Reassign Store <span style="font-style: italic;font-weight:700">"{{storeInput.AccountName}}"</span></h4>
+            </div>
+            <div class="modal-body cusFont text-left" style="min-height:300px">
+                <form>
+                    <div class="form-group top-bottom-buffer">
+                        <label class="col-xs-4 control-label" for="inputSuccess"><span class="glyphicon glyphicon-road"></span>Assigned Route</label>
+
+                        <label class="col-xs-8 text-info">{{routeData.RouteName}}</label>
+                    </div>
+
+                    <div class="form-group top-bottom-buffer">
+                        <label class="col-xs-4 control-label" for="inputSuccess"><span class="glyphicon glyphicon-home"></span>Store:</label>
+                        <label class="col-xs-8 text-info">{{storeInput.AccountName}}</label>
+                    </div>
+
+                    <div class="form-group top-bottom-buffer">
+
+                        <div class="btn-group col-xs-4" dropdown keyboardNav="true">
+                            <button id="routesddl" type="button" class="btn btn-default" dropdownToggle>
+                                Target Routes <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="height: auto; max-height: 200px; overflow-x: hidden;">
+                                <li role="menuitem" *ngFor="let route of routesInput"><a (click)="selectedRoute(route.RouteID, route.RouteName, route.GSN)">{{route.RouteName}}</a></li>
+                            </ul>
+                        </div>
+                        <label class="col-xs-8 text-info" for="routesddl">{{routeName}}</label>
+                    </div>
+
+                    <div class="form-group col-xs-12 text-right top-bottom-buffer">
+                        <button type="submit" class="btn btn-primary" (click)="setupdatedroute();">Save</button> <button type="reset" class="btn btn-default" (click)="lgModal.hide()">Cancel</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

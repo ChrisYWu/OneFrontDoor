@@ -1,0 +1,48 @@
+<div class="dispatch-row-outer plm-row-outer" *ngIf="idx==0">
+
+    <div>
+        <div class="col-md-2 col-lg-2 col-sm-12">
+            &nbsp;
+        </div>
+
+        <div class="col-md-10 col-lg-10 col-sm-12 plm-item-row plm-row-day-route">
+            <div class="plm-item-outer">
+                <span class="col-plm-item col-plm-day text-center" *ngFor="let day of days; let idx=index">
+                    {{day}}
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="dispatch-row-outer plm-row-outer-route">
+
+    <!--  <div class="col-md-12">{{MerchToAssigne | json}}        {{RouteToDayMerch | json}}</div> -->
+
+    <div>
+        <div class="col-md-2 col-lg-2 col-sm-12 ">
+            <pl-route-info [RouteID]="RouteToDayMerch.RouteID" [RouteName]="RouteToDayMerch.RouteName " [idx]="idx "></pl-route-info>
+        </div>
+
+        <div class="col-md-10 col-lg-10 col-sm-12 plm-item-row-route ">
+
+            <div class="plm-item-outer ">
+                <pl-route-item class="col-plm-item-route" (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [AvailableMerchandisers]="MerchToAssigne.Monday " [DayMerch]="RouteToDayMerch.Monday " [Day]="Monday "></pl-route-item>
+                <pl-route-item class="col-plm-item-route" (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [AvailableMerchandisers]="MerchToAssigne.Tuesday " [DayMerch]="RouteToDayMerch.Tuesday " [Day]="Tuesday "></pl-route-item>
+                <pl-route-item class="col-plm-item-route" (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [AvailableMerchandisers]="MerchToAssigne.Wednesday " [DayMerch]="RouteToDayMerch.Wednesday " [Day]="Wednesday "></pl-route-item>
+                <pl-route-item class="col-plm-item-route" (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [AvailableMerchandisers]="MerchToAssigne.Thursday " [DayMerch]="RouteToDayMerch.Thursday " [Day]="Thursday "></pl-route-item>
+                <pl-route-item class="col-plm-item-route" (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [AvailableMerchandisers]="MerchToAssigne.Friday " [DayMerch]="RouteToDayMerch.Friday " [Day]="Friday "></pl-route-item>
+                <pl-route-item class="col-plm-item-route" (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [AvailableMerchandisers]="MerchToAssigne.Saturday " [DayMerch]="RouteToDayMerch.Saturday " [Day]="Saturday "></pl-route-item>
+                <pl-route-item class="col-plm-item-route" (deleteMerch)="onDeleteMerch($event)" (addMerchandiser)="onAddMerchandiser($event)" [AvailableMerchandisers]="MerchToAssigne.Sunday " [DayMerch]="RouteToDayMerch.Sunday " [Day]="Sunday "></pl-route-item>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 " style="height: 10px;">
+
+    </div>
+
+</div>

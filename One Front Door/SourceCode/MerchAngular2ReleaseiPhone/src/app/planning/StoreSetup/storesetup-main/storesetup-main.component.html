@@ -1,0 +1,42 @@
+<div class="container-fluid dispatch-container">
+    <div class="row distpatch-menu-row navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="col-md-6 pull-left remove-col-margin">
+
+                <storeitem (storeSelected)="setselectedStore($event)" [storeLookupList]=inputAcctLookupList [MerchGroupItem]=item></storeitem>
+
+            </div>
+            <div class="col-md-6 remove-col-margin pull-right">
+
+                <a type="button" class="btn btn-me btn-light-gray pull-right btn-p-form" (click)="onStoreCancel()">&nbsp;&nbsp;Cancel&nbsp;&nbsp;</a>
+                <a type="submit" class="btn btn-me btn-dark-gray pull-right btn-p-form" (click)="onStoreSave()">&nbsp;&nbsp;Save&nbsp;&nbsp;</a>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dispatch-row">
+
+        <div class="row">
+
+            <!--  left side   Form   from here    -->
+            <div class="col-md-4">
+
+                <!--              <storeitem (storeSelected)="setselectedStore($event)" [storeLookupList]=inputAcctLookupList [MerchGroupItem]=item></storeitem> -->
+                <stores-list [storeListData]="inputAcctList" [MerchGroupItem]="item" (refreshDeleteList)="refreshDeletedStoreList()" (storeListSelected)="setListselectedStore($event)" [(selectedIdx)]=listIndex></stores-list>
+            </div>
+            <!--  rigt side   Form   from here    -->
+            <div class="col-md-8 no-border-radius">
+                <storedetail (refreshList)="refreshStoreList($event)" [storeSelectedInfo]=selStoreInfo [routeList]=routesList [daysofWeek]=weekDays [selectedRoute]=selDefaultRoute [ShowSaveMsg]=SaveMsg [MerchGroupItem]=item (cancelDetail)="cancelDetailStore($event)"></storedetail>
+            </div>
+        </div>
+    </div>
+    <!--StoreList popup-->
+
+</div>
+
+
+<app-spinner [isRunning]="isRequesting"></app-spinner>

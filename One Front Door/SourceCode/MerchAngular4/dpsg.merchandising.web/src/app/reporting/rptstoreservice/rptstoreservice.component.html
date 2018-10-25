@@ -1,0 +1,194 @@
+<div class="container-fluid dispatch-container"  style="overflow-x: auto !important">
+    <div class="row distpatch-menu-row navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="col-md-9 pull-left remove-col-margin">
+                <div class="lable-report">Geo:</div>
+                <div class="float-left">
+                    <ss-multiselect-dropdown [options]="usrAllGeo" (selectedModel)="optionsUpdated($event)" [settings]="mySettings" [texts]="myTexts" [defaultModel]="selectedGeo"></ss-multiselect-dropdown>
+                </div>
+                <div class="lable-report">From Date:</div>
+                <div class="float-left">
+                    <ng2-datepicker [(ngModel)]="FromDate"  class="merchandiser" [options] = "customFromDate"></ng2-datepicker>
+                </div>
+                <div class="lable-report">To Date:</div>
+                <div class="float-left">
+                    <ng2-datepicker [(ngModel)]="ToDate" class="merchandiser" [options] = "customToDate"></ng2-datepicker>
+                </div>
+                <div>
+                    &nbsp;&nbsp;<button (click)="FilterReportData()" class="btn schedule-bordercolor">Go</button>
+                </div>
+            </div>
+            <div class="col-md-2">               
+                <div class="report-search">
+                    <div class="input-group">
+                        <span class="input-group-addon dispatch-search-addon">
+                        <i class="fa fa-search"></i>
+                    </span>                        
+                        <input type="text" [(ngModel)]="filterRpt" (ngModelChange)="SearchFilterRpt()" class="form-control menu-input" id="txtSearch" placeholder="Search">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-1 pull-right remove-col-margin">
+                <div class="pull-right">
+                    <button (click)="exportData()" class="btn schedule-bordercolor">Export to CSV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dispatch-row">
+        <div class="row">
+            <kendo-grid [data]="gridView" [pageSize]="pageSize" [skip]="skip" [sortable]="{ mode: 'single' }" [sort]="sort" (sortChange)="sortChange($event)"
+                (pageChange)="pageChange($event)"  [scrollable]="'none'" [pageable]="{
+            buttonCount: buttonCount,
+            info: info,
+            type: type,
+            pageSizes: pageSizes,
+            previousNext: previousNext
+          }">
+                <kendo-grid-column field="Branch" title="Branch" >                  
+                </kendo-grid-column>               
+                 <kendo-grid-column field="Merchandiser" title="Merchandiser">
+                </kendo-grid-column>
+                <kendo-grid-column field="Date" title="Date">
+                </kendo-grid-column>
+                <kendo-grid-column field="Chain" title="Chain">                    
+                </kendo-grid-column>
+                <kendo-grid-column field="StoreName" title="Store Name">                    
+                </kendo-grid-column>
+                <kendo-grid-column field="StartTime" title="Start Time">
+                </kendo-grid-column>
+                  <kendo-grid-column field="EndTime" title="End Time">
+                </kendo-grid-column>
+                <kendo-grid-column field="TimeinStoreHours" title="Time in Store" >
+                    </kendo-grid-column>
+                  <kendo-grid-column field="ManagerName" title="Manager Name">                      
+                </kendo-grid-column>                 
+                <kendo-grid-column field="ManagerSignature">
+                     <template kendoHeaderTemplate>
+                       Manager<br/>Signature                       
+                    </template>
+                    <template kendoCellTemplate let-dataItem>
+                        <div *ngIf="dataItem.ManagerSignature!=null && dataItem.ManagerSignature!=''">
+                          <a href='javascript:' (click)="getImageDetails(dataItem.ManagerSignature, 1);">Link</a>
+                        </div>
+                    </template>
+                </kendo-grid-column>
+                  <kendo-grid-column field="CasesWorked">
+                       <template kendoHeaderTemplate>
+                       Cases<br/>Worked 
+                       </template>
+                </kendo-grid-column>
+                  <kendo-grid-column field="CasesInBackstock">
+                        <template kendoHeaderTemplate>
+                       Cases In<br/>Backstock                       
+                    </template>
+                </kendo-grid-column>               
+
+                <kendo-grid-column field="StorePics">
+                    <template kendoHeaderTemplate>
+                       Store<br/>Pics                       
+                    </template>
+                    <template kendoCellTemplate let-dataItem>
+                        <div *ngIf="dataItem.StorePics!=null && dataItem.StorePics!=''">
+                          <a href='javascript:' (click)="getImageDetails(dataItem.StorePics, 0);">Link</a>
+                        </div>
+                    </template>
+                </kendo-grid-column>
+                 <kendo-grid-column field="Comments" title="Comments" >
+                </kendo-grid-column>
+                <kendo-grid-column field="CKINLocation">
+                    <template kendoHeaderTemplate>
+                       Check-in<br/>Location                       
+                    </template>
+                    <template kendoCellTemplate let-dataItem>
+                        <div *ngIf="dataItem.CKINLocation!=null && dataItem.CKINLocation!=''">
+                          <a href='javascript:' (click)="getCheckInLocationMap(dataItem.CKINLocation, dataItem.Address, dataItem.City, dataItem.PostalCode, dataItem.State );">{{dataItem.CKINLocation}}</a>
+                        </div>
+                    </template>
+                </kendo-grid-column>
+                <kendo-grid-column field="CKOUTLocation">
+                    <template kendoHeaderTemplate>
+                       Check-out<br/>Location                       
+                    </template>
+                    <template kendoCellTemplate let-dataItem>
+                        <div *ngIf="dataItem.CKOUTLocation!=null && dataItem.CKOUTLocation!=''">
+                          <a href='javascript:' (click)="getCheckOutLocationMap(dataItem.CKOUTLocation, dataItem.Address, dataItem.City, dataItem.PostalCode, dataItem.State);">{{dataItem.CKOUTLocation}}</a>
+                        </div>
+                    </template>
+                </kendo-grid-column>
+            </kendo-grid>
+        </div>
+    </div>
+</div>
+ <app-spinner [isRunning]="isRequesting"></app-spinner>
+ 
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="false" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Image</h4>
+            </div>
+          
+          
+          
+            <div class="modal-body mp-modal2-body-img" style="height:500px">
+                <app-spinner [isRunning]="isRequesting"></app-spinner>
+                <!--<h4 *ngIf="imageBlobID == ''">There is no image</h4>-->
+                <div class="row mp-row2-top">
+                    
+    
+                        <div *ngIf="imgURLList.length <= 0" class="no-img-text">
+                            <h1>No picture available.</h1>
+        
+                        </div>
+                        <div *ngIf="imgURLList.length > 0">
+                            <div *ngFor="let img of imgURLList" class="col-md-4 col-xs-1 col-pic">
+                                <div class="mp-img-div2" >
+                                    <img [src]="img"   class="mp-img-pic"/>
+                                </div>
+                            </div>
+                        </div>  
+                
+                </div>
+
+            </div>
+
+           
+        
+    
+        </div>
+
+    </div>
+</div>
+<div bsModal #lgModalGMap="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="false" [config]="{backdrop: 'static'}">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="lgModalGMap.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">{{locationTitle}}</h4>
+            </div>
+            <div class="modal-body cusFont" style="min-height:500px;color:#333333;">
+                <app-spinner [isRunning]="isRequesting"></app-spinner>
+                <!--<h4 *ngIf="imageBlobID == ''">There is no image</h4>-->
+                <ngui-map center="{{locationAddress}}">
+                    <marker position="{{selectedCheckInLocation}}" label="Check-in Location"
+                         draggable="false"></marker>
+                        <marker position="{{locationAddress}}" label="Store Location"
+                         draggable="false"></marker>
+                </ngui-map>
+                <!-- <div class="fr-row-ltmap text-center">
+                    <a class="add-route" target="_blank" href="https://maps.googleapis.com/maps/api/staticmap?center={{locationAddress}}&markers=color:blue%7Clabel:S%7C{{locationAddress}}&markers={{selectedCheckInLocation}}">
+                        Location Map</a>
+                </div> -->
+
+            </div>
+        </div>
+
+    </div>
+</div>
